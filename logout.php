@@ -5,7 +5,7 @@
 	<?php $ver = "0.05";?>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Login PHPCheckin <?php echo $ver;?></title>
+<title>Logout PHPCheckin <?php echo $ver;?></title>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->

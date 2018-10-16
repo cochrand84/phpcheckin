@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="main.css">
-	<?php $ver = "0.04";?>
+	<?php $ver = "0.05";?>
 <meta charset="utf-8">
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>PHPCheckin <?php echo $ver;?></title>
@@ -13,13 +13,16 @@
 </head>
 
 <body>
-<!-- TemplateBeginEditable name="Form" -->Form<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="Body" -->Body<!-- TemplateEndEditable -->
 </p>
 PHPCheckin Version: <?php echo $ver;?>
 	</p>
 
 <form>
 <input type="button" value="Login" onclick="window.location.href='login.php'" />
+</form>
+<form>
+<input type="button" value="Logout" onclick="window.location.href='logout.php'" />
 </form>
 
 </body>
