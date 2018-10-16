@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
+	<link rel="stylesheet" href="main.css">
+	<?php $ver = ".03";?>
 <meta charset="utf-8">
 <!-- TemplateBeginEditable name="doctitle" -->
-<title>Untitled Document</title>
+<title>PHPCheckin <?php echo $ver;?></title>
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
@@ -12,5 +14,7 @@
 
 <body>
 <!-- TemplateBeginEditable name="Form" -->Form<!-- TemplateEndEditable -->
+</p>
+<?php echo $ver;?>
 </body>
 </html>
