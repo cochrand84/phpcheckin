@@ -49,6 +49,13 @@ Bike Vin #: <input type="text" name="vin" value="<?php echo $vin;?>">
 Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
 <!-- InstanceEndEditable -->
 </p>
-PHPChecin Version: <?php echo $ver;?>
+PHPCheckin Version: <?php echo $ver;?>
+	</p>
+
+<form>
+<input type="button" value="Login" onclick="window.location.href='login.php'" />
+</form>
+
 </body>
+
 <!-- InstanceEnd --></html>
