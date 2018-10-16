@@ -1,4 +1,6 @@
 <?php
+include 'config.php';
+
 $uploaddir = 'uploads/';
 
 $uploadfile = $uploaddir . basename($_FILES['image']['name']);
