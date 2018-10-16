@@ -27,6 +27,16 @@ input[type=submit] {
   cursor: pointer;
   float: right;
 }
+/* Style the other buttons */
+input[type=button] {
+  background-color: #ff2323;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
 
 /* Style the container */
 .container {

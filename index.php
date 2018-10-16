@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/tmp1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<link rel="stylesheet" href="main.css">
-	<?php $ver = "0.05";?>
+	<?php $ver = "0.05.5";?>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Index PHPCheckin <?php echo $ver;?></title>
@@ -14,9 +14,15 @@
 
 <body>
 <!-- InstanceBeginEditable name="Body" -->
+<form action="action_page.php">
+  <div class="row">
+    <div class="col-25">
 	
-Current time and date is: <input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
-	
+Current time and date is: 
+	  </div>
+	  <div class="col-75">
+<input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
+	</div>
 Name: <input type="text" name="name" value="<?php echo $name;?>">
 	</p>
 E-mail: <input type="text" name="email" value="<?php echo $email;?>">

@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/tmp1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<link rel="stylesheet" href="main.css">
-	<?php $ver = "0.05";?>
+	<?php $ver = "0.05.5";?>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Login PHPCheckin <?php echo $ver;?></title>
