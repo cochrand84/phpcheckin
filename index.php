@@ -23,25 +23,25 @@ E-mail: <input type="text" name="email" value="<?php echo $email;?>">
 </p>
 Bike Vin #: <input type="text" name="vin" value="<?php echo $vin;?>">
 	</p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select clutch side image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+    Select image to upload: <input type="file" name="image">
+    <input type="submit" name="upload" value="upload">
+</form>
 </p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select brake side image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+    Select image to upload: <input type="file" name="image">
+    <input type="submit" name="upload" value="upload">
+</form>
 </p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select front image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+    Select image to upload: <input type="file" name="image">
+    <input type="submit" name="upload" value="upload">
+</form>
 </p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select back image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+    Select image to upload: <input type="file" name="image">
+    <input type="submit" name="upload" value="upload">
+</form>
 </p>
 <div class="row">
       <input type="submit" value="Submit">
