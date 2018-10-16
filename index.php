@@ -14,45 +14,67 @@
 
 <body>
 <!-- InstanceBeginEditable name="Body" -->
-<form action="action_page.php">
+<form action="upload.php">
   <div class="row">
     <div class="col-25">
-	
-Current time and date is: 
-	  </div>
-	  <div class="col-75">
-<input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
+		Current time and date is: 
 	</div>
-Name: <input type="text" name="name" value="<?php echo $name;?>">
-	</p>
-E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-</p>
-Bike Vin #: <input type="text" name="vin" value="<?php echo $vin;?>">
-	</p>
-<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
-    Select image to upload: <input type="file" name="image">
-    <input type="submit" name="upload" value="upload">
-</form>
-</p>
-<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
-    Select image to upload: <input type="file" name="image">
-    <input type="submit" name="upload" value="upload">
-</form>
-</p>
-<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
-    Select image to upload: <input type="file" name="image">
-    <input type="submit" name="upload" value="upload">
-</form>
-</p>
-<form name="upload" action="upload.php" method="POST" enctype="multipart/form-data">
-    Select image to upload: <input type="file" name="image">
-    <input type="submit" name="upload" value="upload">
-</form>
-</p>
-<div class="row">
+	<div class="col-75">
+		<input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
+	</div>
+	<div class="col-25">
+		Name: 
+	</div>
+	<div class="col-75">
+		<input type="text" name="name" value="<?php echo $name;?>">
+	</div>
+	<div class="col-25">
+		E-mail: 
+	</div>
+	<div class="col-75">	
+		<input type="text" name="email" value="<?php echo $email;?>">
+	</div>
+	<div class="col-25">
+		Bike Vin #: 
+	</div>
+	<div class="col-75">
+		<input type="text" name="vin" value="<?php echo $vin;?>">
+	</div>
+	<div class="col-25">
+		Select image to upload: 
+	</div>
+	<div class="col-75">
+	  <input type="file" name="image">
+    </div>
+	<div class="col-25">
+		Select image to upload: 
+	</div>
+	<div class="col-75">
+	  <input type="file" name="image">
+    </div>
+	  <div class="col-25">
+		Select image to upload: 
+	</div>
+	<div class="col-75">
+	  <input type="file" name="image">
+    </div>
+	  <div class="col-25">
+		Select image to upload: 
+	</div>
+	<div class="col-75">
+	  <input type="file" name="image">
+    </div>
+	
+	<div class="col-25">
+Comment: 
+	</div>
+	<div class="col-75">
+	<textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+	</div>
+	  <div class="row">
       <input type="submit" value="Submit">
-</div>
-Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+	</div>
+	  </form>
 <!-- InstanceEndEditable -->
 </p>
 PHPCheckin Version: <?php echo $ver;?>
