@@ -2,7 +2,7 @@
 <html><!-- InstanceBegin template="/Templates/tmp1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 	<link rel="stylesheet" href="main.css">
-	<?php $ver = ".03";?>
+	<?php $ver = ".04";?>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Index PHPCheckin <?php echo $ver;?></title>
