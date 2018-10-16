@@ -15,6 +15,6 @@
 <body>
 <!-- TemplateBeginEditable name="Form" -->Form<!-- TemplateEndEditable -->
 </p>
-<?php echo $ver;?>
+PHPChecin Version: <?php echo $ver;?>
 </body>
 </html>
