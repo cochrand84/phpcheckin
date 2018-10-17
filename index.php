@@ -2,7 +2,7 @@
 <html>
 <?php include "includes/header.php"; ?>
 <body>
-<form action="includes/upload.php" method="post">
+<form action="includes/upload.php" method="post" enctype="multipart/form-data">
   <div class="row">
   	<div class="col-25">
 		Current date is: 
