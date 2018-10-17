@@ -14,25 +14,25 @@
 		First Name: 
 	</div>
 	<div class="col-25">
-		<input type="text" name="firstname" value="<?php echo $firstname;?>">
+		<input type="text" name="firstname">
 	</div>
 	<div class="col-25">
 		Last Name: 
 	</div>
 	<div class="col-25">
-		<input type="text" name="lastname" value="<?php echo $lastname;?>">
+		<input type="text" name="lastname">
 	</div>
 	<div class="col-25">
 		E-mail: 
 	</div>
 	<div class="col-75">	
-		<input type="text" name="email" value="<?php echo $email;?>">
+		<input type="text" name="email">
 	</div>
 	<div class="col-25">
 		Bike Vin #: 
 	</div>
 	<div class="col-75">
-		<input type="text" name="vin" value="<?php echo $vin;?>">
+		<input type="text" name="vin">
 	</div>
 	<div class="col-25">
 		Select image to upload: 
