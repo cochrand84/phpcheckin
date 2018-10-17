@@ -58,25 +58,25 @@
 		Select image to upload: 
 	</div>
 	<div class="col-75">
-	  <input type="file" name="image">
+	  <input type="file" name="image1">
     </div>
 	<div class="col-25">
 		Select image to upload: 
 	</div>
 	<div class="col-75">
-	  <input type="file" name="image">
+	  <input type="file" name="image2">
     </div>
 	  <div class="col-25">
 		Select image to upload: 
 	</div>
 	<div class="col-75">
-	  <input type="file" name="image">
+	  <input type="file" name="image3">
     </div>
 	  <div class="col-25">
 		Select image to upload: 
 	</div>
 	<div class="col-75">
-	  <input type="file" name="image">
+	  <input type="file" name="image4">
     </div>
 	
 	<div class="col-25">
