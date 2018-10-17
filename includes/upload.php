@@ -3,8 +3,8 @@
 <body>
 
 <?php
-require_once("config.php");
-require_once("connect.php");
+include "config.php";
+include "connect.php";
 
 if (!$con)
 
