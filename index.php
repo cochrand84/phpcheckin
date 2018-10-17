@@ -1,14 +1,21 @@
 <!doctype html>
 <html>
 <?php include "includes/header.php"; ?>
+<?php include "includes/record_number.php"; ?>
 <body>
 <!-- InstanceBeginEditable name="Body" -->
 <form action="upload.php">
   <div class="row">
+  	<div class="col-25">
+		Record number: 
+	</div>
+	<div class="col-25">
+		<input type="text" name="record_number" value="<?php echo $new_record_number;?>"readonly="readonly">
+	</div>
     <div class="col-25">
 		Current time and date is: 
 	</div>
-	<div class="col-75">
+	<div class="col-25">
 		<input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
 	</div>
 	<div class="col-25">
