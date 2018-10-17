@@ -15,9 +15,9 @@ if (!$con)
 
   }
 
-mysqli_select_db($mysql_database_username, $con);
+mysqli_select_db(mysqli, $con);
 
-$sql="INSERT INTO tickets (firstname, lastname, record_number)
+$sql="INSERT INTO tickets (firstname, lastname)
 
 VALUES
 
