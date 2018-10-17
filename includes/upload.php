@@ -2,7 +2,7 @@
 
 include "connect.php";
 
-$sql="INSERT INTO tickets (firstname, lastname, check_in_date) VALUES ('$_POST[firstname]','$_POST[lastname]','$_POST[check_in_date]')";
+$sql="INSERT INTO tickets (firstname, lastname, check_in_date, due_date, status) VALUES ('$_POST[firstname]','$_POST[lastname]','$_POST[check_in_date]','$_POST[due_date]','$_POST[status]')";
 
 if (!mysqli_query($con,$sql))
 

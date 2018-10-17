@@ -5,10 +5,16 @@
 <form action="includes/upload.php" method="post">
   <div class="row">
   	<div class="col-25">
-		Current time and date is: 
+		Current date is: 
 	</div>
 	<div class="col-25">
 		<input type="date" name="check_in_date" value="<?php include "includes/time_adjustment.php"; ?>" readonly="readonly">
+	</div>
+	<div class="col-25">
+		Due date is: 
+	</div>
+	<div class="col-25">
+		<input type="date" name="due_date" value="<?php include "includes/time_adjustment.php"; ?>">
 	</div>
 	<div class="col-25">
 		First Name: 
@@ -21,6 +27,12 @@
 	</div>
 	<div class="col-25">
 		<input type="text" name="lastname">
+	</div>
+	<div class="col-25">
+		Status: 
+	</div>
+	<div class="col-25">
+		<input type="text" name="status">
 	</div>
 	<div class="col-25">
 		E-mail: 
