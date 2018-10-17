@@ -1,16 +1,5 @@
-<!doctype html>
-<html><!-- InstanceBegin template="/Templates/tmp1.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-	<link rel="stylesheet" href="main.css">
-	<?php $ver = "0.05.5";?>
-<meta charset="utf-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Logout PHPCheckin <?php echo $ver;?></title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-
-</head>
+<html>
+<?php include "includes/header.php"; ?>
 
 <body>
 <!-- InstanceBeginEditable name="Body" -->Form<!-- InstanceEndEditable -->
