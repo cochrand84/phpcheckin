@@ -31,7 +31,7 @@ if (!mysqli_query($sql,$con))
 
 echo "1 record added";
 
- 
+echo $new_record_number 'updated'
 
 mysql_close($con)
 ?> 
