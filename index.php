@@ -14,7 +14,7 @@
 		Due date is: 
 	</div>
 	<div class="col-25">
-		<input type="date" name="due_date" value="<?php include "includes/time_adjustment.php"; ?>">
+		<input type="date" name="due_date" value="" min="<?php include "includes/time_adjustment.php"; ?>">
 	</div>
 	<div class="col-25">
 		First Name: 
@@ -81,7 +81,7 @@
 Comment: 
 	</div>
 	<div class="col-75">
-	<textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+	<textarea name="description" rows="5" cols="40"></textarea>
 	</div>
 	  <div class="row">
       <input type="submit" value="Submit">
