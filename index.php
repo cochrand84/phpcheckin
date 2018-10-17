@@ -15,7 +15,7 @@
 		Current time and date is: 
 	</div>
 	<div class="col-25">
-		<input type="text" name="check_in_date" value="<?php ?>" readonly="readonly">
+		<input type="text" name="check_in_date" value="<?php include "includes/time_adjustment.php"; ?>" readonly="readonly">
 	</div>
 	<div class="col-25">
 		First Name: 
