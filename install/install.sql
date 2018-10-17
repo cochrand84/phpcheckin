@@ -10,5 +10,10 @@ CREATE TABLE IF NOT EXISTS tickets (
     status TINYINT NOT NULL,
     priority TINYINT NOT NULL,
     description TEXT,
+    image1 TEXT,
+    image2 TEXT,
+    image3 TEXT,
+    image4 TEXT,
+    image5 TEXT,
     PRIMARY KEY (record_number)
 ) 

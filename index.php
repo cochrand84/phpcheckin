@@ -34,9 +34,11 @@
 	<div class="col-25">
 		<select name="status">
 			<option value="Checked In">Checked In</option>
-			<option value="Awaiting Parts">Awaiting Parts</option>
+			<option value="Waiting on Parts">Waiting on Parts</option>
 			<option value="In Paint">In Paint</option>
-			<option value="Awaiting Payment/Pickup">Awaiting Payment/Pickup</option>
+			<option value="In Service">In Service</option>
+			<option value="Waiting on Lift">Waiting on Lift</option>
+			<option value="Awaiting Deposit">Awaiting Deposit</option>
 			<option value="Ready For Pickup">Ready For Pickup</option>
 		</select>
 	</div>

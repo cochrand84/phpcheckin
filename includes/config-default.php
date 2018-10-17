@@ -5,4 +5,4 @@ $mysql_database_password = 'password';
 $mysql_database_server = 'localhost';
 
 $ver = '0.6.5'
-?> 
+?>
