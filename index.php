@@ -3,7 +3,6 @@
 <?php include "includes/header.php"; ?>
 <?php include "includes/record_number.php"; ?>
 <body>
-<!-- InstanceBeginEditable name="Body" -->
 <form action="upload.php">
   <div class="row">
   	<div class="col-25">
@@ -16,13 +15,19 @@
 		Current time and date is: 
 	</div>
 	<div class="col-25">
-		<input type="text" name="current_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
+		<input type="text" name="check_in_date" value="<?php echo date('H:i:s M d, Y'); ?>" readonly="readonly">
 	</div>
 	<div class="col-25">
-		Name: 
+		First Name: 
 	</div>
-	<div class="col-75">
-		<input type="text" name="name" value="<?php echo $name;?>">
+	<div class="col-25">
+		<input type="text" name="firstname" value="<?php echo $firstname;?>">
+	</div>
+	<div class="col-25">
+		Last Name: 
+	</div>
+	<div class="col-25">
+		<input type="text" name="lastname" value="<?php echo $lastname;?>">
 	</div>
 	<div class="col-25">
 		E-mail: 
@@ -71,18 +76,6 @@ Comment:
       <input type="submit" value="Submit">
 	</div>
 	  </form>
-<!-- InstanceEndEditable -->
-</p>
-PHPCheckin Version: <?php echo $ver;?>
-	</p>
-
-<form>
-<input type="button" value="Login" onclick="window.location.href='login.php'" />
-</form>
-<form>
-<input type="button" value="Logout" onclick="window.location.href='logout.php'" />
-</form>
-
+<?php include "includes/header.php"; ?>
 </body>
-
-<!-- InstanceEnd --></html>
+</html>
