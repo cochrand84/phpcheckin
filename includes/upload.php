@@ -16,5 +16,5 @@ echo "1 record added";
 
 mysqli_close($con);
 
-include "includes/footer.php";
+include "footer.php";
 ?>
