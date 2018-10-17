@@ -5,7 +5,7 @@
 <?php
 include "config.php";
 
-$con = mysql_connect($mysql_database_server, $mysql_database_username, $mysql_database_password);
+$con = mysqli_connect($mysql_database_server, $mysql_database_username, $mysql_database_password);
 
 if (!$con)
 
@@ -15,7 +15,7 @@ if (!$con)
 
   }
 
-mysql_select_db("cis_id", $con);
+mysqli_select_db($mysql_database_username, $con);
 
 $sql="INSERT INTO tickets (firstname, lastname, record_number)
 
