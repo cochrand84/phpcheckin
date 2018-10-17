@@ -17,7 +17,7 @@ VALUES ('$_POST[record_number]','$_POST[firstname]', '$_POST[lastname]', '$_POST
 if ($connection->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $connection->error;
 }
 
 $connection->close();
