@@ -1,17 +1,10 @@
 <!doctype html>
 <html>
 <?php include "includes/header.php"; ?>
-<?php include "includes/record_number.php"; ?>
 <body>
 <form action="includes/upload.php" method="post">
   <div class="row">
   	<div class="col-25">
-		Record number: 
-	</div>
-	<div class="col-25">
-		<input type="text" name="record_number" value="<?php echo $new_record_number;?>"readonly="readonly">
-	</div>
-    <div class="col-25">
 		Current time and date is: 
 	</div>
 	<div class="col-25">
@@ -76,20 +69,6 @@ Comment:
       <input type="submit" value="Submit">
 	</div>
 	  </form>
-
-	  <form action="includes/upload.php" method="post">
-
-Firstname: <input type="text" name="firstname" /><br><br>
-
-Lastname: <input type="text" name="lastname" /><br><br>
-
-Record_number: <input type="text" name="record_number" />
-
- 
-
-<input type="submit" />
-
-</form>
 <?php include "includes/footer.php"; ?>
 </body>
 </html>
