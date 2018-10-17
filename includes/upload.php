@@ -12,7 +12,7 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
 }
 
 $sql = "INSERT INTO tickets (record_number,firstname, lastname, email)
-VALUES ('$_POST[record_number]','$_POST[firstname]', '$_POST[lastname]', '$_POST[email]')";
+VALUES (':$_POST[record_number]',':$_POST[firstname]', ':$_POST[lastname]', ':$_POST[email]')";
 
 if ($connection->query($sql) === TRUE) {
     echo "New record created successfully";
