@@ -15,7 +15,7 @@ if (!$con)
 
   }
 
-mysqli_select_db(mysqli, $con);
+mysqli_select_db($con, $mysql_databasename);
 
 $sql="INSERT INTO tickets (firstname, lastname)
 
