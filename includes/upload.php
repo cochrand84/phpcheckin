@@ -25,7 +25,7 @@ VALUES
 
  
 
-if (!mysqli_query($sql,$con))
+if (!mysqli_query($con,$sql))
 
   {
 
