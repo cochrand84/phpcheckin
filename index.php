@@ -77,7 +77,7 @@ Comment:
 	</div>
 	  </form>
 
-	  <form action="upload.php" method="post">
+	  <form action="includes/upload.php" method="post">
 
 Firstname: <input type="text" name="firstname" /><br><br>
 
