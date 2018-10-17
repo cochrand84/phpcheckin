@@ -3,7 +3,7 @@
 <?php include "includes/header.php"; ?>
 <?php include "includes/record_number.php"; ?>
 <body>
-<form action="upload.php">
+<form action="includes/upload.php">
   <div class="row">
   	<div class="col-25">
 		Record number: 
