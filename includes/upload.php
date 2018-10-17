@@ -17,7 +17,7 @@ $sql="INSERT INTO tickets (record_number, lastname)
 
 VALUES
 
-('$_POST['$record_number']','$_POST['$lastname']')";
+('$_POST['record_number']','$_POST['lastname']')";
 
  
 
