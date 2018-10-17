@@ -76,6 +76,6 @@ Comment:
       <input type="submit" value="Submit">
 	</div>
 	  </form>
-<?php include "includes/header.php"; ?>
+<?php include "includes/footer.php"; ?>
 </body>
 </html>
