@@ -17,15 +17,15 @@ $sql="INSERT INTO tickets (record_number, lastname)
 
 VALUES
 
-('$_POST[record_number]','$_POST[lastname]')";
+('$_POST['$record_number']','$_POST['$lastname']')";
 
  
 
-if (!mysql_query($sql,$con))
+if (!mysqli_query($sql,$con))
 
   {
 
-  die('Error: ' . mysql_error());
+  die('Error: ' . mysqli_query());
 
   }
 
