@@ -76,6 +76,20 @@ Comment:
       <input type="submit" value="Submit">
 	</div>
 	  </form>
+
+	  <form action="upload.php" method="post">
+
+Firstname: <input type="text" name="firstname" /><br><br>
+
+Lastname: <input type="text" name="lastname" /><br><br>
+
+Record_number: <input type="text" name="record_number" />
+
+ 
+
+<input type="submit" />
+
+</form>
 <?php include "includes/footer.php"; ?>
 </body>
 </html>

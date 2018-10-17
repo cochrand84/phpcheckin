@@ -1,6 +1,10 @@
+<html>
+
+<body>
+
 <?php
 require_once("config.php");
-
+require_once("connect.php");
 
 if (!$con)
 
@@ -10,28 +14,32 @@ if (!$con)
 
   }
 
+mysql_select_db("cis_id", $con);
 
- 
-
-$sql="INSERT INTO tickets (record_number, lastname)
+$sql="INSERT INTO nametable (fname, lname)
 
 VALUES
 
-('$_POST['record_number']','$_POST['lastname']')";
+('$_POST[fname]','$_POST[lname]')";
 
  
 
-if (!mysqli_query($sql,$con))
+if (!mysql_query($sql,$con))
 
   {
 
-  die('Error: ' . mysqli_query());
+  die('Error: ' . mysql_error());
 
   }
 
 echo "1 record added";
 
-echo $new_record_number 'updated'
+ 
 
 mysql_close($con)
-?> 
+
+?>
+
+</body>
+
+</html>
