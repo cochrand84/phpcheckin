@@ -15,12 +15,7 @@
 		Current time and date is: 
 	</div>
 	<div class="col-25">
-		<input type="text" name="check_in_date" value="
-		<?php 
-		$startTime = date("Y-m-d H:i:s");
-		echo date('Y-m-d H:i:s',strtotime('-1 hour',strtotime($startTime))); 
-		?>" 
-		readonly="readonly">
+		<input type="text" name="check_in_date" value="<?php ?>" readonly="readonly">
 	</div>
 	<div class="col-25">
 		First Name: 
