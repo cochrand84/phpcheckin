@@ -8,13 +8,13 @@
 		Current date is: 
 	</div>
 	<div class="col-25">
-		<input type="date" name="check_in_date" value="<?php date("Y-m-d"); ?>" readonly="readonly">
+		<input type="date" name="check_in_date" value="<?php echo date("Y-m-d"); ?>" readonly="readonly">
 	</div>
 	<div class="col-25">
 		Due date is: 
 	</div>
 	<div class="col-25">
-		<input type="date" name="due_date" value="" min="<?php date("Y-m-d"); ?>">
+		<input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>">
 	</div>
 	<div class="col-25">
 		First Name: 
