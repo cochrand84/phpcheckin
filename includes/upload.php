@@ -25,11 +25,11 @@ VALUES
 
  
 
-if (!mysql_query($sql,$con))
+if (!mysqli_query($sql,$con))
 
   {
 
-  die('Error: ' . mysql_error());
+  die('Error: ' . mysqli_error());
 
   }
 
@@ -37,7 +37,7 @@ echo "1 record added";
 
  
 
-mysql_close($con)
+mysqli_close($con)
 
 ?>
 
