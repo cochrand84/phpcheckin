@@ -2,7 +2,7 @@
 
 /**
  * Use an HTML form to create a new entry in the
- * users table.
+ * tickets table.
  *
  */
 
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
         $sql = sprintf(
                 "INSERT INTO %s (%s) values (%s)",
-                "users",
+                "tickets",
                 implode(", ", array_keys($new_user)),
                 ":" . implode(", :", array_keys($new_user))
         );
