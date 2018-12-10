@@ -59,6 +59,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
+                <td><a href="edit.php%<?php echo escape($row["id"]); ?>">Edit</a></td>
             </tr>
         <?php } ?>
         </tbody>
