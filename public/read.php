@@ -69,11 +69,9 @@ if (isset($_POST['submit'])) {
     <?php } 
 } ?> 
 
-<h2>Find user based on location</h2>
+<h2>Show all none completed tickets</h2>
 
 <form method="post">
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location">
     <input type="submit" name="submit" value="View Results">
 </form>
 
