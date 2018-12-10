@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
-                <td><a href="edit2.php?id=<?php echo escape($row["id"]); ?>">Edit</a></td>
+                <td><a href="edit2.php?editit=<?php echo escape($row["id"]); ?>">Edit</a></td>
             </tr>
         <?php } ?>
         </tbody>
@@ -124,7 +124,7 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
-                <td><a href="edit2.php?id=<?php echo escape($row["id"]); ?>">Edit</a></td>
+                <td><a href="edit2.php?editid=<?php echo escape($row["id"]); ?>">Edit</a></td>
                 </tr>
         <?php } ?>
         </tbody>
