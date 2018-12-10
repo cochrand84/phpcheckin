@@ -15,8 +15,7 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
 
         $sql = "SELECT * 
-                        FROM tickets
-                        WHERE location = :location";
+                        FROM tickets WHERE NOT (status = 'complete')";
 
         $location = $_POST['location'];
 
@@ -66,7 +65,7 @@ if (isset($_POST['submit'])) {
         </tbody>
     </table>
     <?php } else { ?>
-        <blockquote>No results found for <?php echo escape($_POST['location']); ?>.</blockquote>
+        <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
 } ?> 
 
