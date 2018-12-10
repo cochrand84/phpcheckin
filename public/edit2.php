@@ -5,48 +5,70 @@
  * tickets table.
  *
  */
-$_GET['id']
-$incommingid = 'id'
+$_GET['editid']
+$incommingid = 'editid'
 
 
 
 if (isset($_POST['submit'])) {
-    require "../config.php";
-    require "../common.php";
-
     try  {
-        $connection = new PDO($dsn, $username, $password, $options);
         
-        $new_user = array(
-            "id"        => $_POST['id'],
-            "firstname" => $_POST['firstname'],
-            "lastname"  => $_POST['lastname'],
-            "email"     => $_POST['email'],
-            "year"       => $_POST['year'],
-            "location"  => $_POST['location'],
-            "status"    => $_POST['status']
-        );
+        require "../config.php";
+        require "../common.php";
 
-        $sql = sprintf(
-                "INSERT INTO %s (%s) values (%s)",
-                "tickets",
-                implode(", ", array_keys($new_user)),
-                ":" . implode(", :", array_keys($new_user))
-        );
-        
+        $connection = new PDO($dsn, $username, $password, $options);
+
+        $sql = "SELECT * FROM `tickets` WHERE (ID = '$incommingid')";
+
+        $location = $_POST['location'];
+
         $statement = $connection->prepare($sql);
-        $statement->execute($new_user);
+        $statement->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
-?>
 
-<?php require "templates/header.php"; ?>
+if (isset($_POST['submit'])) {
+    if ($result && $statement->rowCount() > 0) { ?>
+        <h2>Results</h2>
 
-<?php if (isset($_POST['submit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
-<?php } ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Year</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+        <?php foreach ($result as $row) { ?>
+            <tr>
+                <td><?php echo escape($row["id"]); ?></td>
+                <td><?php echo escape($row["firstname"]); ?></td>
+                <td><?php echo escape($row["lastname"]); ?></td>
+                <td><?php echo escape($row["email"]); ?></td>
+                <td><?php echo escape($row["year"]); ?></td>
+                <td><?php echo escape($row["location"]); ?></td>
+                <td><?php echo escape($row["date"]); ?> </td>
+                <td><?php echo escape($row["status"]); ?> </td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <?php } else { ?>
+        <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
+    <?php } 
+} 
+
 
 <h2>Add a user</h2>
 
