@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     <input type="text" name="location" id="location">
     <label for="status">Status</label>
     <select name="status">
-    <option value="checkedin">Checked-In</option>
+    <option value="checked-in">Checked-In</option>
     <option value="waiting">Waiting</option>
     <option value="finished">Finished</option>
     <option value="complete">Complete</option>
