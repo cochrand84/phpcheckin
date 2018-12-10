@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["age"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
-                <td><?php echo excape($row["status"]); ?> </td>
+                <td><?php echo escape($row["status"]); ?> </td>
             </tr>
         <?php } ?>
         </tbody>
