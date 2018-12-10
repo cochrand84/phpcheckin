@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email Address</th>
-                    <th>Age</th>
+                    <th>Year</th>
                     <th>Location</th>
                     <th>Date</th>
                     <th>Status</th>
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
                 <td><?php echo escape($row["email"]); ?></td>
-                <td><?php echo escape($row["age"]); ?></td>
+                <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>

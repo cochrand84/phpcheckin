@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
-            "age"       => $_POST['age'],
+            "year"       => $_POST['year'],
             "location"  => $_POST['location'],
             "status"    => $_POST['status']
         );
@@ -53,10 +53,11 @@ if (isset($_POST['submit'])) {
     <input type="text" name="lastname" id="lastname">
     <label for="email">Email Address</label>
     <input type="text" name="email" id="email">
-    <label for="age">Age</label>
-    <input type="text" name="age" id="age">
+    <label for="year">Year</label>
+    <input type="text" name="year" id="year">
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
+    <label for="status">Status</label>
     <select name="status">
     <option value="checkedin">Checked-In</option>
     <option value="waiting">Waiting</option>
