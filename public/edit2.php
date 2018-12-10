@@ -11,9 +11,7 @@ echo $incommingid;
 
 
 
-if (isset($_POST['submit'])) {
-    try  {
-        
+     
         require "../config.php";
         require "../common.php";
 
@@ -30,10 +28,9 @@ if (isset($_POST['submit'])) {
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
-    }
-}
 
-if (isset($_POST['submit'])) {
+
+
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
@@ -68,7 +65,6 @@ if (isset($_POST['submit'])) {
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
-} 
 
 ?>
 <h2>Add a user</h2>
