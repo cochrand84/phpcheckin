@@ -123,6 +123,7 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
+                <td>edit</td>
             </tr>
         <?php } ?>
         </tbody>
