@@ -6,7 +6,7 @@
  *
  */
 $_GET['editid'];
-$incommingid = 'editid';
+$incommingid = $_GET['editid'];
 echo $incommingid;
 
 
