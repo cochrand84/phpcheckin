@@ -1,5 +1,3 @@
-CREATE DATABASE area51_checkin;
-
 use area51_checkin;
 
 CREATE TABLE tickets (
