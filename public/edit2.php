@@ -5,6 +5,9 @@
  * tickets table.
  *
  */
+$_GET['id']
+$incommingid = 'id'
+
 
 
 if (isset($_POST['submit'])) {
@@ -15,6 +18,7 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $new_user = array(
+            "id"        => $_POST['id'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
@@ -47,6 +51,7 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
+    <input type="text" name="id" value="<?php echo escape($row["id"]); ?>">
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
