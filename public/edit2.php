@@ -5,8 +5,8 @@
  * tickets table.
  *
  */
-$_GET['editid']
-$incommingid = 'editid'
+$_GET['editid'];
+$incommingid = 'editid';
 
 
 
