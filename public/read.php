@@ -93,7 +93,6 @@ if (isset($_POST['submit2'])) {
     }
 }
 ?>
-<?php require "templates/header.php"; ?>
         
 <?php  
 if (isset($_POST['submit2'])) {
@@ -134,12 +133,7 @@ if (isset($_POST['submit2'])) {
 } ?> 
 
 
-
-
-
-
-
-<h2>Show all none completed tickets</h2>
+<h2>Select your view option</h2>
 
 <form method="post">
     <input type="submit" name="submit" value="View non-Complete">
