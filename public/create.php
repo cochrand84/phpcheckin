@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
             "email"     => $_POST['email'],
             "age"       => $_POST['age'],
             "location"  => $_POST['location']
+            "status"    => $_POST['status']
         );
 
         $sql = sprintf(
@@ -56,6 +57,13 @@ if (isset($_POST['submit'])) {
     <input type="text" name="age" id="age">
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
+    <select name="status">
+    <option value="checkedin">Checked-In</option>
+    <option value="waiting">Waiting</option>
+    <option value="finished">Finished</option>
+    <option value="complete">Complete</option>
+    </select>
+    <br><br>
     <input type="submit" name="submit" value="Submit">
 </form>
 
