@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
     <?php } 
 } 
 
-
+?>
 <h2>Add a user</h2>
 
 <form method="post">
