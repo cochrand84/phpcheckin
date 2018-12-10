@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
             "age"       => $_POST['age'],
-            "location"  => $_POST['location']
+            "location"  => $_POST['location'],
             "status"    => $_POST['status']
         );
 
