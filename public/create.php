@@ -34,15 +34,15 @@ if ($vin) {
     $i = 0;
     $vindecode = '';
     foreach ($json['Results'][0] as $k => $v) {
-        $vindecode .= '' . $k . ' - ' . $v . '';
-        ${'something'.$i} = $v;
+ #       $vindecode .= '' . $k . ' - ' . $v . '';
+        ${$k} = $v;
         $i++;
     }
-echo $something0;
-echo $something1;
-echo $something2;
-echo $something6;
-echo $something52;
+echo $ModelYear;
+echo $Model;
+echo $PlantCity;
+echo $VIN;
+echo $Make;
 #    echo $vindecode;
     echo "</br></br></br>";
     print_r ($json);
