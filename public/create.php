@@ -6,7 +6,7 @@
  *
  */
 
-$vin = isset($_POST['b12']) ? $_POST['b12'] : '';
+$vin = isset($_POST['vin']) ? $_POST['vin'] : '';
 
 if ($vin) {
     $postdata = http_build_query([
@@ -51,6 +51,7 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $new_user = array(
+            "vin"       => $_POST['vin'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
@@ -84,7 +85,7 @@ if (isset($_POST['submit'])) {
 
 <form method="post">
     <label for="vin">VIN</label>
-    <input type="text" id="b12" placeholder="Enter VIN" name="b12" maxlength="17"/>
+    <input type="text" id="vin" placeholder="Enter VIN" name="vin" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
