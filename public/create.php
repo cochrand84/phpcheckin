@@ -12,7 +12,7 @@ $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image = $_FILES['image1']['tmp_name'];
         $imgContent = addslashes(file_get_contents($image));
-
+}
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
