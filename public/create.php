@@ -42,7 +42,7 @@ echo $something0;
 echo $something1;
 echo $something2;
 #    echo $vindecode;
-#    echo "</br></br></br>";
+    echo "</br></br></br>";
 #    print_r ($json);
 } else {
     echo 'No Vin Inputted';
