@@ -47,6 +47,7 @@ if ($vin) {
 #    echo $vindecode;
 
 } else {
+    #    echo 'No Vin Inputted';
 }
 
 
