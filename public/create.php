@@ -40,10 +40,8 @@ if ($vin) {
     }
 
 #    echo $vindecode;
-#    echo "</br></br></br>";
-#    print_r ($json);
+
 } else {
-#    echo 'No Vin Inputted';
 }
 
 
@@ -110,13 +108,18 @@ if (isset($_POST['submit'])) {
 
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
+    <label for="due_date">Due Date</label>
+    <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>">
     <label for="status">Status</label>
     <select name="status">
     <option value="selectstatus" selected>Select Status</option>
-    <option value="checked-in">Checked-In</option>
-    <option value="waiting">Waiting</option>
-    <option value="finished">Finished</option>
-    <option value="complete">Complete</option>
+            <option value="Checked In">Checked In</option>
+            <option value="Waiting on Parts">Waiting on Parts</option>
+            <option value="In Paint">In Paint</option>
+            <option value="In Service">In Service</option>
+            <option value="Waiting on Lift">Waiting on Lift</option>
+            <option value="Awaiting Deposit">Awaiting Deposit</option>
+            <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
     <br><br>
     <input type="submit" name="submit" value="Submit">
