@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $new_user = array(
-            "vin"       => $_POST['vin'],
+            "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
