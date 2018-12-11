@@ -28,11 +28,16 @@ if ($vin) {
     $fp = fopen($apiURL, 'rb', false, $context);
 
     $line_of_text = fgets($fp);
-    $vindecode = json_decode($line_of_text, true);
+    $json = json_decode($line_of_text, true);
 
-    fclose($fp);    
+    fclose($fp);
 
-    echo $vindecode['a'];
+    $vindecode = '';
+    foreach ($json['Results'][0] as $k => $v) {
+        $vindecode .= '[' . $k . '] - ' . $v . '<br />';
+    }
+
+    echo $vindecode;
 } else {
     echo 'No Vin Inputted';
 }
