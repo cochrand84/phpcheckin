@@ -39,7 +39,7 @@ if ($vin) {
 
     echo $vindecode;
     echo "</br></br></br>";
-    echo $json;
+    print_r ($json);
 } else {
     echo 'No Vin Inputted';
 }
