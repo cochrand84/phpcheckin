@@ -71,7 +71,7 @@ if (isset($_POST['edit'])) {
 } 
 
 ?>
-<h2>Add a user</h2>
+<h2>Edit a ticket</h2>
 
 <form method="post">
     <input type="submit" name="edit" value="View non-Complete">
@@ -111,6 +111,7 @@ if (isset($_POST['submitedit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $edit = array(
+            "id"        => $_POST['id'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
@@ -137,7 +138,9 @@ if (isset($_POST['submitedit'])) {
 <?php require "templates/header.php"; ?>
 
 <?php if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
+    <blockquote><?php echo $_POST['firstname']; ?> successfully edited.</blockquote>
 <?php } ?>
+
+<a href="index.php">Back to home</a>
 
 <?php require "templates/footer.php"; ?>
