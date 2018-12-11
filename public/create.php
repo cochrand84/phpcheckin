@@ -31,15 +31,17 @@ if ($vin) {
     $json = json_decode($line_of_text, true);
 
     fclose($fp);
-
+    $i = 0;
     $vindecode = '';
     foreach ($json['Results'][0] as $k => $v) {
         $vindecode .= '' . $k . ' - ' . $v . '';
+        ${'something'.$i} = $k;
+        $i++;
     }
-
-    echo $vindecode;
-    echo "</br></br></br>";
-    print_r ($json);
+echo $something$i;
+#    echo $vindecode;
+#    echo "</br></br></br>";
+#    print_r ($json);
 } else {
     echo 'No Vin Inputted';
 }
