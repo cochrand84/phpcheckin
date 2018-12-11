@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
 
 <form method="post">
     <label for="vin">VIN</label>
-    <input type="text" id="vindecoder" value= name="vindecoder" maxlength="17"/>
+    <input type="text" id="vindecoder" value="" name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
