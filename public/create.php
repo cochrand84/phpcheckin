@@ -61,7 +61,8 @@ if (isset($_POST['submit'])) {
             "location"  => $_POST['location'],
             "status"    => $_POST['status'],
             "make"      => $_POST['make'],
-            "model"     => $_POST['model']
+            "model"     => $_POST['model'],
+            "due_date"  => $_POST['due_date']
         );
 
         $sql = sprintf(
@@ -99,13 +100,10 @@ if (isset($_POST['submit'])) {
     <input type="text" name="email" id="email">
     <label for="year">Year</label>
     <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
-
     <label for="make">Make</label>
     <input type="text" name="make" id="make" value="<?php echo $Make; ?>"">
-
     <label for="model">Model</label>
     <input type="text" name="model" id="model" value="<?php echo $Model; ?>"">
-
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
     <label for="due_date">Due Date</label>

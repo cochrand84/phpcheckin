@@ -9,6 +9,7 @@ CREATE TABLE tickets (
 	year INT(4),
 	model VARCHAR(50) NOT NULL,
 	make VARCHAR(50) NOT NULL,
+	due_date VARCHAR(50),
 	location VARCHAR(50),
 	status VARCHAR(15),
 	date TIMESTAMP
