@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
                     <th>Vin Number</th>
                     <th>Make</th>
                     <th>Model</th>
+                    <th>Due Date</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -64,6 +65,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["vin"]); ?> </td>
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
+                <td><?php echo excape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
 
             </tr>
@@ -119,6 +121,7 @@ if (isset($_POST['submit2'])) {
                     <th>Vin Number</th>
                     <th>Make</th>
                     <th>Model</th>
+                    <th>Due Date</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -135,6 +138,7 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["vin"]); ?> </td>
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
+                <td><?php echo excape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
             </tr>
         <?php } ?>
