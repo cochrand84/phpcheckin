@@ -138,7 +138,7 @@ if (isset($_POST['submitedit'])) {
 <?php require "templates/header.php"; ?>
 
 <?php if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['firstname']; ?> successfully edited.</blockquote>
+    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
 
 <a href="index.php">Back to home</a>
