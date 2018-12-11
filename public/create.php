@@ -39,11 +39,11 @@ if ($vin) {
         $i++;
     }
 
-    echo $vindecode;
-    echo "</br></br></br>";
-    print_r ($json);
+#    echo $vindecode;
+#    echo "</br></br></br>";
+#    print_r ($json);
 } else {
-    echo 'No Vin Inputted';
+#    echo 'No Vin Inputted';
 }
 
 
@@ -61,7 +61,9 @@ if (isset($_POST['submit'])) {
             "email"     => $_POST['email'],
             "year"      => $_POST['year'],
             "location"  => $_POST['location'],
-            "status"    => $_POST['status']
+            "status"    => $_POST['status'],
+            "make"    => $_POST['make'],
+            "model"    => $_POST['model']
         );
 
         $sql = sprintf(
@@ -105,9 +107,6 @@ if (isset($_POST['submit'])) {
 
     <label for="model">Model</label>
     <input type="text" name="model" id="model" value="<?php echo $Model; ?>"">
-
-    <label for="series">Series</label>
-    <input type="text" name="series" id="series" value="<?php echo $Series; ?>"">
 
     <label for="location">Location</label>
     <input type="text" name="location" id="location">

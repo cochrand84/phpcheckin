@@ -7,6 +7,8 @@ CREATE TABLE tickets (
 	lastname VARCHAR(30) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	year INT(4),
+	model VARCHAR(50) NOT NULL,
+	make VARCHAR(50) NOT NULL,
 	location VARCHAR(50),
 	status VARCHAR(15),
 	date TIMESTAMP
