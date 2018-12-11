@@ -40,9 +40,9 @@ if ($vin) {
     }
 echo $ModelYear;
 echo $Model;
-echo $PlantCity;
 echo $VIN;
 echo $Make;
+
 #    echo $vindecode;
     echo "</br></br></br>";
     print_r ($json);
@@ -103,6 +103,13 @@ if (isset($_POST['submit'])) {
     <input type="text" name="email" id="email">
     <label for="year">Year</label>
     <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
+
+    <label for="make">Make</label>
+    <input type="text" name="year" id="year" value="<?php echo $Make; ?>"">
+
+    <label for="model">Model</label>
+    <input type="text" name="year" id="year" value="<?php echo $Model; ?>"">
+
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
     <label for="status">Status</label>
