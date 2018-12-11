@@ -9,9 +9,6 @@
 require "templates/header.php";
 $_GET['editid'];
 $incommingid = $_GET['editid'];
-echo $incommingid;
-
-
 
 try  {
         
@@ -33,24 +30,19 @@ try  {
         echo $sql . "<br>" . $error->getMessage();
     }
 
-
-
-    if ($result && $statement->rowCount() > 0) { ?>
-        <?php foreach ($result as $row) { ?>
-            <tr>
-                <td><?php echo escape($row["id"]); ?></td>
-                <td><?php echo escape($row["firstname"]); ?></td>
-                <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["email"]); ?></td>
-                <td><?php echo escape($row["year"]); ?></td>
-                <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
-    <?php } else { ?>
+if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { 
+                 echo escape($row["id"]); 
+                 echo escape($row["firstname"]); 
+                 echo escape($row["lastname"]); 
+                 echo escape($row["email"]); 
+                 echo escape($row["year"]); 
+                 echo escape($row["location"]); 
+                 echo escape($row["date"]); 
+                 echo escape($row["status"]);
+            
+         } 
+        } else { 
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
 
