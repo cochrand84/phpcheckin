@@ -41,6 +41,8 @@ if ($vin) {
 echo $something0;
 echo $something1;
 echo $something2;
+echo $something6;
+echo $something52;
 #    echo $vindecode;
     echo "</br></br></br>";
     print_r ($json);
