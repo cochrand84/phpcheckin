@@ -12,5 +12,6 @@ CREATE TABLE tickets (
 	due_date VARCHAR(50),
 	location VARCHAR(50),
 	status VARCHAR(15),
+	image longblob NOT NULL,
 	date TIMESTAMP
 );

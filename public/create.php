@@ -8,6 +8,11 @@
 
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
+$check = getimagesize($_FILES["image"]["tmp_name"]);
+    if($check !== false){
+        $image = $_FILES['image']['tmp_name'];
+        $imgContent = addslashes(file_get_contents($image));
+
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
@@ -62,7 +67,8 @@ if (isset($_POST['submit'])) {
             "status"    => $_POST['status'],
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
-            "due_date"  => $_POST['due_date']
+            "due_date"  => $_POST['due_date'],
+            "image1"    => $_POST['$imgContent']
         );
 
         $sql = sprintf(
@@ -78,6 +84,8 @@ if (isset($_POST['submit'])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
+
+
 ?>
 
 <?php require "templates/header.php"; ?>
@@ -119,6 +127,7 @@ if (isset($_POST['submit'])) {
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
+    <input type="file" name="image1" id="image1" /><br />
     <br><br>
     <input type="submit" name="submit" value="Submit">
 </form>
