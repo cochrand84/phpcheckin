@@ -58,7 +58,11 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
+                <td><?php echo escape($row["vin"]); ?> </td>
+                <td><?php echo escape($row["make"]); ?> </td>
+                <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
+
             </tr>
         <?php } ?>
         </tbody>
@@ -122,6 +126,9 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>
+                <td><?php echo escape($row["vin"]); ?> </td>
+                <td><?php echo escape($row["make"]); ?> </td>
+                <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
             </tr>
         <?php } ?>
