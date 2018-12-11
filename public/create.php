@@ -39,6 +39,8 @@ if ($vin) {
         $i++;
     }
 echo $something0;
+echo $something1;
+echo $something2;
 #    echo $vindecode;
 #    echo "</br></br></br>";
 #    print_r ($json);
