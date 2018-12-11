@@ -83,10 +83,10 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
-    <form method="post">
+    
     <input type="text" id="b12" placeholder="Enter VIN" name="b12" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
-    </form>
+    
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
