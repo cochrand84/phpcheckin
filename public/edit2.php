@@ -11,7 +11,7 @@ echo $incommingid;
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['edit'])) {
     try  {
         
         require "../config.php";
@@ -101,6 +101,7 @@ if (isset($_POST['submit'])) {
 </form>
 
 <a href="index.php">Back to home</a>
+
 <?php
 if (isset($_POST['submitedit'])) {
     require "../config.php";
@@ -135,7 +136,7 @@ if (isset($_POST['submitedit'])) {
 
 <?php require "templates/header.php"; ?>
 
-<?php if (isset($_POST['submit']) && $statement) { ?>
+<?php if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
 <?php } ?>
 
