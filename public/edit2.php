@@ -74,13 +74,13 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
-    <input type="submit" name="submit" value="View non-Complete">
+    <input type="submit" name="edit" value="View non-Complete">
 </form>
 
 <form method="post">
     <input type="text" name="id" value="<?php echo escape($row["id"]); ?>">
     <label for="firstname">First Name</label>
-    <input type="text" name="firstname" id="firstname">
+    <input type="text" name="firstname" id="firstname" value="<?php echo escape($row["firstname"]); ?>">
     <label for="lastname">Last Name</label>
     <input type="text" name="lastname" id="lastname">
     <label for="email">Email Address</label>
@@ -97,9 +97,46 @@ if (isset($_POST['submit'])) {
     <option value="complete">Complete</option>
     </select>
     <br><br>
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submitedit" value="Submit edit">
 </form>
 
 <a href="index.php">Back to home</a>
+<?php
+if (isset($_POST['submitedit'])) {
+    require "../config.php";
+    require "../common.php";
+
+    try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        
+        $new_user = array(
+            "firstname" => $_POST['firstname'],
+            "lastname"  => $_POST['lastname'],
+            "email"     => $_POST['email'],
+            "year"       => $_POST['year'],
+            "location"  => $_POST['location'],
+            "status"    => $_POST['status']
+        );
+
+        $sql = sprintf(
+                "UPDATE INTO %s (%s) values (%s)",
+                "tickets",
+                implode(", ", array_keys($new_user)),
+                ":" . implode(", :", array_keys($new_user))
+        );
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+?>
+
+<?php require "templates/header.php"; ?>
+
+<?php if (isset($_POST['submit']) && $statement) { ?>
+    <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
+<?php } ?>
 
 <?php require "templates/footer.php"; ?>
