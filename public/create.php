@@ -32,12 +32,12 @@ if ($vin) {
 
     fclose($fp);
 
-    $html = '';
+    $vindecode = '';
     foreach ($json['Results'][0] as $k => $v) {
-        $html .= '[' . $k . '] - ' . $v . '<br />';
+        $vindecode .= '[' . $k . '] - ' . $v . '<br />';
     }
 
-    echo $html;
+    echo $vindecode;
 } else {
     echo 'No Vin Inputted';
 }
@@ -83,10 +83,9 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
-    
+    <label for="vin">VIN</label>
     <input type="text" id="b12" placeholder="Enter VIN" name="b12" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
-    
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
