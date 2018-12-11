@@ -8,11 +8,11 @@
 
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
-$check = getimagesize($_FILES["image1"]["tmp_name"]);
-    if($check !== false){
-        $image = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image));
-}
+#$check = getimagesize($_FILES["image1"]["tmp_name"]);
+ #   if($check !== false){
+ #       $image = $_FILES['image1']['tmp_name'];
+ #       $imgContent = addslashes(file_get_contents($image));
+#}
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
@@ -127,6 +127,7 @@ if (isset($_POST['submit'])) {
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
+    <label for="image1">Image 1</label>
     <input type="file" name="image1" id="image1" /><br />
     <br><br>
     <input type="submit" name="submit" value="Submit">
