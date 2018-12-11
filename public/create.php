@@ -6,7 +6,7 @@
  *
  */
 
-$vin = isset($_POST['vin']) ? $_POST['vin'] : '';
+$vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if ($vin) {
     $postdata = http_build_query([
@@ -38,6 +38,8 @@ if ($vin) {
     }
 
     echo $vindecode;
+    echo "</br></br></br>"
+    echo $json;
 } else {
     echo 'No Vin Inputted';
 }
@@ -55,7 +57,7 @@ if (isset($_POST['submit'])) {
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
-            "year"       => $_POST['year'],
+            "year"      => $_POST['year'],
             "location"  => $_POST['location'],
             "status"    => $_POST['status']
         );
@@ -85,7 +87,7 @@ if (isset($_POST['submit'])) {
 
 <form method="post">
     <label for="vin">VIN</label>
-    <input type="text" id="vin" placeholder="Enter VIN" name="vin" maxlength="17"/>
+    <input type="text" id="vindecoder" value= name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
