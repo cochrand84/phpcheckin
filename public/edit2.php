@@ -43,7 +43,7 @@ if ($result && $statement->rowCount() > 0) {
             
          } 
         } else { 
-        <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
+        echo escape($_POST['status']);
     <?php } 
 
 
