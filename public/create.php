@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
 
 <form method="post">
     <label for="vin">VIN</label>
-    <input type="text" id="vindecoder" value="<?phpecho $VIN; ?>" name="vindecoder" maxlength="17"/>
+    <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
     <label for="email">Email Address</label>
     <input type="text" name="email" id="email">
     <label for="year">Year</label>
-    <input type="text" name="year" id="year" value="<?phpecho $ModelYear; ?>">
+    <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
     <label for="status">Status</label>
