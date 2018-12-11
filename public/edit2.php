@@ -30,21 +30,21 @@ try  {
         echo $sql . "<br>" . $error->getMessage();
     }
 
-#if ($result && $statement->rowCount() > 0) {
-#        foreach ($result as $row) { 
-#                 echo escape($row["id"]); 
-#                 echo escape($row["firstname"]); 
-#                 echo escape($row["lastname"]); 
-#                 echo escape($row["email"]); 
-#                 echo escape($row["year"]); 
-#                 echo escape($row["location"]); 
-#                 echo escape($row["date"]); 
-#                 echo escape($row["status"]);
-#            
-#         } 
-#        } else { 
-#        echo escape($_POST['status']);
-#     } 
+if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { 
+                 echo escape($row["id"]); 
+                 echo escape($row["firstname"]); 
+                 echo escape($row["lastname"]); 
+                 echo escape($row["email"]); 
+                 echo escape($row["year"]); 
+                 echo escape($row["location"]); 
+                 echo escape($row["date"]); 
+                 echo escape($row["status"]);
+            
+         } 
+        } else { 
+        echo escape($_POST['status']);
+     } 
 
 
 ?>
@@ -63,7 +63,7 @@ try  {
     <label for="location">Location</label>
     <input type="text" name="location" id="location" value="<?php echo escape($row["location"]); ?>">
     <label for="status">Status</label>
-    <select name="status">
+    <select name="status" value="<?php echo escape($row["status"]); ?>">
     <option value="checked-in">Checked-In</option>
     <option value="waiting">Waiting</option>
     <option value="finished">Finished</option>
