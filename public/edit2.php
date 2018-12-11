@@ -32,14 +32,14 @@ try  {
 
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
-                 echo escape($row["id"]); 
-                 echo escape($row["firstname"]); 
-                 echo escape($row["lastname"]); 
-                 echo escape($row["email"]); 
-                 echo escape($row["year"]); 
-                 echo escape($row["location"]); 
-                 echo escape($row["date"]); 
-                 echo escape($row["status"]);
+                 escape($row["id"]) = $id; 
+                 escape($row["firstname"]) = $firstname; 
+                 escape($row["lastname"]) = $lastname; 
+                 escape($row["email"]) = $email; 
+                 escape($row["year"]) = $year; 
+                 escape($row["location"]) = $location; 
+                 escape($row["date"]) = $date; 
+                 escape($row["status"]) = $status;
             
          } 
         } else { 
@@ -51,17 +51,17 @@ if ($result && $statement->rowCount() > 0) {
 <h2>Edit a ticket</h2>
 
 <form method="post">
-    <input type="text" name="id" value="<?php echo escape($row["id"]); ?>">
+    <input type="text" name="id" value="<?php echo $id; ?>">
     <label for="firstname">First Name</label>
-    <input type="text" name="firstname" id="firstname" value="<?php echo escape($row["firstname"]); ?>">
+    <input type="text" name="firstname" id="firstname" value="<?php echo $firstname; ?>">
     <label for="lastname">Last Name</label>
-    <input type="text" name="lastname" id="lastname" value="<?php echo escape($row["lastname"]); ?>">
+    <input type="text" name="lastname" id="lastname" value="<?php echo $lastname; ?>">
     <label for="email">Email Address</label>
-    <input type="text" name="email" id="email" value="<?php echo escape($row["email"]); ?>">
+    <input type="text" name="email" id="email" value="<?php echo $email; ?>">
     <label for="year">Year</label>
-    <input type="text" name="year" id="year" value="<?php echo escape($row["year"]); ?>">
+    <input type="text" name="year" id="year" value="<?php echo $year; ?>">
     <label for="location">Location</label>
-    <input type="text" name="location" id="location" value="<?php echo escape($row["location"]); ?>">
+    <input type="text" name="location" id="location" value="<?php echo $location; ?>">
     <label for="status">Status</label>
     <select name="status">
     <option value="checked-in">Checked-In</option>
