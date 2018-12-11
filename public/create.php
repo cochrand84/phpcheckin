@@ -28,14 +28,9 @@ if ($vin) {
     $fp = fopen($apiURL, 'rb', false, $context);
 
     $line_of_text = fgets($fp);
-    $json = json_decode($line_of_text, true);
+    $vindecode = json_decode($line_of_text, true);
 
-    fclose($fp);
-
-    $vindecode = '';
-    foreach ($json['Results'][0] as $k => $v) {
-        $vindecode .= $k- . $v . '<br />';
-    }
+    fclose($fp);    
 
     echo $vindecode;
 } else {
