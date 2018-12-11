@@ -32,7 +32,7 @@ if ($vin) {
 
     fclose($fp);    
 
-    echo $vindecode;
+    echo $vindecode['a'];
 } else {
     echo 'No Vin Inputted';
 }
