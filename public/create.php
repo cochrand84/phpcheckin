@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['$imgContent']
+            "image1"    => $_POST[$imgContent]
         );
 
         $sql = sprintf(
@@ -84,7 +84,6 @@ if (isset($_POST['submit'])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
-
 
 ?>
 
@@ -135,5 +134,3 @@ if (isset($_POST['submit'])) {
 <a href="index.php">Back to home</a>
 
 <?php require "templates/footer.php"; ?>
-
-?>
