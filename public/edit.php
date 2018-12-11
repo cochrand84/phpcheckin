@@ -51,15 +51,15 @@ if (isset($_POST['submit'])) {
             <tbody>
         <?php foreach ($result as $row) { ?>
             <tr>
-                <td><?php echo escape($row["id"]); ?></td>
-                <td><?php echo escape($row["firstname"]); ?></td>
-                <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["email"]); ?></td>
-                <td><?php echo escape($row["year"]); ?></td>
-                <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>
-                <td><a href="edit2.php?editid=<?php echo escape($row["id"]); ?>">Edit</a></td>
+                <td><?php echo $row["id"]; ?></td>
+                <td><?php echo $row["firstname"]; ?></td>
+                <td><?php echo $row["lastname"]; ?></td>
+                <td><?php echo $row["email"]; ?></td>
+                <td><?php echo $row["year"]; ?></td>
+                <td><?php echo $row["location"]; ?></td>
+                <td><?php echo $row["date"]; ?> </td>
+                <td><?php echo $row["status"]; ?> </td>
+                <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
             </tr>
         <?php } ?>
         </tbody>
@@ -116,15 +116,15 @@ if (isset($_POST['submit2'])) {
             <tbody>
         <?php foreach ($result as $row) { ?>
             <tr>
-                <td><?php echo escape($row["id"]); ?></td>
-                <td><?php echo escape($row["firstname"]); ?></td>
-                <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["email"]); ?></td>
-                <td><?php echo escape($row["year"]); ?></td>
-                <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>
-                <td><a href="edit2.php?editid=<?php echo escape($row["id"]); ?>">Edit</a></td>
+                <td><?php echo $row["id"]; ?></td>
+                <td><?php echo $row["firstname"]; ?></td>
+                <td><?php echo $row["lastname"]; ?></td>
+                <td><?php echo $row["email"]; ?></td>
+                <td><?php echo $row["year"]; ?></td>
+                <td><?php echo $row["location"]; ?></td>
+                <td><?php echo $row["date"]; ?> </td>
+                <td><?php echo $row["status"]; ?> </td>
+                <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
                 </tr>
         <?php } ?>
         </tbody>
