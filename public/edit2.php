@@ -44,7 +44,7 @@ if ($result && $statement->rowCount() > 0) {
          } 
         } else { 
         echo escape($_POST['status']);
-    <?php } 
+     } 
 
 
 ?>
