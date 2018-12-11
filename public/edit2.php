@@ -11,8 +11,7 @@ echo $incommingid;
 
 
 
-if (isset($_POST['edit'])) {
-    try  {
+try  {
         
         require "../config.php";
         require "../common.php";
@@ -31,7 +30,28 @@ if (isset($_POST['edit'])) {
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
-}
+
+
+if (isset($_POST['edit'])) {
+    if ($result && $statement->rowCount() > 0) { ?>
+        <?php foreach ($result as $row) { ?>
+            <tr>
+                <td><?php echo escape($row["id"]); ?></td>
+                <td><?php echo escape($row["firstname"]); ?></td>
+                <td><?php echo escape($row["lastname"]); ?></td>
+                <td><?php echo escape($row["email"]); ?></td>
+                <td><?php echo escape($row["year"]); ?></td>
+                <td><?php echo escape($row["location"]); ?></td>
+                <td><?php echo escape($row["date"]); ?> </td>
+                <td><?php echo escape($row["status"]); ?> </td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <?php } else { ?>
+        <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
+    <?php } 
+} 
 
 ?>
 <h2>Edit a ticket</h2>
