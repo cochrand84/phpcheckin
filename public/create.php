@@ -8,9 +8,9 @@
 
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
-$check = getimagesize($_FILES["image"]["tmp_name"]);
+$check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
-        $image = $_FILES['image']['tmp_name'];
+        $image = $_FILES['image1']['tmp_name'];
         $imgContent = addslashes(file_get_contents($image));
 
 if ($vin) {
@@ -135,3 +135,5 @@ if (isset($_POST['submit'])) {
 <a href="index.php">Back to home</a>
 
 <?php require "templates/footer.php"; ?>
+
+?>
