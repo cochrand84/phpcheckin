@@ -45,6 +45,9 @@ if (isset($_POST['submit'])) {
                     <th>Year</th>
                     <th>Location</th>
                     <th>Date</th>
+                    <th>Vin Number</th>
+                    <th>Make</th>
+                    <th>Model</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -113,6 +116,9 @@ if (isset($_POST['submit2'])) {
                     <th>Year</th>
                     <th>Location</th>
                     <th>Date</th>
+                    <th>Vin Number</th>
+                    <th>Make</th>
+                    <th>Model</th>
                     <th>Status</th>
                 </tr>
             </thead>
