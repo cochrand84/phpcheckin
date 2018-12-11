@@ -62,8 +62,8 @@ if (isset($_POST['submit'])) {
             "year"      => $_POST['year'],
             "location"  => $_POST['location'],
             "status"    => $_POST['status'],
-            "make"    => $_POST['make'],
-            "model"    => $_POST['model']
+            "make"      => $_POST['make'],
+            "model"     => $_POST['model']
         );
 
         $sql = sprintf(
