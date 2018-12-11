@@ -32,7 +32,7 @@ try  {
     }
 
 
-if (isset($_POST['edit'])) {
+
     if ($result && $statement->rowCount() > 0) { ?>
         <?php foreach ($result as $row) { ?>
             <tr>
@@ -51,7 +51,7 @@ if (isset($_POST['edit'])) {
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
-} 
+
 
 ?>
 <h2>Edit a ticket</h2>
