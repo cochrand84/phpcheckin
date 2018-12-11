@@ -5,6 +5,8 @@
  * tickets table.
  *
  */
+
+require "templates/header.php";
 $_GET['editid'];
 $incommingid = $_GET['editid'];
 echo $incommingid;
@@ -55,10 +57,6 @@ try  {
 
 ?>
 <h2>Edit a ticket</h2>
-
-<form method="post">
-    <input type="submit" name="edit" value="View non-Complete">
-</form>
 
 <form method="post">
     <input type="text" name="id" value="<?php echo escape($row["id"]); ?>">
@@ -118,7 +116,7 @@ if (isset($_POST['submitedit'])) {
 }
 ?>
 
-<?php require "templates/header.php"; ?>
+
 
 <?php if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
