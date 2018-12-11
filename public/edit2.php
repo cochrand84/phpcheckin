@@ -33,7 +33,7 @@ if (isset($_POST['edit'])) {
     }
 }
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['edit'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
