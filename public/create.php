@@ -34,16 +34,12 @@ if ($vin) {
     $i = 0;
     $vindecode = '';
     foreach ($json['Results'][0] as $k => $v) {
- #       $vindecode .= '' . $k . ' - ' . $v . '';
+        $vindecode .= '' . $k . ' - ' . $v . '';
         ${$k} = $v;
         $i++;
     }
-echo $ModelYear;
-echo $Model;
-echo $VIN;
-echo $Make;
 
-#    echo $vindecode;
+    echo $vindecode;
     echo "</br></br></br>";
     print_r ($json);
 } else {
@@ -105,10 +101,13 @@ if (isset($_POST['submit'])) {
     <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
 
     <label for="make">Make</label>
-    <input type="text" name="year" id="year" value="<?php echo $Make; ?>"">
+    <input type="text" name="make" id="make" value="<?php echo $Make; ?>"">
 
     <label for="model">Model</label>
-    <input type="text" name="year" id="year" value="<?php echo $Model; ?>"">
+    <input type="text" name="model" id="model" value="<?php echo $Model; ?>"">
+
+    <label for="series">Series</label>
+    <input type="text" name="series" id="series" value="<?php echo $Series; ?>"">
 
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
