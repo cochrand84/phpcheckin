@@ -38,7 +38,7 @@ if ($vin) {
         ${'something'.$i} = $k;
         $i++;
     }
-echo $something$i;
+echo $something0;
 #    echo $vindecode;
 #    echo "</br></br></br>";
 #    print_r ($json);
