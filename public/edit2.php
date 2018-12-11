@@ -64,6 +64,7 @@ if ($result && $statement->rowCount() > 0) {
     <input type="text" name="location" id="location" value="<?php echo escape($row["location"]); ?>">
     <label for="status">Status</label>
     <select name="status" value="<?php echo escape($row["status"]); ?>">
+    <option value="selectstatus" selected>Select Status</option>
     <option value="checked-in">Checked-In</option>
     <option value="waiting">Waiting</option>
     <option value="finished">Finished</option>
