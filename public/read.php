@@ -79,7 +79,7 @@ if (isset($_POST['submit2'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT ID  FROM tickets";
+        $sql = "SELECT *  FROM tickets";
 
         $location = $_POST['location'];
 
