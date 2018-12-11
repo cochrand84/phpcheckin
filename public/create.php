@@ -34,7 +34,7 @@ if ($vin) {
 
     $vindecode = '';
     foreach ($json['Results'][0] as $k => $v) {
-        $vindecode .= '[' . $k . '] - ' . $v . '<br />';
+        $vindecode .= '' . $k . ' - ' . $v . '';
     }
 
     echo $vindecode;
