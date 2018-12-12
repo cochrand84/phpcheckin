@@ -82,7 +82,7 @@ if ($result && $statement->rowCount() > 0) {
 if (isset($_POST['submitedit'])) {
     require "../config.php";
 $editdata = array(
-            "id"        => $incommingid],
+            "id"        => $incommingid,
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
