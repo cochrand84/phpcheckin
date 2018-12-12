@@ -94,7 +94,9 @@ if (isset($_POST['submit'])) {
     <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
 <?php } ?>
 <?php
-$username = array_slice($LOGIN_INFORMATION, 0, 1); 
+$username = array_slice($LOGIN_INFORMATION, 0, 1);
+
+?> 
 <h2>Add a user</h2>
 
 <form method="post">
