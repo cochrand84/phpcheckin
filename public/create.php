@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
 
         $image1 = $_FILES['image1'];
-        $img1content = file_get_contents($image1);
+   #     $img1content = file_get_contents($image1);
         
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $img1content
+            "image1"    => $image1
         );
 
         $sql = sprintf(
