@@ -108,7 +108,7 @@ if (isset($_POST['submitedit'])) {
         );
         
         $statement = $connection->prepare($sql);
-        $statement->execute($new_user);
+        $statement->execute($edit);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
