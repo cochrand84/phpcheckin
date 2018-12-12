@@ -81,7 +81,7 @@ if ($result && $statement->rowCount() > 0) {
 <?php
 if (isset($_POST['submitedit'])) {
     require "../config.php";
-$editdata = array[
+$editdata = array(
             "id"        => $incommingid],
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
@@ -94,6 +94,7 @@ $editdata = array[
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
             "image1"    => $_POST['image1']
+)
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
