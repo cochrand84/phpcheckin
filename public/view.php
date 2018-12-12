@@ -22,8 +22,7 @@ if(!empty($_GET['id'])){
         
         //Render image
         header("Content-type: image/jpg"); 
-        echo $imgData['image1']; 
-        echo $imgData;
+        echo $imgData['image1'];
     }else{
         echo 'Image not found...';
     }

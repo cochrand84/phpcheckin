@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
-        $img1Content = addslashes(file_get_contents($image1));
+        $img1Content = file_get_contents($image1);
         
         
         //Insert image content into database
