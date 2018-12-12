@@ -81,28 +81,28 @@ if ($result && $statement->rowCount() > 0) {
 <?php
 if (isset($_POST['submitedit'])) {
     require "../config.php";
-#    require "../common.php";
-            $firstname  = $_POST['firstname'];
-            $vin        = $_POST['vindecoder'];
-            $firstname  = $_POST['firstname'];
-            $lastname   = $_POST['lastname'];
-            $email      = $_POST['email'];
-            $year       = $_POST['year'];
-            $location   = $_POST['location'];
-            $status     = $_POST['status'];
-            $make       = $_POST['make'];
-            $model      = $_POST['model'];
-            $due_date   = $_POST['due_date'];
-            $image1     = $_POST['image1'];
+$editdata = [
+            "id"        => $incommingid],
+            "vin"       => $_POST['vindecoder'],
+            "firstname" => $_POST['firstname'],
+            "lastname"  => $_POST['lastname'],
+            "email"     => $_POST['email'],
+            "year"      => $_POST['year'],
+            "location"  => $_POST['location'],
+            "status"    => $_POST['status'],
+            "make"      => $_POST['make'],
+            "model"     => $_POST['model'],
+            "due_date"  => $_POST['due_date'],
+            "image1"    => $_POST['image1']
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
 
 
-        $sql = "UPDATE tickets SET vin='$vin', firstname='$firstname' WHERE id=$incommingid";
+        $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
         
         $statement = $connection->prepare($sql);
-        $statement->execute($sql);
+        $statement->execute($editdata);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
