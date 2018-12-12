@@ -70,7 +70,13 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["status"]); ?> </td>
                 <td><div height="100px" width="100px">
 <?php 
-        echo '<img src="data:image/jpg;base64,' .  base64_encode($row['image1'])  . '" />';
+        $image = imagecreatefromstring($row['image1']); 
+
+ob_start(); //You could also just output the $image via header() and bypass this buffer capture.
+imagejpeg($image, null, 80);
+$data = ob_get_contents();
+ob_end_clean();
+echo '<img src="data:image/jpg;base64,' .  base64_encode($data)  . '" />';
 ?>
 </div>
 </td>
