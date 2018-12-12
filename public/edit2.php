@@ -87,14 +87,17 @@ if (isset($_POST['submitedit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
         
         $edit = array(
-                 echo $row["id"]; 
-                 echo $row["firstname"]; 
-                 echo $row["lastname"]; 
-                 echo $row["email"]; 
-                 echo $row["year"]; 
-                 echo $row["location"]; 
-                 echo $row["date"]; 
-                 echo $row["status"];
+            "vin"       => $_POST['vindecoder'],
+            "firstname" => $_POST['firstname'],
+            "lastname"  => $_POST['lastname'],
+            "email"     => $_POST['email'],
+            "year"      => $_POST['year'],
+            "location"  => $_POST['location'],
+            "status"    => $_POST['status'],
+            "make"      => $_POST['make'],
+            "model"     => $_POST['model'],
+            "due_date"  => $_POST['due_date'],
+            "image1"    => $_POST['image1']
         );
 
         $sql = sprintf(
