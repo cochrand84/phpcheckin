@@ -125,6 +125,8 @@ if (isset($_POST['submit2'])) {
                     <th>Model</th>
                     <th>Due Date</th>
                     <th>Status</th>
+                    <th>Image 1</th>
+                    <th>Image 2</th>
                 </tr>
             </thead>
             <tbody>
@@ -141,7 +143,8 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>
+                <td><?php echo escape($row["status"]); ?> </td>                
+              <td><td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="Smiley face" height="42" width="42"></a></td>
             </tr>
         <?php } ?>
         </tbody>

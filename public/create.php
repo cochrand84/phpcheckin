@@ -8,11 +8,6 @@
 
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
-#$check = getimagesize($_FILES["image1"]["tmp_name"]);
- #   if($check !== false){
- #       $image = $_FILES['image1']['tmp_name'];
- #       $imgContent = addslashes(file_get_contents($image));
-#}
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
@@ -62,27 +57,23 @@ if (isset($_POST['submit'])) {
         $imgContent = addslashes(file_get_contents($image1));
 
 
-        /*
-         * Insert image data into database
-         */
-        
-        //DB details
+
         $dbHost     = 'localhost';
         $dbUsername = 'a51checkin';
         $dbPassword = 'ylKy724$';
         $dbName     = 'area51_checkin';
         
-        //Create connection and select DB
+
         $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
         
-        // Check connection
+
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         $rand = rand() . "\n";
-        //Insert image content into database
+
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
             echo "File uploaded successfully.";
@@ -91,6 +82,44 @@ if (isset($_POST['submit'])) {
         } 
     }else{
         echo "Please select an image file to upload.";
+
+
+
+    $check = getimagesize($_FILES["image2"]["tmp_name"]);
+    if($check !== false){
+        $image2 = $_FILES['image2']['tmp_name'];
+        $imgContent = addslashes(file_get_contents($image2));
+
+
+
+        $dbHost     = 'localhost';
+        $dbUsername = 'a51checkin';
+        $dbPassword = 'ylKy724$';
+        $dbName     = 'area51_checkin';
+        
+
+        $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+        
+
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand2 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand2')");
+        if($insert){
+            echo "File uploaded successfully.";
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        echo "Please select an image file to upload.";
+
+
+
+
     }
 
     try  {
@@ -107,7 +136,8 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $rand
+            "image1"    => $rand,
+            "image2"    => $rand2
         );
 
         $sql = sprintf(
@@ -168,7 +198,7 @@ if (isset($_POST['submit'])) {
     </select>
     <label for="image1">Image 1</label>
     <input type="file" name="image1" id="image1" value="<?php echo $rand; ?>"/><br />
-    <br><br>
+    <input type="file" name="image1" id="image2" value="<?php echo $rand2; ?>"/><br />
     <input type="submit" name="submit" value="Submit">
 </form>
 
