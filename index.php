@@ -1,2 +1,2 @@
-<?php include "../index.php"; ?>
+<?php include "public/index.php"; ?>
 
