@@ -67,9 +67,9 @@ if (isset($_POST['submit'])) {
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $image1 = $_FILES['image1']['tmp_name'];
-        $img1content = addslashes(file_get_contents($image1));
-        echo $image1;
+        $image1 = $_FILES['image1'];
+        $img1content = file_get_contents($image1);
+        
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
