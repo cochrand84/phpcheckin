@@ -71,6 +71,7 @@ if (isset($_POST['submit'])) {
                 <td><div height="100px" width="100px">
 <?php 
         $image = imagecreatefromstring($row['image1']); 
+        echo '<img class="attachment-shop_single size-shop_single wp-post-image" src="data:image/jpeg;base64,'.$row['image1'].'" width="274" />';
 
 ob_start(); //You could also just output the $image via header() and bypass this buffer capture.
 imagejpeg($image, null, 80);
