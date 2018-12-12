@@ -168,6 +168,7 @@ if (isset($_POST['submit'])) {
     </select>
     <label for="image1">Image 1</label>
     <input type="file" name="image1" id="image1" value="<?php echo $rand; ?>"/><input type="submit" name="upload" value="Upload"><br />
+    <input type="text" name="image1rand" id="image1rand" value="<?php echo $rand; ?>"/><br />
     <br><br>
     <input type="submit" name="submit" value="Submit">
 </form>
