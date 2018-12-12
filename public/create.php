@@ -44,31 +44,57 @@ if ($vin) {
         $i++;
     }
 
-#    echo $vindecode;
+
 
 } else {
-    #    echo 'No Vin Inputted';
+        echo 'No Vin Inputted';
 }
 
+if(isset($_POST["upload"])){
+    $check = getimagesize($_FILES["image1"]["tmp_name"]);
+    if($check !== false){
+        $image1 = $_FILES['image1']['tmp_name'];
+        $imgContent = addslashes(file_get_contents($image1));
 
+
+        /*
+         * Insert image data into database
+         */
+        
+        //DB details
+        $dbHost     = 'localhost';
+        $dbUsername = 'a51checkin';
+        $dbPassword = 'ylKy724$';
+        $dbName     = 'area51_checkin';
+        
+        //Create connection and select DB
+        $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+        
+        // Check connection
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        
+        //Insert image content into database
+        $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgContent', '$dataTime')");
+        if($insert){
+            echo "File uploaded successfully.";
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        echo "Please select an image file to upload.";
+    }
+}
 
 if (isset($_POST['submit'])) {
     require "../config.php";
-    require "../common.php";
-
-
-        
-        
-    //   Insert image content into database
-    //   $insert = $db->query("INSERT into tickets (image1, location) VALUES ('$imgContent', '$dataTime')");
-        
-    
+    require "../common.php";  
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
-     
-        $image1 = $_FILES['image1']['tmp_name'];
-        $img1Content = file_get_contents($image1);
      
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
@@ -141,7 +167,7 @@ if (isset($_POST['submit'])) {
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
     <label for="image1">Image 1</label>
-    <input type="file" name="image1" id="image1" /><br />
+    <input type="file" name="image1" id="image1" /><input type="submit" name="upload" value="Upload"><br />
     <br><br>
     <input type="submit" name="submit" value="Submit">
 </form>
