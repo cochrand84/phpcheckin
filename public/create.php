@@ -50,7 +50,7 @@ if ($vin) {
         echo 'No Vin Inputted';
 }
 
-if(isset($_POST["upload"])){
+if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
