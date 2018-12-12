@@ -27,7 +27,7 @@ if(isset($_POST["submit"])){
         $dataTime = date("Y-m-d H:i:s");
         
         //Insert image content into database
-        $insert = $db->query("INSERT into images (image1, image2, created) VALUES ('$imgContent', '$dataTime')");
+        $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgContent', '$dataTime')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
