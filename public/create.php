@@ -66,7 +66,10 @@ if (isset($_POST['submit'])) {
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
-        
+
+        $check = getimagesize($_FILES["image1"]["tmp_name"]);
+        if($check !== false){
+
         $image1 = $_FILES['image1']['tmp_name'];
         $img1content = addslashes(file_get_contents($image1));
 
@@ -97,7 +100,9 @@ if (isset($_POST['submit'])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
-
+}else{
+        echo "Please select an image file to upload.";
+    }
 ?>
 
 <?php require "templates/header.php"; ?>
