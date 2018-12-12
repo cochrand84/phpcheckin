@@ -1,4 +1,5 @@
 <?php include "templates/header.php"; ?>
+<?php include "templates/password_protect.php"; ?>
 
 <ul>
 	<li><a href="create.php"><strong>Create</strong></a> - add a new ticket</li>
