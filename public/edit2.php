@@ -64,11 +64,13 @@ if ($result && $statement->rowCount() > 0) {
     <input type="text" name="location" id="location" value="<?php echo $row["location"]; ?>">
     <label for="status">Status</label>
     <select name="status" value="<?php echo $row["status"]; ?>">
-    <option value="selectstatus" selected>Select Status</option>
-    <option value="checked-in">Checked-In</option>
-    <option value="waiting">Waiting</option>
-    <option value="finished">Finished</option>
-    <option value="complete">Complete</option>
+            <option value="Checked In">Checked In</option>
+            <option value="Waiting on Parts">Waiting on Parts</option>
+            <option value="In Paint">In Paint</option>
+            <option value="In Service">In Service</option>
+            <option value="Waiting on Lift">Waiting on Lift</option>
+            <option value="Awaiting Deposit">Awaiting Deposit</option>
+            <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
     <br><br>
     <input type="submit" name="submitedit" value="Submit edit">
