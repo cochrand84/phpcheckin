@@ -111,7 +111,7 @@ if (isset($_POST['submit'])) {
  
 <h2>Add a user</h2>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <label for="vin">VIN</label>
     <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
