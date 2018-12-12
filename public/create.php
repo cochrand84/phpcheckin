@@ -56,14 +56,12 @@ if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
 
-    $check = getimagesize($_FILES["image1"]["tmp_name"]);
-    if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
         $img1Content = file_get_contents($image1);
         
         
-        //Insert image content into database
-     //   $insert = $db->query("INSERT into tickets (image1, location) VALUES ('$imgContent', '$dataTime')");
+    //   Insert image content into database
+    //   $insert = $db->query("INSERT into tickets (image1, location) VALUES ('$imgContent', '$dataTime')");
         
     
 
