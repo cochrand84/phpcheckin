@@ -52,24 +52,24 @@ if ($vin) {
 
 
 
-
-
-
-
-
-
 if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
 
-
+    $check = getimagesize($_FILES["image1"]["tmp_name"]);
+    if($check !== false){
+        $image1 = $_FILES['image1']['tmp_name'];
+        $imgContent = addslashes(file_get_contents($image1));
+        
+        
+        //Insert image content into database
+     //   $insert = $db->query("INSERT into tickets (image1, location) VALUES ('$imgContent', '$dataTime')");
+        
+    
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
-
-        $image1 = $_FILES['image1'];
-   #     $img1content = file_get_contents($image1);
-        
+     
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $image1
+            "image1"    => $imgContent
         );
 
         $sql = sprintf(
@@ -95,6 +95,9 @@ if (isset($_POST['submit'])) {
         $statement->execute($new_user);
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
+    }
+    }else{
+        echo "Something went wrong, please try again.";
     }
 }
 
