@@ -1,5 +1,5 @@
 <?php
-if(!empty($_GET['id'])){
+if(!empty($_GET['rand'])){
     //DB details
     $dbHost     = 'localhost';
     $dbUsername = 'a51checkin';
@@ -15,7 +15,7 @@ if(!empty($_GET['id'])){
     }
     
     //Get image data from database
-    $result = $db->query("SELECT image1 FROM images WHERE id = {$_GET['id']}");
+    $result = $db->query("SELECT image1 FROM images WHERE rand = {$_GET['rand']}");
     
     if($result->num_rows > 0){
         $imgData = $result->fetch_assoc();

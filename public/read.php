@@ -68,19 +68,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
-                <td><div height="100px" width="100px">
-<?php 
-        $image = imagecreatefromstring($row['image1']); 
-        echo '<img class="attachment-shop_single size-shop_single wp-post-image" src="data:image/jpeg;base64,'.$row['image1'].'" width="274" />';
-
-ob_start(); //You could also just output the $image via header() and bypass this buffer capture.
-imagejpeg($image, null, 80);
-$data = ob_get_contents();
-ob_end_clean();
-echo '<img src="data:image/jpg;base64,' .  base64_encode($data)  . '" />';
-?>
-</div>
-</td>
+                <td><div height="100px" width="100px"><td><a href="view.php?rand=<?php echo $row["rand"]; ?>"><img src="view.php?rand=<?php echo $row["rand"]; ?>" alt="Smiley face" height="42" width="42"></a></td></td>
             </tr>
         <?php } ?>
         </tbody>
