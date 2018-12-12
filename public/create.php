@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
     }else{
         echo "Please select an image file to upload.";
 
-
+}
 
     $check = getimagesize($_FILES["image2"]["tmp_name"]);
     if($check !== false){
