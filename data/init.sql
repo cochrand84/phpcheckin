@@ -13,5 +13,8 @@ CREATE TABLE tickets (
 	location VARCHAR(50),
 	status VARCHAR(15),
 	image1 longblob NOT NULL,
+	image2 longblob NOT NULL,
+	image3 longblob NOT NULL,
+	image4 longblob NOT NULL,
 	date TIMESTAMP
 );

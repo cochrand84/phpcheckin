@@ -51,13 +51,25 @@ if ($vin) {
 }
 
 
+
+
+
+
+
+
+
 if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
 
+
+
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
+        $image1 = $_FILES['image1']['tmp_name'];
+        $img1content = addslashes(file_get_contents($image1));
+
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
@@ -69,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['image1']
+            "image1"    => '$img1content'
         );
 
         $sql = sprintf(
