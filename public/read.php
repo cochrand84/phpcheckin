@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
                     <th>Model</th>
                     <th>Due Date</th>
                     <th>Status</th>
-                    <th>image1</th>
+                    <th>rand</th>
                 </tr>
             </thead>
             <tbody>
