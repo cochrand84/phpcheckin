@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => '$img1Content'
+            "image1"    = '$img1Content'
         );
 
         $sql = sprintf(
