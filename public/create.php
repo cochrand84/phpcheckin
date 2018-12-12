@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['image1']
+            "image1"    => $_POST['image1rand']
         );
 
         $sql = sprintf(
