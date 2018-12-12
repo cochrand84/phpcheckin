@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
-                <td><div height="100px" width="100px"><td><a href="view.php?rand=<?php echo $row["rand"]; ?>"><img src="view.php?rand=<?php echo $row["rand"]; ?>" alt="Smiley face" height="42" width="42"></a></td></td>
+                <td><div height="100px" width="100px"><td><a href="view.php?rand=<?php echo $row["rand"]; ?>"><?php echo $row["rand"]; ?><img src="view.php?rand=<?php echo $row["rand"]; ?>" alt="Smiley face" height="42" width="42"></a></td></td>
             </tr>
         <?php } ?>
         </tbody>
