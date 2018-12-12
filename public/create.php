@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image1));
+        $img1Content = addslashes(file_get_contents($image1));
         
         
         //Insert image content into database
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => '$imgContent'
+            "image1"    => '$img1Content'
         );
 
         $sql = sprintf(
