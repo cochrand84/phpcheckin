@@ -54,27 +54,19 @@ if (isset($_POST['submit'])) {
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image1));
+        $imgContent = addslashes(file_get_contents($image1));      
 
-
-
-        $dbHost     = 'localhost';
-        $dbUsername = 'a51checkin';
-        $dbPassword = 'ylKy724$';
-        $dbName     = 'area51_checkin';
+        $db = new mysqli($host, $username, $password, $dbname);
         
 
-        $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-        
-
-        if($connection->connect_error){
-            die("Connection failed: " . $connection->connect_error);
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         $rand = rand() . "\n";
 
-        $insert = $connection->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
@@ -89,26 +81,17 @@ if (isset($_POST['submit'])) {
     if($check !== false){
         $image2 = $_FILES['image2']['tmp_name'];
         $imgContent2 = addslashes(file_get_contents($image2));
-
-
-
-        $dbHost     = 'localhost';
-        $dbUsername = 'a51checkin';
-        $dbPassword = 'ylKy724$';
-        $dbName     = 'area51_checkin';
-        
-
-        $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-        
-
-        if($connection->connect_error){
-            die("Connection failed: " . $connection->connect_error);
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         $rand2 = rand() . "\n";
 
-        $insert = $connection->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
