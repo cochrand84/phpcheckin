@@ -51,6 +51,7 @@ if (isset($_POST['submit'])) {
                     <th>Due Date</th>
                     <th>Status</th>
                     <th>Image 1</th>
+                    <th>Image 2</th>
                 </tr>
             </thead>
             <tbody>
