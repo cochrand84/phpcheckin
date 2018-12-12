@@ -43,7 +43,7 @@ if ($result && $statement->rowCount() > 0) {
             
          } 
         } else { 
-        echo escape($_POST['status']);
+        echo $_POST['status'];
      } 
 
 
@@ -63,7 +63,7 @@ if ($result && $statement->rowCount() > 0) {
     <label for="location">Location</label>
     <input type="text" name="location" id="location" value="<?php echo $row["location"]; ?>">
     <label for="status">Status</label>
-    <select name="status" value="<?php echo escape($row["status"]); ?>">
+    <select name="status" value="<?php echo $row["status"]; ?>">
     <option value="selectstatus" selected>Select Status</option>
     <option value="checked-in">Checked-In</option>
     <option value="waiting">Waiting</option>
