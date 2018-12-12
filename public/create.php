@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 
         $image1 = $_FILES['image1']['tmp_name'];
         $img1content = addslashes(file_get_contents($image1));
-        echo $image1
+        echo $image1;
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
