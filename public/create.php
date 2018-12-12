@@ -97,7 +97,7 @@ if (isset($_POST['submit'])) {
 <h2>Add a user</h2>
 
 <form method="post">
-    <input type="text" id="username" name="username" value="<?php echo array_values($LOGIN_INFORMATION)[0];; ?>">
+    <input type="text" id="username" name="username" value="<?php echo $login; ?>">
     <label for="vin">VIN</label>
     <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
