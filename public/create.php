@@ -56,8 +56,7 @@ if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
 
-        $image1 = $_FILES['image1']['tmp_name'];
-        $img1Content = file_get_contents($image1);
+
         
         
     //   Insert image content into database
@@ -67,6 +66,9 @@ if (isset($_POST['submit'])) {
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
+     
+        $image1 = $_FILES['image1']['tmp_name'];
+        $img1Content = file_get_contents($image1);
      
         $new_user = array(
             "vin"       => $_POST['vindecoder'],
@@ -79,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    = '$img1Content'
+            "image1"    => '$img1Content'
         );
 
         $sql = sprintf(
