@@ -49,8 +49,8 @@ $LOGIN_INFORMATION = array(
 // Add login/password pairs below, like described above
 // NOTE: all rows except last must have comma "," at the end of line
 $LOGIN_INFORMATION = array(
-  'admina' => 'adminap',
-  'adminb' => 'adminbp'
+  'david' => 'shotput',
+  'josh' => 'timeout'
 );
 
 // request login? true - show login and password boxes, false - password box only
@@ -113,7 +113,6 @@ function showLoginPasswordProtect($error_msg) {
     <input type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
   </form>
   <br />
-  <a style="font-size:9px; color: #B0B0B0; font-family: Verdana, Arial;" href="http://www.zubrag.com/scripts/password-protect.php" title="Download Password Protector">Powered by Password Protect</a>
   </div>
 </body>
 </html>
