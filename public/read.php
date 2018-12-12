@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
                     <th>Model</th>
                     <th>Due Date</th>
                     <th>Status</th>
-                    <th>rand</th>
+                    <th>Image 1</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,8 +68,8 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
-                <td><?php echo escape($row["rand"]); ?> </td>
-<!--                <td><div height="100px" width="100px"><td><a href="view.php?rand=<?php echo $row["rand"]; ?>"><img src="view.php?rand=<?php echo $row["rand"]; ?>" alt="Smiley face" height="42" width="42"></a></td></td> -->
+                
+              <td><div height="100px" width="100px"><td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="Smiley face" height="42" width="42"></a></td></td> 
             </tr>
         <?php } ?>
         </tbody>
