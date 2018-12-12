@@ -50,8 +50,12 @@ if ($result && $statement->rowCount() > 0) {
 ?>
 <h2>Edit a ticket</h2>
 
+
 <form method="post">
     <input type="text" name="id" value="<?php echo $row["id"]; ?>">
+    <label for="vin">VIN</label>
+    <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
+    <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname" value="<?php echo $row["firstname"]; ?>">
     <label for="lastname">Last Name</label>
@@ -60,10 +64,17 @@ if ($result && $statement->rowCount() > 0) {
     <input type="text" name="email" id="email" value="<?php echo $row["email"]; ?>">
     <label for="year">Year</label>
     <input type="text" name="year" id="year" value="<?php echo $row["year"]; ?>">
+    <label for="make">Make</label>
+    <input type="text" name="make" id="make" value="<?php echo $Make; ?>"">
+    <label for="model">Model</label>
+    <input type="text" name="model" id="model" value="<?php echo $Model; ?>"">
     <label for="location">Location</label>
     <input type="text" name="location" id="location" value="<?php echo $row["location"]; ?>">
+    <label for="due_date">Due Date</label>
+    <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>">
     <label for="status">Status</label>
     <select name="status" value="<?php echo $row["status"]; ?>">
+    
             <option value="Checked In">Checked In</option>
             <option value="Waiting on Parts">Waiting on Parts</option>
             <option value="In Paint">In Paint</option>
@@ -72,8 +83,10 @@ if ($result && $statement->rowCount() > 0) {
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
+    <label for="image1">Image 1</label>
+    <input type="file" name="image1" id="image1" /><br />
     <br><br>
-    <input type="submit" name="submitedit" value="Submit edit">
+    <input type="submit" name="submit" value="Submit">
 </form>
 
 <a href="index.php">Back to home</a>
@@ -89,15 +102,15 @@ $editdata = array(
             "id"        => $incommingid,
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
-            "lastname"  => $_POST['lastname'],
-            "email"     => $_POST['email'],
-            "year"      => $_POST['year'],
-            "location"  => $_POST['location'],
-            "status"    => $_POST['status'],
-            "make"      => $_POST['make'],
-            "model"     => $_POST['model'],
-            "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['image1']
+         #   "lastname"  => $_POST['lastname'],
+        #    "email"     => $_POST['email'],
+       #     "year"      => $_POST['year'],
+      #      "location"  => $_POST['location'],
+     #       "status"    => $_POST['status'],
+    #        "make"      => $_POST['make'],
+   #         "model"     => $_POST['model'],
+  #          "due_date"  => $_POST['due_date'],
+ #           "image1"    => $_POST['image1']
 );
 
         $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
