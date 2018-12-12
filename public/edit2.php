@@ -81,6 +81,10 @@ if ($result && $statement->rowCount() > 0) {
 <?php
 if (isset($_POST['submitedit'])) {
     require "../config.php";
+
+    try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        
 $editdata = array(
             "id"        => $incommingid,
             "vin"       => $_POST['vindecoder'],
@@ -95,10 +99,6 @@ $editdata = array(
             "due_date"  => $_POST['due_date'],
             "image1"    => $_POST['image1']
 )
-    try  {
-        $connection = new PDO($dsn, $username, $password, $options);
-        
-
 
         $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
         
