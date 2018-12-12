@@ -115,6 +115,6 @@ if (isset($_POST['submitedit'])) {
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
 
-<a href="index.php">Back to home</a>
+
 
 <?php require "templates/footer.php"; ?>
