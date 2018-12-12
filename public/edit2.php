@@ -98,7 +98,7 @@ $editdata = array(
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
             "image1"    => $_POST['image1']
-)
+);
 
         $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
         
