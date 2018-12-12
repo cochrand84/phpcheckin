@@ -11,9 +11,9 @@ if(isset($_POST["submit"])){
         
         //DB details
         $dbHost     = 'localhost';
-        $dbUsername = 'root';
-        $dbPassword = '*****';
-        $dbName     = 'codexworld';
+        $dbUsername = 'a51checkin';
+        $dbPassword = 'ylKy724$';
+        $dbName     = 'area51_checkin';
         
         //Create connection and select DB
         $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
