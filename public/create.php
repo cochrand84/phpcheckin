@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * tickets table.
- *
- */
-
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if ($vin) {
@@ -38,8 +32,6 @@ if ($vin) {
         ${$k} = $v;
         $i++;
     }
-
-
 
 } else {
         echo 'No Vin Inputted';
@@ -99,9 +91,6 @@ if (isset($_POST['submit'])) {
         } 
     }else{
         echo "Please select an image file to upload.";
-
-
-
 
     }
 
@@ -183,7 +172,5 @@ if (isset($_POST['submit'])) {
     <input type="file" name="image2" id="image2" /><br />
     <input type="submit" name="submit" value="Submit">
 </form>
-
-
 
 <?php require "templates/footer.php"; ?>

@@ -1,32 +1,20 @@
 <?php
+require "../config.php";
+
 if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
         $imgContent = addslashes(file_get_contents($image1));
 
-
-        /*
-         * Insert image data into database
-         */
-        
-        //DB details
-        $dbHost     = 'localhost';
-        $dbUsername = 'a51checkin';
-        $dbPassword = 'ylKy724$';
-        $dbName     = 'area51_checkin';
-        
-        //Create connection and select DB
-        $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-        
-        // Check connection
+        $db = new mysqli($host, $username, $password, $dbname);
+       
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         
-        //Insert image content into database
         $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgContent', '$dataTime')");
         if($insert){
             echo "File uploaded successfully.";
