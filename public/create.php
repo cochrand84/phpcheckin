@@ -76,9 +76,9 @@ if(isset($_POST["upload"])){
         }
         
         $dataTime = date("Y-m-d H:i:s");
-        
+        $rand = rand() . "\n";
         //Insert image content into database
-        $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgContent', '$dataTime')");
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => '$img1Content'
+            "image1"    => $_POST['image1']
         );
 
         $sql = sprintf(
