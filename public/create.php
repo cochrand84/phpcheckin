@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
     $check = getimagesize($_FILES["image2"]["tmp_name"]);
     if($check !== false){
         $image2 = $_FILES['image2']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image2));
+        $imgContent2 = addslashes(file_get_contents($image2));
 
 
 
@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
         $dataTime = date("Y-m-d H:i:s");
         $rand2 = rand() . "\n";
 
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand2')");
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
