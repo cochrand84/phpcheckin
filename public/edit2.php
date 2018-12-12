@@ -101,7 +101,7 @@ if (isset($_POST['submitedit'])) {
         );
 
         $sql = sprintf(
-                "UPDATE INTO %s (%s) values (%s)",
+                "UPDATE %s (%s) values (%s)",
                 "tickets",
                 implode(", ", array_keys($edit)),
                 ":" . implode(", :", array_keys($edit))
