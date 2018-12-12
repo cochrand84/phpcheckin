@@ -51,7 +51,7 @@ if ($result && $statement->rowCount() > 0) {
 <h2>Edit a ticket</h2>
 
 <form method="post">
-    <input type="text" name="id" value="<?php echo escape($row["id"]); ?>">
+    <input type="text" name="id" value="<?php echo $row["id"]; ?>">
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname" value="<?php echo $row["firstname"]; ?>">
     <label for="lastname">Last Name</label>
@@ -89,7 +89,7 @@ if (isset($_POST['submitedit'])) {
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
-            "year"       => $_POST['year'],
+            "year"      => $_POST['year'],
             "location"  => $_POST['location'],
             "status"    => $_POST['status']
         );
