@@ -67,14 +67,14 @@ if (isset($_POST['submit'])) {
         $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
         
 
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
+        if($connection->connect_error){
+            die("Connection failed: " . $connection->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         $rand = rand() . "\n";
 
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
+        $insert = $connection->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
@@ -101,14 +101,14 @@ if (isset($_POST['submit'])) {
         $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
         
 
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
+        if($connection->connect_error){
+            die("Connection failed: " . $connection->connect_error);
         }
         
         $dataTime = date("Y-m-d H:i:s");
         $rand2 = rand() . "\n";
 
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
+        $insert = $connection->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
