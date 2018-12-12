@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
                 <td>
 <?php 
         header("Content-type: image/jpg"); 
-        echo $imgData['image1'];
+        echo $row['image1'];
 ?>
 </td>
             </tr>
