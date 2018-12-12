@@ -50,7 +50,12 @@ if ($vin) {
         echo 'No Vin Inputted';
 }
 
-if(isset($_POST["submit"])){
+
+if (isset($_POST['submit'])) {
+
+    require "../config.php";
+    require "../common.php";  
+
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
@@ -87,11 +92,6 @@ if(isset($_POST["submit"])){
     }else{
         echo "Please select an image file to upload.";
     }
-}
-
-if (isset($_POST['submit'])) {
-    require "../config.php";
-    require "../common.php";  
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
