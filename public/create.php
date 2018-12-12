@@ -93,11 +93,12 @@ if (isset($_POST['submit'])) {
 <?php if (isset($_POST['submit']) && $statement) { ?>
     <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
 <?php } ?>
-
+<?php
+$username = array_slice($LOGIN_INFORMATION, 0, 1); 
 <h2>Add a user</h2>
 
 <form method="post">
-    <input type="text" id="username" name="username" value="<?php echo $LOGIN_INFORMATION; ?>">
+    <input type="text" id="username" name="username" value="<?php echo $username; ?>">
     <label for="vin">VIN</label>
     <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
     <button id="submit_btn" type="submit">Decode Vin</button>
