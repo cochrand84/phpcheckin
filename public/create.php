@@ -196,9 +196,8 @@ if (isset($_POST['submit'])) {
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
-    <label for="image1">Image 1</label>
-    <input type="file" name="image1" id="image1" value="<?php echo $rand; ?>"/><br />
-    <input type="file" name="image1" id="image2" value="<?php echo $rand2; ?>"/><br />
+    <input type="file" name="image1" id="image1" /><br />
+    <input type="file" name="image2" id="image2" /><br />
     <input type="submit" name="submit" value="Submit">
 </form>
 
