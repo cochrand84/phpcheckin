@@ -50,6 +50,7 @@ if (isset($_POST['submit'])) {
                     <th>Model</th>
                     <th>Due Date</th>
                     <th>Status</th>
+                    <th>image1</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,10 +68,12 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>
+                <td>
 <?php 
         header("Content-type: image/jpg"); 
         echo $imgData['image1'];
 ?>
+</td>
             </tr>
         <?php } ?>
         </tbody>
