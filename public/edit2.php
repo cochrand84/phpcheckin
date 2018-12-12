@@ -102,15 +102,15 @@ $editdata = array(
             "id"        => $incommingid,
             "vin"       => $_POST['vindecoder'],
             "firstname" => $_POST['firstname'],
-         #   "lastname"  => $_POST['lastname'],
-        #    "email"     => $_POST['email'],
-       #     "year"      => $_POST['year'],
-      #      "location"  => $_POST['location'],
-     #       "status"    => $_POST['status'],
-    #        "make"      => $_POST['make'],
-   #         "model"     => $_POST['model'],
-  #          "due_date"  => $_POST['due_date'],
- #           "image1"    => $_POST['image1']
+            "lastname"  => $_POST['lastname'],
+            "email"     => $_POST['email'],
+            "year"      => $_POST['year'],
+            "location"  => $_POST['location'],
+            "status"    => $_POST['status'],
+            "make"      => $_POST['make'],
+            "model"     => $_POST['model'],
+            "due_date"  => $_POST['due_date'],
+            "image1"    => $_POST['image1']
 );
 
         $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
