@@ -67,9 +67,6 @@ if (isset($_POST['submit'])) {
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $check = getimagesize($_FILES["image1"]["tmp_name"]);
-        if($check !== false){
-
         $image1 = $_FILES['image1']['tmp_name'];
         $img1content = addslashes(file_get_contents($image1));
 
@@ -84,7 +81,7 @@ if (isset($_POST['submit'])) {
             "make"      => $_POST['make'],
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
-            "image1"    => '$img1content'
+            "image1"    => $img1content
         );
 
         $sql = sprintf(
@@ -100,9 +97,7 @@ if (isset($_POST['submit'])) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
-}else{
-        echo "Please select an image file to upload.";
-    }
+
 ?>
 
 <?php require "templates/header.php"; ?>
