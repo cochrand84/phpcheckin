@@ -57,7 +57,7 @@ $LOGIN_INFORMATION = array(
 define('USE_USERNAME', true);
 
 // User will be redirected to this page after logout
-define('LOGOUT_URL', 'http://checkin.area51custom.com/logout.php');
+define('LOGOUT_URL', 'http://checkin.area51custom.com/index.php');
 
 // time out after NN minutes of inactivity. Set to 0 to not timeout
 define('TIMEOUT_MINUTES', 15);
