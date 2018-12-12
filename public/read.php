@@ -70,8 +70,10 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["status"]); ?> </td>
                 <td><div height="100px" width="100px">
 <?php 
+        $result = $row['image1'];
         header("Content-type: image/jpg"); 
-        echo $row['image1'];
+        $imgData = $result->fetch_assoc();
+        echo $imgData
 ?>
 </div>
 </td>
