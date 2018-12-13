@@ -152,11 +152,11 @@ if (isset($_POST['submit'])) {
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
             "phone"     => $_POST['phone'],
-            "year"      => $_POST['year'],
+            "year"      => $ModelYear,
             "location"  => $_POST['location'],
             "status"    => $_POST['status'],
-            "make"      => $_POST['make'],
-            "model"     => $_POST['model'],
+            "make"      => $Make,
+            "model"     => $Model,
             "due_date"  => $_POST['due_date'],
             "image1"    => $rand,
             "image2"    => $rand2,
@@ -187,12 +187,11 @@ if (isset($_POST['submit'])) {
     <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
 <?php } ?>
  
-<h2>Add a user</h2>
+<h2>Create a new ticket</h2>
 
 <form method="post" enctype="multipart/form-data">
     <label for="vin">VIN</label>
     <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
-    <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname" required>
     <label for="lastname">Last Name</label>
@@ -201,12 +200,6 @@ if (isset($_POST['submit'])) {
     <input type="text" name="email" id="email" required>
     <label for="phone">Phone Number</label>
     <input type="text" name="phone" id="phone" required>    
-    <label for="year">Year</label>
-    <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"" required>
-    <label for="make">Make</label>
-    <input type="text" name="make" id="make" value="<?php echo $Make; ?>"" required>
-    <label for="model">Model</label>
-    <input type="text" name="model" id="model" value="<?php echo $Model; ?>"" required>
     <label for="location">Location</label>
     <input type="text" name="location" id="location" required>
     <label for="due_date">Due Date</label>
