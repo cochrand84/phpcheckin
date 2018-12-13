@@ -159,8 +159,8 @@ if (isset($_POST['submit'])) {
             "due_date"  => $_POST['due_date'],
             "image1"    => $rand,
             "image2"    => $rand2,
-            "image2"    => $rand3,
-            "image2"    => $rand4
+            "image3"    => $rand3,
+            "image4"    => $rand4
         );
 
         $sql = sprintf(
