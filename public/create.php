@@ -182,8 +182,6 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<?php require "templates/header.php"; ?>
-
 <?php if (isset($_POST['submit']) && $statement) { ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added.</blockquote>
 <?php } ?>
