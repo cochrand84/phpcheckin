@@ -315,7 +315,12 @@ if (isset($_POST['submit'])) {
                 <label for="mechanical">Mechanical</label>
         </div>
         <div class="col-75">
-            <input type="checkbox" name="oilchange" id="oilchange" required/><br />
+            Oil Change/Service<br />
+            <input type="checkbox" name="oilchange" id="oilchange" required/>Oil Change<br />
+            <input type="checkbox" name="fullservice" id="fullservice" required/>Full Service<br />
+            Tires<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange" required/>Oil Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" required/>Full Service<br />
         </div>
     </div>
     <div class="row">
