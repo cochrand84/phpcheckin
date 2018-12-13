@@ -331,8 +331,8 @@ if (isset($_POST['submit'])) {
             <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
             <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
             Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Oil Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Full Service<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Front Tire Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Rear Tire Change<br />
         </div>
     </div>
     <div class="row">     
