@@ -162,16 +162,16 @@ if (isset($_POST['submit'])) {
             "image2"                    => $rand2,
             "image3"                    => $rand3,
             "image4"                    => $rand4,
-            "description"               => $_POST['description']
-            "oilchange"                 => $_POST['oilchange']
-            "fullservice"               => $_POST['fullservice']
-            "otherservice"              => $_POST['otherservice']
-            "otherservicedescription"   => $_POST['otherservicedescription']
-            "fronttirechange"           => $_POST['fronttirechange']
-            "reartirechange"            => $_POST['reartirechange']
-            "audiotroubleshooting"      => $_POST['audiotroubleshooting']
-            "otheraudiodescription"     => $_POST['otheraudiodescription']
-            "fullaudiosystem"           => $_POST['fullaudiosystem']
+            "description"               => $_POST['description'],
+            "oilchange"                 => $_POST['oilchange'],
+            "fullservice"               => $_POST['fullservice'],
+            "otherservice"              => $_POST['otherservice'],
+            "otherservicedescription"   => $_POST['otherservicedescription'],
+            "fronttirechange"           => $_POST['fronttirechange'],
+            "reartirechange"            => $_POST['reartirechange'],
+            "audiotroubleshooting"      => $_POST['audiotroubleshooting'],
+            "otheraudiodescription"     => $_POST['otheraudiodescription'],
+            "fullaudiosystem"           => $_POST['fullaudiosystem'],
             "audioupgrade"              => $_POST['audioupgrade']
         );   
 
