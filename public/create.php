@@ -221,7 +221,7 @@ if (isset($_POST['submit'])) {
             <option value="Waiting on Lift">Waiting on Lift</option>
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
-    </select>
+    </select><br />
     <input type="file" name="image1" id="image1" required/><br />
     <input type="file" name="image2" id="image2" required/><br />
     <input type="file" name="image3" id="image3" required/><br />
