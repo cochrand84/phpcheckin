@@ -271,7 +271,10 @@ if (isset($_POST['submit'])) {
 </div>
 <div class="col-75">
     <input type="file" name="image4" id="image4" required/><br />
+</div>
+<div class="row">
     <input type="submit" name="submit" value="Submit">
+</div>
 </div>
 </form>
 
