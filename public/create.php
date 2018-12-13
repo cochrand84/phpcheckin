@@ -197,42 +197,56 @@ if (isset($_POST['submit'])) {
         <div class="col-75">
             <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
         </div>
+    </div>    
+    <div class="row">    
         <div class="col-25">
             <label for="firstname">First Name</label>
         </div>
         <div class="col-75">
             <input type="text" name="firstname" id="firstname" required>
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
             <label for="lastname">Last Name</label>
         </div>
         <div class="col-75">
             <input type="text" name="lastname" id="lastname" required>
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
             <label for="email">Email Address</label>
         </div>
         <div class="col-75">
             <input type="text" name="email" id="email" required>
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
             <label for="phone">Phone Number</label>
         </div>
         <div class="col-75">
             <input type="text" name="phone" id="phone" required> 
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">   
             <label for="location">Location</label>
         </div>
         <div class="col-75">
             <input type="text" name="location" id="location" required>
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
             <label for="due_date">Due Date</label>
         </div>
         <div class="col-75">
             <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>" required>
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
             <label for="status">Status</label>
         </div>
@@ -248,24 +262,32 @@ if (isset($_POST['submit'])) {
                     <option value="Ready For Pickup">Ready For Pickup</option>
             </select><br />
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-75">
             <input type="file" name="image1" id="image1" required/><br />
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
                 <label for="image2">Image 2</label>
         </div>
         <div class="col-75">
             <input type="file" name="image2" id="image2" required/><br />
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
                 <label for="image3">Image 3</label>
         </div>
         <div class="col-75">
             <input type="file" name="image3" id="image3" required/><br />
         </div>
+    </div>    
+    <div class="row">     
         <div class="col-25">
                 <label for="image4">Image 4</label>
         </div>
