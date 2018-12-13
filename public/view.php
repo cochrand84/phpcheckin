@@ -1,5 +1,6 @@
+<?php include "templates/password_protect.php"; ?>
 <?php
-//require "templates/header.php";
+
 if(!empty($_GET['rand'])){
     //DB details
     $dbHost     = 'localhost';
