@@ -89,7 +89,7 @@ input[type=submit] {
 }
 
 #ticketstable tr:nth-child(even){background-color: #f2f2f2;}
-#ticketstable tr:nth-child(odd){background-color: #000000;}
+#ticketstable tr:nth-child(odd){background-color: #f1f1f1;}
 
 #ticketstable tr:hover {background-color: #ddd;}
 
