@@ -8,7 +8,7 @@ if(!empty($_GET['rand'])){
     $dbName     = 'area51_checkin';
     require "../config.php";
     //Create connection and select DB
-    $db = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+    $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     
     //Check connection
     if($db->connect_error){
