@@ -302,7 +302,7 @@ if (isset($_POST['submit'])) {
             <label for ="description">Description of Issue/Upgrade</label>
         </div>
         <div class="col-75">
-            <textarea name="description" id="description" rows="10" cols="80" required/><br />
+            <textarea name="description" id="description" rows="10" cols="80" required>Enter a discrption of the issue or upgrade</textarea><br />
         </div>
     </div>
     <div class="row">
