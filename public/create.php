@@ -188,7 +188,7 @@ if (isset($_POST['submit'])) {
 <?php } ?>
  
 <h2>Create a new ticket</h2>
-
+<div class="container">
 <form method="post" enctype="multipart/form-data">
 <div class="row">
 <div class="col-25">
@@ -276,6 +276,7 @@ if (isset($_POST['submit'])) {
     <input type="submit" name="submit" value="Submit">
 </div>
 </div>
+
 </form>
 
 <?php require "templates/footer.php"; ?>
