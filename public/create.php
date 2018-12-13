@@ -92,7 +92,56 @@ if (isset($_POST['submit'])) {
     }else{
         echo "Please select an image file to upload.";
 
-    }
+}
+
+    $check = getimagesize($_FILES["image3"]["tmp_name"]);
+    if($check !== false){
+        $image3 = $_FILES['image3']['tmp_name'];
+        $imgContent3 = addslashes(file_get_contents($image3));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand3 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent3', '$dataTime', '$rand3')");
+        if($insert){
+            echo "File uploaded successfully.";
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        echo "Please select an image file to upload.";
+
+}
+    $check = getimagesize($_FILES["image4"]["tmp_name"]);
+    if($check !== false){
+        $image4 = $_FILES['image4']['tmp_name'];
+        $imgContent4 = addslashes(file_get_contents($image4));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand3 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand3')");
+        if($insert){
+            echo "File uploaded successfully.";
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        echo "Please select an image file to upload.";
+
+}
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
@@ -109,7 +158,9 @@ if (isset($_POST['submit'])) {
             "model"     => $_POST['model'],
             "due_date"  => $_POST['due_date'],
             "image1"    => $rand,
-            "image2"    => $rand2
+            "image2"    => $rand2,
+            "image2"    => $rand3,
+            "image2"    => $rand4
         );
 
         $sql = sprintf(
@@ -170,6 +221,8 @@ if (isset($_POST['submit'])) {
     </select>
     <input type="file" name="image1" id="image1" /><br />
     <input type="file" name="image2" id="image2" /><br />
+    <input type="file" name="image3" id="image3" /><br />
+    <input type="file" name="image4" id="image4" /><br />
     <input type="submit" name="submit" value="Submit">
 </form>
 
