@@ -1,5 +1,5 @@
 <?php
-
+require "templates/header.php";
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if ($vin) {

@@ -1,5 +1,5 @@
 <?php
-
+include "public/templates/password_protect.php";
 /**
  * Escapes HTML for output
  *
