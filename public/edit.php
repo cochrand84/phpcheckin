@@ -200,9 +200,9 @@ if (isset($_POST['submit3'])) {
 <h2>Select your edit option</h2>
 
 <form method="post">
-    <input type="submit" name="submit" value="View non-Complete">
-    <input type="submit" name="submit2" value="View all">
-    <input type="submit" name="submit3" value="View Complete">
+    <input type="submit" name="submit" value="Edit non-Complete">
+    <input type="submit" name="submit2" value="Edit All">
+    <input type="submit" name="submit3" value="Edit Complete">
 </form>
 
 

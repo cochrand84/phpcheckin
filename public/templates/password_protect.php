@@ -60,7 +60,7 @@ define('USE_USERNAME', true);
 define('LOGOUT_URL', 'http://checkin.area51custom.com/index.php');
 
 // time out after NN minutes of inactivity. Set to 0 to not timeout
-define('TIMEOUT_MINUTES', 15);
+define('TIMEOUT_MINUTES', 1440);
 
 // This parameter is only useful when TIMEOUT_MINUTES is not zero
 // true - timeout time from last activity, false - timeout time from login
