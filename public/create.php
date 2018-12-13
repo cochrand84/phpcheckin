@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
-            echo "File uploaded successfully.";
+            
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
         if($insert){
-            echo "File uploaded successfully.";
+            
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
 
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent3', '$dataTime', '$rand3')");
         if($insert){
-            echo "File uploaded successfully.";
+            
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -134,7 +134,7 @@ if (isset($_POST['submit'])) {
 
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand4')");
         if($insert){
-            echo "File uploaded successfully.";
+            
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -184,7 +184,7 @@ if (isset($_POST['submit'])) {
 <?php require "templates/header.php"; ?>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['firstname']; ?> successfully added.</blockquote>
+    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added.</blockquote>
 <?php } ?>
  
 <h2>Create a new ticket</h2>
