@@ -1,6 +1,6 @@
 <?php
 $page = $_SERVER['PHP_SELF'];
-$sec = "900";
+$sec = "60";
 ?>
 <html>
     <head>
