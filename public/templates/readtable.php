@@ -16,6 +16,7 @@
                     <th>Image 2</th>
                     <th>Image 3</th>
                     <th>Image 4</th>
+                    <th>View Details</th>
                 </tr>
             </thead>
             <tbody>
