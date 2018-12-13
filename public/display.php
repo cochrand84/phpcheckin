@@ -9,7 +9,7 @@ $sec = "10";
     <body>
 <?php
 require "templates/header.php";
-if (isset($_POST['submit'])) {
+
     try  {
         
         require "../config.php";
@@ -29,12 +29,12 @@ if (isset($_POST['submit'])) {
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
-}
+
 ?>
 
         
 <?php  
-if (isset($_POST['submit'])) {
+
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
@@ -43,16 +43,5 @@ if (isset($_POST['submit'])) {
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
-} 
+
 ?>
-
-<h2>Select your view option</h2>
-
-<form method="post">
-    <input type="submit" name="submit" value="View non-Complete">
-    <input type="submit" name="submit2" value="View all">
-    <input type="submit" name="submit3" value="View Complete">
-    <input type="submit" name="submit4" value="View all data">
-</form>
-
-<?php require "templates/footer.php"; ?>
