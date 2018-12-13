@@ -228,7 +228,7 @@ if (isset($_POST['submit'])) {
             <label for="email">Email Address</label>
         </div>
         <div class="col-75">
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" >
         </div>
     </div>    
     <div class="row">     

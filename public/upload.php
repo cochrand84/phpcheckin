@@ -5,7 +5,7 @@ if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
-        $image2 = imagescale($image1, 100, 100);
+        $image2 = imagescale($image1, 512);
         $imgContent = addslashes(file_get_contents($image2));
         require "../config.php";
         $db = new mysqli($host, $username, $password, $dbname);
