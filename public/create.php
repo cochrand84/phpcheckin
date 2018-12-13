@@ -147,21 +147,22 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
      
         $new_user = array(
-            "vin"       => $_POST['vindecoder'],
-            "firstname" => $_POST['firstname'],
-            "lastname"  => $_POST['lastname'],
-            "email"     => $_POST['email'],
-            "phone"     => $_POST['phone'],
-            "year"      => $ModelYear,
-            "location"  => $_POST['location'],
-            "status"    => $_POST['status'],
-            "make"      => $Make,
-            "model"     => $Model,
-            "due_date"  => $_POST['due_date'],
-            "image1"    => $rand,
-            "image2"    => $rand2,
-            "image3"    => $rand3,
-            "image4"    => $rand4
+            "vin"           => $_POST['vindecoder'],
+            "firstname"     => $_POST['firstname'],
+            "lastname"      => $_POST['lastname'],
+            "email"         => $_POST['email'],
+            "phone"         => $_POST['phone'],
+            "year"          => $ModelYear,
+            "location"      => $_POST['location'],
+            "status"        => $_POST['status'],
+            "make"          => $Make,
+            "model"         => $Model,
+            "due_date"      => $_POST['due_date'],
+            "image1"        => $rand,
+            "image2"        => $rand2,
+            "image3"        => $rand3,
+            "image4"        => $rand4,
+            "description"   => $_POST['description']
         );
 
         $sql = sprintf(
@@ -301,7 +302,7 @@ if (isset($_POST['submit'])) {
             <label for ="description">Description of Issue/Upgrade</label>
         </div>
         <div class="col-75">
-            <input type="textarea" name="description" id="description" required/><br />
+            <textarea name="description" id="description" rows="10" cols="80" required/><br />
         </div>
     </div>
     <div class="row">
