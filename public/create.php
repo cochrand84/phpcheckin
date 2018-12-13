@@ -306,21 +306,36 @@ if (isset($_POST['submit'])) {
             <label for ="description">Description of Issue/Upgrade</label>
         </div>
         <div class="col-75">
-            <textarea name="description" id="description" rows="10" cols="80" required>Enter a discrption of the issue or upgrade</textarea><br />
+            <textarea name="description" id="description" rows="10" cols="80" required></textarea><br />
         </div>
     </div>
     Services Requested
-        <div class="row">     
+    <div class="row">     
         <div class="col-25">
                 <label for="mechanical">Mechanical</label>
         </div>
         <div class="col-75">
             Oil Change/Service<br />
-            <input type="checkbox" name="oilchange" id="oilchange" required/>Oil Change<br />
-            <input type="checkbox" name="fullservice" id="fullservice" required/>Full Service<br />
+            <input type="checkbox" name="oilchange" id="oilchange"/>Oil Change<br />
+            <input type="checkbox" name="fullservice" id="fullservice"/>Full Service<br />
+            <input type="checkbox" name="otherservice" id="otherservice"/>Other Service<br />
+            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
             Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange" required/>Oil Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" required/>Full Service<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange"/>Oil Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange"/>Full Service<br />
+        </div>
+    </div>
+    <div class="row">     
+        <div class="col-25">
+                <label for="audio">Audio</label>
+        </div>
+        <div class="col-75">
+            Audio Troubleshooting<br />
+            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting"/>Audio Troubleshooting<br />
+            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ></textarea><br />
+            Audio Upgrade<br />
+            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem"/>Full Audio System<br />
+            <input type="checkbox" name="audioupgrade" id="audioupgrade"/>Audio Upgrade<br />
         </div>
     </div>
     <div class="row">
