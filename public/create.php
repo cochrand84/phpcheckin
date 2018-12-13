@@ -218,7 +218,7 @@ if (isset($_POST['submit'])) {
             <label for="email">Email Address</label>
         </div>
         <div class="col-75">
-            <input type="text" name="email" id="email" required>
+            <input type="email" name="email" id="email" required>
         </div>
     </div>    
     <div class="row">     
@@ -226,7 +226,7 @@ if (isset($_POST['submit'])) {
             <label for="phone">Phone Number</label>
         </div>
         <div class="col-75">
-            <input type="text" name="phone" id="phone" required> 
+            <input type="tel" name="phone" id="phone" required> 
         </div>
     </div>    
     <div class="row">     
