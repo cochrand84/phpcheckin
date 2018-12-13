@@ -130,9 +130,9 @@ if (isset($_POST['submit'])) {
         }
         
         $dataTime = date("Y-m-d H:i:s");
-        $rand3 = rand() . "\n";
+        $rand4 = rand() . "\n";
 
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand3')");
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand4')");
         if($insert){
             echo "File uploaded successfully.";
         }else{
