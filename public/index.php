@@ -2,9 +2,9 @@
 
 
 
-<a href="create.php" class="linkbutton"><strong>Create</strong></a>add a new ticket</li>
-<a href="read.php" class="linkbutton"><strong>Read</strong></a>show tickets</li>
-<a href="edit.php" class="linkbutton"><strong>Edit</strong></a>edit tickets</li>
+<a href="create.php" class="linkbutton"><strong>Create</strong></a></li>
+<a href="read.php" class="linkbutton"><strong>Read</strong></a></li>
+<a href="edit.php" class="linkbutton"><strong>Edit</strong></a></li>
 
 
 <?php include "templates/footer.php"; ?>
