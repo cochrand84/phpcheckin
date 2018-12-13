@@ -1,4 +1,4 @@
-<?php include "templates/password_protect.php"; ?>
+
 
 <!doctype html>
 <html lang="en">
