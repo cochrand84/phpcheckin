@@ -1,7 +1,7 @@
 <?php 
 
 include "templates/password_protect.php"; 
-include "../config.php";
+// include "../config.php";
 ?>
 <?php
 
@@ -11,7 +11,7 @@ if(!empty($_GET['rand'])){
     $dbUsername = 'a51checkin';
     $dbPassword = 'ylKy724$';
     $dbName     = 'area51_checkin';
-    
+
     //Create connection and select DB
     $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     
