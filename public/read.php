@@ -115,7 +115,6 @@ if (isset($_POST['submit2'])) {
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Email Address</th>
                     <th>Year</th>
                     <th>Location</th>
                     <th>Date</th>
@@ -136,7 +135,6 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["id"]); ?></td>
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["email"]); ?></td>
                 <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
                 <td><?php echo escape($row["date"]); ?> </td>

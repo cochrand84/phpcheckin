@@ -151,6 +151,7 @@ if (isset($_POST['submit'])) {
             "firstname" => $_POST['firstname'],
             "lastname"  => $_POST['lastname'],
             "email"     => $_POST['email'],
+            "phone"     => $_POST['phone'],
             "year"      => $_POST['year'],
             "location"  => $_POST['location'],
             "status"    => $_POST['status'],
@@ -198,6 +199,8 @@ if (isset($_POST['submit'])) {
     <input type="text" name="lastname" id="lastname">
     <label for="email">Email Address</label>
     <input type="text" name="email" id="email">
+    <label for="phone">Phone Number</label>
+    <input type="text" name="phone" id="phone">    
     <label for="year">Year</label>
     <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
     <label for="make">Make</label>
