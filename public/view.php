@@ -1,12 +1,12 @@
 <?php
-require "../config.php";
+
 if(!empty($_GET['rand'])){
     //DB details
     $dbHost     = 'localhost';
     $dbUsername = 'a51checkin';
     $dbPassword = 'ylKy724$';
     $dbName     = 'area51_checkin';
-    
+    require "../config.php";
     //Create connection and select DB
     $db = new mysqli($host, $dbUsername, $dbPassword, $dbName);
     
