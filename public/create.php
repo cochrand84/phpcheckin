@@ -234,7 +234,13 @@ if (isset($_POST['submit'])) {
             <label for="location">Location</label>
         </div>
         <div class="col-75">
-            <input type="text" name="location" id="location" required>
+            <select name="location" id="location" required>
+            <option value="selectlocation" selected>Select Location</option>
+                    <option value="Out Front">Out Front</option>
+                    <option value="Quonset Hut">Quonset Hut</option>
+                    <option value="Shop">Shop</option>
+                    <option value="At Harley">At Harley</option>
+            </select><br />
         </div>
     </div>    
     <div class="row">     
@@ -301,6 +307,15 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="col-75">
             <textarea name="description" id="description" rows="10" cols="80" required>Enter a discrption of the issue or upgrade</textarea><br />
+        </div>
+    </div>
+    Services Requested
+        <div class="row">     
+        <div class="col-25">
+                <label for="mechanical">Mechanical</label>
+        </div>
+        <div class="col-75">
+            <input type="checkbox" name="oilchange" id="oilchange" required/><br />
         </div>
     </div>
     <div class="row">
