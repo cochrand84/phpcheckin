@@ -46,6 +46,8 @@ if (isset($_POST['submit'])) {
                     <th>Status</th>
                     <th>Image 1</th>
                     <th>Image 2</th>
+                    <th>Image 3</th>
+                    <th>Image 4</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,8 +65,10 @@ if (isset($_POST['submit'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
-              <td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="Smiley face" height="42" width="42"></a></td>
-              <td><a href="view.php?rand=<?php echo $row["image2"]; ?>"><img src="view.php?rand=<?php echo $row["image2"]; ?>" alt="Smiley face" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="<?php echo $row["image1"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image2"]; ?>"><img src="view.php?rand=<?php echo $row["image2"]; ?>" alt="<?php echo $row["image2"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image3"]; ?>"><img src="view.php?rand=<?php echo $row["image3"]; ?>" alt="<?php echo $row["image3"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image4"]; ?>"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
             </tr>
         <?php } ?>
         </tbody>
@@ -105,7 +109,7 @@ if (isset($_POST['submit2'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-        <table>
+               <table>
             <thead>
                 <tr>
                     <th>#</th>
@@ -122,6 +126,8 @@ if (isset($_POST['submit2'])) {
                     <th>Status</th>
                     <th>Image 1</th>
                     <th>Image 2</th>
+                    <th>Image 3</th>
+                    <th>Image 4</th>
                 </tr>
             </thead>
             <tbody>
@@ -139,7 +145,10 @@ if (isset($_POST['submit2'])) {
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
-              <td><td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="Smiley face" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="<?php echo $row["image1"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image2"]; ?>"><img src="view.php?rand=<?php echo $row["image2"]; ?>" alt="<?php echo $row["image2"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image3"]; ?>"><img src="view.php?rand=<?php echo $row["image3"]; ?>" alt="<?php echo $row["image3"]; ?>" height="42" width="42"></a></td>
+              <td><a href="view.php?rand=<?php echo $row["image4"]; ?>"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
             </tr>
         <?php } ?>
         </tbody>
