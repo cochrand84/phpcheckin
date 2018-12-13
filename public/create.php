@@ -147,23 +147,33 @@ if (isset($_POST['submit'])) {
         $connection = new PDO($dsn, $username, $password, $options);
      
         $new_user = array(
-            "vin"           => $_POST['vindecoder'],
-            "firstname"     => $_POST['firstname'],
-            "lastname"      => $_POST['lastname'],
-            "email"         => $_POST['email'],
-            "phone"         => $_POST['phone'],
-            "year"          => $ModelYear,
-            "location"      => $_POST['location'],
-            "status"        => $_POST['status'],
-            "make"          => $Make,
-            "model"         => $Model,
-            "due_date"      => $_POST['due_date'],
-            "image1"        => $rand,
-            "image2"        => $rand2,
-            "image3"        => $rand3,
-            "image4"        => $rand4,
-            "description"   => $_POST['description']
-        );
+            "vin"                       => $_POST['vindecoder'],
+            "firstname"                 => $_POST['firstname'],
+            "lastname"                  => $_POST['lastname'],
+            "email"                     => $_POST['email'],
+            "phone"                     => $_POST['phone'],
+            "year"                      => $ModelYear,
+            "location"                  => $_POST['location'],
+            "status"                    => $_POST['status'],
+            "make"                      => $Make,
+            "model"                     => $Model,
+            "due_date"                  => $_POST['due_date'],
+            "image1"                    => $rand,
+            "image2"                    => $rand2,
+            "image3"                    => $rand3,
+            "image4"                    => $rand4,
+            "description"               => $_POST['description']
+            "oilchange"                 => $_POST['oilchange']
+            "fullservice"               => $_POST['fullservice']
+            "otherservice"              => $_POST['otherservice']
+            "otherservicedescription"   => $_POST['otherservicedescription']
+            "fronttirechange"           => $_POST['fronttirechange']
+            "reartirechange"            => $_POST['reartirechange']
+            "audiotroubleshooting"      => $_POST['audiotroubleshooting']
+            "otheraudiodescription"     => $_POST['otheraudiodescription']
+            "fullaudiosystem"           => $_POST['fullaudiosystem']
+            "audioupgrade"              => $_POST['audioupgrade']
+        );   
 
         $sql = sprintf(
                 "INSERT INTO %s (%s) values (%s)",
@@ -316,13 +326,13 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="col-75">
             Oil Change/Service<br />
-            <input type="checkbox" name="oilchange" id="oilchange"/>Oil Change<br />
-            <input type="checkbox" name="fullservice" id="fullservice"/>Full Service<br />
-            <input type="checkbox" name="otherservice" id="otherservice"/>Other Service<br />
+            <input type="checkbox" name="oilchange" id="oilchange" value="true"/>Oil Change<br />
+            <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
+            <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
             <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
             Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange"/>Oil Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange"/>Full Service<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Oil Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Full Service<br />
         </div>
     </div>
     <div class="row">     
@@ -331,11 +341,11 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="col-75">
             Audio Troubleshooting<br />
-            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting"/>Audio Troubleshooting<br />
+            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"/>Audio Troubleshooting<br />
             <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ></textarea><br />
             Audio Upgrade<br />
-            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem"/>Full Audio System<br />
-            <input type="checkbox" name="audioupgrade" id="audioupgrade"/>Audio Upgrade<br />
+            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"/>Full Audio System<br />
+            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"/>Audio Upgrade<br />
         </div>
     </div>
     <div class="row">
