@@ -191,28 +191,28 @@ if (isset($_POST['submit'])) {
 
 <form method="post" enctype="multipart/form-data">
     <label for="vin">VIN</label>
-    <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17"/>
+    <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
     <button id="submit_btn" type="submit">Decode Vin</button>
     <label for="firstname">First Name</label>
-    <input type="text" name="firstname" id="firstname">
+    <input type="text" name="firstname" id="firstname" required>
     <label for="lastname">Last Name</label>
-    <input type="text" name="lastname" id="lastname">
+    <input type="text" name="lastname" id="lastname" required>
     <label for="email">Email Address</label>
-    <input type="text" name="email" id="email">
+    <input type="text" name="email" id="email" required>
     <label for="phone">Phone Number</label>
-    <input type="text" name="phone" id="phone">    
+    <input type="text" name="phone" id="phone" required>    
     <label for="year">Year</label>
-    <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"">
+    <input type="text" name="year" id="year" value="<?php echo $ModelYear; ?>"" required>
     <label for="make">Make</label>
-    <input type="text" name="make" id="make" value="<?php echo $Make; ?>"">
+    <input type="text" name="make" id="make" value="<?php echo $Make; ?>"" required>
     <label for="model">Model</label>
-    <input type="text" name="model" id="model" value="<?php echo $Model; ?>"">
+    <input type="text" name="model" id="model" value="<?php echo $Model; ?>"" required>
     <label for="location">Location</label>
-    <input type="text" name="location" id="location">
+    <input type="text" name="location" id="location" required>
     <label for="due_date">Due Date</label>
-    <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>">
+    <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>" required>
     <label for="status">Status</label>
-    <select name="status">
+    <select name="status"required>
     <option value="selectstatus" selected>Select Status</option>
             <option value="Checked In">Checked In</option>
             <option value="Waiting on Parts">Waiting on Parts</option>
@@ -222,10 +222,10 @@ if (isset($_POST['submit'])) {
             <option value="Awaiting Deposit">Awaiting Deposit</option>
             <option value="Ready For Pickup">Ready For Pickup</option>
     </select>
-    <input type="file" name="image1" id="image1" /><br />
-    <input type="file" name="image2" id="image2" /><br />
-    <input type="file" name="image3" id="image3" /><br />
-    <input type="file" name="image4" id="image4" /><br />
+    <input type="file" name="image1" id="image1" required/><br />
+    <input type="file" name="image2" id="image2" required/><br />
+    <input type="file" name="image3" id="image3" required/><br />
+    <input type="file" name="image4" id="image4" required/><br />
     <input type="submit" name="submit" value="Submit">
 </form>
 
