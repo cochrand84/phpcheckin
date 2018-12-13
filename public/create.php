@@ -34,7 +34,7 @@ if ($vin) {
     }
 
 } else {
-        echo 'No Vin Inputted';
+        
 }
 
 
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
             echo "File upload failed, please try again.";
         } 
     }else{
-        echo "Please select an image file to upload.";
+        
 
 }
 
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
             echo "File upload failed, please try again.";
         } 
     }else{
-        echo "Please select an image file to upload.";
+        
 
 }
 
@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
             echo "File upload failed, please try again.";
         } 
     }else{
-        echo "Please select an image file to upload.";
+        
 
 }
     $check = getimagesize($_FILES["image4"]["tmp_name"]);
@@ -139,7 +139,7 @@ if (isset($_POST['submit'])) {
             echo "File upload failed, please try again.";
         } 
     }else{
-        echo "Please select an image file to upload.";
+        
 
 }
 
