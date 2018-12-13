@@ -45,3 +45,14 @@ if (isset($_POST['submit'])) {
     <?php } 
 } 
 ?>
+
+<h2>Select your view option</h2>
+
+<form method="post">
+    <input type="submit" name="submit" value="View non-Complete">
+    <input type="submit" name="submit2" value="View all">
+    <input type="submit" name="submit3" value="View Complete">
+    <input type="submit" name="submit4" value="View all data">
+</form>
+
+<?php require "templates/footer.php"; ?>
