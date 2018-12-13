@@ -297,6 +297,14 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
     <div class="row">
+        <div class="col-25">
+            <label for ="description">Description of Issue/Upgrade</label>
+        </div>
+        <div class="col-75">
+            <input type="textarea" name="description" id="description" required/><br />
+        </div>
+    </div>
+    <div class="row">
         <input type="submit" name="submit" value="Submit">
     </div>
         </form>
