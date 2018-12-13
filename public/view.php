@@ -1,6 +1,6 @@
 <?php 
 
-include "templates/password_protect.php"; 
+
 // include "../config.php";
 ?>
 <?php

@@ -1,5 +1,5 @@
 <?php
-require "templates/header.php";
+
 
 if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
