@@ -6,7 +6,7 @@ if(!empty($_GET['rand'])){
     $dbUsername = 'a51checkin';
     $dbPassword = 'ylKy724$';
     $dbName     = 'area51_checkin';
-    require "../config.php";
+ //   require "../config.php";
     //Create connection and select DB
     $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     
