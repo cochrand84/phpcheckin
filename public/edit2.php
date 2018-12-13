@@ -45,8 +45,39 @@ if ($result && $statement->rowCount() > 0) {
         echo $_POST['status'];
      } 
 
+if (isset($_POST['submitedit'])) {
+    require "../config.php";
 
-?>
+    try  {
+        $connection = new PDO($dsn, $username, $password, $options);
+        
+$editdata = array(
+            "id"        => $incommingid,
+            "vin"       => $_POST['vindecoder'],
+            "firstname" => $_POST['firstname'],
+            "lastname"  => $_POST['lastname'],
+            "email"     => $_POST['email'],
+            "year"      => $_POST['year'],
+            "location"  => $_POST['location'],
+            "status"    => $_POST['status'],
+            "make"      => $_POST['make'],
+            "model"     => $_POST['model'],
+            "due_date"  => $_POST['due_date'],
+            "image1"    => $_POST['image1']
+);
+
+        $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($editdata);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+
+if (isset($_POST['submitedit']) && $statement) { ?>
+    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
+<?php } ?>
 <h2>Edit a ticket</h2>
 
 
@@ -163,43 +194,5 @@ if ($result && $statement->rowCount() > 0) {
     </div>
         </form>
 </div>
-
-<a href="index.php">Back to home</a>
-
-<?php
-if (isset($_POST['submitedit'])) {
-    require "../config.php";
-
-    try  {
-        $connection = new PDO($dsn, $username, $password, $options);
-        
-$editdata = array(
-            "id"        => $incommingid,
-            "vin"       => $_POST['vindecoder'],
-            "firstname" => $_POST['firstname'],
-            "lastname"  => $_POST['lastname'],
-            "email"     => $_POST['email'],
-            "year"      => $_POST['year'],
-            "location"  => $_POST['location'],
-            "status"    => $_POST['status'],
-            "make"      => $_POST['make'],
-            "model"     => $_POST['model'],
-            "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['image1']
-);
-
-        $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
-        
-        $statement = $connection->prepare($sql);
-        $statement->execute($editdata);
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-?>
-
-<?php if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
-<?php } ?>
 
 <?php require "templates/footer.php"; ?>
