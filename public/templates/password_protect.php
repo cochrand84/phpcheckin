@@ -54,7 +54,12 @@ $LOGIN_INFORMATION = array(
 // NOTE: all rows except last must have comma "," at the end of line
 $LOGIN_INFORMATION = array(
   'david' => 'shotput',
-  'josh' => 'timeout'
+  'josh'  => 'timeout',
+  'tim'   => 'area51',
+  'bill'  => 'area51',
+  'josh2' => 'area51',
+  'cain'  => 'area51',
+  'terry' => 'area51'
 );
 
 // request login? true - show login and password boxes, false - password box only
