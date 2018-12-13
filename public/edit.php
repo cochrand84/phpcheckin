@@ -35,35 +35,8 @@ if (isset($_POST['submit'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email Address</th>
-                    <th>Year</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-        <?php foreach ($result as $row) { ?>
-            <tr>
-                <td><?php echo $row["id"]; ?></td>
-                <td><?php echo $row["firstname"]; ?></td>
-                <td><?php echo $row["lastname"]; ?></td>
-                <td><?php echo $row["email"]; ?></td>
-                <td><?php echo $row["year"]; ?></td>
-                <td><?php echo $row["location"]; ?></td>
-                <td><?php echo $row["date"]; ?> </td>
-                <td><?php echo $row["status"]; ?> </td>
-                <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
+<?php require "templates/edittable.php"; ?>
+
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
@@ -100,35 +73,8 @@ if (isset($_POST['submit2'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email Address</th>
-                    <th>Year</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-        <?php foreach ($result as $row) { ?>
-            <tr>
-                <td><?php echo $row["id"]; ?></td>
-                <td><?php echo $row["firstname"]; ?></td>
-                <td><?php echo $row["lastname"]; ?></td>
-                <td><?php echo $row["email"]; ?></td>
-                <td><?php echo $row["year"]; ?></td>
-                <td><?php echo $row["location"]; ?></td>
-                <td><?php echo $row["date"]; ?> </td>
-                <td><?php echo $row["status"]; ?> </td>
-                <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
-                </tr>
-        <?php } ?>
-        </tbody>
-    </table>
+<?php require "templates/edittable.php"; ?>
+
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
@@ -164,35 +110,7 @@ if (isset($_POST['submit3'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email Address</th>
-                    <th>Year</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-        <?php foreach ($result as $row) { ?>
-            <tr>
-                <td><?php echo $row["id"]; ?></td>
-                <td><?php echo $row["firstname"]; ?></td>
-                <td><?php echo $row["lastname"]; ?></td>
-                <td><?php echo $row["email"]; ?></td>
-                <td><?php echo $row["year"]; ?></td>
-                <td><?php echo $row["location"]; ?></td>
-                <td><?php echo $row["date"]; ?> </td>
-                <td><?php echo $row["status"]; ?> </td>
-                <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
-                </tr>
-        <?php } ?>
-        </tbody>
-    </table>
+<?php require "templates/edittable.php"; ?>
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
