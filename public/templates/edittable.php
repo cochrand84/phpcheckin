@@ -1,4 +1,4 @@
-               <table>
+               <table id="ticketstable">
             <thead>
                 <tr>
                     <th>#</th>
