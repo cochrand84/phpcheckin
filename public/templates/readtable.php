@@ -39,6 +39,7 @@
                         $hoursleft = floor(($secondsleft - $daysleft*60*60*24) / 60*60);
                         echo "$daysleft days $hoursleft hours";
                         echo $secondsleft;
+                        echo strtotime($row["due_date"]);
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
