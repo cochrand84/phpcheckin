@@ -42,7 +42,6 @@
                         $hoursLeft = $minutesLeft / 60;
                         $daysLeft = $hoursLeft / 24;
                         echo "$daysLeft days";
-                        
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
