@@ -34,8 +34,8 @@
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php 
-                        $interval = date_diff($row["due_date"],date("Y-m-d"));
-                        echo $interval->format('%R%a days');
+                        $daysleft = abs(strtotime($row["due_date"]) - strtotime(date("Y-m-d")));
+                        echo $daysleft;
                         
                         ?>
                 </td>
