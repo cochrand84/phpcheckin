@@ -45,6 +45,6 @@
               <td><a href="view.php?rand=<?php echo $row["image4"]; ?>"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
               <td><a href="readdetails.php?editid=<?php echo $row["id"]; ?>">View</a></td>
             </tr>
-        <?php } ?>
+        <?php } echo date("Y-m-d"); ?>
         </tbody>
     </table>
