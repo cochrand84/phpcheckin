@@ -11,6 +11,7 @@
                     <th>Make</th>
                     <th>Model</th>
                     <th>Due Date</th>
+                    <th>Time Left</th>
                     <th>Status</th>
                     <th>Image 1</th>
                     <th>Image 2</th>
@@ -32,6 +33,14 @@
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
+                <td><?php 
+                        $secondsleft = $row["due_date"] - time();
+                        $daysleft = floor($secondsLeft / 60*60*24);
+                        echo $daysleft;
+                        ?> 
+
+
+                </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
               <td><a href="view.php?rand=<?php echo $row["image1"]; ?>"><img src="view.php?rand=<?php echo $row["image1"]; ?>" alt="<?php echo $row["image1"]; ?>" height="42" width="42"></a></td>
               <td><a href="view.php?rand=<?php echo $row["image2"]; ?>"><img src="view.php?rand=<?php echo $row["image2"]; ?>" alt="<?php echo $row["image2"]; ?>" height="42" width="42"></a></td>
