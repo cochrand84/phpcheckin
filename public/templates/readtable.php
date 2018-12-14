@@ -38,6 +38,7 @@
                         $daysleft = floor($secondsleft / 60*60*24);
                         $hoursleft = floor(($secondsleft - $daysleft*60*60*24) / 60*60);
                         echo "$daysleft days $hoursleft hours";
+                        echo $secondsleft;
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
