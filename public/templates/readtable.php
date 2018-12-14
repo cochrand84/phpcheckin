@@ -34,7 +34,7 @@
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php 
-                        $secondsleft = $row["due_date"] - time();
+                        $secondsleft = strtotime($row["due_date"]) - time();
                         $daysleft = floor($secondsleft / 60*60*24);
                         $hoursleft = floor(($secondsleft - $daysleft*60*60*24) / 60*60);
                         echo "$daysleft days $hoursleft hours";
