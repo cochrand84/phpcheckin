@@ -34,6 +34,7 @@
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php 
+                        $daysleft = 0;
                         $daysleft = abs(strtotime($row["due_date"]) - strtotime(date("Y-m-d")));
                         echo $daysleft;
                         
