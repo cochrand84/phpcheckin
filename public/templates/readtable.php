@@ -37,7 +37,7 @@
                         $daysleft = 0;
                         $curDate = date('Y-m-d');
                         $fromDate = $row["due_date"];
-                        $daysleft = abs(strtotime($fromDate) - strtotime($curDate));
+                        $daysleft = abs(strtotime($curDate) - strtotime($fromDate));
                         echo $daysleft;
                         echo $row["due_date"];
                         
