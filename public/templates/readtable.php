@@ -41,7 +41,7 @@
                         $minutesLeft = $secondsLeft / 60;
                         $hoursLeft = $minutesLeft / 60;
                         $daysLeft = $hoursLeft / 24;
-                        echo $daysLeft;
+                        echo "$daysLeft days";
                         
                         ?>
                 </td>
