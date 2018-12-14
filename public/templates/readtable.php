@@ -39,7 +39,6 @@
                         $fromDate = $row["due_date"];
                         $daysleft = abs(strtotime($curDate) - strtotime($fromDate));
                         echo $daysleft;
-                        echo $row["due_date"];
                         
                         ?>
                 </td>
