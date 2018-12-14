@@ -2,12 +2,12 @@
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>Check in Date</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Year</th>
                     <th>Location</th>
-                    <th>Date</th>
                     <th>Vin Number</th>
+                    <th>Year</th>                 
                     <th>Make</th>
                     <th>Model</th>
                     <th>Due Date</th>
@@ -23,12 +23,12 @@
         <?php foreach ($result as $row) { ?>
             <tr>
                 <td><?php echo escape($row["id"]); ?></td>
+                <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["date"]); ?> </td>
                 <td><?php echo escape($row["vin"]); ?> </td>
+                <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
