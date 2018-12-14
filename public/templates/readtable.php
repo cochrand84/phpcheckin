@@ -36,7 +36,7 @@
                 <td><?php 
                         $secondsleft = $row["due_date"] - time();
                         $daysleft = floor($secondsLeft / 60*60*24);
-                        echo $daysleft;
+                        echo "$daysleft days $hoursleft hours";
                         ?> 
 
 
