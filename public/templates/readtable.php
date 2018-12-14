@@ -34,9 +34,8 @@
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php 
-                        $secondsleft = $row["due_date"] - date();
-                        echo $secondsleft;
-                        echo strtotime($row["due_date"]);
+                        $daysleft = $row["due_date"] - date("Y-m-d");
+                        echo $daysleft;
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>                
@@ -46,6 +45,6 @@
               <td><a href="view.php?rand=<?php echo $row["image4"]; ?>"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
               <td><a href="readdetails.php?editid=<?php echo $row["id"]; ?>">View</a></td>
             </tr>
-        <?php echo date(); } ?>
+        <?php } ?>
         </tbody>
     </table>
