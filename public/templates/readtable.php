@@ -37,7 +37,10 @@
                         $daysleft = 0;
                         $curDate = date('Y-m-d');
                         $fromDate = $row["due_date"];
-                        $daysLeft = abs(strtotime($curDate) - strtotime($fromDate));
+                        $secondsLeft = abs(strtotime($curDate) - strtotime($fromDate));
+                        $minutesLeft = $secondsLeft / 60;
+                        $hoursLeft = $minutesLeft / 60;
+                        $daysLeft = $hoursLeft / 24;
                         echo $daysLeft;
                         
                         ?>
