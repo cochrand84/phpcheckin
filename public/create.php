@@ -145,9 +145,9 @@ if (isset($_POST['submit'])) {
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
-     
+        $vinuppercase = strtoupper($_POST['vindecoder']);
         $new_user = array(
-            "vin"                       => $_POST['vindecoder'],
+            "vin"                       => $vinuppercase,
             "firstname"                 => $_POST['firstname'],
             "lastname"                  => $_POST['lastname'],
             "email"                     => $_POST['email'],
