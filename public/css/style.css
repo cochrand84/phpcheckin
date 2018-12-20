@@ -100,3 +100,7 @@ input[type=submit] {
   background-color: #ff0000;
   color: white;
 }
+
+div.a {
+  font-size: 15px;
+}

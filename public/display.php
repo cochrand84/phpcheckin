@@ -38,7 +38,7 @@ require "templates/header.php";
 
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
-
+<div class="a">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
             <thead>
                 <tr>
@@ -95,6 +95,7 @@ require "templates/header.php";
         <?php }  ?>
         </tbody>
     </table>
+</div>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
