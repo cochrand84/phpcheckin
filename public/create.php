@@ -236,7 +236,7 @@ if (isset($_POST['submit'])) {
             <label for="phone">Phone Number</label>
         </div>
         <div class="col-75">
-            <input type="tel" name="phone" id="phone" required> 
+            <input type="tel" name="phone" id="phone"> 
         </div>
     </div>    
     <div class="row">     
