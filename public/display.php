@@ -1,7 +1,7 @@
 
 <?php
 $page = $_SERVER['PHP_SELF'];
-$sec = "300";
+$sec = "10";
 ?>
 <html>
     <head>
