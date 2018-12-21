@@ -52,6 +52,7 @@ require "templates/header.php";
                     <th>Due Date</th>
                     <th>Time Left</th>
                     <th>Status</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -77,7 +78,8 @@ require "templates/header.php";
                         echo "$daysLeft days";
                         ?>
                 </td>
-                <td><?php echo escape($row["status"]); ?> </td>                
+                <td><?php echo escape($row["status"]); ?> </td>  
+                <td><?php echo excape($row["description"]); ?> </td>              
             </tr>
         <?php }  ?>
         </tbody>
