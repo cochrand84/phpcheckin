@@ -79,7 +79,7 @@ require "templates/header.php";
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>  
-                <td><?php echo excape($row["description"]); ?> </td>              
+                <td><?php echo escape($row["description"]); ?> </td>              
             </tr>
         <?php }  ?>
         </tbody>
