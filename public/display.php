@@ -37,7 +37,6 @@ require "templates/header.php";
 <?php  
 
     if ($result && $statement->rowCount() > 0) { ?>
-        <h2>Results</h2>
 <div class="a">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
             <thead>
@@ -47,7 +46,6 @@ require "templates/header.php";
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Location</th>
-                    <th>Vin Number</th>
                     <th>Year</th>                 
                     <th>Make</th>
                     <th>Model</th>
@@ -64,7 +62,6 @@ require "templates/header.php";
                 <td><?php echo escape($row["firstname"]); ?></td>
                 <td><?php echo escape($row["lastname"]); ?></td>
                 <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["vin"]); ?> </td>
                 <td><?php echo escape($row["year"]); ?></td>
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
