@@ -85,7 +85,7 @@ require "templates/header.php";
                         $hoursLeft = $minutesLeft / 60;
                         $daysLeft = $hoursLeft / 24;
                         echo '<p style="color:$dayscolor"> "$daysLeft days"';
-                        
+                        ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>  
                 <td><?php echo escape($row["description"]); ?> </td>              
