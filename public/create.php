@@ -276,6 +276,7 @@ if (isset($_POST['submit'])) {
                     <option value="Awaiting Deposit">Awaiting Deposit</option>
                     <option value="Ready For Pickup">Ready For Pickup</option>
                     <option value="Complete">Complete</option>
+                    <option value="On Lift">On Lift</option>
             </select><br />
         </div>
     </div>    

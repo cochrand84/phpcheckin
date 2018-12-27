@@ -71,11 +71,20 @@ require "templates/header.php";
                         $daysleft = 0;
                         $curDate = date('Y-m-d');
                         $fromDate = $row["due_date"];
+
+                        if($curDate > $fromDate){
+                        	$dayscolor = "red";
+                        }
+                        else{
+                        	$dayscolor = "black";
+                        }
+
+
                         $secondsLeft = abs(strtotime($curDate) - strtotime($fromDate));
                         $minutesLeft = $secondsLeft / 60;
                         $hoursLeft = $minutesLeft / 60;
                         $daysLeft = $hoursLeft / 24;
-                        echo "$daysLeft days";
+                        echo "<p style="color:$dayscolor; "$daysLeft days";
                         ?>
                 </td>
                 <td><?php echo escape($row["status"]); ?> </td>  
