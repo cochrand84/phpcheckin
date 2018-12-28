@@ -32,7 +32,9 @@ require "templates/header.php";
         $result = $statement->fetchAll();
 
         $statement2 = $connection->prepare($sql2);
+
         $statement2->execute();
+        $result2 = $statement2->fetchAll();
 
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
@@ -42,7 +44,7 @@ require "templates/header.php";
 
         
 <?php  
-	echo $statement2[status];
+	echo $result2[status];
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
