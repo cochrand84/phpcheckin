@@ -44,7 +44,7 @@ require "templates/header.php";
 
         
 <?php  
-	echo "hello"
+	echo "hello";
 	echo $result2[status];
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
