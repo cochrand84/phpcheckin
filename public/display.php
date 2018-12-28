@@ -19,6 +19,7 @@ require "templates/header.php";
         $connection = new PDO($dsn, $username, $password, $options);
 
         $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql2 = "SELECT COUNT(status) FROM tickets WHERE NOT (status = 'complete')";
 
         $location = $_POST['location'];
 
@@ -26,7 +27,13 @@ require "templates/header.php";
         $statement->bindParam(':location', $location, PDO::PARAM_STR);
         $statement->execute();
 
+
+
         $result = $statement->fetchAll();
+
+        $statement2 = $connection->prepare($sql2);
+        $statement2->execute();
+
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -35,7 +42,7 @@ require "templates/header.php";
 
         
 <?php  
-
+	echo $statement2;
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
