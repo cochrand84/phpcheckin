@@ -8,8 +8,8 @@ $sec = "60";
     <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body>
+    	<link rel="stylesheet" href="css/style.css">
 <?php
-require "templates/header.php";
 
     try  {
         
@@ -45,7 +45,7 @@ require "templates/header.php";
         
 <?php  
 	echo "hello";
-	echo $result2[status];
+	echo $result2[count];
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
