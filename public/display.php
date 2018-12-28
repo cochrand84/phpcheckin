@@ -42,7 +42,7 @@ require "templates/header.php";
 
         
 <?php  
-	echo $statement2;
+	
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
