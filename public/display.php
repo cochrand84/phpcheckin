@@ -42,8 +42,8 @@ require "templates/header.php";
 
         
 <?php  
-	$count = mysql_fetch_array($statement2);
-	echo $count[0];
+	
+	echo $statement2[0];
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
                <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
