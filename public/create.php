@@ -250,6 +250,7 @@ if (isset($_POST['submit'])) {
                     <option value="Quonset Hut">Quonset Hut</option>
                     <option value="Shop">Shop</option>
                     <option value="At Harley">At Harley</option>
+                    <option value="Audio Bay">Audio Bay</option>
             </select><br />
         </div>
     </div>    
@@ -277,6 +278,8 @@ if (isset($_POST['submit'])) {
                     <option value="Ready For Pickup">Ready For Pickup</option>
                     <option value="Complete">Complete</option>
                     <option value="On Lift">On Lift</option>
+                    <option value="Waiting on Test Ride">Waiting on Test Ride</option>
+                    <option value="Waiting on Quote">Waiting on Quote</option>
             </select><br />
         </div>
     </div>    

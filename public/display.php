@@ -79,7 +79,6 @@ require "templates/header.php";
                         	$dayscolor = "black";
                         }
 
-
                         $secondsLeft = abs(strtotime($curDate) - strtotime($fromDate));
                         $minutesLeft = $secondsLeft / 60;
                         $hoursLeft = $minutesLeft / 60;
