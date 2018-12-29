@@ -32,7 +32,7 @@ $sec = "60";
         $result = $statement->fetchAll();
 
         $statement2 = $connection->prepare($sql2);
-
+        $statement2->bindParam(':status', status, PDO::PARAM_STR);
         $statement2->execute();
         $result2 = $statement2->fetchAll();
 
