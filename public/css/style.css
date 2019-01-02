@@ -113,5 +113,8 @@ h1 {
 div.displaytopbar {
   font-size: xx-small;
   width: 100%;
-  background-color: red;
+  background: red;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
