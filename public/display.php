@@ -19,20 +19,27 @@ $sec = "60";
         $connection = new PDO($dsn, $username, $password, $options);
 
         $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
-        $sql2 = "SELECT COUNT(*) FROM tickets WHERE NOT (status = 'complete')";
-
         $location = $_POST['location'];
-
         $statement = $connection->prepare($sql);
         $statement->bindParam(':location', $location, PDO::PARAM_STR);
         $statement->execute();
         $result = $statement->fetchAll();
 
 
-
+        $sql2 = "SELECT COUNT(*) FROM tickets WHERE NOT (status = 'complete')";
         $statement2 = $connection->prepare($sql2);
         $statement2->execute();
         $result2 = $statement2->fetchColumn();
+
+        $sql3 = "SELECT COUNT(*) FROM tickets WHERE (status = 'In Paint')";
+        $statement3 = $connection->prepare($sql3);
+        $statement3->execute();
+        $result3 = $statement3->fetchColumn();
+
+        $sql4 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Waiting on Parts')";
+        $statement4 = $connection->prepare($sql4);
+        $statement4->execute();
+        $result4 = $statement4->fetchColumn();
 
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
@@ -44,13 +51,21 @@ $sec = "60";
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
             <thead>
                 <tr>    
-                <th>Total number of bike Not Complete:</th>
+                <th>Total number of bikes Not Complete:</th>
+                <th>number of bikes In Paint:</th>
+                <th>number of bikes Waiting on Parts:</th>
                 </tr>
             </thead>
             <tbody>
             	<tr>
             		<td>
             			<?php echo $result2; ?>
+            		</td>
+            		<td>
+            			<?php echo $result3; ?>
+            		</td>
+            		 <td>
+            			<?php echo $result4; ?>
             		</td>
             	</tr>
             	</tbody>
