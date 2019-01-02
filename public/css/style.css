@@ -110,10 +110,10 @@ h1 {
   color: red;
 }
 
-div.displaytopbar {
+.displaytopbar {
   font-size: xx-small;
   width: 100%;
-  background: red;
+  background-color: red;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
