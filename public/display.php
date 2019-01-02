@@ -32,7 +32,7 @@ $sec = "60";
 
         $statement2 = $connection->prepare($sql2);
         $statement2->execute();
-        $result2 = print_r($statement2->fetchAll());
+        $result2 = $statement2->fetchColumn();
 
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
@@ -42,7 +42,7 @@ $sec = "60";
 
         
 <?php  
-	print_r($statement2->fetchAll());
+	echo $result2;
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
