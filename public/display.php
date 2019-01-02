@@ -19,7 +19,7 @@ $sec = "60";
         $connection = new PDO($dsn, $username, $password, $options);
 
         $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
-        $sql2 = "SELECT COUNT(status) FROM tickets WHERE NOT (status = 'complete')";
+        $sql2 = "SELECT COUNT(*) FROM tickets WHERE NOT (status = 'complete')";
 
         $location = $_POST['location'];
 
