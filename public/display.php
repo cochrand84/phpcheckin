@@ -40,12 +40,23 @@ $sec = "60";
 
 ?>
 
-<div class="displaytopbar">        
-Total number of bike Not Complete: 
-<?php  
-	echo $result2;
-	?>
-</div>
+<div class="displaytable">
+	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
+            <thead>
+                <tr>    
+                <th>Total number of bike Not Complete:</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+            		<td>
+            			<?php echo $result2; ?>
+            		</td>
+            	</tr>
+            	</tbody>
+            	</table>
+            	</div>
+<?php echo $result2; ?>
 	<?php 
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">

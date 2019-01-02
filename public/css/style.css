@@ -109,11 +109,3 @@ div.displaytable {
 h1 {
   color: red;
 }
-
-.displaytopbar {
-  width: 100%;
-  background-color: red;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
