@@ -41,9 +41,9 @@ $sec = "60";
 ?>
 
 <div class="displaytopbar">        
+Total number of bike Not Complete: 
 <?php  
 	echo $result2;
-
 	?>
 </div>
 	<?php 
