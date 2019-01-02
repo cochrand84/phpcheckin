@@ -56,7 +56,6 @@ $sec = "60";
             	</tbody>
             	</table>
             	</div>
-<?php echo $result2; ?>
 	<?php 
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
