@@ -27,11 +27,10 @@ $sec = "60";
         $statement->bindParam(':location', $location, PDO::PARAM_STR);
         $statement->execute();
 
-
-
         $result = $statement->fetchAll();
 
-        $statement2 = $dbh->prepare($sql2);
+
+        $statement2 = $connection->prepare($sql2);
         $statement2->execute();
         $result2 = print_r($statement2->fetchAll());
 
