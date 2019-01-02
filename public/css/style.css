@@ -109,3 +109,9 @@ div.displaytable {
 h1 {
   color: red;
 }
+
+div.displaytopbar {
+  font-size: xx-small;
+  width: 100%;
+  background-color: red;
+}
