@@ -26,8 +26,8 @@ $sec = "60";
         $statement = $connection->prepare($sql);
         $statement->bindParam(':location', $location, PDO::PARAM_STR);
         $statement->execute();
-
         $result = $statement->fetchAll();
+
 
 
         $statement2 = $connection->prepare($sql2);
@@ -42,7 +42,7 @@ $sec = "60";
 
         
 <?php  
-	echo $result2;
+	print_r($statement2->fetchAll());
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
