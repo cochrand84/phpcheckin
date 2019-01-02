@@ -40,9 +40,13 @@ $sec = "60";
 
 ?>
 
-        
+<div class="displaytopbar">        
 <?php  
 	echo $result2;
+
+	?>
+</div>
+	<?php 
     if ($result && $statement->rowCount() > 0) { ?>
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
