@@ -51,6 +51,11 @@ $sec = "60";
         $statement6->execute();
         $result6 = $statement6->fetchColumn();
 
+        $sql7 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Ready for Pickup')";
+        $statement7 = $connection->prepare($sql7);
+        $statement7->execute();
+        $result7 = $statement7->fetchColumn();
+
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -62,10 +67,11 @@ $sec = "60";
             <thead>
                 <tr>    
                 <th>Total number of bikes Not Complete:</th>
-                <th>number of bikes In Paint:</th>
-                <th>number of bikes Waiting on Parts:</th>
-                <th>number of bikes On Lift:</th>
-                <th>number of bikes Checked In:</th>
+                <th>Number of bikes In Paint:</th>
+                <th>Number of bikes Waiting on Parts:</th>
+                <th>Number of bikes On Lift:</th>
+                <th>Number of bikes Checked In:</th>
+                <th>Number Ready for Pickup:</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,6 +90,9 @@ $sec = "60";
             		</td>
             		  <td>
             			<?php echo $result6; ?>
+            		</td>
+            		  <td>
+            			<?php echo $result7; ?>
             		</td>
             	</tr>
             	</tbody>
