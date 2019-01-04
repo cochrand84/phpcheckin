@@ -7,12 +7,14 @@
  */
 
 require "templates/header.php";
+
 $_GET['editid'];
 $incommingid = $_GET['editid'];
 
 try  {
         
         require "../config.php"; 
+        require "../common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -31,7 +33,8 @@ try  {
 
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
-                 echo $row["id"]; 
+                 $editid = $row["id"]; 
+                 $editvin = $row["vin"];
                  echo $row["firstname"]; 
                  echo $row["lastname"]; 
                  echo $row["email"]; 
@@ -46,7 +49,6 @@ if ($result && $statement->rowCount() > 0) {
      } 
 
 if (isset($_POST['submitedit'])) {
-    require "../config.php";
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
@@ -85,10 +87,18 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-25">
+            <label for="vin">Ticket ID</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="ticketid" value="<?php echo $editid; ?>"" name="ticketid" maxlength="255" required/>
+        </div>
+    </div>   
+    <div class="row">
+        <div class="col-25">
             <label for="vin">VIN</label>
         </div>
         <div class="col-75">
-            <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
+            <input type="text" id="vindecoder" value="<?php echo $editvin; ?>"" name="vindecoder" maxlength="17" required/>
         </div>
     </div>    
     <div class="row">    
