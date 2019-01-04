@@ -174,7 +174,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-25">
-                              <a href="view.php?rand=$editimage1"><img src="view.php?rand=$editimage1" alt="<?php echo $editimage1; ?>" height="42" width="42"></a>
+                              <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="42" width="42"></a>
         </div>
         <div class="col-75">
             <input type="file" name="image1" id="image1" required/><br />
