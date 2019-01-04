@@ -35,13 +35,13 @@ if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
                  $editid = $row["id"]; 
                  $editvin = $row["vin"];
-                 echo $row["firstname"]; 
-                 echo $row["lastname"]; 
-                 echo $row["email"]; 
-                 echo $row["year"]; 
-                 echo $row["location"]; 
-                 echo $row["date"]; 
-                 echo $row["status"];
+                 $editfirstname $row["firstname"]; 
+                 $editlastname $row["lastname"]; 
+                 $editemail $row["email"]; 
+                 $edityear $row["year"]; 
+                 $editlocation $row["location"]; 
+                 $editdate $row["date"]; 
+                 $editstatus $row["status"];
             
          } 
         } else { 
@@ -106,7 +106,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="firstname">First Name</label>
         </div>
         <div class="col-75">
-            <input type="text" name="firstname" id="firstname" required>
+            <input type="text" name="firstname" id="firstname" value="<?php echo $editfirstname; ?>" required>
         </div>
     </div>    
     <div class="row">     
@@ -114,7 +114,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="lastname">Last Name</label>
         </div>
         <div class="col-75">
-            <input type="text" name="lastname" id="lastname" required>
+            <input type="text" name="lastname" id="lastname" value="<?php echo $editlastname; ?>"required>
         </div>
     </div>    
     <div class="row">     
@@ -122,7 +122,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="email">Email Address</label>
         </div>
         <div class="col-75">
-            <input type="text" name="email" id="email" required>
+            <input type="text" name="email" id="email" value="<?php echo $editemail; ?>">
         </div>
     </div>    
     <div class="row">     
@@ -138,7 +138,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="location">Location</label>
         </div>
         <div class="col-75">
-            <input type="text" name="location" id="location" required>
+            <input type="text" name="location" id="location" value="<?php echo $editlocation; ?>" >
         </div>
     </div>    
     <div class="row">     
