@@ -223,7 +223,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for ="description">Description of Issue/Upgrade</label>
         </div>
         <div class="col-75">
-            <textarea name="description" id="description" rows="10" cols="80" value="<?php echo $editdescription; ?>" required></textarea><br />
+            <textarea name="description" id="description" rows="10" cols="80" required><?php echo $editdescription; ?></textarea><br />
         </div>
     </div>
     <div class="row">
