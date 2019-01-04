@@ -44,9 +44,9 @@ if ($result && $statement->rowCount() > 0) {
                  $editstatus = $row["status"];
                  $editphone = $row["phone"];
                  $editimage1 =  $row["image1"];
-                 $editimage1 =  $row["image2"];
-                 $editimage1 =  $row["image3"];
-                 $editimage1 =  $row["image4"];
+                 $editimage2 =  $row["image2"];
+                 $editimage3 =  $row["image3"];
+                 $editimage4 =  $row["image4"];
             
          } 
         } else { 
