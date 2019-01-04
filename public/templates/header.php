@@ -11,6 +11,7 @@
 	<title>Area 51 Check-in App</title>
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" herf="lightbox/css/lightbox.css">
 </head>
 
 <body>
