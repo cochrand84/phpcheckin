@@ -44,6 +44,9 @@ if ($result && $statement->rowCount() > 0) {
                  $editstatus = $row["status"];
                  $editphone = $row["phone"];
                  $editimage1 =  $row["image1"];
+                 $editimage1 =  $row["image2"];
+                 $editimage1 =  $row["image3"];
+                 $editimage1 =  $row["image4"];
             
          } 
         } else { 
@@ -174,33 +177,42 @@ if (isset($_POST['submitedit']) && $statement) { ?>
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="42" width="42"></a>
+            <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
             <input type="file" name="image1" id="image1" required/><br />
         </div>
     </div>    
-    <div class="row">     
+<div class="row">     
         <div class="col-25">
-                <label for="image2">Image 2</label>
+                <label for="image1">Image 2</label>
         </div>
-        <div class="col-75">
+        <div class="col-25">
+            <a href="view.php?rand=<?php echo $editimage2; ?>"><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></a>
+        </div>
+        <div class="col-25">
             <input type="file" name="image2" id="image2" required/><br />
         </div>
-    </div>    
+    </div>
     <div class="row">     
         <div class="col-25">
                 <label for="image3">Image 3</label>
         </div>
-        <div class="col-75">
+        <div class="col-25">
+            <a href="view.php?rand=<?php echo $editimage3; ?>"><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></a>
+        </div>
+        <div class="col-25">
             <input type="file" name="image3" id="image3" required/><br />
         </div>
-    </div>    
+    </div>
     <div class="row">     
         <div class="col-25">
                 <label for="image4">Image 4</label>
         </div>
-        <div class="col-75">
+        <div class="col-25">
+            <a href="view.php?rand=<?php echo $editimage4; ?>"><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></a>
+        </div>
+        <div class="col-25">
             <input type="file" name="image4" id="image4" required/><br />
         </div>
     </div>
