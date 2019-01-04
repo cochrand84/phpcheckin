@@ -157,7 +157,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             <select name="status" required>
-            <option value="<?php echo $editstatus; ?>" selected>Select Status</option>
+            <option value="<?php echo $editstatus; ?>" selected><?php echo $editstatus; ?></option>
                     <option value="Checked In">Checked In</option>
                     <option value="Waiting on Parts">Waiting on Parts</option>
                     <option value="In Paint">In Paint</option>
