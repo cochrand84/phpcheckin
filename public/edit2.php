@@ -47,6 +47,7 @@ if ($result && $statement->rowCount() > 0) {
                  $editimage2 =  $row["image2"];
                  $editimage3 =  $row["image3"];
                  $editimage4 =  $row["image4"];
+                 $editduedate = $row["due_date"]
             
          } 
         } else { 
@@ -151,7 +152,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="due_date">Due Date</label>
         </div>
         <div class="col-75">
-            <input type="date" name="due_date" value="" min="<?php echo date("Y-m-d"); ?>" required>
+            <input type="date" name="due_date" value="<?php echo $editvin; ?>" required>
         </div>
     </div>    
     <div class="row">     
@@ -180,7 +181,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image1" id="image1" required/><br />
+            <input type="file" name="image1" id="image1" /><br />
         </div>
     </div>    
 <div class="row">     
@@ -191,7 +192,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage2; ?>"><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image2" id="image2" required/><br />
+            <input type="file" name="image2" id="image2" /><br />
         </div>
     </div>
     <div class="row">     
@@ -202,7 +203,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage3; ?>"><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image3" id="image3" required/><br />
+            <input type="file" name="image3" id="image3" /><br />
         </div>
     </div>
     <div class="row">     
@@ -213,7 +214,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage4; ?>"><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image4" id="image4" required/><br />
+            <input type="file" name="image4" id="image4" /><br />
         </div>
     </div>
     <div class="row">
