@@ -42,6 +42,8 @@ if ($result && $statement->rowCount() > 0) {
                  $editlocation = $row["location"]; 
                  $editdate = $row["date"]; 
                  $editstatus = $row["status"];
+                 $editphone = $row["phone"];
+                 $editimage1 =  $row["image1"];
             
          } 
         } else { 
@@ -130,7 +132,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="phone">Phone Number</label>
         </div>
         <div class="col-75">
-            <input type="text" name="phone" id="phone" required> 
+            <input type="text" name="phone" id="phone" value="<?php echo $editphone; ?>" required> 
         </div>
     </div>    
     <div class="row">     
@@ -154,8 +156,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="status">Status</label>
         </div>
         <div class="col-75">
-            <select name="status"required>
-            <option value="selectstatus" selected>Select Status</option>
+            <select name="status" required>
+            <option value="<?php echo $editstatus; ?>" selected>Select Status</option>
                     <option value="Checked In">Checked In</option>
                     <option value="Waiting on Parts">Waiting on Parts</option>
                     <option value="In Paint">In Paint</option>
@@ -170,6 +172,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     <div class="row">     
         <div class="col-25">
                 <label for="image1">Image 1</label>
+        </div>
+        <div class="col-25">
+                              <a href="view.php?rand=$editimage1"><img src="view.php?rand=$editimage1" alt="<?php echo $editimage1; ?>" height="42" width="42"></a>
         </div>
         <div class="col-75">
             <input type="file" name="image1" id="image1" required/><br />
