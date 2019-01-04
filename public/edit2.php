@@ -151,8 +151,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-25">
             <label for="due_date">Due Date</label>
         </div>
-        <div class="col-75">
-            <input type="date" name="due_date" value="<?php echo $editvin; ?>" required>
+        <div class="col-25">
+            <input type="date" name="due_date" value="<?php echo $editduedate; ?>" required>
         </div>
     </div>    
     <div class="row">     
