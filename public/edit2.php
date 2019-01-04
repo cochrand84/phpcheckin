@@ -48,6 +48,7 @@ if ($result && $statement->rowCount() > 0) {
                  $editimage3 =  $row["image3"];
                  $editimage4 =  $row["image4"];
                  $editduedate = $row["due_date"];
+                 $editdescription = $row["description"];
             
          } 
         } else { 
@@ -215,6 +216,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-25">
             <input type="file" name="image4" id="image4" /><br />
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-25">
+            <label for ="description">Description of Issue/Upgrade</label>
+        </div>
+        <div class="col-75">
+            <textarea name="description" id="description" rows="10" cols="80" value="<?php echo $editdescription; ?>" required></textarea><br />
         </div>
     </div>
     <div class="row">
