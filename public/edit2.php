@@ -35,13 +35,13 @@ if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
                  $editid = $row["id"]; 
                  $editvin = $row["vin"];
-                 $editfirstname $row["firstname"]; 
-                 $editlastname $row["lastname"]; 
-                 $editemail $row["email"]; 
-                 $edityear $row["year"]; 
-                 $editlocation $row["location"]; 
-                 $editdate $row["date"]; 
-                 $editstatus $row["status"];
+                 $editfirstname = $row["firstname"]; 
+                 $editlastname = $row["lastname"]; 
+                 $editemail = $row["email"]; 
+                 $edityear = $row["year"]; 
+                 $editlocation = $row["location"]; 
+                 $editdate = $row["date"]; 
+                 $editstatus = $row["status"];
             
          } 
         } else { 
