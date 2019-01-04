@@ -90,7 +90,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="vin">Ticket ID</label>
         </div>
         <div class="col-75">
-            <input type="text" id="ticketid" value="<?php echo $editid; ?>"" name="ticketid" maxlength="255" required/>
+            <input type="text" id="ticketid" value="<?php echo $editid; ?>" name="ticketid" maxlength="255" required/>
         </div>
     </div>   
     <div class="row">
@@ -98,7 +98,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="vin">VIN</label>
         </div>
         <div class="col-75">
-            <input type="text" id="vindecoder" value="<?php echo $editvin; ?>"" name="vindecoder" maxlength="17" required/>
+            <input type="text" id="vin" value="<?php echo $editvin; ?>" name="vin" maxlength="17" required/>
         </div>
     </div>    
     <div class="row">    
