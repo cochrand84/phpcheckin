@@ -47,7 +47,7 @@ if ($result && $statement->rowCount() > 0) {
                  $editimage2 =  $row["image2"];
                  $editimage3 =  $row["image3"];
                  $editimage4 =  $row["image4"];
-                 $editduedate = $row["due_date"]
+                 $editduedate = $row["due_date"];
             
          } 
         } else { 
