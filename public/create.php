@@ -288,7 +288,7 @@ if (isset($_POST['submit'])) {
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-75">
-            <input type="file" name="image1" id="image1" required/><br />
+            <input type="file" name="image1" id="image1" /><br />
         </div>
     </div>    
     <div class="row">     
@@ -296,7 +296,7 @@ if (isset($_POST['submit'])) {
                 <label for="image2">Image 2</label>
         </div>
         <div class="col-75">
-            <input type="file" name="image2" id="image2" required/><br />
+            <input type="file" name="image2" id="image2" /><br />
         </div>
     </div>    
     <div class="row">     
@@ -304,7 +304,7 @@ if (isset($_POST['submit'])) {
                 <label for="image3">Image 3</label>
         </div>
         <div class="col-75">
-            <input type="file" name="image3" id="image3" required/><br />
+            <input type="file" name="image3" id="image3" /><br />
         </div>
     </div>    
     <div class="row">     
@@ -312,7 +312,7 @@ if (isset($_POST['submit'])) {
                 <label for="image4">Image 4</label>
         </div>
         <div class="col-75">
-            <input type="file" name="image4" id="image4" required/><br />
+            <input type="file" name="image4" id="image4" /><br />
         </div>
     </div>
     <div class="row">
