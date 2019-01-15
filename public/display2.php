@@ -1,11 +1,8 @@
 
-<?php
-$page = $_SERVER['PHP_SELF'];
-$sec = "60";
-?>
+
 <html>
     <head>
-    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
+    
     </head>
     <body>
     	<link rel="stylesheet" href="css/style.css">
@@ -64,6 +61,7 @@ $sec = "60";
 
 	<?php 
     if ($result && $statement->rowCount() > 0) { ?>
+
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
             <thead>

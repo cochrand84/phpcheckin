@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-<title>Dashboard Example</title>
+<title>PHPCheckin</title>
 <style type="text/css">
 body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
 iframe { border: none; }
@@ -12,9 +12,9 @@ var Dash = {
     nextIndex: 0,
 
     dashboards: [
-        {url: "http://checkin.area51custom.com/public/display1.php", time: 10},
-        {url: "http://checkin.area51custom.com/public/display2.php", time: 10},
-        {url: "http://checkin.area51custom.com/public/display3.php", time: 10}
+        {url: "http://checkin.area51custom.com/public/display1.php", time: 15},
+        {url: "http://checkin.area51custom.com/public/display2.php", time: 15},
+        {url: "http://checkin.area51custom.com/public/display3.php", time: 15}
     ],
 
     display: function()

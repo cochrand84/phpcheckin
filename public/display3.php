@@ -1,11 +1,7 @@
 
-<?php
-$page = $_SERVER['PHP_SELF'];
-$sec = "60";
-?>
+
 <html>
     <head>
-    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     <body>
     	<link rel="stylesheet" href="css/style.css">
@@ -18,15 +14,7 @@ $sec = "60";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
-        $location = $_POST['location'];
-        $statement = $connection->prepare($sql);
-        $statement->bindParam(':location', $location, PDO::PARAM_STR);
-        $statement->execute();
-        $result = $statement->fetchAll();
-
-
-        $sql2 = "SELECT COUNT(*) FROM tickets WHERE NOT (status = 'complete')";
+        $sql2 = "SELECT COUNT(*) FROM tickets WHERE NOT (status = 'Complete')";
         $statement2 = $connection->prepare($sql2);
         $statement2->execute();
         $result2 = $statement2->fetchColumn();
@@ -56,12 +44,43 @@ $sec = "60";
         $statement7->execute();
         $result7 = $statement7->fetchColumn();
 
+
+        $sql8 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Waiting on Test Ride')";
+        $statement8 = $connection->prepare($sql8);
+        $statement8->execute();
+        $result8 = $statement8->fetchColumn();
+
+        $sql9 = "SELECT COUNT(*) FROM tickets WHERE (status = 'In Service')";
+        $statement9 = $connection->prepare($sql9);
+        $statement9->execute();
+        $result9 = $statement9->fetchColumn();
+
+        $sql10 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Awaiting Deposit')";
+        $statement10 = $connection->prepare($sql10);
+        $statement10->execute();
+        $result10 = $statement10->fetchColumn();
+
+        $sql11 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Waiting on Lift')";
+        $statement11 = $connection->prepare($sql11);
+        $statement11->execute();
+        $result11 = $statement11->fetchColumn();
+
+        $sql12 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Complete')";
+        $statement12 = $connection->prepare($sql12);
+        $statement12->execute();
+        $result12 = $statement12->fetchColumn();
+
+        $sql13 = "SELECT COUNT(*) FROM tickets WHERE (status = 'Waiting on Quote')";
+        $statement13 = $connection->prepare($sql13);
+        $statement13->execute();
+        $result13 = $statement13->fetchColumn();
+
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 
 ?>
-
+<h1>Overview</h1>
 <div class="displaytable">
 	        <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
             <thead>
@@ -98,6 +117,42 @@ $sec = "60";
             	</tbody>
             	</table>
             	</div>
+<div class="displaytable">
+            <table id="ticketstable" style="border-style:solid; border-width:2px; border-color: #c3d2d9;" cellspacing="0">
+            <thead>
+                <tr>    
+                <th>Number of bikes Waiting on Test Ride:</th>
+                <th>Number of bikes In Service:</th>
+                <th>Number of bikes Awaiting Deposit:</th>
+                <th>Number of bikes Waiting on Lift:</th>
+                <th>Number of bikes Complete:</th>
+                <th>Number of bikes Waiting on Quote:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <?php echo $result8; ?>
+                    </td>
+                    <td>
+                        <?php echo $result9; ?>
+                    </td>
+                     <td>
+                        <?php echo $result10; ?>
+                    </td>
+                     <td>
+                        <?php echo $result11; ?>
+                    </td>
+                      <td>
+                        <?php echo $result12; ?>
+                    </td>
+                      <td>
+                        <?php echo $result13; ?>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
 	<?php 
     if ($result && $statement->rowCount() > 0) { ?>
 
