@@ -154,11 +154,11 @@
                 </table>
                 </div>
 	<?php 
-    if ($result && $statement->rowCount() > 0) { ?>
+    
 
 
-    <?php } else { ?>
-        <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
-    <?php } 
+    
+        
+    
 
 ?>
