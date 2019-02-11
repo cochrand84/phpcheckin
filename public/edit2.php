@@ -64,7 +64,7 @@ if (isset($_POST['submitedit'])) {
             $editedfirstname                = $_POST['firstname'];
             $editedphone                    = $_POST['phone'];
 
-         $sql = "UPDATE tickets SET vin = $editedvin, firstname = $editedfirstname, phone = $editedphone WHERE id = $editid";
+         $sql = "UPDATE tickets ". "SET vin = $editedvin, firstname = $editedfirstname, phone = $editedphone ". "WHERE id = $editid";
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
