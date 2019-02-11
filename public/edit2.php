@@ -60,6 +60,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editfullaudiosystem            = $row['fullaudiosystem'];
                     $editaudioupgrade               = $row['audioupgrade'];
 
+
+                    $oilchangechecked = "";
                     if ($editoilchange = "true"){
                         $oilchangechecked = "checked";
                     } else {
