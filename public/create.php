@@ -46,12 +46,7 @@ if (isset($_POST['submit'])) {
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image1));   
-
-$upload_image=$_FILES["image1"][ "tmp_name" ];
-$folder="/images/";
-move_uploaded_file($_FILES["image1"]["tmp_name"], "$folder".$_FILES["myimage"]["tmp_name"]);
-
+        $imgContent = addslashes(file_get_contents($image1));      
 
         $db = new mysqli($host, $username, $password, $dbname);
         
@@ -65,7 +60,7 @@ move_uploaded_file($_FILES["image1"]["tmp_name"], "$folder".$_FILES["myimage"]["
 
         $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
         if($insert){
-            $insert_path="INSERT INTO image_table VALUES('$folder','$upload_image')";
+            
         }else{
             echo "File upload failed, please try again.";
         } 
