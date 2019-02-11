@@ -106,6 +106,7 @@ if (isset($_POST['submitedit'])) {
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
+        echo "<meta http-equiv='refresh' content='0'>";
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
