@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
         $imgContent = addslashes(file_get_contents($image1));   
 
 $upload_image=$_FILES["image1"][ "tmp_name" ];
-$folder="../images/";
+$folder="/images/";
 move_uploaded_file($_FILES["image1"]["tmp_name"], "$folder".$_FILES["myimage"]["tmp_name"]);
 
 
