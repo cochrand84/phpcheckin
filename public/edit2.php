@@ -220,7 +220,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             <select name="location" id="location" required>
-            <option value="<?php echo $editlocation; ?>" selected>Select Location</option>
+            <option value="<?php echo $editlocation; ?>" selected><?php echo $editlocation; ?></option>
                     <option value="Out Front">Out Front</option>
                     <option value="Quonset Hut">Quonset Hut</option>
                     <option value="Shop">Shop</option>
