@@ -33,23 +33,32 @@ try  {
 
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
-                 $editid = $row["id"]; 
-                 $editvin = $row["vin"];
-                 $editfirstname = $row["firstname"]; 
-                 $editlastname = $row["lastname"]; 
-                 $editemail = $row["email"]; 
-                 $edityear = $row["year"]; 
-                 $editlocation = $row["location"]; 
-                 $editdate = $row["date"]; 
-                 $editstatus = $row["status"];
-                 $editphone = $row["phone"];
-                 $editimage1 =  $row["image1"];
-                 $editimage2 =  $row["image2"];
-                 $editimage3 =  $row["image3"];
-                 $editimage4 =  $row["image4"];
-                 $editduedate = $row["due_date"];
-                 $editdescription = $row["description"];
-            
+                    $editid                         = $row["id"]; 
+                    $editvin                        = $row["vin"];
+                    $editfirstname                  = $row["firstname"]; 
+                    $editlastname                   = $row["lastname"]; 
+                    $editemail                      = $row["email"]; 
+                    $edityear                       = $row["year"]; 
+                    $editlocation                   = $row["location"]; 
+                    $editdate                       = $row["date"]; 
+                    $editstatus                     = $row["status"];
+                    $editphone                      = $row["phone"];
+                    $editimage1                     = $row["image1"];
+                    $editimage2                     = $row["image2"];
+                    $editimage3                     = $row["image3"];
+                    $editimage4                     = $row["image4"];
+                    $editduedate                    = $row["due_date"];
+                    $editdescription                = $row["description"];
+                    $editoilchange                  = $row['oilchange'];
+                    $editfullservice                = $row['fullservice'];
+                    $editotherservice               = $row['otherservice'];
+                    $editotherservicedescription    = $row['otherservicedescription'];
+                    $editfronttirechange            = $row['fronttirechange'];
+                    $editreartirechange             = $row['reartirechange'];
+                    $editaudiotroubleshooting       = $row['audiotroubleshooting'];
+                    $editotheraudiodescription      = $row['otheraudiodescription'];
+                    $editfullaudiosystem            = $row['fullaudiosystem'];
+                    $editaudioupgrade               = $row['audioupgrade'];
          } 
         } else { 
         echo $_POST['status'];
@@ -60,14 +69,32 @@ if (isset($_POST['submitedit'])) {
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
-            $editedvin                      = $vinuppercase;
-            $editedfirstname                = $_POST['firstname'];
-            $editedlastname                 = $_POST['lastname'];
-            $editedemail                    = $_POST['email'];
-            $editedphone                    = $_POST['phone'];
+            $editedvin                              = $_POST['vin'];
+            $editedfirstname                        = $_POST['firstname'];
+            $editedlastname                         = $_POST['lastname'];
+            $editedemail                            = $_POST['email'];
+            $editedphone                            = $_POST['phone'];
+            $editedyear                             = $_POST['ModelYear'],
+            $editedlocation                         = $_POST['location'],
+            $editedstatus                           = $_POST['status'],
+            $editedmake                             = $_POST['Make'],
+            $editedmodel                            = $_POST['Model'],
+            $editeddue_date                         = $_POST['due_date'],
+            $editeddescription                      = $_POST['description'],
+            $editedoilchange                        = $_POST['oilchange'],
+            $editedfullservice                      = $_POST['fullservice'],
+            $editedotherservice                     = $_POST['otherservice'],
+            $editedotherservicedescription          = $_POST['otherservicedescription'],
+            $editedfronttirechange                  = $_POST['fronttirechange'],
+            $editedreartirechange                   = $_POST['reartirechange'],
+            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'],
+            $editedotheraudiodescription            = $_POST['otheraudiodescription'],
+            $editedfullaudiosystem                  = $_POST['fullaudiosystem'],
+            $editedaudioupgrade                     = $_POST['audioupgrade']
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone' WHERE `id` = '$editid';";
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone' 
+         WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
@@ -163,6 +190,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
                     <option value="Awaiting Deposit">Awaiting Deposit</option>
                     <option value="Ready For Pickup">Ready For Pickup</option>
                     <option value="Complete">Complete</option>
+                    <option value="On Lift">On Lift</option>
+                    <option value="Waiting on Test Ride">Waiting on Test Ride</option>
+                    <option value="Waiting on Quote">Waiting on Quote</option>
             </select><br />
         </div>
     </div>    
@@ -174,7 +204,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image1" id="image1" /><br />
+            
         </div>
     </div>    
 <div class="row">     
@@ -185,7 +215,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage2; ?>"><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image2" id="image2" /><br />
+            
         </div>
     </div>
     <div class="row">     
@@ -196,7 +226,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage3; ?>"><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image3" id="image3" /><br />
+            
         </div>
     </div>
     <div class="row">     
@@ -207,7 +237,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <a href="view.php?rand=<?php echo $editimage4; ?>"><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></a>
         </div>
         <div class="col-25">
-            <input type="file" name="image4" id="image4" /><br />
+            
         </div>
     </div>
         <div class="row">
@@ -216,6 +246,35 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             <textarea name="description" id="description" rows="10" cols="80" required><?php echo $editdescription; ?></textarea><br />
+        </div>
+    </div>
+    Services Requested
+    <div class="row">     
+        <div class="col-25">
+                <label for="mechanical">Mechanical</label>
+        </div>
+        <div class="col-75">
+            Oil Change/Service<br />
+            <input type="checkbox" name="oilchange" id="oilchange" value="true"/>Oil Change<br />
+            <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
+            <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
+            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
+            Tires<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Front Tire Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Rear Tire Change<br />
+        </div>
+    </div>
+    <div class="row">     
+        <div class="col-25">
+                <label for="audio">Audio</label>
+        </div>
+        <div class="col-75">
+            Audio Troubleshooting<br />
+            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"/>Audio Troubleshooting<br />
+            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ></textarea><br />
+            Audio Upgrade<br />
+            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"/>Full Audio System<br />
+            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"/>Audio Upgrade<br />
         </div>
     </div>
     <div class="row">
