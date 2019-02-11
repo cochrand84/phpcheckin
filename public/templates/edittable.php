@@ -17,6 +17,7 @@
                     <th>Image 3</th>
                     <th>Image 4</th>
                     <th>Edit</th>
+                    <th>Complete</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@
               <td><a href="view.php?rand=<?php echo $row["image3"]; ?>" data-lightbox="image-1"><img src="view.php?rand=<?php echo $row["image3"]; ?>" alt="<?php echo $row["image3"]; ?>" height="42" width="42"></a></td>
               <td><a href="view.php?rand=<?php echo $row["image4"]; ?>" data-lightbox="image-1"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
+              <td><a href="complete.php?editid=<?php echo $row["id"]; ?>">Mark as Complete</a></td>
             </tr>
         <?php } ?>
         </tbody>
