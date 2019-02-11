@@ -60,23 +60,12 @@ if (isset($_POST['submitedit'])) {
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
-$editdata = array(
-            "id"        => $incommingid,
-            "vin"       => $_POST['vindecoder'],
-            "firstname" => $_POST['firstname'],
-            "lastname"  => $_POST['lastname'],
-            "email"     => $_POST['email'],
-            "year"      => $_POST['year'],
-            "location"  => $_POST['location'],
-            "status"    => $_POST['status'],
-            "make"      => $_POST['make'],
-            "model"     => $_POST['model'],
-            "due_date"  => $_POST['due_date'],
-            "image1"    => $_POST['image1']
-);
+            $editedvin                      = $vinuppercase;
+            $editedfirstname                = $_POST['firstname'];
+            $editedphone                    = $_POST['phone'];
 
-        $sql = "UPDATE tickets SET vin = $editvin, firstname = $editfirstname WHERE id = $editid";
-        
+         $sql = "UPDATE tickets SET vin = $editedvin, firstname = $editedfirstname, phone = $editedphone WHERE id = $editid";
+
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
     } catch(PDOException $error) {
