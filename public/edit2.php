@@ -80,6 +80,8 @@ if ($result && $statement->rowCount() > 0) {
                         $otherserviceckd = "";
                     }
                     
+
+
                     $fronttirechangeckd = "";
                     if ($editfronttirechange == 'true'){
                         $fronttirechangeckd = "checked";
@@ -99,6 +101,8 @@ if ($result && $statement->rowCount() > 0) {
                         $audiotroubleshootingckd = "";
                     }
                     
+
+
                     $fullaudiosystemckd = "";
                     if ($editfullaudiosystem == 'true'){
                         $fullaudiosystemckd = "checked";
@@ -146,7 +150,7 @@ if (isset($_POST['submitedit'])) {
             $editedaudioupgrade                     = $_POST['audioupgrade'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `audioupgrade` = '$editedaudioupgrade'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
