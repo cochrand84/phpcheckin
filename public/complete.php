@@ -13,3 +13,8 @@ $sql = "UPDATE `tickets` SET `status` = 'Complete' WHERE `id` = '$incommingid';"
 
 $statement = $connection->prepare($sql);
 $statement->execute($editdata);
+
+echo "Record ";
+echo $incommingid;
+echo " has been marked as complete";
+?>
