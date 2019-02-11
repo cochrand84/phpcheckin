@@ -327,7 +327,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ><?php echo $editotherservicedescription; ?></textarea><br />
             Tires<br />
             <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"<?php echo $fronttirechangeckd; ?>/>Front Tire Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"<?php echo $reartirechangedckd; ?>/>Rear Tire Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"<?php echo $reartirechangeckd; ?>/>Rear Tire Change<br />
         </div>
     </div>
     <div class="row">     
