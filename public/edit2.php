@@ -101,7 +101,7 @@ if (isset($_POST['submitedit'])) {
             $editedaudioupgrade                     = $_POST['audioupgrade'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone' 
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `oilchange` = '$editedoilchange'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -263,7 +263,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             Oil Change/Service<br />
-            <?php echo $oilchangeckd; ?>
             <input type="checkbox" name="oilchange" id="oilchange" value="true" <?php echo $oilchangeckd; ?>/>Oil Change<br />
             <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
             <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
