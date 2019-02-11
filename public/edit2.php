@@ -61,9 +61,9 @@ if ($result && $statement->rowCount() > 0) {
                     $editaudioupgrade               = $row['audioupgrade'];
 
                     if ($editoilchange = 'true'){
-                        $oilchangechecked = "checked"
+                        $oilchangechecked = "checked";
                     } else {
-                        $oilchangechecked = ""
+                        $oilchangechecked = "";
                     }
          } 
         } else { 
