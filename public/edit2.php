@@ -67,6 +67,51 @@ if ($result && $statement->rowCount() > 0) {
                     } else {
                         $oilchangeckd = "";
                     }
+                    $fullserviceckd = "";
+                    if ($editfullservice == 'true'){
+                        $fullserviceckd = "checked";
+                    } else {
+                        $fullserviceckd = "";
+                    }
+                    $otherserviceckd = "";
+                    if ($editotherservice == 'true'){
+                        $otherserviceckd = "checked";
+                    } else {
+                        $otherserviceckd = "";
+                    }
+                    
+                    $fronttirechangeckd = "";
+                    if ($editfronttirechange == 'true'){
+                        $fronttirechangeckd = "checked";
+                    } else {
+                        $fronttirechangeckd = "";
+                    }
+                    $reartirechangeckd = "";
+                    if ($editreartirechange == 'true'){
+                        $reartirechangeckd = "checked";
+                    } else {
+                        $reartirechangeckd = "";
+                    }
+                    $audiotroubleshootingckd = "";
+                    if ($editaudiotroubleshooting == 'true'){
+                        $audiotroubleshootingckd = "checked";
+                    } else {
+                        $audiotroubleshootingckd = "";
+                    }
+                    
+                    $fullaudiosystemckd = "";
+                    if ($editfullaudiosystem == 'true'){
+                        $fullaudiosystemckd = "checked";
+                    } else {
+                        $fullaudiosystemckd = "";
+                    }
+                    $audioupgradeckd = "";
+                    if ($editaudioupgrade == 'true'){
+                        $audioupgradeckd = "checked";
+                    } else {
+                        $audioupgradeckd = "";
+                    }
+
          } 
         } else { 
         echo $_POST['status'];
@@ -101,12 +146,13 @@ if (isset($_POST['submitedit'])) {
             $editedaudioupgrade                     = $_POST['audioupgrade'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `oilchange` = '$editedoilchange'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `audioupgrade` = '$editedaudioupgrade'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
         echo "<meta http-equiv='refresh' content='0'>";
+
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -265,12 +311,12 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             Oil Change/Service<br />
             <input type="checkbox" name="oilchange" id="oilchange" value="true" <?php echo $oilchangeckd; ?>/>Oil Change<br />
-            <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
-            <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
-            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
+            <input type="checkbox" name="fullservice" id="fullservice" value="true"<?php echo $fullserviceckd; ?>/>Full Service<br />
+            <input type="checkbox" name="otherservice" id="otherservice" value="true"<?php echo $otherserviceckd; ?>/>Other Service<br />
+            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ><?php echo $editotherservicedescription; ?></textarea><br />
             Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Front Tire Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Rear Tire Change<br />
+            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"<?php echo $fronttirechangeckd; ?>/>Front Tire Change<br />
+            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"<?php echo $reartirechangedckd; ?>/>Rear Tire Change<br />
         </div>
     </div>
     <div class="row">     
@@ -279,11 +325,11 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             Audio Troubleshooting<br />
-            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"/>Audio Troubleshooting<br />
-            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ></textarea><br />
+            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"<?php echo $audiotroubleshootingckd; ?>/>Audio Troubleshooting<br />
+            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ><?php echo $editotheraudiodescription; ?></textarea><br />
             Audio Upgrade<br />
-            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"/>Full Audio System<br />
-            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"/>Audio Upgrade<br />
+            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"<?php echo $fullaudiosystemckd; ?>/>Full Audio System<br />
+            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"<?php echo $audioupgradeckd; ?>/>Audio Upgrade<br />
         </div>
     </div>
     <div class="row">
