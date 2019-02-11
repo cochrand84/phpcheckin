@@ -59,6 +59,12 @@ if ($result && $statement->rowCount() > 0) {
                     $editotheraudiodescription      = $row['otheraudiodescription'];
                     $editfullaudiosystem            = $row['fullaudiosystem'];
                     $editaudioupgrade               = $row['audioupgrade'];
+
+                    if ($editoilchange = 'true'){
+                        $oilchangechecked = "checked"
+                    } else {
+                        $oilchangechecked = ""
+                    }
          } 
         } else { 
         echo $_POST['status'];
@@ -255,7 +261,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         <div class="col-75">
             Oil Change/Service<br />
-            <input type="checkbox" name="oilchange" id="oilchange" value="true"/>Oil Change<br />
+            <input type="checkbox" name="oilchange" id="oilchange" value="true" <?php echo $oilchangechecked; ?>/>Oil Change<br />
             <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
             <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
             <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
