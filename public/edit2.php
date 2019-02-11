@@ -62,10 +62,12 @@ if (isset($_POST['submitedit'])) {
         
             $editedvin                      = $vinuppercase;
             $editedfirstname                = $_POST['firstname'];
-            $editedphone                    = $_POST['phone'];
             $editedlastname                 = $_POST['lastname'];
+            $editedemail                    = $_POST['email'];
+            $editedphone                    = $_POST['phone'];
+            
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname' WHERE `id` = 48;";
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone' WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
