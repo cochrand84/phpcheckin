@@ -21,7 +21,12 @@ echo " has been marked as complete";
 ?>
 
 
-<a href="javascript:history.back()">Go Back</a>
+<form method="post" action="edit.php">
+    <input type="submit" name="submit" value="Edit non-Complete">
+    <input type="submit" name="submit2" value="Edit All">
+    <input type="submit" name="submit3" value="Edit Complete">
+</form>
+
 <?php
 require "templates/footer.php";
 
