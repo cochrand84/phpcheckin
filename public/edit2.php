@@ -63,7 +63,7 @@ if ($result && $statement->rowCount() > 0) {
 
                     $oilchangeckd = "";
                     if ($editoilchange = "true"){
-                        $oilchangeckd = "checked";
+                        $oilchangeckd = "true";
                     } else {
                         $oilchangeckd = "";
                     }
