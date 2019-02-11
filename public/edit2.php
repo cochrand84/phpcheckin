@@ -75,7 +75,7 @@ $editdata = array(
             "image1"    => $_POST['image1']
 );
 
-        $sql = "UPDATE tickets SET vin=:vin, firstname=:firstname WHERE id=:id";
+        $sql = "UPDATE tickets SET vin=$editvin, firstname=$editfirstname WHERE id=$editid";
         
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
