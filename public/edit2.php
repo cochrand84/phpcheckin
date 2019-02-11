@@ -74,23 +74,23 @@ if (isset($_POST['submitedit'])) {
             $editedlastname                         = $_POST['lastname'];
             $editedemail                            = $_POST['email'];
             $editedphone                            = $_POST['phone'];
-            $editedyear                             = $_POST['ModelYear'],
-            $editedlocation                         = $_POST['location'],
-            $editedstatus                           = $_POST['status'],
-            $editedmake                             = $_POST['Make'],
-            $editedmodel                            = $_POST['Model'],
-            $editeddue_date                         = $_POST['due_date'],
-            $editeddescription                      = $_POST['description'],
-            $editedoilchange                        = $_POST['oilchange'],
-            $editedfullservice                      = $_POST['fullservice'],
-            $editedotherservice                     = $_POST['otherservice'],
-            $editedotherservicedescription          = $_POST['otherservicedescription'],
-            $editedfronttirechange                  = $_POST['fronttirechange'],
-            $editedreartirechange                   = $_POST['reartirechange'],
-            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'],
-            $editedotheraudiodescription            = $_POST['otheraudiodescription'],
-            $editedfullaudiosystem                  = $_POST['fullaudiosystem'],
-            $editedaudioupgrade                     = $_POST['audioupgrade']
+            $editedyear                             = $_POST['ModelYear'];
+            $editedlocation                         = $_POST['location'];
+            $editedstatus                           = $_POST['status'];
+            $editedmake                             = $_POST['Make'];
+            $editedmodel                            = $_POST['Model'];
+            $editeddue_date                         = $_POST['due_date'];
+            $editeddescription                      = $_POST['description'];
+            $editedoilchange                        = $_POST['oilchange'];
+            $editedfullservice                      = $_POST['fullservice'];
+            $editedotherservice                     = $_POST['otherservice'];
+            $editedotherservicedescription          = $_POST['otherservicedescription'];
+            $editedfronttirechange                  = $_POST['fronttirechange'];
+            $editedreartirechange                   = $_POST['reartirechange'];
+            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'];
+            $editedotheraudiodescription            = $_POST['otheraudiodescription'];
+            $editedfullaudiosystem                  = $_POST['fullaudiosystem'];
+            $editedaudioupgrade                     = $_POST['audioupgrade'];
             
 
          $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone' 
