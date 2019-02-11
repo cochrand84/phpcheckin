@@ -219,7 +219,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <label for="location">Location</label>
         </div>
         <div class="col-75">
-            <input type="text" name="location" id="location" value="<?php echo $editlocation; ?>" >
+            <select name="location" id="location" required>
+            <option value="<?php echo $editlocation; ?>" selected>Select Location</option>
+                    <option value="Out Front">Out Front</option>
+                    <option value="Quonset Hut">Quonset Hut</option>
+                    <option value="Shop">Shop</option>
+                    <option value="At Harley">At Harley</option>
+                    <option value="Audio Bay">Audio Bay</option>
+            </select><br />
         </div>
     </div>    
     <div class="row">     
