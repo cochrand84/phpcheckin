@@ -291,7 +291,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
 
     </div>
-    
+
     <div class="row">     
         <div class="col-25">
                 Image 4
@@ -309,8 +309,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <?php echo $editdescription; ?>
         </div>
     </div>
+    <div class="row">
     Services Requested
-    <div class="row">     
+         
         <div class="col-25">
                 Mechanical
         </div>
