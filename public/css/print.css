@@ -86,14 +86,10 @@ input[type=submit] {
 #ticketstable tr:nth-child(even){background-color: #f2f2f2;}
 #ticketstable tr:nth-child(odd){background-color: #f4d4d4;}
 
-#ticketstable tr:hover {background-color: #ddd;}
-
 #ticketstable th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #ff0000;
-  color: white;
 }
 
 h1 {
