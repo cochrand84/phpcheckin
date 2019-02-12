@@ -1,3 +1,5 @@
+<link media="print" href="css/print.css">
+
 <?php
 
 /**
@@ -349,7 +351,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </form>
 </div>
 
-Barcode:
+Ticket Number:
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
 
 <?php require "templates/footer.php"; ?>
