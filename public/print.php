@@ -264,7 +264,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
     </div>  
 
-    
+    </br>
     <div class="row">     
         <div class="col-25">
                 Image 1
@@ -274,6 +274,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
 
     </div>    
+    </br>
 <div class="row">     
         <div class="col-25">
                 Image 2
@@ -282,6 +283,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
         </div>
     </div>
+    </br>
     <div class="row">     
         <div class="col-25">
                 Image 3
@@ -291,7 +293,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
 
     </div>
-
+</br>
     <div class="row">     
         <div class="col-25">
                 Image 4
@@ -348,7 +350,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         </form>
 </div>
-
+</br>
 <div class="row">
         <div class="col-25">
 Ticket Number:
