@@ -13,9 +13,9 @@ var Dash = {
 
     dashboards: [
         {url: "http://checkin.area51custom.com/public/display1.php", time: 15},
-        {url: "http://checkin.area51custom.com/public/display2.php", time: 15},
+        //{url: "http://checkin.area51custom.com/public/display2.php", time: 15},
         {url: "http://checkin.area51custom.com/public/display3.php", time: 15},
-        {url: "http://checkin.area51custom.com/public/display4.php", time: 15}
+        //{url: "http://checkin.area51custom.com/public/display4.php", time: 15}
     ],
 
     display: function()
