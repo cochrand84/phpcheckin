@@ -1,5 +1,11 @@
-<link media="print" href="css/print.css">
-<link rel="stylesheet" href="css/style.css">
+
+
+<head>
+	<link media="print" href="css/print.css">
+	<script type="text/javascript">
+ window.onload = function() { window.print(); }
+</script>
+	</head>
 
 <?php
 
