@@ -172,7 +172,7 @@ if (isset($_POST['submitedit'])) {
 if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
-<h2>Edit a ticket</h2>
+<h2>Ticket # <?php echo $editid; ?></h2>
 
 
 <div class="container">
@@ -238,36 +238,24 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             Due Date
         </div>
         <div class="col-25">
-            <input type="date" name="due_date" value="<?php echo $editduedate; ?>" required>
+            <?php echo $editduedate; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-            <label for="status">Status</label>
+            Status
         </div>
         <div class="col-75">
-            <select name="status" required>
-            <option value="<?php echo $editstatus; ?>" selected><?php echo $editstatus; ?></option>
-                    <option value="Checked In">Checked In</option>
-                    <option value="Waiting on Parts">Waiting on Parts</option>
-                    <option value="In Paint">In Paint</option>
-                    <option value="In Service">In Service</option>
-                    <option value="Waiting on Lift">Waiting on Lift</option>
-                    <option value="Awaiting Deposit">Awaiting Deposit</option>
-                    <option value="Ready For Pickup">Ready For Pickup</option>
-                    <option value="Complete">Complete</option>
-                    <option value="On Lift">On Lift</option>
-                    <option value="Waiting on Test Ride">Waiting on Test Ride</option>
-                    <option value="Waiting on Quote">Waiting on Quote</option>
-            </select><br />
+            
+            <?php echo $editstatus; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image1">Image 1</label>
+                Image 1
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage1; ?>"><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></a>
+            <img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100">
         </div>
         <div class="col-25">
             
@@ -275,21 +263,10 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </div>    
 <div class="row">     
         <div class="col-25">
-                <label for="image1">Image 2</label>
+                Image 2
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage2; ?>"><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></a>
-        </div>
-        <div class="col-25">
-            
-        </div>
-    </div>
-    <div class="row">     
-        <div class="col-25">
-                <label for="image3">Image 3</label>
-        </div>
-        <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage3; ?>"><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></a>
+            <img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
         </div>
         <div class="col-25">
             
@@ -297,10 +274,21 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </div>
     <div class="row">     
         <div class="col-25">
-                <label for="image4">Image 4</label>
+                Image 3
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage4; ?>"><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></a>
+            <img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100">
+        </div>
+        <div class="col-25">
+            
+        </div>
+    </div>
+    <div class="row">     
+        <div class="col-25">
+                Image 4
+        </div>
+        <div class="col-25">
+            <img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
         </div>
         <div class="col-25">
             
@@ -308,39 +296,39 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </div>
         <div class="row">
         <div class="col-25">
-            <label for ="description">Description of Issue/Upgrade</label>
+            Description of Issue/Upgrade
         </div>
         <div class="col-75">
-            <textarea name="description" id="description" rows="10" cols="80" required><?php echo $editdescription; ?></textarea><br />
+            <?php echo $editdescription; ?>
         </div>
     </div>
     Services Requested
     <div class="row">     
         <div class="col-25">
-                <label for="mechanical">Mechanical</label>
+                Mechanical
         </div>
         <div class="col-75">
             Oil Change/Service<br />
-            <input type="checkbox" name="oilchange" id="oilchange" value="true" <?php echo $oilchangeckd; ?>/>Oil Change<br />
-            <input type="checkbox" name="fullservice" id="fullservice" value="true"<?php echo $fullserviceckd; ?>/>Full Service<br />
-            <input type="checkbox" name="otherservice" id="otherservice" value="true"<?php echo $otherserviceckd; ?>/>Other Service<br />
-            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ><?php echo $editotherservicedescription; ?></textarea><br />
+            <?php echo $oilchangeckd; ?>Oil Change<br />
+            <?php echo $fullserviceckd; ?>Full Service<br />
+            <?php echo $otherserviceckd; ?>Other Service<br />
+            <?php echo $editotherservicedescription; ?><br />
             Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"<?php echo $fronttirechangeckd; ?>/>Front Tire Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"<?php echo $reartirechangeckd; ?>/>Rear Tire Change<br />
+            <?php echo $fronttirechangeckd; ?>Front Tire Change<br />
+            <?php echo $reartirechangeckd; ?>Rear Tire Change<br />
         </div>
     </div>
     <div class="row">     
         <div class="col-25">
-                <label for="audio">Audio</label>
+                Audio
         </div>
         <div class="col-75">
             Audio Troubleshooting<br />
-            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"<?php echo $audiotroubleshootingckd; ?>/>Audio Troubleshooting<br />
-            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ><?php echo $editotheraudiodescription; ?></textarea><br />
+            <?php echo $audiotroubleshootingckd; ?>Audio Troubleshooting<br />
+            <?php echo $editotheraudiodescription; ?><br />
             Audio Upgrade<br />
-            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"<?php echo $fullaudiosystemckd; ?>/>Full Audio System<br />
-            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"<?php echo $audioupgradeckd; ?>/>Audio Upgrade<br />
+            <?php echo $fullaudiosystemckd; ?>Full Audio System<br />
+            <?php echo $audioupgradeckd; ?>Audio Upgrade<br />
         </div>
     </div>
     <div class="row">
