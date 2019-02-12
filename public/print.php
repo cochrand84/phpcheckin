@@ -1,4 +1,5 @@
 <link media="print" href="css/print.css">
+<link rel="stylesheet" href="css/style.css">
 
 <?php
 
