@@ -175,8 +175,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
 
-<div class="container">
-        <form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-25">
             Ticket ID
@@ -185,6 +183,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <?php echo $editid; ?>
         </div>
     </div>   
+
+
     <div class="row">
         <div class="col-25">
             VIN
@@ -192,7 +192,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editvin; ?>
         </div>
-    </div>    
+    </div>   
+
+
     <div class="row">    
         <div class="col-25">
             First Name
@@ -200,7 +202,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editfirstname; ?>
         </div>
-    </div>    
+    </div>  
+
+
     <div class="row">     
         <div class="col-25">
             Last Name
@@ -209,6 +213,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <?php echo $editlastname; ?>
         </div>
     </div>    
+
+
     <div class="row">     
         <div class="col-25">
             Email Address
@@ -216,7 +222,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editemail; ?>
         </div>
-    </div>    
+    </div>  
+
+
     <div class="row">     
         <div class="col-25">
             Phone Number
@@ -225,6 +233,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <?php echo $editphone; ?>
         </div>
     </div>    
+
+
     <div class="row">     
         <div class="col-25">   
             Location
@@ -232,7 +242,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editlocation; ?>
         </div>
-    </div>    
+    </div>   
+
+
     <div class="row">     
         <div class="col-25">
             Due Date
@@ -240,7 +252,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-25">
             <?php echo $editduedate; ?>
         </div>
-    </div>    
+    </div>  
+
+
     <div class="row">     
         <div class="col-25">
             Status
@@ -248,7 +262,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editstatus; ?>
         </div>
-    <!--</div>    
+    </div>  
+
+    <!--  
     <div class="row">     
         <div class="col-25">
                 Image 1
