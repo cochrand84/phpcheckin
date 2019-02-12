@@ -33,7 +33,7 @@ label {
 
 /* Floating column for inputs: 75% width */
 .col-75 {
-  float: left;
+  float: right;
   width: 75%;
   margin-top: 6px;
 }
