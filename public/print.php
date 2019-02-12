@@ -291,6 +291,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
 
     </div>
+    
     <div class="row">     
         <div class="col-25">
                 Image 4
@@ -299,6 +300,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
 
     </div>
+</div>
         <div class="row">
         <div class="col-25">
             Description of Issue/Upgrade
