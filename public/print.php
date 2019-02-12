@@ -346,12 +346,11 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
     </div>
     <div class="row">
-        <input type="submit" name="submitedit" value="Submit Edit">
-    </div>
+        </div>
         </form>
 </div>
 
 Ticket Number:
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
 
-<?php require "templates/footer.php"; ?>
+
