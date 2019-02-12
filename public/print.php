@@ -269,45 +269,35 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-25">
                 Image 1
         </div>
-        <div class="col-25">
+        <div class="col-75">
             <img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100">
         </div>
-        <div class="col-25">
-            
-        </div>
+
     </div>    
 <div class="row">     
         <div class="col-25">
                 Image 2
         </div>
-        <div class="col-25">
+        <div class="col-75">
             <img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
-        </div>
-        <div class="col-25">
-            
         </div>
     </div>
     <div class="row">     
         <div class="col-25">
                 Image 3
         </div>
-        <div class="col-25">
+        <div class="col-75">
             <img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100">
         </div>
-        <div class="col-25">
-            
-        </div>
+
     </div>
     <div class="row">     
         <div class="col-25">
                 Image 4
         </div>
-        <div class="col-25">
+        <div class="col-75">
             <img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
-        </div>
-        <div class="col-25">
-            
-        </div>
+
     </div>
         <div class="row">
         <div class="col-25">
