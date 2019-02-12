@@ -179,70 +179,63 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-25">
-            <label for="vin">Ticket ID</label>
+            Ticket ID
         </div>
         <div class="col-75">
-            <input type="text" id="ticketid" value="<?php echo $editid; ?>" name="ticketid" maxlength="255" required/>
+            <?php echo $editid; ?>
         </div>
     </div>   
     <div class="row">
         <div class="col-25">
-            <label for="vin">VIN</label>
+            VIN
         </div>
         <div class="col-75">
-            <input type="text" id="vin" value="<?php echo $editvin; ?>" name="vin" maxlength="17" required/>
+            <?php echo $editvin; ?>
         </div>
     </div>    
     <div class="row">    
         <div class="col-25">
-            <label for="firstname">First Name</label>
+            First Name
         </div>
         <div class="col-75">
-            <input type="text" name="firstname" id="firstname" value="<?php echo $editfirstname; ?>" required>
+            <?php echo $editfirstname; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-            <label for="lastname">Last Name</label>
+            Last Name
         </div>
         <div class="col-75">
-            <input type="text" name="lastname" id="lastname" value="<?php echo $editlastname; ?>"required>
+            <?php echo $editlastname; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-            <label for="email">Email Address</label>
+            Email Address
         </div>
         <div class="col-75">
-            <input type="text" name="email" id="email" value="<?php echo $editemail; ?>">
+            <?php echo $editemail; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-            <label for="phone">Phone Number</label>
+            Phone Number
         </div>
         <div class="col-75">
-            <input type="text" name="phone" id="phone" value="<?php echo $editphone; ?>" required> 
+            <?php echo $editphone; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">   
-            <label for="location">Location</label>
+            Location
         </div>
         <div class="col-75">
-            <select name="location" id="location" required>
-            <option value="<?php echo $editlocation; ?>" selected><?php echo $editlocation; ?></option>
-                    <option value="Out Front">Out Front</option>
-                    <option value="Quonset Hut">Quonset Hut</option>
-                    <option value="Shop">Shop</option>
-                    <option value="At Harley">At Harley</option>
-                    <option value="Audio Bay">Audio Bay</option>
-            </select><br />
+            <?php echo $editlocation; ?>
         </div>
     </div>    
     <div class="row">     
         <div class="col-25">
-            <label for="due_date">Due Date</label>
+            Due Date
         </div>
         <div class="col-25">
             <input type="date" name="due_date" value="<?php echo $editduedate; ?>" required>
