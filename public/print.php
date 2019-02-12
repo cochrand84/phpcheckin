@@ -249,7 +249,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-25">
             Due Date
         </div>
-        <div class="col-25">
+        <div class="col-75">
             <?php echo $editduedate; ?>
         </div>
     </div>  
@@ -264,7 +264,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
     </div>  
 
-    <!--  
+    
     <div class="row">     
         <div class="col-25">
                 Image 1
@@ -350,7 +350,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         </form>
 </div>
--->
+
 <div class="row">
         <div class="col-25">
 Ticket Number:
