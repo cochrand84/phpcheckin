@@ -349,9 +349,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </form>
 </div>
 
-<?php require "templates/footer.php"; ?>
-
-?>
 Barcode:
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
-<img src="/barcode.php?text=testing" alt="testing" />
+
+<?php require "templates/footer.php"; ?>
