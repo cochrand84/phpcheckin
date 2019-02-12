@@ -70,19 +70,19 @@ if ($result && $statement->rowCount() > 0) {
 
                     $oilchangeckd = "";
                     if ($editoilchange == 'true'){
-                        $oilchangeckd = "checked";
+                        $oilchangeckd = "red";
                     } else {
                         $oilchangeckd = "";
                     }
                     $fullserviceckd = "";
                     if ($editfullservice == 'true'){
-                        $fullserviceckd = "checked";
+                        $fullserviceckd = "red";
                     } else {
                         $fullserviceckd = "";
                     }
                     $otherserviceckd = "";
                     if ($editotherservice == 'true'){
-                        $otherserviceckd = "checked";
+                        $otherserviceckd = "red";
                     } else {
                         $otherserviceckd = "";
                     }
@@ -91,19 +91,19 @@ if ($result && $statement->rowCount() > 0) {
 
                     $fronttirechangeckd = "";
                     if ($editfronttirechange == 'true'){
-                        $fronttirechangeckd = "checked";
+                        $fronttirechangeckd = "red";
                     } else {
                         $fronttirechangeckd = "";
                     }
                     $reartirechangeckd = "";
                     if ($editreartirechange == 'true'){
-                        $reartirechangeckd = "checked";
+                        $reartirechangeckd = "red";
                     } else {
                         $reartirechangeckd = "";
                     }
                     $audiotroubleshootingckd = "";
                     if ($editaudiotroubleshooting == 'true'){
-                        $audiotroubleshootingckd = "checked";
+                        $audiotroubleshootingckd = "red";
                     } else {
                         $audiotroubleshootingckd = "";
                     }
@@ -112,13 +112,13 @@ if ($result && $statement->rowCount() > 0) {
 
                     $fullaudiosystemckd = "";
                     if ($editfullaudiosystem == 'true'){
-                        $fullaudiosystemckd = "checked";
+                        $fullaudiosystemckd = "red";
                     } else {
                         $fullaudiosystemckd = "";
                     }
                     $audioupgradeckd = "";
                     if ($editaudioupgrade == 'true'){
-                        $audioupgradeckd = "checked";
+                        $audioupgradeckd = "red";
                     } else {
                         $audioupgradeckd = "";
                     }
@@ -246,7 +246,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             Status
         </div>
         <div class="col-75">
-            
             <?php echo $editstatus; ?>
         </div>
     </div>    
@@ -308,14 +307,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
                 Mechanical
         </div>
         <div class="col-75">
-            Oil Change/Service<br />
-            <?php echo $oilchangeckd; ?>Oil Change<br />
-            <?php echo $fullserviceckd; ?>Full Service<br />
-            <?php echo $otherserviceckd; ?>Other Service<br />
-            <?php echo $editotherservicedescription; ?><br />
-            Tires<br />
-            <?php echo $fronttirechangeckd; ?>Front Tire Change<br />
-            <?php echo $reartirechangeckd; ?>Rear Tire Change<br />
+            Oil Change/Service
+            <div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div>
+            <div style="color:<?php echo $fullserviceckd; ?>">Full Service</div>
+            <div style="color:<?php echo $otherserviceckd; ?>">Other Service</div>
+            <?php echo $editotherservicedescription; ?>
+            Tires
+            <div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div>
+            <div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div>
         </div>
     </div>
     <div class="row">     
@@ -323,12 +322,12 @@ if (isset($_POST['submitedit']) && $statement) { ?>
                 Audio
         </div>
         <div class="col-75">
-            Audio Troubleshooting<br />
-            <?php echo $audiotroubleshootingckd; ?>Audio Troubleshooting<br />
-            <?php echo $editotheraudiodescription; ?><br />
-            Audio Upgrade<br />
-            <?php echo $fullaudiosystemckd; ?>Full Audio System<br />
-            <?php echo $audioupgradeckd; ?>Audio Upgrade<br />
+            Audio Troubleshooting
+            <div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div>
+            <?php echo $editotheraudiodescription; ?>
+            Audio Upgrade
+            <div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div>
+            <div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div>
         </div>
     </div>
     <div class="row">
@@ -338,5 +337,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
 Ticket Number:
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
+
+Vin Number:
+<img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" />
 
 
