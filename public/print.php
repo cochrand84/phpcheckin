@@ -8,8 +8,6 @@
  *
  */
 
-require "templates/header.php";
-
 $_GET['editid'];
 $incommingid = $_GET['editid'];
 
