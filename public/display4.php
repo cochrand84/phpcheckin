@@ -1,5 +1,15 @@
 <center>
 <?php
+session_start(); 
+header("Cache-Control: private, max-age=10800, pre-check=10800");
+header("Pragma: private");
+header("Expires: " . date(DATE_RFC822,strtotime(" 2 day")));
+
+if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
+  // if the browser has a cached version of this image, send 304
+  header('Last-Modified: '.$_SERVER['HTTP_IF_MODIFIED_SINCE'],true,304);
+  exit;
+}
     try  {
         
         require "../config.php";
