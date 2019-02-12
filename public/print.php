@@ -248,7 +248,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <?php echo $editstatus; ?>
         </div>
-    </div>    
+    <!--</div>    
     <div class="row">     
         <div class="col-25">
                 Image 1
@@ -334,6 +334,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         </form>
 </div>
+-->
 <div class="row">
         <div class="col-25">
 Ticket Number:
@@ -354,4 +355,5 @@ Vin Number:
         </div>
     </div>
     </html>
-   
+
+
