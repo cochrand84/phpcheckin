@@ -334,11 +334,24 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
         </form>
 </div>
-
+<div class="row">
+        <div class="col-25">
 Ticket Number:
-<img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
 
+        </div>
+        <div class="col-75">
+<img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
+        </div>
+    </div>
+     <div class="row">     
+        <div class="col-25">
 Vin Number:
+
+   </div>
+        <div class="col-75">
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" />
 
-
+        </div>
+    </div>
+    </html>
+   
