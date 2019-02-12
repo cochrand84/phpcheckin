@@ -354,3 +354,4 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 ?>
 Barcode:
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
+<img src="/barcode.php?text=testing" alt="testing" />
