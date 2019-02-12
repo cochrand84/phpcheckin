@@ -6,46 +6,27 @@ background-image: url(../images/background.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100%;
+-webkit-print-color-adjust: exact;
 }
 
-input[type=text], select, textarea{
-  width: 100%;
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-/* Style the container */
-.container {
-  border-radius: 5px;
-  padding: 20px;
-}
-
-/* Floating column for labels: 25% width */
 .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-/* Floating column for inputs: 75% width */
 .col-75 {
   float: right;
   width: 75%;
   margin-top: 6px;
 }
-
-@media print {
-  body {-webkit-print-color-adjust: exact;}
 }
+
 @page {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin: 0;
     -webkit-print-color-adjust: exact;
 }
