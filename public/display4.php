@@ -1,3 +1,4 @@
+<center>
 <?php
     try  {
         
@@ -28,4 +29,4 @@
     <?php } 
 
 ?>
-    
+    </center>
