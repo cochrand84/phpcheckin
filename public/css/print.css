@@ -9,15 +9,15 @@ background-size: 100%;
 -webkit-print-color-adjust: exact;
 }
 
-.col-25 {
+.col1 {
   float: left;
-  width: 25%;
+  width: 50%;
   margin-top: 6px;
 }
 
-.col-75 {
+.col2 {
   float: right;
-  width: 75%;
+  width: 50%;
   margin-top: 6px;
 }
 }
