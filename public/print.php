@@ -176,153 +176,136 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
 
     <div class="row">
-        <div class="col-25">
+        <div class="col1">
             Ticket ID
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editid; ?>
         </div>
     </div>   
 
 
     <div class="row">
-        <div class="col-25">
+        <div class="col1">
             VIN
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editvin; ?>
         </div>
     </div>   
 
 
     <div class="row">    
-        <div class="col-25">
+        <div class="col1">
             First Name
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editfirstname; ?>
         </div>
     </div>  
 
 
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
             Last Name
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editlastname; ?>
         </div>
     </div>    
 
 
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
             Email Address
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editemail; ?>
         </div>
     </div>  
 
 
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
             Phone Number
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editphone; ?>
         </div>
     </div>    
 
 
     <div class="row">     
-        <div class="col-25">   
+        <div class="col1">   
             Location
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editlocation; ?>
         </div>
     </div>   
 
 
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
             Due Date
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editduedate; ?>
         </div>
     </div>  
 
 
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
             Status
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editstatus; ?>
         </div>
     </div>  
 
     </br>
     <div class="row">     
-        <div class="col-25">
-                Image 1
+        <div class="col1">
+                Image 1<img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100">
         </div>
-        <div class="col-75">
-            <img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100">
+        <div class="col2">
+            Image 2<img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
         </div>
 
     </div>    
     </br>
-<div class="row">     
-        <div class="col-25">
-                Image 2
-        </div>
-        <div class="col-75">
-            <img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
-        </div>
-    </div>
-    </br>
     <div class="row">     
-        <div class="col-25">
-                Image 3
+        <div class="col1">
+                Image 3<img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100">
         </div>
-        <div class="col-75">
-            <img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100">
+        <div class="col2">
+            Image 4<img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
         </div>
 
     </div>
-</br>
-    <div class="row">     
-        <div class="col-25">
-                Image 4
-        </div>
-        <div class="col-75">
-            <img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
 
-    </div>
 </div>
         <div class="row">
-        <div class="col-25">
+        <div class="col1">
             Description of Issue/Upgrade
         </div>
-        <div class="col-75">
+        <div class="col2">
             <?php echo $editdescription; ?>
         </div>
     </div>
     <div class="row">
-    	<div class="col-25">
+    	<div class="col1">
     Services Requested
          </div>
-         <div class="col-75">
+         <div class="col2">
          	 </div>
      </div>
      <div class="row">
-        <div class="col-25">
+        <div class="col1">
                 Mechanical
         </div>
-        <div class="col-75">
+        <div class="col2">
             Oil Change/Service
             <div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div>
             <div style="color:<?php echo $fullserviceckd; ?>">Full Service</div>
@@ -334,10 +317,10 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
     </div>
     <div class="row">     
-        <div class="col-25">
+        <div class="col1">
                 Audio
         </div>
-        <div class="col-75">
+        <div class="col2">
             Audio Troubleshooting
             <div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div>
             <?php echo $editotheraudiodescription; ?>
@@ -352,20 +335,20 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 </div>
 </br>
 <div class="row">
-        <div class="col-25">
+        <div class="col1">
 Ticket Number:
 
         </div>
-        <div class="col-75">
+        <div class="col2">
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
         </div>
     </div>
      <div class="row">     
-        <div class="col-25">
+        <div class="col1">
 Vin Number:
 
    </div>
-        <div class="col-75">
+        <div class="col2">
 <img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" />
 
         </div>
