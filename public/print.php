@@ -235,12 +235,17 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td>Image 4</td>
             <td><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></td>
             </tr>
+            </table>
+<table>
             <tr>
 
             <td>Description of Issue/Upgrade</td>
 
             <td><?php echo $editdescription; ?></td>
 </tr>
+
+            </table>
+<table>
             <tr>
     <td>Services Requested</td>
 </tr>
