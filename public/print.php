@@ -174,185 +174,109 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 <?php } ?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
+<table style="width:100%">
+	<tr>
+		
+            <td>Ticket ID</td>
 
-    <div class="row">
-        <div class="col1">
-            Ticket ID
-        </div>
-        <div class="col2">
-            <?php echo $editid; ?>
-        </div>
-    </div>   
+            <td><?php echo $editid; ?></td>
 
+            <td>VIN</td>
 
-    <div class="row">
-        <div class="col1">
-            VIN
-        </div>
-        <div class="col2">
-            <?php echo $editvin; ?>
-        </div>
-    </div>   
+            <td><?php echo $editvin; ?></td>
+</tr>
+            <tr>
 
+            <td>First Name</td>
 
-    <div class="row">    
-        <div class="col1">
-            First Name
-        </div>
-        <div class="col2">
-            <?php echo $editfirstname; ?>
-        </div>
-    </div>  
+            <td><?php echo $editfirstname; ?></td>
 
+            <td>Last Name</td>
 
-    <div class="row">     
-        <div class="col1">
-            Last Name
-        </div>
-        <div class="col2">
-            <?php echo $editlastname; ?>
-        </div>
-    </div>    
+            <td><?php echo $editlastname; ?></td>
+            </tr>
+            <tr>
 
+            <td>Email Address</td>
 
-    <div class="row">     
-        <div class="col1">
-            Email Address
-        </div>
-        <div class="col2">
-            <?php echo $editemail; ?>
-        </div>
-    </div>  
+            <td><?php echo $editemail; ?></td>
 
+            <td>Phone Number</td>
 
-    <div class="row">     
-        <div class="col1">
-            Phone Number
-        </div>
-        <div class="col2">
-            <?php echo $editphone; ?>
-        </div>
-    </div>    
+            <td><?php echo $editphone; ?></td>
+            </tr>
+            <tr>
+ 
+            <td>Location</td>
 
+            <td><?php echo $editlocation; ?></td>
+ 
+            <td>Due Date</td>
 
-    <div class="row">     
-        <div class="col1">   
-            Location
-        </div>
-        <div class="col2">
-            <?php echo $editlocation; ?>
-        </div>
-    </div>   
+            <td><?php echo $editduedate; ?></td>
+            </tr>
+            <tr>
 
+            <td>Status</td>
 
-    <div class="row">     
-        <div class="col1">
-            Due Date
-        </div>
-        <div class="col2">
-            <?php echo $editduedate; ?>
-        </div>
-    </div>  
+            <td><?php echo $editstatus; ?></td>
+</tr>
+            <tr>
+            <td>Image 1</td>
+            <td><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></td>
 
+            <td>Image 2</td>
+            <td><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></td>
+</tr>
+            <td><tr>
+            <td>Image 3</td>
+            <td><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></td>
 
-    <div class="row">     
-        <div class="col1">
-            Status
-        </div>
-        <div class="col2">
-            <?php echo $editstatus; ?>
-        </div>
-    </div>  
+            <td>Image 4</td>
+            <td><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></td>
+            </tr>
+            <tr>
 
-    </br>
-    <div class="row">     
-        <div class="col1">
-                Image 1<img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100">
-        </div>
-        <div class="col2">
-            Image 2<img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100">
-        </div>
+            <td>Description of Issue/Upgrade</td>
 
-    </div>    
-    </br>
-    <div class="row">     
-        <div class="col1">
-                Image 3<img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100">
-        </div>
-        <div class="col2">
-            Image 4<img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100">
-        </div>
+            <td><?php echo $editdescription; ?></td>
+</tr>
+            <tr>
+    <td>Services Requested</td>
+</tr>
+            <tr>
+            <td>Mechanical</td>
 
-    </div>
+            <td>Oil Change/Service</td>
+            <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
+            <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
+            <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
+            <td><?php echo $editotherservicedescription; ?></td>
+            <td>Tires</td>
+            <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
+            <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
+</tr>
+            <tr>
+            <td>Audio</td>
 
-</div>
-        <div class="row">
-        <div class="col1">
-            Description of Issue/Upgrade
-        </div>
-        <div class="col2">
-            <?php echo $editdescription; ?>
-        </div>
-    </div>
-    <div class="row">
-    	<div class="col1">
-    Services Requested
-         </div>
-         <div class="col2">
-         	 </div>
-     </div>
-     <div class="row">
-        <div class="col1">
-                Mechanical
-        </div>
-        <div class="col2">
-            Oil Change/Service
-            <div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div>
-            <div style="color:<?php echo $fullserviceckd; ?>">Full Service</div>
-            <div style="color:<?php echo $otherserviceckd; ?>">Other Service</div>
-            <?php echo $editotherservicedescription; ?>
-            Tires
-            <div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div>
-            <div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div>
-        </div>
-    </div>
-    <div class="row">     
-        <div class="col1">
-                Audio
-        </div>
-        <div class="col2">
-            Audio Troubleshooting
-            <div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div>
-            <?php echo $editotheraudiodescription; ?>
-            Audio Upgrade
-            <div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div>
-            <div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div>
-        </div>
-    </div>
-    <div class="row">
-        </div>
-        </form>
-</div>
-</br>
-<div class="row">
-        <div class="col1">
-Ticket Number:
+            <td>Audio Troubleshooting</td>
+            <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
+            <td><?php echo $editotheraudiodescription; ?></td>
+            <td>Audio Upgrade</td>
+            <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
+            <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
+</tr>
+            <tr>
+			<td>Ticket Number:</td>
 
-        </div>
-        <div class="col2">
-<img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" />
-        </div>
-    </div>
-     <div class="row">     
-        <div class="col1">
-Vin Number:
+			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
 
-   </div>
-        <div class="col2">
-<img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" />
+			<td>Vin Number:</td>
 
-        </div>
-    </div>
+			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" /></td>
+
+</tr>
+    </table>
     </html>
 
 
