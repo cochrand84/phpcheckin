@@ -238,6 +238,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             </table>
 <table>
             <tr>
+            	<th>
+            	</th>
+            	<th>
+            	</th>
+            	<th>
+            	</th>
+            </tr>
+            <tr>
 
             <td>Description of Issue/Upgrade</td>
 
