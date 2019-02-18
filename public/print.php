@@ -254,14 +254,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td><?php echo $editdescription; ?></td>
 </tr>
 
-            </table>
+            </table></br>
 <table>
             <tr>
     <td>Services Requested</td>
 </tr>
             <tr>
             <td>Mechanical</td>
-</br></br></br>
+
             <td>Oil Change/Service</td>
             <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
             <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
@@ -270,26 +270,29 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <tr>
             <td>Other Services Description:</td>
         </tr>
+	
         <tr>
             <td><?php echo $editotherservicedescription; ?></td>
-            </tr><tr>
+            </tr></br><tr>
             <td>Tires</td>
             <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
             <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
 </tr>
             <tr>
             <td>Audio</td>
-</tr></br></br></br><tr>
+</tr><tr>
             <td>Audio Troubleshooting</td>
             <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
-            </tr><tr>
+	<td>Audio Upgrade</td>
+            <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
+            <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
+            </tr>
+<tr>
             <td>Other Audio Description:</td>
             </tr><tr>
             <td><?php echo $editotheraudiodescription; ?></td>
-            <td>Audio Upgrade</td>
-            <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
-            <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
-</tr>
+            
+</tr></br>
             <tr>
             </br>
 			<td>Ticket Number:</td>
