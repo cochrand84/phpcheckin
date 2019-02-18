@@ -272,6 +272,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </tr>
         <tr>
             <td><?php echo $editotherservicedescription; ?></td>
+            </tr><tr>
             <td>Tires</td>
             <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
             <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
@@ -280,7 +281,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td>Audio</td>
 </tr><tr>
             <td>Audio Troubleshooting</td>
-            </tr><tr>
             <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
             </tr><tr>
             <td>Other Audio Description:</td>
@@ -291,6 +291,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
 </tr>
             <tr>
+            </br>
 			<td>Ticket Number:</td>
 
 			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
