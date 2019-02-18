@@ -261,7 +261,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 </tr>
             <tr>
             <td>Mechanical</td>
-
+</tr><tr>
             <td>Oil Change/Service</td>
             <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
             <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
