@@ -47,7 +47,38 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote1date           = $row['servicenote1date'];
                     $editservicenote2date           = $row['servicenote2date'];
                     $editservicenote3date           = $row['servicenote3date'];
-
+                    
+                    $lowbeamckd = "";
+                    if ($editlowbeam == 'true'){
+                        $lowbeamckd = "checked";
+                    } else {
+                        $lowbeamckd = "";
+                    }
+                    $highbeamckd = "";
+                    if ($edithighbeam == 'true'){
+                        $highbeamckd = "checked";
+                    } else {
+                        $highbeamckd = "";
+                    }
+                    $rightblinkerckd = "";
+                    if ($editrightblinker == 'true'){
+                        $rightblinkerckd = "checked";
+                    } else {
+                        $rightblinkerckd = "";
+                    }
+                    $leftblinkerckd = "";
+                    if ($editleftblinker == 'true'){
+                        $leftblinkerckd = "checked";
+                    } else {
+                        $leftblinkerckd = "";
+                    }
+                    $brakelightckd = "";
+                    if ($editbrakelight == 'true'){
+                        $brakelightckd = "checked";
+                    } else {
+                        $brakelightckd = "";
+                    }
+                    
          } 
         } else { 
         echo $_POST['status'];
@@ -70,9 +101,17 @@ if (isset($_POST['submitedit'])) {
             $editedservicenote1date                 = $_POST['servicenote1date'];
             $editedservicenote2date                 = $_POST['servicenote2date'];
             $editedservicenote3date                 = $_POST['servicenote3date'];
+            $editedvoltage                          = $_POST['voltage'];
+            $editedreartirepressure                 = $_POST['reartirepressure'];
+            $editedfronttirepressure                = $_POST['fronttirepressure'];
+            $editedlowbeam                          = $_POST['lowbeam'];
+            $editedhighbeam                         = $_POST['highbeam'];
+            $editedrightblinker                     = $_POST['rightblinker'];
+            $editedleftblinker                      = $_POST['leftblinker'];
+            $editedbrakelight                       = $_POST['brakelight'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `year` = '$editedyear', `location` = '$editedlocation', `make` = '$editedmake', `model` = '$editedmodel', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `year` = '$editedyear', `location` = '$editedlocation', `make` = '$editedmake', `model` = '$editedmodel', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date',`voltage` = '$editedvoltage',`reartirepressure` = '$editedreartirepressure',`fronttirepressure` = '$editedfronttirepressure',`lowbeam` = '$editedlowbeam',`highbeam` = '$editedhighbeam',`rightblinker` = '$editedrightblinker',`leftblinker` = '$editedleftblinker',`brakelight` = '$editedbrakelight'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -158,6 +197,50 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <input type="date" name="servicenote3date" value="<?php echo $editservicenote3date; ?>">
            
             <textarea name="servicenote3" id="servicenote3" rows="5" cols="80" ><?php echo $editservicenote3; ?></textarea><br />
+        </div>
+    </div>
+    <div class="row">     
+        <div class="col-25">
+            <label for="checkout">Checkout</label>
+        </div>
+        <div class="col-75">
+             
+        </div>
+    </div>  
+    <div class="row">     
+        <div class="col-25">
+            <label for="voltage">Battery Voltage</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="voltage" id="voltage" value="<?php echo $editvoltage; ?>" required> 
+        </div>
+    </div>  
+    <div class="row">     
+        <div class="col-25">
+            <label for="reartirepressure">Rear Tire Pressure</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="reartirepressure" id="reartirepressure" value="<?php echo $editreartirepressure; ?>" required> 
+        </div>
+    </div> 
+    <div class="row">     
+        <div class="col-25">
+            <label for="fronttirepressure">Front Tire Pressure</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="fronttirepressure" id="fronttirepressure" value="<?php echo $editfronttirepressure; ?>" required> 
+        </div>
+    </div> 
+    <div class="row">     
+        <div class="col-25">
+                <label for="lights">Lights</label>
+        </div>
+        <div class="col-75">
+            <input type="checkbox" name="lowbeam" id="lowbeam" value="true" <?php echo $lowbeamckd; ?>/>Low Beam<br />
+            <input type="checkbox" name="highbeam" id="highbeam" value="true"<?php echo $highbeamckd; ?>/>High Beam<br />
+            <input type="checkbox" name="rightblinker" id="rightblinker" value="true"<?php echo $rightblinkerckd; ?>/>Right Blinker<br />
+            <input type="checkbox" name="leftblinker" id="leftblinker" value="true"<?php echo $leftblinkerckd; ?>/>Left Blinker<br />
+            <input type="checkbox" name="brakelight" id="brakelight" value="true"<?php echo $brakelightckd; ?>/>Brake Light<br />
         </div>
     </div>
     <div class="row">
