@@ -3,8 +3,19 @@
 include "templates/password_protect.php"; 
 
 ?>
-
-
+<form method="post" action="edit2.php"enctype="multipart/form-data">
+<div class="row">     
+        <div class="col-25">
+            <label for="editid">Ticket number or select below</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="editid" id="editid" required>
+        </div>
+    </div> 
+    <div class="row">
+        <input type="submit" name="submit" value="Submit">
+    </div>
+        </form>
 
 <a href="create.php" class="linkbutton"><strong>Create</strong></a></li>
 <a href="read.php" class="linkbutton"><strong>Read</strong></a></li>
