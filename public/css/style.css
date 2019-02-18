@@ -28,7 +28,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: center;
+  float: right;
 }
 
 /* Style the container */
@@ -75,7 +75,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
+  float: center;
 }
 #ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
