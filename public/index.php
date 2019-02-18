@@ -8,7 +8,7 @@ include "templates/password_protect.php";
         <div class="col-25">
             <label for="editid">Ticket number or select below</label>
         </div>
-        <div class="col-75">
+        <div class="col-25">
             <input type="text" name="editid" id="editid">
         </div>
     </div> 
