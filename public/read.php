@@ -1,5 +1,7 @@
 <?php
 require "templates/header.php";
+include "templates/password_protect.php"; 
+
 if (isset($_POST['submit'])) {
     try  {
         

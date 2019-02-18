@@ -3,6 +3,8 @@
 require "templates/header.php";
 require "../config.php"; 
 require "../common.php";
+include "templates/password_protect.php"; 
+
 
 $_GET['editid'];
 $incommingid = $_GET['editid'];

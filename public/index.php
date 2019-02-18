@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="css/style.css">
-<?php include "templates/header.php"; ?>
+<?php include "templates/header.php"; 
+include "templates/password_protect.php"; 
+
+?>
 
 
 

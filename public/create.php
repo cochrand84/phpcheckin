@@ -1,5 +1,6 @@
 <?php
 require "templates/header.php";
+include "templates/password_protect.php"; 
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if ($vin) {

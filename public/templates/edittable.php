@@ -41,7 +41,7 @@
               <td><a href="view.php?rand=<?php echo $row["image4"]; ?>" data-lightbox="image-1"><img src="view.php?rand=<?php echo $row["image4"]; ?>" alt="<?php echo $row["image4"]; ?>" height="42" width="42"></a></td>
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
               <td><a href="complete.php?editid=<?php echo $row["id"]; ?>">Mark as Complete</a></td>
-              <td><a href="pring.php?editid="<?php echo $row["id"]; ?>">Print</a></td>
+              <td><a href="print.php?editid="<?php echo $row["id"]; ?>">Print</a></td>
             </tr>
         <?php } ?>
         </tbody>
