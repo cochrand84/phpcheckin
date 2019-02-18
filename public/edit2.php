@@ -361,19 +361,28 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-25">
                 <label for="servicenotes">Service Notes</label>
         </div>
+         <div class="col-25">
+                <label for="servicenotes">Service note #1</label>
+        </div>
         <div class="col-75">
             <input type="date" name="servicenote1date" value="<?php echo $editservicenote1date; ?>">
-            Service note #1<br />
+            
             <textarea name="servicenote1" id="servicenote1" rows="5" cols="80" ><?php echo $editservicenote1; ?></textarea><br />
+        </div>
+                 <div class="col-25">
+                <label for="servicenotes">Service note #2</label>
         </div>
              <div class="col-75">
             <input type="date" name="servicenote2date" value="<?php echo $editservicenote2date; ?>">
-            Service note #2<br />
+            
             <textarea name="servicenote2" id="servicenote2" rows="5" cols="80" ><?php echo $editservicenote2; ?></textarea><br />
+        </div>
+                 <div class="col-25">
+                <label for="servicenotes">Service note #3</label>
         </div>
              <div class="col-75">
             <input type="date" name="servicenote3date" value="<?php echo $editservicenote3date; ?>">
-            Service note #3<br />
+           
             <textarea name="servicenote3" id="servicenote3" rows="5" cols="80" ><?php echo $editservicenote3; ?></textarea><br />
         </div>
     </div>
