@@ -23,10 +23,10 @@ background-size: 100%;
 }
 
 @page {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-left: 50mm;
+    margin-right: 50mm;
+    margin-top: 50mm;
+    margin-bottom: 50mm;
     margin: 0;
     -webkit-print-color-adjust: exact;
 }
