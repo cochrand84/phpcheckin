@@ -111,7 +111,7 @@ if (isset($_POST['submitedit'])) {
             $editedbrakelight                       = $_POST['brakelight'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `year` = '$editedyear', `location` = '$editedlocation', `make` = '$editedmake', `model` = '$editedmodel', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date',`voltage` = '$editedvoltage',`reartirepressure` = '$editedreartirepressure',`fronttirepressure` = '$editedfronttirepressure',`lowbeam` = '$editedlowbeam',`highbeam` = '$editedhighbeam',`rightblinker` = '$editedrightblinker',`leftblinker` = '$editedleftblinker',`brakelight` = '$editedbrakelight'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `year` = '$editedyear', `location` = '$editedlocation', `make` = '$editedmake', `model` = '$editedmodel', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date',`voltage` = '$editedvoltage',`reartirepressure` = '$editedreartirepressure',`fronttirepressure` = '$editedfronttirepressure',`lowbeam` = '$editedlowbeam',`highbeam` = '$editedhighbeam',`rightblinker` = '$editedrightblinker',`leftblinker` = '$editedleftblinker',`brakelight` = '$editedbrakelight', `status` = 'Checked-Out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -244,7 +244,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         </div>
     </div>
     <div class="row">
-        <input type="submit" name="submitedit" value="Submit Edit">
+        <input type="submit" name="submitedit" value="Check Out">
     </div>
         </form>
 </div>
