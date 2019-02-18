@@ -279,7 +279,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 </tr>
             <tr>
             <td>Audio</td>
-</tr><tr>
+</tr></br></br></br><tr>
             <td>Audio Troubleshooting</td>
             <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
             </tr><tr>
