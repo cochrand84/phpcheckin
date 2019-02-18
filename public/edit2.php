@@ -60,6 +60,13 @@ if ($result && $statement->rowCount() > 0) {
                     $editotheraudiodescription      = $row['otheraudiodescription'];
                     $editfullaudiosystem            = $row['fullaudiosystem'];
                     $editaudioupgrade               = $row['audioupgrade'];
+                    $editservicenote1             = $row['servicenote1'];
+                    $editservicenote2             = $row['servicenote2'];
+                    $editservicenote3             = $row['servicenote3'];
+                    $editservicenote1date         = $row['servicenote1date'];
+                    $editservicenote2date         = $row['servicenote2date'];
+                    $editservicenote3date         = $row['servicenote3date'];
+
 
 
                     $oilchangeckd = "";
@@ -149,9 +156,15 @@ if (isset($_POST['submitedit'])) {
             $editedotheraudiodescription            = $_POST['otheraudiodescription'];
             $editedfullaudiosystem                  = $_POST['fullaudiosystem'];
             $editedaudioupgrade                     = $_POST['audioupgrade'];
+            $editedservicenote1                     = $_POST['servicenote1'];
+            $editedservicenote2                     = $_POST['servicenote2'];
+            $editedservicenote3                     = $_POST['servicenote3'];
+            $editedservicenote1date                 = $_POST['servicenote1date'];
+            $editedservicenote2date                 = $_POST['servicenote2date'];
+            $editedservicenote3date                 = $_POST['servicenote3date'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade'
+         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -342,6 +355,26 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             Audio Upgrade<br />
             <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"<?php echo $fullaudiosystemckd; ?>/>Full Audio System<br />
             <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"<?php echo $audioupgradeckd; ?>/>Audio Upgrade<br />
+        </div>
+    </div>
+    <div class="row">     
+        <div class="col-25">
+                <label for="servicenotes">Service Notes</label>
+        </div>
+        <div class="col-75">
+            <input type="date" name="servicenote1date" value="<?php echo $editservicenote1date; ?>">
+            Service note #1<br />
+            <textarea name="servicenote1" id="servicenote1" rows="5" cols="80" ><?php echo $editservicenote1; ?></textarea><br />
+        </div>
+             <div class="col-75">
+            <input type="date" name="servicenote2date" value="<?php echo $editservicenote2date; ?>">
+            Service note #2<br />
+            <textarea name="servicenote2" id="servicenote2" rows="5" cols="80" ><?php echo $editservicenote2; ?></textarea><br />
+        </div>
+             <div class="col-75">
+            <input type="date" name="servicenote3date" value="<?php echo $editservicenote3date; ?>">
+            Service note #3<br />
+            <textarea name="servicenote3" id="servicenote3" rows="5" cols="80" ><?php echo $editservicenote3; ?></textarea><br />
         </div>
     </div>
     <div class="row">
