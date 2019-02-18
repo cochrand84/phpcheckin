@@ -11,7 +11,7 @@ $incommingid = $_GET['editid'];
 $dataTime = date("Y-m-d H:i:s");
 $connection = new PDO($dsn, $username, $password, $options);
 
-$sql = "UPDATE `tickets` SET `status` = 'Complete', `completedate` = '$dataTime' WHERE `id` = '$incommingid';";
+$sql = "UPDATE `tickets` SET `status` = 'Complete', `datecomplete` = '$dataTime' WHERE `id` = '$incommingid';";
 
 $statement = $connection->prepare($sql);
 $statement->execute($editdata);
