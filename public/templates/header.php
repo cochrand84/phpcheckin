@@ -1,10 +1,10 @@
 <?php 
-define('phpusername123', 'phpusername123');
-if(!isset($_COOKIE[phpusername123])) {
-	echo "Not logged in, please login";
-} else {
-    echo "Logged in as " . $_COOKIE[phpusername123];
-}
+//define('phpusername123', 'phpusername123');
+//if(!isset($_COOKIE[phpusername123])) {
+//	echo "Not logged in, please login";
+//} else {
+//    echo "Logged in as " . $_COOKIE[phpusername123];
+//}
 ?>
 
 <!doctype html>
