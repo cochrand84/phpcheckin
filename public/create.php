@@ -145,6 +145,7 @@ if (isset($_POST['submit'])) {
 }
 
     try  {
+        require "../common.php"; 
         $connection = new PDO($dsn, $username, $password, $options);
         $vinuppercase = strtoupper($VIN);
         $new_user = array(
@@ -173,7 +174,8 @@ if (isset($_POST['submit'])) {
             "audiotroubleshooting"      => $_POST['audiotroubleshooting'],
             "otheraudiodescription"     => $_POST['otheraudiodescription'],
             "fullaudiosystem"           => $_POST['fullaudiosystem'],
-            "audioupgrade"              => $_POST['audioupgrade']
+            "audioupgrade"              => $_POST['audioupgrade'],
+            "username"                  => $username
         );   
 
         $sql = sprintf(
@@ -194,7 +196,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
-    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added.</blockquote>
+    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
 <?php } ?>
  
 <h2>Create a new ticket</h2>
