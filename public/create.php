@@ -42,7 +42,7 @@ if ($vin) {
 if (isset($_POST['submit'])) {
 
     require "../config.php";
-    require "../common.php";  
+ 
 
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
@@ -145,7 +145,7 @@ if (isset($_POST['submit'])) {
 }
 
     try  {
-        require "../common.php"; 
+        
         $connection = new PDO($dsn, $username, $password, $options);
         $vinuppercase = strtoupper($VIN);
         $new_user = array(
