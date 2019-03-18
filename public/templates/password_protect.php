@@ -59,7 +59,8 @@ $LOGIN_INFORMATION = array(
   'bill'  => 'area51',
   'josh2' => 'area51',
   'cain'  => 'area51',
-  'terry' => 'area51'
+  'terry' => 'area51',
+  'jimmy' => 'area51'
 );
 
 // request login? true - show login and password boxes, false - password box only
