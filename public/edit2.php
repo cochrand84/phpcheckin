@@ -131,6 +131,82 @@ if ($result && $statement->rowCount() > 0) {
 
 if (isset($_POST['submitedit'])) {
 
+        $check = getimagesize($_FILES["image5"]["tmp_name"]);
+    if($check !== false){
+        $image5 = $_FILES['image5']['tmp_name'];
+        $imgContent5 = addslashes(file_get_contents($image5));      
+
+        $db = new mysqli($host, $username, $password, $dbname);
+        
+
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand5 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent5', '$dataTime', '$rand5')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
+    $check = getimagesize($_FILES["image6"]["tmp_name"]);
+    if($check !== false){
+        $image6 = $_FILES['image6']['tmp_name'];
+        $imgContent6 = addslashes(file_get_contents($image6));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand2 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent6', '$dataTime', '$rand6')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
+    $check = getimagesize($_FILES["image3"]["tmp_name"]);
+    if($check !== false){
+        $image7 = $_FILES['image7']['tmp_name'];
+        $imgContent7 = addslashes(file_get_contents($image7));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand7 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent7', '$dataTime', '$rand7')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
@@ -162,9 +238,12 @@ if (isset($_POST['submitedit'])) {
             $editedservicenote1date                 = $_POST['servicenote1date'];
             $editedservicenote2date                 = $_POST['servicenote2date'];
             $editedservicenote3date                 = $_POST['servicenote3date'];
+            $editedserviceimage5                    = $rand5;
+            $editedserviceimage6                    = $rand6;
+            $editedserviceimage7                    = $rand7;
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date'
+         $sql = "UPDATE `tickets` SET `vin` = $editedvin, `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7' 
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -372,6 +451,12 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <input type="date" name="servicenote1date" value="<?php echo $editservicenote1date; ?>">
             <textarea name="servicenote1" id="servicenote1" rows="5" cols="80" ><?php echo $editservicenote1; ?></textarea><br />
         </div>
+        <div class="col-25">
+                <label for="image5">Image 5</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="image5" id="image5"/><br />
+        </div>
             </div>
     <div class="row">
                  <div class="col-25">
@@ -382,6 +467,12 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             
             <textarea name="servicenote2" id="servicenote2" rows="5" cols="80" ><?php echo $editservicenote2; ?></textarea><br />
         </div>
+                <div class="col-25">
+                <label for="image6">Image 6</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="image6" id="image6"/><br />
+        </div>
             </div>
     <div class="row">
                  <div class="col-25">
@@ -391,6 +482,12 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <input type="date" name="servicenote3date" value="<?php echo $editservicenote3date; ?>">
            
             <textarea name="servicenote3" id="servicenote3" rows="5" cols="80" ><?php echo $editservicenote3; ?></textarea><br />
+        </div>
+                <div class="col-25">
+                <label for="image7">Image 7</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="image7" id="image7"/><br />
         </div>
     </div>
     <div class="row">
