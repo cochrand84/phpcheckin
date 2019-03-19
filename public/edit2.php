@@ -131,8 +131,7 @@ if ($result && $statement->rowCount() > 0) {
 
 if (isset($_POST['submitedit'])) {
 
-        $check = getimagesize($_FILES["image5"]["tmp_name"]);
-    if($check !== false){
+
         $image5 = $_FILES['image5']['tmp_name'];
         $imgContent5 = addslashes(file_get_contents($image5));      
 
@@ -152,13 +151,8 @@ if (isset($_POST['submitedit'])) {
         }else{
             echo "File upload failed, please try again.";
         } 
-    }else{
-        
+    
 
-}
-
-    $check = getimagesize($_FILES["image6"]["tmp_name"]);
-    if($check !== false){
         $image6 = $_FILES['image6']['tmp_name'];
         $imgContent6 = addslashes(file_get_contents($image6));
      
@@ -177,13 +171,9 @@ if (isset($_POST['submitedit'])) {
         }else{
             echo "File upload failed, please try again.";
         } 
-    }else{
-        
 
-}
 
-    $check = getimagesize($_FILES["image3"]["tmp_name"]);
-    if($check !== false){
+   
         $image7 = $_FILES['image7']['tmp_name'];
         $imgContent7 = addslashes(file_get_contents($image7));
      
@@ -202,10 +192,7 @@ if (isset($_POST['submitedit'])) {
         }else{
             echo "File upload failed, please try again.";
         } 
-    }else{
-        
-
-}
+    
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
