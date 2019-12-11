@@ -5,7 +5,6 @@ include "templates/password_protect.php";
 $_GET['editid'];
 $incommingid = $_GET['editid'];
 
-if (isset($_POST['submit'])) {
     try  {
         
         require "../config.php";
@@ -25,7 +24,6 @@ if (isset($_POST['submit'])) {
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
-}
 ?>
 
         

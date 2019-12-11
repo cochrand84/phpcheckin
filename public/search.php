@@ -29,7 +29,7 @@ $incommingid = $_GET['searchvalue'];
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "templates/readtable.php"; ?>
+<?php require "templates/edittable.php"; ?>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo $incommingid; ?>.</blockquote>
