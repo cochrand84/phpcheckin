@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE NOT (status = 'complete') ORDER by due_date ASC";
+        $sql = "SELECT * FROM tickets ORDER by due_date DESC";
 
         $location = $_POST['location'];
 
