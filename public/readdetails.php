@@ -2,6 +2,9 @@
 require "templates/header.php";
 include "templates/password_protect.php"; 
 
+$_GET['editid'];
+$incommingid = $_GET['editid'];
+
 if (isset($_POST['submit'])) {
     try  {
         
@@ -10,7 +13,7 @@ if (isset($_POST['submit'])) {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets ORDER by due_date DESC";
+        $sql = "SELECT * FROM tickets WHERE (ID = $incommingid)";
 
         $location = $_POST['location'];
 
