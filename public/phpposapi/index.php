@@ -22,7 +22,9 @@ curl_close($curl);
 
 var_dump($response);
 
-extract($response, true);
+$decode = json_decode($response);
+
+extract($decode, true);
 
 var_dump($cart_items);
 
