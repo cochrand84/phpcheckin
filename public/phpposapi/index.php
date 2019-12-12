@@ -18,8 +18,10 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-extract($response);
 
+
+$decode = json_decode($response, true);
+extract($decode);
 
 print_r($name);
 
