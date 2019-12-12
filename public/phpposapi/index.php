@@ -31,5 +31,6 @@ function var_dump_pre($mixed = null) {
   return null;
 }
 
-var_dump_pre($decode)
+var_dump_pre($decode);
+
 ?>
