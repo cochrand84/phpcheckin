@@ -22,7 +22,7 @@ curl_close($curl);
 
 var_dump($response);
 
-extract($response);
+extract($response, true);
 
 var_dump($cart_items);
 
