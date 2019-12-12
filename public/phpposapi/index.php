@@ -18,7 +18,7 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-$decode = json_decode($response);
+$decode = json_decode($response, true);
 
 echo $decode[0]['name'];
 
