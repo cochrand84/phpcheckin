@@ -18,9 +18,9 @@ $err = curl_error($curl);
 
 curl_close($curl);
 echo $response;
-echo ""
-echo "and then the decode"
-echo ""
+echo "";
+echo "and then the decode";
+echo "";
 $decode = json_decode($response);
 
 echo '<pre>'; print_r($decode); echo '</pre>';
