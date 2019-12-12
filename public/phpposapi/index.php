@@ -24,7 +24,12 @@ $decode = json_decode($response, true);
 extract($decode);
 
 print_r($name);
-var_dump($decode)
+function var_dump_pre($mixed = null) {
+  echo '<pre>';
+  var_dump($decode);
+  echo '</pre>';
+  return null;
+}
 
 
 ?>
