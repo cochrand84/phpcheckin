@@ -20,24 +20,11 @@ $err = curl_error($curl);
 curl_close($curl);
 
 echo $response;
-/**
+$xml = simplexml_load_file('$response');
+$blocks  = $xml->xpath('//block'); //gets all <block/> tags
+$blocks2 = $xml->xpath('//layout/block'); //gets all <block/> which parent are   <layout/>  tags
 
-$decode = json_decode($response, true);
-
-extract($decode);
-
-print_r($name);
-function var_dump_pre($mixed = null) {
-  echo '<pre>';
-  var_dump($mixed);
-  echo '</pre>';
-  return null;
-}
-
-var_dump_pre($decode);
-
-print_r(get_defined_vars());
-
-*/
+echo $blocks;
+echo $blocks2;
 
 ?>
