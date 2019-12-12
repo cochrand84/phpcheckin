@@ -66,6 +66,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote1date         = $row['servicenote1date'];
                     $editservicenote2date         = $row['servicenote2date'];
                     $editservicenote3date         = $row['servicenote3date'];
+                    $editphpid                         = $row['phpid'];
 
 
 
@@ -228,9 +229,10 @@ if (isset($_POST['submitedit'])) {
             $editedserviceimage5                    = $rand5;
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
+            $editedphpid                                  = $row['phpid'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7' 
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -476,6 +478,17 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <input type="file" name="image7" id="image7"/><br />
         </div>
+    </div>
+        <div class="row">
+                 <div class="col-25">
+                <label for="phpid">PHP ID</label>
+        </div>
+             <div class="col-75">
+            <input type="date" name="phpid" value="<?php echo $editphpid; ?>">
+           
+            <textarea name="phpid" id="phpid" rows="5" cols="80" ><?php echo $editphpid; ?></textarea><br />
+        </div>
+            
     </div>
     <div class="row">
         <input type="submit" name="submitedit" value="Submit Edit">
