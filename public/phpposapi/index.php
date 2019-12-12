@@ -21,6 +21,6 @@ curl_close($curl);
 
 echo $response;
 $xml = simplexml_load_string('$response');
-print_r($xml);
+var_dump($xml);
 
 ?>
