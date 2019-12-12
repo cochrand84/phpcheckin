@@ -8,7 +8,8 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "cache-control: no-cache"
+    "cache-control: no-cache",
+    "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44”,
   ),
 ));
 
