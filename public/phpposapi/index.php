@@ -20,7 +20,7 @@ $err = curl_error($curl);
 curl_close($curl);
 
 echo $response;
-$xml = simplexml_load_file('$response');
+$xml = simplexml_load_string('$response');
 print_r($xml);
 
 ?>
