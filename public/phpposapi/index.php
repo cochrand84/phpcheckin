@@ -21,10 +21,6 @@ curl_close($curl);
 
 echo $response;
 $xml = simplexml_load_file('$response');
-$blocks  = $xml->xpath('//block'); //gets all <block/> tags
-$blocks2 = $xml->xpath('//layout/block'); //gets all <block/> which parent are   <layout/>  tags
-
-echo $blocks;
-echo $blocks2;
+print_r($xml);
 
 ?>
