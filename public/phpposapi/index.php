@@ -2,7 +2,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://http://area51customs.phppointofsale.com/index.php/api/v1/sales/1234",
+  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/1234",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
