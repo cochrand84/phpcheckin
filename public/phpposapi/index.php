@@ -22,4 +22,8 @@ curl_close($curl);
 
 var_dump($response);
 
+extract($response);
+
+var_dump($cart_items);
+
 ?>
