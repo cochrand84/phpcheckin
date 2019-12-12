@@ -19,7 +19,7 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-echo $response;
+var_dump($response);
 $xml = simplexml_load_string('$response');
 var_dump($xml);
 
