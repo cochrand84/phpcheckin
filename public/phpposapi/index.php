@@ -18,9 +18,8 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-
-
 $decode = json_decode($response, true);
+
 extract($decode);
 
 print_r($name);
@@ -32,5 +31,7 @@ function var_dump_pre($mixed = null) {
 }
 
 var_dump_pre($decode);
+
+print_r(get_defined_vars());
 
 ?>
