@@ -20,12 +20,10 @@ curl_close($curl);
 
 $decode = json_decode($response, true);
 
-/**
-foreach($decode as $names){
-	echo $names . "<br>";
-}
-*/
+
+$decode2 = json_decode($decode, true);
 
 print_r($decode);
+print_r($decode2);
 
 ?>
