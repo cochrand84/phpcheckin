@@ -9,7 +9,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
     "cache-control: no-cache",
-    "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44”,
+    "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44",
   ),
 ));
 
