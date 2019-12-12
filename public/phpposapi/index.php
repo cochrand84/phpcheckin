@@ -26,10 +26,10 @@ extract($decode);
 print_r($name);
 function var_dump_pre($mixed = null) {
   echo '<pre>';
-  var_dump($decode);
+  var_dump($mixed);
   echo '</pre>';
   return null;
 }
 
-
+var_dump_pre($decode)
 ?>
