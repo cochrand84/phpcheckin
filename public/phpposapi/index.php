@@ -24,6 +24,7 @@ $decode = json_decode($response, true);
 extract($decode);
 
 print_r($name);
+var_dump($decode)
 
 
 ?>
