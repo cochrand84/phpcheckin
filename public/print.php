@@ -67,6 +67,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editotheraudiodescription      = $row['otheraudiodescription'];
                     $editfullaudiosystem            = $row['fullaudiosystem'];
                     $editaudioupgrade               = $row['audioupgrade'];
+                    $editphpid                      = $row['phpid'];
 
 
                     $oilchangeckd = "";
@@ -308,7 +309,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
     <p style="page-break-before: always">
 <?php
-    include('phpposapi/index.php');
+    include('phpposapi/index.php?searchvalue='$editphpid);
 ?>
     </html>
 
