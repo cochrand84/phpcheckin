@@ -305,6 +305,10 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
 </tr>
     </table>
+
+    <p style="page-break-before: always">
+
+    include('phpposapi/index.php')
     </html>
 
 
