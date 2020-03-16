@@ -222,6 +222,8 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td>Status</td>
 
             <td><?php echo $editstatus; ?></td>
+            <td>Php POS ID</td>
+            <td><?php echo $editphpid; ?></td>
 </tr>
             <tr>
             <td>Image 1</td>
