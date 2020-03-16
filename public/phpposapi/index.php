@@ -26,6 +26,5 @@ $decode = json_decode($response);
 
 extract($decode, true);
 
-var_dump($cart_items);
 
 ?>
