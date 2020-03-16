@@ -307,8 +307,9 @@ if (isset($_POST['submitedit']) && $statement) { ?>
     </table>
 
     <p style="page-break-before: always">
-
-    include('phpposapi/index.php')
+<?php
+    include('phpposapi/index.php');
+?>
     </html>
 
 
