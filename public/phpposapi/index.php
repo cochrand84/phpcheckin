@@ -1,8 +1,11 @@
 <?php
 $curl = curl_init();
 
+$_GET['searchvalue'];
+$incommingid = $_GET['searchvalue'];
+
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/1234",
+  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$incommingid",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_HEADER => false,
   CURLOPT_TIMEOUT => 30,
@@ -22,9 +25,10 @@ curl_close($curl);
 
 var_dump($response);
 
-$decode = json_decode($response);
+//$decode = json_decode($response);
 
 //extract($decode, true);
 
+//var_dump($cart_items);
 
 ?>
