@@ -40,8 +40,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editlastname                   = $row["lastname"]; 
                     $editemail                      = $row["email"]; 
                     $edityear                       = $row["year"]; 
-                    $editedmake                     = $row["make"];
-                    $editedmodel                     = $row["model"];
+                    $editmake                     = $row["make"];
+                    $editmodel                     = $row["model"];
                     $editlocation                   = $row["location"]; 
                     $editdate                       = $row["date"]; 
                     $editstatus                     = $row["status"];
