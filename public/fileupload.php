@@ -13,7 +13,7 @@
     $fileExtension = strtolower(end(explode('.',$fileName)));
     $rand = rand();
     $uploadPath = $currentDir . $uploadDirectory . $rand . basename($fileName); 
-    $imgpath = $uploadDirectory . $rand . basename($fileName);
+    $imgpath = "." . $uploadDirectory . $rand . basename($fileName);
 
     if (isset($_POST['submit'])) {
 
