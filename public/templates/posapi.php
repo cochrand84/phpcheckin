@@ -5,7 +5,7 @@ $curl = curl_init();
 //$editphpid = $_GET['searchvalue'];
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$editid",
+  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$editphpid",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_HEADER => false,
   CURLOPT_TIMEOUT => 30,
