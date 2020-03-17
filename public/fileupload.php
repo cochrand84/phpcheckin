@@ -13,6 +13,7 @@
     $fileExtension = strtolower(end(explode('.',$fileName)));
 
     $uploadPath = $currentDir . $uploadDirectory . rand() . basename($fileName); 
+    $imgpath = $uploadDirectory . rand() . basename($fileName);
 
     if (isset($_POST['submit'])) {
 
@@ -29,7 +30,7 @@
 
             if ($didUpload) {
                 echo "The file " . basename($fileName) . " has been uploaded";
-                ?><img src="<?php echo $uploadPath;?>" alt="<?php echo $uploadPath; ?>" height="100" width="100">
+                ?><img src="<?php echo $imgpath;?>" alt="<?php echo $imgpath; ?>" height="100" width="100">
                 <?php
             } else {
                 echo "An error occurred somewhere. Try again or contact the admin";
