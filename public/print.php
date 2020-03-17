@@ -311,7 +311,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
     <p style="page-break-before: always">
 <?php
-    include "posapi.php?searchvalue=$editphpid";
+    include "./posapi.php?searchvalue=$editphpid";
 ?>
     </html>
 
