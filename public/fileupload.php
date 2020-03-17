@@ -12,7 +12,7 @@
     $fileType = $_FILES['myfile']['type'];
     $fileExtension = strtolower(end(explode('.',$fileName)));
 
-    $uploadPath = $currentDir . $uploadDirectory . basename($fileName); 
+    $uploadPath = $currentDir . $uploadDirectory . basename($fileName) . rand(); 
 
     if (isset($_POST['submit'])) {
 
