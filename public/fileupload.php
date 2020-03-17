@@ -11,7 +11,7 @@
     $fileTmpName  = $_FILES['myfile']['tmp_name'];
     $fileType = $_FILES['myfile']['type'];
     $fileExtension = strtolower(end(explode('.',$fileName)));
-    $rand = rand()
+    $rand = rand();
     $uploadPath = $currentDir . $uploadDirectory . $rand . basename($fileName); 
     $imgpath = $uploadDirectory . $rand . basename($fileName);
 
