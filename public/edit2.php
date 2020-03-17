@@ -40,6 +40,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editlastname                   = $row["lastname"]; 
                     $editemail                      = $row["email"]; 
                     $edityear                       = $row["year"]; 
+                    $editedmake                     = $row["make"];
+                    $editedmodel                     = $row["model"];
                     $editlocation                   = $row["location"]; 
                     $editdate                       = $row["date"]; 
                     $editstatus                     = $row["status"];
@@ -203,11 +205,11 @@ if (isset($_POST['submitedit'])) {
             $editedlastname                         = $_POST['lastname'];
             $editedemail                            = $_POST['email'];
             $editedphone                            = $_POST['phone'];
-            $editedyear                             = $_POST['ModelYear'];
+            $editedyear                             = $_POST['year'];
             $editedlocation                         = $_POST['location'];
             $editedstatus                           = $_POST['status'];
-            $editedmake                             = $_POST['Make'];
-            $editedmodel                            = $_POST['Model'];
+            $editedmake                             = $_POST['make'];
+            $editedmodel                            = $_POST['model'];
             $editeddue_date                         = $_POST['due_date'];
             $editeddescription                      = $_POST['description'];
             $editedoilchange                        = $_POST['oilchange'];
@@ -283,7 +285,36 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <input type="text" name="lastname" id="lastname" value="<?php echo $editlastname; ?>"required>
         </div>
-    </div>    
+    </div>  
+
+    <div class="row">     
+        <div class="col-25">
+            <label for="make">Make</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="make" id="make" value="<?php echo $editmake; ?>"required>
+        </div>
+    </div>
+
+        <div class="row">     
+        <div class="col-25">
+            <label for="model">Model</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="model" id="model" value="<?php echo $editmodel; ?>"required>
+        </div>
+    </div>
+
+    <div class="row">     
+        <div class="col-25">
+            <label for="year">Year</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="year" id="year" value="<?php echo $edityear; ?>"required>
+        </div>
+    </div>
+
+
     <div class="row">     
         <div class="col-25">
             <label for="email">Email Address</label>
@@ -479,17 +510,17 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <input type="file" name="image7" id="image7"/><br />
         </div>
     </div>
-        <div class="row">
-                 <div class="col-25">
-                <label for="phpid">PHP ID</label>
-        </div>
-             <div class="col-75">
-            <input type="date" name="phpid" value="<?php echo $editphpid; ?>">
-           
-            <textarea name="phpid" id="phpid" rows="5" cols="80" ><?php echo $editphpid; ?></textarea><br />
-        </div>
             
+    <div class="row">     
+        <div class="col-25">
+            <label for="phpid">PHP ID</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="phpid" id="phpid" value="<?php echo $editphpid; ?>"required>
+        </div>
     </div>
+
+  
     <div class="row">
         <input type="submit" name="submitedit" value="Submit Edit">
     </div>
