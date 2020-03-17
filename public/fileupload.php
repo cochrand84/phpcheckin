@@ -29,6 +29,8 @@
 
             if ($didUpload) {
                 echo "The file " . basename($fileName) . " has been uploaded";
+                ?><img src="<?php echo $uploadPath;?>" alt="<?php echo $uploadPath; ?>" height="100" width="100">
+                <?php
             } else {
                 echo "An error occurred somewhere. Try again or contact the admin";
             }
