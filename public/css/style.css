@@ -2,7 +2,7 @@ body {
 background-image: url(../images/background.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-size: 100%;
+background-size: contain;
 }
 
 input[type=text], select, textarea{
@@ -22,7 +22,7 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #ff0000;
+  background-color: #000000;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -89,7 +89,7 @@ input[type=submit] {
 }
 
 #ticketstable tr:nth-child(even){background-color: #f2f2f2;}
-#ticketstable tr:nth-child(odd){background-color: #f4d4d4;}
+#ticketstable tr:nth-child(odd){background-color: #ddd;}
 
 #ticketstable tr:hover {background-color: #ddd;}
 
@@ -97,7 +97,7 @@ input[type=submit] {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #ff0000;
+  background-color: #000000;
   color: white;
 }
 
