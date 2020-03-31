@@ -10,6 +10,7 @@
                     <th>Vin Number</th>
                     <th>Make</th>
                     <th>Model</th>
+                    <th>Discription</th>
                     <th>Due Date</th>
                     <th>Status</th>
                     <th>Edit</th>
@@ -30,6 +31,7 @@
                 <td><?php echo escape($row["vin"]); ?> </td>
                 <td><?php echo escape($row["make"]); ?> </td>
                 <td><?php echo escape($row["model"]); ?> </td>
+                <td><?php echo escape($row["description"]); ?></td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>        
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
