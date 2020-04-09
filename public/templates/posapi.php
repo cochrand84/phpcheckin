@@ -25,16 +25,13 @@ curl_close($curl);
 
 var_dump($response);
 
-$dom = new DOMDocument;
-$dom->preserveWhiteSpace = FALSE;
-$dom->loadXML($response);
-$dom->formatOutput = TRUE;
-echo $dom->saveXML();
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
 
-//$decode = json_decode($response);
-
-//extract($decode, true);
-
-//var_dump($cart_items);
+$xml=simplexml_load_string($response) or die("Error: Cannot create object");
+print_r($xml);
 
 ?>
