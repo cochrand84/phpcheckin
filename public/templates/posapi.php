@@ -31,7 +31,9 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$xml=simplexml_load_string($response) or die("Error: Cannot create object");
-print_r($xml);
+$xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
+foreach ($xml->cart_items->cart_item as $cart_item){
+  echo $cart_item->quantity, $cart_item->name, PHP_EOL;
+}
 
 ?>
