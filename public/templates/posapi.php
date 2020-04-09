@@ -25,7 +25,11 @@ curl_close($curl);
 
 var_dump($response);
 
-
+$dom = new DOMDocument;
+$dom->preserveWhiteSpace = FALSE;
+$dom->loadXML($response);
+$dom->formatOutput = TRUE;
+echo $dom->saveXML();
 
 //$decode = json_decode($response);
 
