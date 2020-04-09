@@ -13,12 +13,14 @@ background-size: 100%;
   float: left;
   width: 50%;
   margin-top: 6px;
+  font-size: 18px;
 }
 
 .col2 {
   float: right;
   width: 50%;
   margin-top: 6px;
+  font-size: 18px;
 }
 }
 
@@ -27,6 +29,7 @@ background-size: 100%;
     margin-right: 50mm;
     margin-top: 50mm;
     margin-bottom: 50mm;
-    margin: 0;
+    margin: 20mm;
+    font-size: 18px;
     -webkit-print-color-adjust: exact;
 }

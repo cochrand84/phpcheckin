@@ -225,20 +225,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <td>Php POS ID</td>
             <td><?php echo $editphpid; ?></td>
 </tr>
-            <tr>
-            <td>Image 1</td>
-            <td><img src="view.php?rand=<?php echo $editimage1; ?>" alt="<?php echo $editimage1; ?>" height="100" width="100"></td>
-
-            <td>Image 2</td>
-            <td><img src="view.php?rand=<?php echo $editimage2; ?>" alt="<?php echo $editimage2; ?>" height="100" width="100"></td>
-</tr>
-            <td><tr>
-            <td>Image 3</td>
-            <td><img src="view.php?rand=<?php echo $editimage3; ?>" alt="<?php echo $editimage3; ?>" height="100" width="100"></td>
-
-            <td>Image 4</td>
-            <td><img src="view.php?rand=<?php echo $editimage4; ?>" alt="<?php echo $editimage4; ?>" height="100" width="100"></td>
-            </tr>
             </table>
 <table>
             <tr>
