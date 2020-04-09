@@ -25,15 +25,15 @@ curl_close($curl);
 
 var_dump($response);
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
+echo "</br>";
 
 $xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
 foreach ($xml->cart_items->cart_item as $cart_item){
-  echo $cart_item->quantity, $cart_item->name, PHP_EOL;
+  echo $cart_item->quantity, '  ',$cart_item->name, '</br>';
 }
 
 ?>
