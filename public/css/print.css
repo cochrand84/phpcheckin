@@ -7,7 +7,7 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100%;
 margin: 1.6cm;
-font-size: 18px;
+font-size: 25px;
 -webkit-print-color-adjust: exact;
 }
 
@@ -29,7 +29,7 @@ font-size: 18px;
 @page {
 background-image: url(../images/background.png);
 margin: 0;
-font-size: 18px;
+font-size: 25px;
 -webkit-print-color-adjust: exact;
 }
 #table-items {
