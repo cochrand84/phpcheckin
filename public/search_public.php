@@ -8,8 +8,10 @@
 
 require "templates/header.php";
 
-$_GET['searchvalue'];
-$incommingid = $_GET['searchvalue'];
+$_GET['ticketid'];
+$incommingid = $_GET['ticketid'];
+$_GET['lastname'];
+$incommingid = $_GET['lastname'];
 
 try  {
         
@@ -18,7 +20,7 @@ try  {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM `tickets` WHERE (ID = $incommingid)";
+        $sql = "SELECT * FROM `tickets` WHERE (ID = $incommingid AND lastname = $incommingln)";
 
         $location = $_POST['location'];
 
