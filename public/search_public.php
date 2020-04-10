@@ -11,7 +11,7 @@ require "templates/header.php";
 $_GET['ticketid'];
 $incommingid = $_GET['ticketid'];
 $_GET['lastname'];
-$incommingid = $_GET['lastname'];
+$incommingln = $_GET['lastname'];
 
 try  {
         
