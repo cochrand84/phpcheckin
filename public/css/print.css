@@ -39,3 +39,6 @@ font-size: 18px;
 .items-row {
     border:solid thin;
 }
+.items-divider {
+    border:solid thin;
+}
