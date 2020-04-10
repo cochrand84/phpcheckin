@@ -38,8 +38,8 @@
 if (isset($_POST['submit'])) {
     try  {
         
-        require "../../config.php";
-        require "../../common.php";
+        require "../config.php";
+        require "../common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "../templates/edittable.php"; ?>
+<?php require "templates/edittable.php"; ?>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
@@ -77,8 +77,8 @@ if (isset($_POST['submit'])) {
 if (isset($_POST['submit2'])) {
     try  {
         
-        require "../../config.php";
-        require "../../common.php";
+        require "../config.php";
+        require "../common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -102,7 +102,7 @@ if (isset($_POST['submit2'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "../templates/edittable.php"; ?>
+<?php require "templates/edittable.php"; ?>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
@@ -114,8 +114,8 @@ if (isset($_POST['submit2'])) {
 if (isset($_POST['submit3'])) {
     try  {
         
-        require "../../config.php";
-        require "../../common.php";
+        require "../config.php";
+        require "../common.php";
 
         $connection = new PDO($dsn, $username, $password, $options);
 
@@ -139,7 +139,7 @@ if (isset($_POST['submit3'])) {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "../templates/edittable.php"; ?>
+<?php require "templates/edittable.php"; ?>
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
