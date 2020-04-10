@@ -130,170 +130,111 @@ if ($result && $statement->rowCount() > 0) {
         echo $_POST['status'];
      } 
 
-if (isset($_POST['submitedit'])) {
 
-    try  {
-        $connection = new PDO($dsn, $username, $password, $options);
-        
-            $editedvin                              = $_POST['vin'];
-            $editedfirstname                        = $_POST['firstname'];
-            $editedlastname                         = $_POST['lastname'];
-            $editedemail                            = $_POST['email'];
-            $editedphone                            = $_POST['phone'];
-            $editedyear                             = $_POST['ModelYear'];
-            $editedlocation                         = $_POST['location'];
-            $editedstatus                           = $_POST['status'];
-            $editedmake                             = $_POST['Make'];
-            $editedmodel                            = $_POST['Model'];
-            $editeddue_date                         = $_POST['due_date'];
-            $editeddescription                      = $_POST['description'];
-            $editedoilchange                        = $_POST['oilchange'];
-            $editedfullservice                      = $_POST['fullservice'];
-            $editedotherservice                     = $_POST['otherservice'];
-            $editedotherservicedescription          = $_POST['otherservicedescription'];
-            $editedfronttirechange                  = $_POST['fronttirechange'];
-            $editedreartirechange                   = $_POST['reartirechange'];
-            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'];
-            $editedotheraudiodescription            = $_POST['otheraudiodescription'];
-            $editedfullaudiosystem                  = $_POST['fullaudiosystem'];
-            $editedaudioupgrade                     = $_POST['audioupgrade'];
-            
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade'
-         WHERE `id` = '$editid';";
 
-        $statement = $connection->prepare($sql);
-        $statement->execute($editdata);
-        echo "<meta http-equiv='refresh' content='0'>";
-
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
-
-if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
-<table id="ticket">
+<table id="table-ticket">
 	<tr>
-		
-            <td>Ticket ID</td>
-
-            <td><?php echo $editid; ?></td>
-
-            <td>VIN</td>
-
-            <td><?php echo $editvin; ?></td>
-</tr>
-            <tr>
-
-            <td>First Name</td>
-
-            <td><?php echo $editfirstname; ?></td>
-
-            <td>Last Name</td>
-
-            <td><?php echo $editlastname; ?></td>
-            </tr>
-            <tr>
-
-            <td>Email Address</td>
-
-            <td><?php echo $editemail; ?></td>
-
-            <td>Phone Number</td>
-
-            <td><?php echo $editphone; ?></td>
-            </tr>
-            <tr>
- 
-            <td>Location</td>
-
-            <td><?php echo $editlocation; ?></td>
- 
-            <td>Due Date</td>
-
-            <td><?php echo $editduedate; ?></td>
-            </tr>
-            <tr>
-
-            <td>Status</td>
-
-            <td><?php echo $editstatus; ?></td>
-            <td>Php POS ID</td>
-            <td><?php echo $editphpid; ?></td>
-</tr>
-            </table>
+		<td>Ticket ID</td>
+        <td><?php echo $editid; ?></td>
+        <td>VIN</td>
+        <td><?php echo $editvin; ?></td>
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td><?php echo $editfirstname; ?></td>
+        <td>Last Name</td>
+        <td><?php echo $editlastname; ?></td>
+    </tr>
+    <tr>
+        <td>Email Address</td>
+        <td><?php echo $editemail; ?></td>
+        <td>Phone Number</td>
+        <td><?php echo $editphone; ?></td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td><?php echo $editlocation; ?></td>
+        <td>Due Date</td>
+        <td><?php echo $editduedate; ?></td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td><?php echo $editstatus; ?></td>
+        <td>Php POS ID</td>
+        <td><?php echo $editphpid; ?></td>
+    </tr>
+</table>
 <table>
-            <tr>
-            	<th>
-            	</th>
-            	<th>
-            	</th>
-            	<th>
-            	</th>
-            </tr>
-            <tr>
-
-            <td>Description of Issue/Upgrade</td>
-</tr>
-<tr>
-            <td><?php echo $editdescription; ?></td>
-</tr>
-
-            </table></br>
+    <tr>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+    </tr>
+    <tr>
+        <td>Description of Issue/Upgrade</td>
+    </tr>
+    <tr>
+        <td><?php echo $editdescription; ?></td>
+    </tr>
+</table>
+</br>
 <table>
-            <tr>
-    <td>Services Requested</td>
-</tr>
-            <tr>
-            <td>Mechanical</td>
-</tr><tr>
-            <td>Oil Change/Service</td>
-            <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
-            <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
-            <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
-        </tr>
-        <tr>
-            <td>Other Services Description:</td>
-        </tr>
-	
-        <tr>
-            <td><?php echo $editotherservicedescription; ?></td>
-            </tr></br><tr>
-            <td>Tires</td>
-            <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
-            <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
-</tr>
-            <tr>
-            <td>Audio</td>
-</tr><tr>
-            <td>Audio Troubleshooting</td>
-            <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
-	<td>Audio Upgrade</td>
-            <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
-            <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
-            </tr>
-<tr>
-            <td>Other Audio Description:</td>
-            </tr><tr>
-            <td><?php echo $editotheraudiodescription; ?></td>
-            
-</tr></br>
-            <tr>
-            </br>
-			<td>Ticket Number:</td>
-
-			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
-
-			<td>Vin Number:</td>
-
-			<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" /></td>
-
-</tr>
-    </table>
+    <tr>
+        <td>Services Requested</td>
+    </tr>
+    <tr>
+        <td>Mechanical</td>
+    </tr>
+    <tr>
+        <td>Oil Change/Service</td>
+        <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
+        <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
+        <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
+    </tr>
+    <tr>
+        <td>Other Services Description:</td>
+    </tr>
+	<tr>
+        <td><?php echo $editotherservicedescription; ?></td>
+    </tr>
+    </br>
+    <tr>
+        <td>Tires</td>
+        <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
+        <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+    </tr>
+    <tr>
+        <td>Audio Troubleshooting</td>
+        <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
+        <td>Audio Upgrade</td>
+        <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
+        <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
+    </tr>
+    <tr>
+        <td>Other Audio Description:</td>
+    </tr>
+    <tr>
+        <td><?php echo $editotheraudiodescription; ?></td>
+    </tr>
+    </br>
+    <tr>
+    </br>
+	    <td>Ticket Number:</td>
+		<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
+		<td>Vin Number:</td>
+		<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editvin; ?>&print=true" /></td>
+    </tr>
+</table>
 
     <p style="page-break-before: always">
 <?php
