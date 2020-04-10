@@ -176,7 +176,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 <?php } ?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
-<table style="width:100%">
+<table id="ticket">
 	<tr>
 		
             <td>Ticket ID</td>
