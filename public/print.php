@@ -183,21 +183,12 @@ if ($result && $statement->rowCount() > 0) {
 </table>
 <table id="table-ticket2">
     <tr>
-        <th>
-        </th>
-        <th>
-        </th>
-        <th>
-        </th>
-    </tr>
-    <tr>
         <td colspan="3">Description of Issue/Upgrade</td>
     </tr>
     <tr>
         <td colspan="3"><?php echo $editdescription; ?></td>
     </tr>
 </table>
-</br>
 <table id="table-ticket3">
     <tr>
         <td colspan="5">Services Requested</td>
@@ -218,7 +209,6 @@ if ($result && $statement->rowCount() > 0) {
 	<tr>
         <td colspan="5"><?php echo $editotherservicedescription; ?></td>
     </tr>
-    </br>
     <tr>
         <td>Tires</td>
         <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
@@ -242,9 +232,7 @@ if ($result && $statement->rowCount() > 0) {
     <tr>
         <td colspan="5"><?php echo $editotheraudiodescription; ?></td>
     </tr>
-    </br>
     <tr>
-    </br>
 	    <td>Ticket Number:</td>
 		<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
 		<td>Vin Number:</td>
