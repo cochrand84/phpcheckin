@@ -131,9 +131,7 @@ if ($result && $statement->rowCount() > 0) {
      } 
 
 
-
-
-<?php } ?>
+?>
 <h2>Ticket # <?php echo $editid; ?></h2>
 
 <table id="table-ticket">
