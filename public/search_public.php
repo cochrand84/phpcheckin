@@ -20,7 +20,7 @@ try  {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM `tickets` WHERE ID = $incommingid AND lastname = $incommingln";
+        $sql = "SELECT * FROM `tickets` WHERE (ID = $incommingid AND lastname = "$incommingln")";
 
         $location = $_POST['location'];
 
