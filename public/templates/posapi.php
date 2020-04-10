@@ -26,7 +26,7 @@ echo '</br>';
 echo '</br>';
 echo 'POS Ticket:';
 echo '</br>';
-echo '<table>';
+echo '<table id="table-items">';
 echo '<tr>';
 echo '<th>Quantity</th>';
 echo '<th>Product ID</th>';
