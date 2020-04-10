@@ -68,6 +68,9 @@ if ($result && $statement->rowCount() > 0) {
                     $editfullaudiosystem            = $row['fullaudiosystem'];
                     $editaudioupgrade               = $row['audioupgrade'];
                     $editphpid                      = $row['phpid'];
+                    $edityear                       = $row["year"]; 
+                    $editmake                       = $row["make"];
+                    $editmodel                      = $row["model"];
 
 
                     $oilchangeckd = "";
@@ -148,6 +151,18 @@ if ($result && $statement->rowCount() > 0) {
         <td><?php echo $editlastname; ?></td>
     </tr>
     <tr>
+        <td>Year</td>
+        <td><?php echo $edityear; ?></td>
+        <td>Make</td>
+        <td><?php echo $editmake; ?></td>
+    </tr>
+    <tr>
+        <td>Model</td>
+        <td><?php echo $editmodel; ?></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td>Email Address</td>
         <td><?php echo $editemail; ?></td>
         <td>Phone Number</td>
@@ -166,7 +181,7 @@ if ($result && $statement->rowCount() > 0) {
         <td><?php echo $editphpid; ?></td>
     </tr>
 </table>
-<table>
+<table id="table-ticket2">
     <tr>
         <th>
         </th>
@@ -183,7 +198,7 @@ if ($result && $statement->rowCount() > 0) {
     </tr>
 </table>
 </br>
-<table>
+<table id="table-ticket3">
     <tr>
         <td>Services Requested</td>
     </tr>

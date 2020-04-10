@@ -50,11 +50,13 @@ font-size: 25px;
   border-collapse: collapse;
   width: 100%;
 }
-.ticket-row {
-    border:solid thin;
+#table-ticket2{
+  border: solid thin; 
+  border-collapse: collapse;
+  width: 100%;
 }
-.ticket-divider {
-    border:solid thin;
-    text-align: left;
-    padding: 5px;
+#table-ticket3{
+  border: solid thin; 
+  border-collapse: collapse;
+  width: 100%;
 }
