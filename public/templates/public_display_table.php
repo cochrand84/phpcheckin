@@ -34,10 +34,6 @@
                 <td><?php echo escape($row["description"]); ?></td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
                 <td><?php echo escape($row["status"]); ?> </td>        
-              <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>">Edit</a></td>
-              <td><a href="complete.php?editid=<?php echo $row["id"]; ?>">Mark as Complete</a></td>
-              <td><a href="print.php?editid=<?php echo $row["id"]; ?>">Print</a></td>
-              <td><a href="checkout.php?editid=<?php echo $row["id"]; ?>">Check-out</a></td>
             </tr>
         <?php } ?>
         </tbody>
