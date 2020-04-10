@@ -6,7 +6,6 @@ background-image: url(../images/background.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: 100%;
-margin: 25mm 25mm 25mm 25mm;
 -webkit-print-color-adjust: exact;
 }
 
@@ -26,7 +25,8 @@ margin: 25mm 25mm 25mm 25mm;
 }
 
 @page {
-margin: 25mm 25mm 25mm 25mm;
+background-image: url(../images/background.png);
+margin: 15mm 15mm 15mm 15mm;
     font-size: 18px;
     -webkit-print-color-adjust: exact;
 }
