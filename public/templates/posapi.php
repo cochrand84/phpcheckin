@@ -30,13 +30,13 @@ echo '<tr>';
 echo '<th>Quantity</th>';
 echo '<th>Description</th>';
 echo '</tr>';
-echo '<tr>';
+
 
 $xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
 foreach ($xml->cart_items->cart_item as $cart_item){
-  echo '<td>',$cart_item->quantity,'</td>','<td>',$cart_item->name,'</td>';
+  echo '<tr>','<td>',$cart_item->quantity,'</td>','<td>',$cart_item->name,'</td>','</tr>';
 }
-echo '</tr>';
+
 echo '</table>';
 
 ?>
