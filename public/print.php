@@ -191,19 +191,19 @@ if ($result && $statement->rowCount() > 0) {
         </th>
     </tr>
     <tr>
-        <td>Description of Issue/Upgrade</td>
+        <td colspan="3">Description of Issue/Upgrade</td>
     </tr>
     <tr>
-        <td><?php echo $editdescription; ?></td>
+        <td colspan="3"><?php echo $editdescription; ?></td>
     </tr>
 </table>
 </br>
 <table id="table-ticket3">
     <tr>
-        <td>Services Requested</td>
+        <td colspan="4">Services Requested</td>
     </tr>
     <tr>
-        <td>Mechanical</td>
+        <td colspan="4">Mechanical</td>
     </tr>
     <tr>
         <td>Oil Change/Service</td>
@@ -212,19 +212,20 @@ if ($result && $statement->rowCount() > 0) {
         <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
     </tr>
     <tr>
-        <td>Other Services Description:</td>
+        <td colspan="4">Other Services Description:</td>
     </tr>
 	<tr>
-        <td><?php echo $editotherservicedescription; ?></td>
+        <td colspan="4"><?php echo $editotherservicedescription; ?></td>
     </tr>
     </br>
     <tr>
         <td>Tires</td>
         <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
         <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
+        <td></td>
     </tr>
     <tr>
-        <td>Audio</td>
+        <td colspan="4">Audio</td>
     </tr>
     <tr>
         <td>Audio Troubleshooting</td>
@@ -234,10 +235,10 @@ if ($result && $statement->rowCount() > 0) {
         <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
     </tr>
     <tr>
-        <td>Other Audio Description:</td>
+        <td colspan="4">Other Audio Description:</td>
     </tr>
     <tr>
-        <td><?php echo $editotheraudiodescription; ?></td>
+        <td colspan="4"><?php echo $editotheraudiodescription; ?></td>
     </tr>
     </br>
     <tr>
