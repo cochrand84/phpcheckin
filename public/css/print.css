@@ -41,4 +41,6 @@ font-size: 18px;
 }
 .items-divider {
     border:solid thin;
+    text-align: left;
+    padding: 5px;
 }
