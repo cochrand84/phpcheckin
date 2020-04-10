@@ -22,7 +22,8 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 
 curl_close($curl);
-
+echo '</br>';
+echo '</br>';
 echo 'POS Ticket:';
 echo '</br>';
 echo '<table>';
