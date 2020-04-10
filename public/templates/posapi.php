@@ -28,13 +28,14 @@ echo '</br>';
 echo '<table>';
 echo '<tr>';
 echo '<th>Quantity</th>';
+echo '<th>Product ID</th>';
 echo '<th>Description</th>';
 echo '</tr>';
 
 
 $xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
 foreach ($xml->cart_items->cart_item as $cart_item){
-  echo '<tr>','<td>',$cart_item->quantity,'</td>','<td>',$cart_item->name,'</td>','</tr>';
+  echo '<tr>','<td>',$cart_item->quantity,'</td>','<td>',$cart_item->product_id,'</td>','<td>',$cart_item->name,'</td>','</tr>';
 }
 
 echo '</table>';
