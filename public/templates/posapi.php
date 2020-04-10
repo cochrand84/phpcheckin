@@ -23,17 +23,22 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-var_dump($response);
+echo 'POS Ticket:'
+echo '</br>';
+echo '<table>';
+echo '<tr>';
+echo '<th>Quantity</th>';
+echo '<th>Description</th>';
+echo '</tr>';
 
-echo "</br>";
-echo "</br>";
-echo "</br>";
-echo "</br>";
-echo "</br>";
+echo '<tr>';
+
 
 $xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
 foreach ($xml->cart_items->cart_item as $cart_item){
-  echo $cart_item->quantity, '  ',$cart_item->name, '</br>';
+  echo '<td>',$cart_item->quantity,'</td>','<td>',$cart_item->name,'</td>';
 }
+echo '</tr>';
+echo '</table>';
 
 ?>
