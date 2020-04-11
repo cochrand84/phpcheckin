@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * tickets table.
- *
- */
-
-require "templates/header.php";
-
 $_GET['ticketid'];
 $incommingid = $_GET['ticketid'];
 $_GET['lastname'];
@@ -36,13 +28,11 @@ try  {
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
                     $editid                         = $row["id"]; 
-                    $editvin                        = $row["vin"];
                     $editfirstname                  = $row["firstname"]; 
                     $editlastname                   = $row["lastname"]; 
-                    $editemail                      = $row["email"]; 
                     $edityear                       = $row["year"]; 
-                    $editmake                     = $row["make"];
-                    $editmodel                     = $row["model"];
+                    $editmake                       = $row["make"];
+                    $editmodel                      = $row["model"];
                     $editlocation                   = $row["location"]; 
                     $editdate                       = $row["date"]; 
                     $editstatus                     = $row["status"];
@@ -83,7 +73,7 @@ if ($result && $statement->rowCount() > 0) {
                     if ($editfullservice == 'true'){
                         $fullserviceckd = "checked";
                     } else {
-                        $fullserviceckd = "";
+                         $fullserviceckd = "";
                     }
                     $otherserviceckd = "";
                     if ($editotherservice == 'true'){
@@ -133,119 +123,7 @@ if ($result && $statement->rowCount() > 0) {
         echo $_POST['status'];
      } 
 
-if (isset($_POST['submitedit'])) {
 
-
-        $image5 = $_FILES['image5']['tmp_name'];
-        $imgContent5 = addslashes(file_get_contents($image5));      
-
-        $db = new mysqli($host, $username, $password, $dbname);
-        
-
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand5 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent5', '$dataTime', '$rand5')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    
-
-        $image6 = $_FILES['image6']['tmp_name'];
-        $imgContent6 = addslashes(file_get_contents($image6));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand2 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent6', '$dataTime', '$rand6')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-
-
-   
-        $image7 = $_FILES['image7']['tmp_name'];
-        $imgContent7 = addslashes(file_get_contents($image7));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand7 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent7', '$dataTime', '$rand7')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    
-
-    try  {
-        $connection = new PDO($dsn, $username, $password, $options);
-        
-            $editedvin                              = $_POST['vin'];
-            $editedfirstname                        = $_POST['firstname'];
-            $editedlastname                         = $_POST['lastname'];
-            $editedemail                            = $_POST['email'];
-            $editedphone                            = $_POST['phone'];
-            $editedyear                             = $_POST['year'];
-            $editedlocation                         = $_POST['location'];
-            $editedstatus                           = $_POST['status'];
-            $editedmake                             = $_POST['make'];
-            $editedmodel                            = $_POST['model'];
-            $editeddue_date                         = $_POST['due_date'];
-            $editeddescription                      = $_POST['description'];
-            $editedoilchange                        = $_POST['oilchange'];
-            $editedfullservice                      = $_POST['fullservice'];
-            $editedotherservice                     = $_POST['otherservice'];
-            $editedotherservicedescription          = $_POST['otherservicedescription'];
-            $editedfronttirechange                  = $_POST['fronttirechange'];
-            $editedreartirechange                   = $_POST['reartirechange'];
-            $editedaudiotroubleshooting             = $_POST['audiotroubleshooting'];
-            $editedotheraudiodescription            = $_POST['otheraudiodescription'];
-            $editedfullaudiosystem                  = $_POST['fullaudiosystem'];
-            $editedaudioupgrade                     = $_POST['audioupgrade'];
-            $editedservicenote1                     = $_POST['servicenote1'];
-            $editedservicenote2                     = $_POST['servicenote2'];
-            $editedservicenote3                     = $_POST['servicenote3'];
-            $editedservicenote1date                 = $_POST['servicenote1date'];
-            $editedservicenote2date                 = $_POST['servicenote2date'];
-            $editedservicenote3date                 = $_POST['servicenote3date'];
-            $editedserviceimage5                    = $rand5;
-            $editedserviceimage6                    = $rand6;
-            $editedserviceimage7                    = $rand7;
-            $editedphpid                            = $_POST['phpid'];
-            
-
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `oilchange` = '$editedoilchange', `fullservice` = '$editedfullservice', `otherservice` = '$editedotherservice', `otherservicedescription` = '$editedotheraudiodescription', `fronttirechange` = '$editedfronttirechange', `reartirechange` = '$editedreartirechange', `audiotroubleshooting` = '$editedaudiotroubleshooting', `otheraudiodescription` = '$editedotheraudiodescription', `fullaudiosystem` = '$editedfullaudiosystem', `audioupgrade` = '$editedaudioupgrade', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid'
-         WHERE `id` = '$editid';";
-
-        $statement = $connection->prepare($sql);
-        $statement->execute($editdata);
-        echo "<meta http-equiv='refresh' content='0'>";
-
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-}
 
 if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
@@ -254,7 +132,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
 
 <div class="container">
-        <form method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col-25">
             <label for="vin">Ticket ID</label>
@@ -519,13 +396,5 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <input type="text" name="phpid" id="phpid" value="<?php echo $editphpid; ?>"required>
         </div>
-    </div>
-
-  
-    <div class="row">
-        <input type="submit" name="submitedit" value="Submit Edit">
-    </div>
-        </form>
+    </div>        
 </div>
-
-<?php require "templates/footer.php"; ?>
