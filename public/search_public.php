@@ -106,7 +106,7 @@ echo '<a href="javascript:history.back()" class="submit" align="center">Go back<
 
 
         } else { 
-        echo $_POST['status'];
+        echo "error";
      } 
 
 
