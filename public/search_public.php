@@ -134,10 +134,8 @@ if ($result && $statement->rowCount() > 0) {
      } 
 
 
-
-
-    
-
+   
+?>
 <h2>Your bikes status:</h2>
 
 
