@@ -73,15 +73,30 @@ if ($result && $statement->rowCount() > 0) {
  } 
 
          echo "<h2>Your bikes status:</h2>";
+         echo "Hello, ";
          echo $editfirstname;
+         echo " ";
          echo $editlastname;
-         echo $editmake;
-         echo $editmodel;
+         echo ".";
+         echo " Your ";
          echo $edityear;
-         echo $editphone;
-         echo $editlocation;
-         echo $editduedate;
+         echo " ";
+         echo $editmake;
+         echo " ";
+         echo $editmodel;
+         echo " ";
+         echo "is currently ";
          echo $editstatus;
+         echo "and in/on ";
+         echo $editlocation;
+         echo "<p>";
+         echo "it is currently scheduled to be completed on ";
+         echo $editduedate;
+         echo "we will call you at "
+         echo $editphone;
+         
+         
+         
          echo $editdescription;
 
 
