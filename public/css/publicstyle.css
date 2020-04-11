@@ -26,13 +26,13 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.50);
+    background: rgba(136, 126, 126, 0.10);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
     outline: none;
     box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.50);
+    border: 2px solid rgba(0, 0, 0, 0.10);
     margin-bottom: 50px;
     margin-left: 46px;
     text-align: center;
@@ -50,13 +50,13 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.50);
+    background: rgba(136, 126, 126, 0.10);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
     outline: none;
     box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.50);
+    border: 2px solid rgba(0, 0, 0, 0.10);
     margin-bottom: 50px;
     margin-left: 46px;
     text-align: center;
@@ -65,10 +65,11 @@
     }
     
    
-    .un:focus, .pass:focus {
+    .un:focus, .lastname:focus {
         border: 2px solid rgba(0, 0, 0, 0.18) !important;
         
-    }
+    }    
+
     
     .submit {
       cursor: pointer;
