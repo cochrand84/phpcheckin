@@ -106,7 +106,12 @@ echo '<a href="javascript:history.back()" class="submit" align="center">Go back<
 
 
         } else { 
-        echo "error";
+        echo "<center>";
+        echo "<h2>";
+        echo "Could not find a Ticket with that name and ticket id number, please try again";
+        echo "</h2>";
+        echo "</center>";
+        include "display_public.php";
      } 
 
 
