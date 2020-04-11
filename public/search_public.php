@@ -1,3 +1,8 @@
+
+<link rel="stylesheet" href="css/publicstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 <?php
 
 $_GET['ticketid'];
@@ -22,7 +27,8 @@ try  {
 
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
+        echo "Could not find a Ticket with that name and ticket id number, please try again";
+        include "display_public.php";
     }
 
 if ($result && $statement->rowCount() > 0) {
@@ -128,7 +134,7 @@ if ($result && $statement->rowCount() > 0) {
 if (isset($_POST['submitedit']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
 <?php } ?>
-<h2>Edit a ticket</h2>
+<h2>Your bikes status:</h2>
 
 
 <div class="container">
