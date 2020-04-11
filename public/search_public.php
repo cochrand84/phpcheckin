@@ -74,7 +74,7 @@ if ($result && $statement->rowCount() > 0) {
 echo '<div class="main2">';
 echo "<p>";
 echo "<p>";
-         echo "<h2>Your bikes status:</h2>";
+         echo "<h2>Your bike's status:</h2>";
          echo "Hello, ";
          echo $editfirstname;
          echo " ";
