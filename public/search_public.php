@@ -97,8 +97,12 @@ if ($result && $statement->rowCount() > 0) {
          echo " "; 
          echo "after we complete the work described below:";
          echo "<p>";
-         
          echo $editdescription;
+echo "<p>";
+echo "If any of the above information is incorrect, please contact us at 334-446-0595";
+
+echo "<a href="javascript:history.back()" class="submit" align="center">Go back</a>";
+
 
 
         } else { 
