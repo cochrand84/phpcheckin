@@ -1,32 +1,23 @@
 <html>
 
-<link rel="stylesheet" href="css/publicstyle.css">
-<link rel="stylesheet" herf="lightbox/css/lightbox.css">
+<head>
+  <link rel="stylesheet" href="css/publicstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Area 51 Customs Status Page</title>
+</head>
 
-
-
-<form method="get" action="search_public.php"enctype="multipart/form-data">
-    <div class="center">
-<div class="row">     
-        <div class="col-25">
-            <label for="ticketid">Enter Ticket ID:</label>
-        </div>
-        <div class="col-25">
-            <input type="text" name="ticketid" id="ticketid">
-        </div>
-    </div> 
-    <div class="row">     
-        <div class="col-25">
-            <label for="lastname">Enter Last Name:</label>
-        </div>
-        <div class="col-25">
-            <input type="text" name="lastname" id="lastname">
-        </div>
-    </div> 
-    <div class="row">
-        <input type="submit" value="Search">
+<body>
+  <div class="main">
+    <p class="sign" align="center">Area 51 Customs Status Page</p>
+    <form class="form1" method="get" action="search_public.php"enctype="multipart/form-data">
+      <input class="un " type="text" align="center" placeholder="Ticket ID #">
+      <input class="lastname" type="text" align="center" placeholder="Lastname">
+      <a class="submit" align="center">Check Status</a>          
+                
     </div>
-</div>
-        </form>
+     
+</body>
 
-        </html>
+</html>
