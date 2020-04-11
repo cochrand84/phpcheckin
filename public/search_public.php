@@ -71,7 +71,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote3date         = $row['servicenote3date'];
                     $editphpid                         = $row['phpid'];
  } 
-echo '<div class="main">';
+echo '<div class="main2">';
          echo "<h2>Your bikes status:</h2>";
          echo "Hello, ";
          echo $editfirstname;
