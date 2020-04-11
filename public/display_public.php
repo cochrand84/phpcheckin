@@ -14,7 +14,7 @@
     <form class="form1" method="get" action="search_public.php"enctype="multipart/form-data">
       <input class="un " type="text" align="center" placeholder="Ticket ID #">
       <input class="lastname" type="text" align="center" placeholder="Lastname">
-      <a class="submit" align="center">Check Status</a>          
+      <a input type="submit" class="submit" align="center">Check Status</a>          
                 
     </div>
      
