@@ -89,11 +89,11 @@ if ($result && $statement->rowCount() > 0) {
          echo $editstatus;
          echo "and in/on ";
          echo $editlocation;
-         echo "<p>";
-         echo "it is currently scheduled to be completed on ";
-         echo $editduedate;
-         echo "we will call you at "
-         echo $editphone;
+         //echo "<p>";
+         //echo "it is currently scheduled to be completed on ";
+         //echo $editduedate;
+         //echo "we will call you at ";
+         //echo $editphone;
          
          
          
