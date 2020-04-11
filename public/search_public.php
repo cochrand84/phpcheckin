@@ -72,6 +72,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editphpid                         = $row['phpid'];
  } 
 echo '<div class="main2">';
+echo "<p>";
+echo "<p>";
          echo "<h2>Your bikes status:</h2>";
          echo "Hello, ";
          echo $editfirstname;
@@ -100,7 +102,9 @@ echo '<div class="main2">';
          echo $editdescription;
 echo "<p>";
 echo "If any of the above information is incorrect, please contact us at 334-446-0595";
-
+echo "<p>";
+echo "<p>";
+echo "<p>";
 echo '<a href="javascript:history.back()" class="submit" align="center">Go back</a>';
 
 echo '</div>';
