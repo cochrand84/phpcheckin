@@ -105,7 +105,7 @@ echo "If any of the above information is incorrect, please contact us at 334-446
 echo "<p>";
 echo "<p>";
 echo "<p>";
-echo '<a href="javascript:history.back()" class="submit" align="center">Go back</a>';
+echo '<a href="javascript:history.back()" class="submit" align="center">Start over</a>';
 
 echo '</div>';
 
