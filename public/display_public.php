@@ -1,3 +1,7 @@
+<?php
+include "templates/tracking.php";
+?>
+
 <html>
 
 <head>

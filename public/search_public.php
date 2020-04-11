@@ -5,6 +5,8 @@
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 <?php
 
+include "templates/tracking.php";
+
 $_GET['ticketid'];
 $incommingid = $_GET['ticketid'];
 $_GET['lastname'];

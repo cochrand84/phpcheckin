@@ -28,6 +28,7 @@
 <a href="index.php" class="linkbutton">Back to home</a>
 
 <?php
+include "tracking.php";
 
 /**
  * Function to query information based on 
