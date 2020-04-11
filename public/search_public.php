@@ -27,7 +27,11 @@ try  {
 
         $result = $statement->fetchAll();
     } catch(PDOException $error) {
+        echo "<center>";
+        echo "<h2>";
         echo "Could not find a Ticket with that name and ticket id number, please try again";
+        echo "</h2>";
+        echo "</center>";
         include "display_public.php";
     }
 
@@ -131,9 +135,9 @@ if ($result && $statement->rowCount() > 0) {
 
 
 
-if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
-<?php } ?>
+
+    
+
 <h2>Your bikes status:</h2>
 
 
