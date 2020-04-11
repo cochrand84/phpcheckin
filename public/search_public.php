@@ -71,7 +71,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote3date         = $row['servicenote3date'];
                     $editphpid                         = $row['phpid'];
  } 
-
+echo '<div class="main">'
          echo "<h2>Your bikes status:</h2>";
          echo "Hello, ";
          echo $editfirstname;
@@ -103,7 +103,7 @@ echo "If any of the above information is incorrect, please contact us at 334-446
 
 echo '<a href="javascript:history.back()" class="submit" align="center">Go back</a>';
 
-
+echo '</div>'
 
         } else { 
         echo "<center>";
