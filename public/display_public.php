@@ -12,10 +12,9 @@
   <div class="main">
     <p class="sign" align="center">Area 51 Customs Status Page</p>
     <form class="form1" method="get" action="search_public.php"enctype="multipart/form-data">
-      <input class="un " type="text" align="center" placeholder="Ticket ID #">
-      <input class="lastname" type="text" align="center" placeholder="Lastname">
-      <a input type="submit" class="submit" align="center" value="Search">Check Status</a>    
-      <input type="submit" value="Search">      
+      <input class="un " type="text" align="center" placeholder="Ticket ID #" name="ticketid" id="ticketid">
+      <input class="lastname" type="text" align="center" placeholder="Lastname" name="lastname" id="lastname">   
+      <input class="submit" type="submit" value="Search">      
                 </form>
     </div>
      
