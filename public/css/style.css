@@ -22,13 +22,13 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #000000;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+  float: left;
+  display: block;
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* Style the container */
@@ -67,7 +67,7 @@ input[type=submit] {
   }
 }
 
-.linkbutton a {
+.linkbutton{
   float: left;
   display: block;
   background-color: #333;
@@ -77,8 +77,19 @@ input[type=submit] {
   text-decoration: none;
 }
 .linkbutton a:hover {
-  background: #ddd;
-  color: black;
+  color: red;
+}
+a{
+  float: left;
+  display: block;
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
 }
 #ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -110,6 +121,7 @@ h1 {
 
 /* The navigation bar */
 .navbar {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   overflow: hidden;
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
@@ -135,5 +147,6 @@ h1 {
 
 /* Main content */
 .main {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   margin-top: 50px; /* Add a top margin to avoid content overlay */
 }
