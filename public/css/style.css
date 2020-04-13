@@ -67,18 +67,18 @@ input[type=submit] {
   }
 }
 
-.linkbutton {
+.linkbutton a {
   float: left;
   display: block;
-  color: white;
-  backgroud: #333333;
+  background-color: #333;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 .linkbutton a:hover {
-  background: #1c1c1c;
-  color: white;
+  background: #ddd;
+  color: black;
 }
 #ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
