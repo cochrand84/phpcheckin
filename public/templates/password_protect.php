@@ -120,10 +120,13 @@ function showLoginPasswordProtect($error_msg) {
   </style>
   <div class="mainlogin">
   <form method="post">
-    <h3 class="sign">Please Login:</h3>
+    <p class="sign"> 
+      Area 51 Customs Tracker
+    <h3>Please Login:</h3>
     <font color="red"><?php echo $error_msg; ?></font><br />
 <?php if (USE_USERNAME) echo 'Login:<br /><input type="input" name="access_login" /><br />Password:<br />'; ?>
     <input type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
+  </p>
   </form>
   <br />
   </div>
