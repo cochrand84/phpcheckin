@@ -120,14 +120,5 @@ if ($incommingid == 'complete') {
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
 } ?> 
-<h2>Select your edit option</h2>
-
-<form method="post">
-    <input type="submit" name="submit" value="Edit non-Complete">
-    <input type="submit" name="submit2" value="Edit All">
-    <input type="submit" name="submit3" value="Edit Complete">
-</form>
-
-
 
 <?php require "templates/footer.php"; ?>
