@@ -12,14 +12,12 @@
 	<link rel="stylesheet" herf="lightbox/css/lightbox.css">
 </head>
 
-<body>
-	<h1>Area 51 Check-in App</h1>
-
 <?php
 include "tracking.php";
 include "templates/password_protect.php";
 
 ?>
+
 <div class="navbar">
     <a href="edit.php?linkid=noncomplete" class="linkbutton">Edit Non-Complete</a>
     <a href="edit.php?linkid=all" class="linkbutton">Edit All</a>
@@ -28,5 +26,6 @@ include "templates/password_protect.php";
 	<a href="create.php" class="linkbutton">Create New</a>
 	<a href="index.php" class="linkbutton">Back to home</a>
 </div>
-
 <div class="main">
+<body>
+	<h1>Area 51 Check-in App</h1>
