@@ -22,7 +22,6 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  float: left;
   display: block;
   background-color: #333;
   color: #f2f2f2;
