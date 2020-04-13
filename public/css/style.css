@@ -70,14 +70,15 @@ input[type=submit] {
 .linkbutton {
   float: left;
   display: block;
-  color: #ddd;
+  color: white;
+  backgrou: #333333;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 .linkbutton a:hover {
-  background: #333;
-  color: black;
+  background: #1c1c1c;
+  color: white;
 }
 #ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
