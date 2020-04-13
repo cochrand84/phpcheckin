@@ -6,7 +6,12 @@ require "templates/header.php";
  *
  */
 
-if (isset($_POST['submit'])) {
+$_GET['linkid'];
+$incommingid = $_GET['linkid'];
+
+
+
+if ($incommingid == 'noncomplete') {
     try  {
         
         require "../config.php";
@@ -31,7 +36,7 @@ if (isset($_POST['submit'])) {
 
         
 <?php  
-if (isset($_POST['submit'])) {
+if ($incommingid == 'noncomplete') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
@@ -45,7 +50,7 @@ if (isset($_POST['submit'])) {
 
 <?php
 
-if (isset($_POST['submit2'])) {
+if ($incommingid == 'all') {
     try  {
         
         require "../config.php";
@@ -69,7 +74,7 @@ if (isset($_POST['submit2'])) {
 ?>
         
 <?php  
-if (isset($_POST['submit2'])) {
+if ($incommingid == 'all') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
@@ -82,7 +87,7 @@ if (isset($_POST['submit2'])) {
 
 <?php
 
-if (isset($_POST['submit3'])) {
+if ($incommingid == 'complete') {
     try  {
         
         require "../config.php";
@@ -106,7 +111,7 @@ if (isset($_POST['submit3'])) {
 ?>
         
 <?php  
-if (isset($_POST['submit3'])) {
+if ($incommingid == 'complete') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 

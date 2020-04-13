@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="css/style.css">
-<?php include "templates/header.php"; 
-include "templates/password_protect.php"; 
+<?php 
+
+include "templates/header.php"; 
 
 ?>
 <form method="get" action="search.php"enctype="multipart/form-data">
