@@ -19,6 +19,8 @@
 include "tracking.php";
 include "templates/password_protect.php";
 
+?>
+
     <a href="edit.php?linkid=noncomplete">Edit Non-Complete</a>
     <a href="edit.php?linkid=all">Edit All</a>
     <a href="edit.php?linkid=complete">Edit Complete</a>
