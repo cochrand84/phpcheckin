@@ -71,7 +71,7 @@ input[type=submit] {
   float: left;
   display: block;
   color: white;
-  backgrou: #333333;
+  backgroud: #333333;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -87,7 +87,7 @@ input[type=submit] {
 }
 
 #ticketstable td, #ticketstable th {
-  border: 1px solid #ddd;
+  border: 1px solid #333333;
   padding: 8px;
 }
 
@@ -100,7 +100,7 @@ input[type=submit] {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #000000;
+  background-color: #333333;
   color: white;
 }
 
@@ -135,5 +135,5 @@ h1 {
 
 /* Main content */
 .main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
+  margin-top: 50px; /* Add a top margin to avoid content overlay */
 }
