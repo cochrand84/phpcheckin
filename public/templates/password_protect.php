@@ -110,7 +110,7 @@ function showLoginPasswordProtect($error_msg) {
 ?>
 <html>
 <head>
-  <title>Please enter password to access this page</title>
+  <title>Area 51 Customs Checkin page</title>
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
   <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 </head>
@@ -118,9 +118,9 @@ function showLoginPasswordProtect($error_msg) {
   <style>
     input { border: 1px solid black; }
   </style>
-  <div style="width:500px; margin-left:auto; margin-right:auto; text-align:center">
+  <div class="mainlogin">
   <form method="post">
-    <h3>Please enter password to access this page</h3>
+    <h3>Please Login:</h3>
     <font color="red"><?php echo $error_msg; ?></font><br />
 <?php if (USE_USERNAME) echo 'Login:<br /><input type="input" name="access_login" /><br />Password:<br />'; ?>
     <input type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
