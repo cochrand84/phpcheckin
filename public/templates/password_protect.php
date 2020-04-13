@@ -124,8 +124,8 @@ function showLoginPasswordProtect($error_msg) {
       Area 51 Customs Tracker
     <h3>Please Login:</h3>
     <font color="red"><?php echo $error_msg; ?></font><br />
-<?php if (USE_USERNAME) echo 'Login:<br /><input class="login_user "type="input" name="access_login" /><br />Password:<br />'; ?>
-    <input class="login_pass" type="password" name="access_password" /><p></p><input type="submit" name="Submit" value="Submit" />
+<?php if (USE_USERNAME) echo '<input class="login_user "type="input" name="access_login" placeholder="Username"/>'; ?>
+    <input class="login_pass" type="password" name="access_password" placeholder="Password"/><p></p><input type="submit" name="Submit" value="Submit" />
   </p>
   </form>
   <br />
