@@ -26,6 +26,7 @@
 
 <?php
 include "tracking.php";
+include "templates/password_protect.php";
 
 /**
  * Function to query information based on 

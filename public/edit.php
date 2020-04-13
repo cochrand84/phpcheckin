@@ -1,6 +1,5 @@
 <?php
 require "templates/header.php";
-include "templates/password_protect.php"; 
 /**
  * Function to query information based on 
  * a parameter: in this case, location.

@@ -6,8 +6,7 @@
  *
  */
 
-require "templates/header.php";
-include "templates/password_protect.php"; 
+require "templates/header.php"; 
 
 $_GET['editid'];
 $incommingid = $_GET['editid'];
