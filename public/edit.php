@@ -13,10 +13,10 @@ $incommingid = $_GET['linkid'];
 $detect = new Mobile_Detect;
 
 if ( $detect->isMobile() ) {
- echo "<link rel="stylesheet" href="css/mobile_table_style.css">";
+ echo '<link rel="stylesheet" href="css/mobile_table_style.css">';
 }
 else{
-    echo "<link rel="stylesheet" href="css/table_style.css">";
+    echo '<link rel="stylesheet" href="css/table_style.css">';
 }
 
 if ($incommingid == 'noncomplete') {
