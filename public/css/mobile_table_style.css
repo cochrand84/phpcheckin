@@ -3,19 +3,23 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-td, th {
-  border: 1px solid #333333;
-  padding: 8px;
-}
+
 tr:nth-child(even){
   background-color: #f2f2f2;
 }
 tr:nth-child(odd){
   background-color: #d3d3d3;
 }
-tr:hover {
-
-}
-th {
-
-}
+table thead {
+    display: none;
+  }
+  table td {
+    display: flex;
+  }
+  
+  table td::before {
+    content: attr(label);
+    font-weight: bold;
+    width: 120px;
+    min-width: 120px;
+  }
