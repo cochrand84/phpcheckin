@@ -1,8 +1,13 @@
 <?php
 $curl = curl_init();
 
-//$_GET['searchvalue'];
-//$editphpid = $_GET['searchvalue'];
+
+if($editphpid == 0){
+
+  Echo "No POS Data, PLEASE ADD POS ID AND REPRINT"
+
+}else{
+
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$editphpid",
@@ -40,5 +45,5 @@ foreach ($xml->cart_items->cart_item as $cart_item){
 }
 
 echo '</table>';
-
+}
 ?>
