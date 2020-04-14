@@ -368,7 +368,7 @@ if (isset($_POST['submiteditandprint'])) {
 
 if (isset($_POST['submiteditandprint']) && $statement) { ?>
     <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
-    <?php header('Location: print.php?editid=$_POST[id]');
+    <?php header("Location: print.php?editid=$_POST[id]");
 
 } ?>
 
