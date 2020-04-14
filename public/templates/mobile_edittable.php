@@ -1,4 +1,4 @@
-               <table id="mobile_ticketstable">
+               <table class="mobile_ticketstable">
             <thead>
                 <tr>
                     <th>Ticket #</th>
