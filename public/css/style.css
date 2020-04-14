@@ -108,16 +108,22 @@ a:hover {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   display: block;
 }
+
 #mobile_ticketstable td, #mobile_ticketstable th {
 }
+
 #mobile_ticketstable tr:nth-child(even){
 }
+
 #mobile_ticketstable tr:nth-child(odd){
 }
+
 #mobile_ticketstable tr:hover {
 }
+
 #mobile_ticketstable th {
 }
+
 h1 {
   color: black;
 }
