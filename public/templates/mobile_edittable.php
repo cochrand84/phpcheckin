@@ -1,4 +1,4 @@
-               <table class="mobile_ticketstable">
+              <table class="mobile_ticketstable">
             <thead>
                 <tr>
                     <th>Ticket #</th>
@@ -14,19 +14,43 @@
                 </tr>
             </thead>
             <tbody>
-        <?php foreach ($result as $row) { ?>
-            <tr>
-                <td><?php echo escape($row["id"]); ?></td>
-                <td><?php echo escape($row["firstname"]); ?></td>
-                <td><?php echo escape($row["lastname"]); ?></td>
-                <td><?php echo escape($row["location"]); ?></td>
-                <td><?php echo escape($row["due_date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>     
-                <td><?php echo "NA"; ?> </td>   
-              <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Edit</a></td>
-              <td><a href="complete.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Mark as Complete</a></td>
-              <td><a href="checkout.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Check-out</a></td>
+        <?php
+foreach ($result as $row) {
+?>
+           <tr>
+                <td><?php
+    echo escape($row["id"]);
+?></td>
+                <td><?php
+    echo escape($row["firstname"]);
+?></td>
+                <td><?php
+    echo escape($row["lastname"]);
+?></td>
+                <td><?php
+    echo escape($row["location"]);
+?></td>
+                <td><?php
+    echo escape($row["due_date"]);
+?> </td>
+                <td><?php
+    echo escape($row["status"]);
+?> </td>    
+                <td><?php
+    echo "NA";
+?> </td>  
+              <td><a href="edit2.php?editid=<?php
+    echo $row["id"];
+?>" class="linkbutton">Edit</a></td>
+              <td><a href="complete.php?editid=<?php
+    echo $row["id"];
+?>" class="linkbutton">Mark as Complete</a></td>
+              <td><a href="checkout.php?editid=<?php
+    echo $row["id"];
+?>" class="linkbutton">Check-out</a></td>
             </tr>
-        <?php } ?>
-        </tbody>
+        <?php
+}
+?>
+       </tbody>
     </table>
