@@ -4,7 +4,7 @@ $curl = curl_init();
 
 if($editphpid == 0){
 
-  Echo "No POS Data, PLEASE ADD POS ID AND REPRINT"
+  Echo "No POS Data, PLEASE ADD POS ID AND REPRINT";
 
 }else{
 
