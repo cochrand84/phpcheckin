@@ -4,6 +4,7 @@ table {
   display: flex;
   overflow: hidden;
   background: none;
+  border: 1px;
 }
 
 tr:nth-child(even){
