@@ -175,7 +175,8 @@ if (isset($_POST['submit'])) {
             "otheraudiodescription"     => $_POST['otheraudiodescription'],
             "fullaudiosystem"           => $_POST['fullaudiosystem'],
             "audioupgrade"              => $_POST['audioupgrade'],
-            "username"                  => $username
+            "username"                  => $username,
+            "phpid"                     => $_POST['phpid']
         );   
 
         $sql = sprintf(
@@ -353,6 +354,14 @@ if (isset($_POST['submit'])) {
             Audio Upgrade<br />
             <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"/>Full Audio System<br />
             <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"/>Audio Upgrade<br />
+        </div>
+    </div>
+       <div class="row">     
+        <div class="col-25">
+            <label for="phpid">PHP ID</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="phpid" id="phpid" required>
         </div>
     </div>
     <div class="row">

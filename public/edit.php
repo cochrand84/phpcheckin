@@ -1,5 +1,6 @@
 <?php
 require "templates/header.php";
+require "templates/mobile-detect/Mobile_Detect.php";
 /**
  * Function to query information based on 
  * a parameter: in this case, location.
@@ -9,7 +10,7 @@ require "templates/header.php";
 $_GET['linkid'];
 $incommingid = $_GET['linkid'];
 
-
+$detect = new Mobile_Detect;
 
 if ($incommingid == 'noncomplete') {
     try  {
@@ -40,7 +41,13 @@ if ($incommingid == 'noncomplete') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "templates/edittable.php"; ?>
+<?php 
+if ( $detect->isMobile() ) {
+ require "templates/mobile_edittable.php";
+}
+else{
+    require "templates/edittable.php";
+} ?>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
@@ -78,7 +85,12 @@ if ($incommingid == 'all') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "templates/edittable.php"; ?>
+<?php if ( $detect->isMobile() ) {
+ require "templates/mobile_edittable.php";
+}
+else{
+    require "templates/edittable.php";
+} ?>
 
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
@@ -115,7 +127,12 @@ if ($incommingid == 'complete') {
     if ($result && $statement->rowCount() > 0) { ?>
         <h2>Results</h2>
 
-<?php require "templates/edittable.php"; ?>
+<?php if ( $detect->isMobile() ) {
+ require "templates/mobile_edittable.php";
+}
+else{
+    require "templates/edittable.php";
+} ?>
     <?php } else { ?>
         <blockquote>No results found for <?php echo escape($_POST['status']); ?>.</blockquote>
     <?php } 
