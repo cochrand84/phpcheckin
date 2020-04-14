@@ -8,8 +8,18 @@ table {
 
 tr:nth-child(even){
   background-color: #f2f2f2;
+      display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  flex-shrink: 0;
 }
 tr:nth-child(odd){
+  background-color: #f3f3f3;
     display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
