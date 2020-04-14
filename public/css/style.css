@@ -106,6 +106,7 @@ a:hover {
 }
 #mobile_ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  display: block;
 }
 #mobile_ticketstable td, #mobile_ticketstable th {
 }
