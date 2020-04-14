@@ -104,7 +104,7 @@ a:hover {
   background-color: #333333;
   color: white;
 }
-.mobile_ticketstable table, thead, tbody, th, td, tr{
+.mobile_ticketstable{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   display: block;
 }
