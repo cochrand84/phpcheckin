@@ -106,28 +106,16 @@ a:hover {
 }
 #mobile_ticketstable {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
 }
 #mobile_ticketstable td, #mobile_ticketstable th {
-  border: 1px solid #333333;
-  padding: 4px;
 }
 #mobile_ticketstable tr:nth-child(even){
-  background-color: #f2f2f2;
 }
 #mobile_ticketstable tr:nth-child(odd){
-  background-color: #ddd;
 }
 #mobile_ticketstable tr:hover {
-  background-color: #ddd;
 }
 #mobile_ticketstable th {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  text-align: left;
-  background-color: #ddd;
-  color: white;
 }
 h1 {
   color: black;
