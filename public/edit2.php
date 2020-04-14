@@ -646,6 +646,7 @@ if (isset($_POST['submiteditandprint']) && $statement) { ?>
   
     <div class="row">
         <input type="submit" name="submitedit" value="Submit Edit">
+        <input type="submit" name="submiteditandprint" value="Submit Edit and Print">
     </div>
         </form>
 </div>
