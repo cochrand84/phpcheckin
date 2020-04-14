@@ -79,25 +79,25 @@ a{
 a:hover {
   color: red;
 }
-#ticketstable {
+table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
-#ticketstable td, #ticketstable th {
+td, th {
   border: 1px solid #333333;
   padding: 8px;
 }
-#ticketstable tr:nth-child(even){
+tr:nth-child(even){
   background-color: #f2f2f2;
 }
-#ticketstable tr:nth-child(odd){
+tr:nth-child(odd){
+  background-color: #d3d3d3;
+}
+tr:hover {
   background-color: #ddd;
 }
-#ticketstable tr:hover {
-  background-color: #ddd;
-}
-#ticketstable th {
+th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
