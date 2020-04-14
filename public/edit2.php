@@ -246,7 +246,7 @@ if (isset($_POST['submitedit'])) {
 }
 
 if (isset($_POST['submitedit']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
+    <blockquote><?php echo $incommingid; ?> successfully edited.</blockquote>
 
 <?php } ?>
 
@@ -359,18 +359,15 @@ if (isset($_POST['submiteditandprint'])) {
 
         $statement = $connection->prepare($sql);
         $statement->execute($editdata);
-        echo "<meta http-equiv='refresh' content='0'>";
+        header("Location: print.php?editid=$incommingid");
+
 
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
 
-if (isset($_POST['submiteditandprint']) && $statement) { ?>
-    <blockquote><?php echo $_POST['id']; ?> successfully edited.</blockquote>
-    <?php header("Location: print.php?editid=$_POST[id]");
-
-} ?>
+?>
 
 <h2>Edit a ticket</h2>
 
