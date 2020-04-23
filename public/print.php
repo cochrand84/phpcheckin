@@ -191,48 +191,6 @@ if ($result && $statement->rowCount() > 0) {
 </table>
 <table id="table-ticket3">
     <tr>
-        <td colspan="5">Services Requested</td>
-    </tr>
-    <tr>
-        <td colspan="5">Mechanical</td>
-    </tr>
-    <tr>
-        <td>Oil Change/Service</td>
-        <td><div style="color:<?php echo $oilchangeckd; ?>">Oil Change</div></td>
-        <td><div style="color:<?php echo $fullserviceckd; ?>">Full Service</div></td>
-        <td><div style="color:<?php echo $otherserviceckd; ?>">Other Service</div></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td colspan="5">Other Services Description:</td>
-    </tr>
-	<tr>
-        <td colspan="5"><?php echo $editotherservicedescription; ?></td>
-    </tr>
-    <tr>
-        <td>Tires</td>
-        <td><div style="color:<?php echo $fronttirechangeckd; ?>">Front Tire Change</div></td>
-        <td><div style="color:<?php echo $reartirechangeckd; ?>">Rear Tire Change</div></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td colspan="5">Audio</td>
-    </tr>
-    <tr>
-        <td>Audio Troubleshooting</td>
-        <td><div style="color:<?php echo $audiotroubleshootingckd; ?>">Audio Troubleshooting</div></td>
-        <td>Audio Upgrade</td>
-        <td><div style="color:<?php echo $fullaudiosystemckd; ?>">Full Audio System</div></td>
-        <td><div style="color:<?php echo $audioupgradeckd; ?>">Audio Upgrade</div></td>
-    </tr>
-    <tr>
-        <td colspan="5">Other Audio Description:</td>
-    </tr>
-    <tr>
-        <td colspan="5"><?php echo $editotheraudiodescription; ?></td>
-    </tr>
-    <tr>
 	    <td>Ticket Number:</td>
 		<td><img alt="Ticket Number" src="barcode.php?text=<?php echo $editid; ?>&print=true" /></td>
 		<td>Vin Number:</td>

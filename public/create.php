@@ -327,35 +327,6 @@ if (isset($_POST['submit'])) {
             <textarea name="description" id="description" rows="10" cols="80" required></textarea><br />
         </div>
     </div>
-    Services Requested
-    <div class="row">     
-        <div class="col-25">
-                <label for="mechanical">Mechanical</label>
-        </div>
-        <div class="col-75">
-            Oil Change/Service<br />
-            <input type="checkbox" name="oilchange" id="oilchange" value="true"/>Oil Change<br />
-            <input type="checkbox" name="fullservice" id="fullservice" value="true"/>Full Service<br />
-            <input type="checkbox" name="otherservice" id="otherservice" value="true"/>Other Service<br />
-            <textarea name="otherservicedescription" id="otherservicedescription" rows="5" cols="80" ></textarea><br />
-            Tires<br />
-            <input type="checkbox" name="fronttirechange" id="fronttirechange" value="true"/>Front Tire Change<br />
-            <input type="checkbox" name="reartirechange" id="reartirechange" value="true"/>Rear Tire Change<br />
-        </div>
-    </div>
-    <div class="row">     
-        <div class="col-25">
-                <label for="audio">Audio</label>
-        </div>
-        <div class="col-75">
-            Audio Troubleshooting<br />
-            <input type="checkbox" name="audiotroubleshooting" id="audiotroubleshooting" value="true"/>Audio Troubleshooting<br />
-            <textarea name="otheraudiodescription" id="otheraudiodescription" rows="5" cols="80" ></textarea><br />
-            Audio Upgrade<br />
-            <input type="checkbox" name="fullaudiosystem" id="fullaudiosystem" value="true"/>Full Audio System<br />
-            <input type="checkbox" name="audioupgrade" id="audioupgrade" value="true"/>Audio Upgrade<br />
-        </div>
-    </div>
        <div class="row">     
         <div class="col-25">
             <label for="phpid">PHP ID</label>

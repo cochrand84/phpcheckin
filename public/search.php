@@ -13,7 +13,7 @@ $incommingid = $_GET['searchvalue'];
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM tickets WHERE '$incommingid' IN (lastname, firstname, vin, id)";
+        $sql = "SELECT * FROM tickets WHERE '$incommingid' IN (lastname, firstname, vin, id, phpid, phone, )";
 
         $location = $_POST['location'];
 
