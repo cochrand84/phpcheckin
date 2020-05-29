@@ -13,8 +13,14 @@
 </head>
 
 <?php
+
 include "tracking.php";
 include "templates/password_protect.php";
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
 
 ?>
 

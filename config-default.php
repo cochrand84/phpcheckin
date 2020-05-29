@@ -13,3 +13,5 @@ $dsn        = "mysql:host=$host;dbname=$dbname";
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
               );
+
+$link = mysqli_connect($host, $username, $password, $dbname);
