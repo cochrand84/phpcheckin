@@ -15,7 +15,7 @@
 <?php
 $tracking_username = "no";
 
-$tracking_username = $_SESSION["username"];
+//$tracking_username = $_SESSION["username"];
 
 echo $tracking_username;
 include "tracking.php";
