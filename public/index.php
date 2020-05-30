@@ -8,7 +8,7 @@ include "templates/header.php";
 session_start();
 
 ?>
-<!--<form method="get" action="search.php"enctype="multipart/form-data">
+<form method="get" action="search.php"enctype="multipart/form-data">
 <div class="row">     
         <div class="col-25">
             <label for="searchvalue">Search:</label>
@@ -22,6 +22,5 @@ session_start();
     </div>
         </form>
 
-<?php // include "templates/footer.php"; ?>
+<?php include "templates/footer.php"; ?>
 
--->
