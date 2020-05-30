@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" herf="lightbox/css/lightbox.css">
-</head>
+
 
 <?php
 
@@ -23,7 +23,7 @@ include "tracking.php";
 // }
 
 ?>
-
+</head>
 <div class="navbar">
     <a href="edit.php?linkid=noncomplete" class="linkbutton">Edit Non-Complete</a>
     <a href="edit.php?linkid=all" class="linkbutton">Edit All</a>
