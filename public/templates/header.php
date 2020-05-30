@@ -13,7 +13,7 @@
 
 </head>
 <?php
-$tracking_username = "null";
+$tracking_username = "no";
 
 $tracking_username = $_SESSION["username"];
 
