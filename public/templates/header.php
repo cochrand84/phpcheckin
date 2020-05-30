@@ -30,7 +30,7 @@ include "tracking.php";
     <a href="edit.php?linkid=complete" class="linkbutton">Edit Complete</a>
 	<a href="create.php" class="linkbutton">Create New</a>
 	<a href="index.php" class="linkbutton">Back to home</a>
-	<a href="templates/password_protect.php?logout=1" class="linkbutton">Logout</a>
+	<a href="logout.php" class="linkbutton">Logout</a>
 </div>
 <div class="main">
 <body>
