@@ -1,6 +1,9 @@
 
 <?php
-$_SESSION["username"] = $tracking_username;
+
+$tracking_username = "null";
+
+$tracking_username = $_SESSION["username"];
 ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163409638-1"></script>
