@@ -13,11 +13,7 @@
 
 </head>
 <?php
-$tracking_username = "no";
 
-//$tracking_username = $_SESSION["username"];
-
-echo $tracking_username;
 include "tracking.php";
 
 // Check if the user is logged in, if not then redirect him to login page
