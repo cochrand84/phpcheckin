@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/style.css">
 <?php 
 
-include // "templates/header.php"; 
+// include "templates/header.php"; 
 
 
 // Initialize the session
