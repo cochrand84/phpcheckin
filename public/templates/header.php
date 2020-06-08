@@ -17,10 +17,9 @@
 include "tracking.php";
 
 //Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: http://checkin.area51custom.com/public/index.php");
-     exit;
- }
+if (session_status() == PHP_SESSION_ACTIVE) {
+  echo 'Session is active';
+}
 
 ?>
 
