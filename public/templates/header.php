@@ -20,6 +20,9 @@ include "tracking.php";
 if (session_status() == PHP_SESSION_ACTIVE) {
   echo 'Session is active';
 }
+else{
+	echo 'Session is not active';
+}
 
 ?>
 
