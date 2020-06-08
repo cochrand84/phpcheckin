@@ -17,12 +17,12 @@
 include "tracking.php";
 
 //Check if the user is logged in, if not then redirect him to login page
-if (session_status() == PHP_SESSION_ACTIVE) {
-  echo 'Session is active';
-}
-else{
-	echo 'Session is not active';
-}
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    echo "yup, it's set";
+ }
+ else{
+ 	echo "nope, it's not set";
+ }
 
 ?>
 
