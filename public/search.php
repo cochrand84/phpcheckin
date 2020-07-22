@@ -1,7 +1,6 @@
 <?php
 
 require "templates/header.php";
-include "templates/password_protect.php"; 
 
 $_GET['searchvalue'];
 $incommingid = $_GET['searchvalue'];

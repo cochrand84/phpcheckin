@@ -8,7 +8,6 @@
 	</head>
 
 <?php
-include "templates/password_protect.php"; 
 
 /**
  * Use an HTML form to create a new entry in the
