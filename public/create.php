@@ -175,7 +175,8 @@ if (isset($_POST['submit'])) {
             "fullaudiosystem"           => $_POST['fullaudiosystem'],
             "audioupgrade"              => $_POST['audioupgrade'],
             "username"                  => $username,
-            "phpid"                     => $_POST['phpid']
+            "phpid"                     => $_POST['phpid'],
+            "miles_in"                  => $_POST['miles_in']
         );   
 
         $sql = sprintf(
@@ -209,7 +210,15 @@ if (isset($_POST['submit'])) {
         <div class="col-75">
             <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
         </div>
-    </div>    
+    </div>  
+        <div class="row">
+        <div class="col-25">
+            <label for="miles_in">Miles In</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="miles_in" value="Miles In"" name="miles_in" maxlength="12" required/>
+        </div>
+    </div>  
     <div class="row">    
         <div class="col-25">
             <label for="firstname">First Name</label>
