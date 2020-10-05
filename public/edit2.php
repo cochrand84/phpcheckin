@@ -406,6 +406,8 @@ if (isset($_POST['submiteditandprint'])) {
                     <option value="On Lift">On Lift</option>
                     <option value="Waiting on Test Ride">Waiting on Test Ride</option>
                     <option value="Waiting on Quote">Waiting on Quote</option>
+                    <option value="Storage">Storage</option>
+                    <option value="Consignment">Consignment</option>
             </select><br />
         </div>
     </div>    

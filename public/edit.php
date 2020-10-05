@@ -171,5 +171,105 @@ if ($incommingid == 'complete') {
 ?> 
 
 <?php
+
+if ($incommingid == 'storage') {
+    try {
+        
+        require "../config.php";
+        require "../common.php";
+        
+        $connection = new PDO($dsn, $username, $password, $options);
+        
+        $sql = "SELECT * FROM tickets WHERE (status = 'storage') ORDER by due_date ASC";
+        
+        $location = $_POST['location'];
+        
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement->execute();
+        
+        $result = $statement->fetchAll();
+    }
+    catch (PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+?>
+       
+<?php
+if ($incommingid == 'storage') {
+    if ($result && $statement->rowCount() > 0) {
+?>
+       <h2>Results</h2>
+
+<?php
+        if ($detect->isMobile()) {
+            require "templates/mobile_edittable.php";
+        } else {
+            require "templates/edittable.php";
+        }
+?>
+   <?php
+    } else {
+?>
+       <blockquote>No results found for <?php
+        echo escape($_POST['status']);
+?>.</blockquote>
+    <?php
+    }
+}
+?>
+
+<?php
+
+if ($incommingid == 'consignment') {
+    try {
+        
+        require "../config.php";
+        require "../common.php";
+        
+        $connection = new PDO($dsn, $username, $password, $options);
+        
+        $sql = "SELECT * FROM tickets WHERE (status = 'consignment') ORDER by due_date ASC";
+        
+        $location = $_POST['location'];
+        
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement->execute();
+        
+        $result = $statement->fetchAll();
+    }
+    catch (PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+?>
+       
+<?php
+if ($incommingid == 'consignment') {
+    if ($result && $statement->rowCount() > 0) {
+?>
+       <h2>Results</h2>
+
+<?php
+        if ($detect->isMobile()) {
+            require "templates/mobile_edittable.php";
+        } else {
+            require "templates/edittable.php";
+        }
+?>
+   <?php
+    } else {
+?>
+       <blockquote>No results found for <?php
+        echo escape($_POST['status']);
+?>.</blockquote>
+    <?php
+    }
+}
+?>
+
+<?php
 require "templates/footer.php";
 ?>

@@ -258,11 +258,12 @@ if (isset($_POST['submit'])) {
         <div class="col-75">
             <select name="location" id="location" required>
             <option value="selectlocation" selected>Select Location</option>
-                    <option value="Out Front">Out Front</option>
-                    <option value="Quonset Hut">Quonset Hut</option>
-                    <option value="Shop">Shop</option>
+                    <option value="Out Front">Showroom</option>
+                    <option value="Quonset Hut">Boat Shop</option>
+                    <option value="Shop">Mechanics Shop</option>
                     <option value="At Harley">At Harley</option>
                     <option value="Audio Bay">Audio Bay</option>
+                    <option value="Audio Bay">Body Shop</option>
             </select><br />
         </div>
     </div>    
@@ -292,6 +293,8 @@ if (isset($_POST['submit'])) {
                     <option value="On Lift">On Lift</option>
                     <option value="Waiting on Test Ride">Waiting on Test Ride</option>
                     <option value="Waiting on Quote">Waiting on Quote</option>
+                    <option value="Storage">Storage</option>
+                    <option value="Consignment">Consignment</option>
             </select><br />
         </div>
     </div>    

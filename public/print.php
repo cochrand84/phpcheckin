@@ -70,62 +70,13 @@ if ($result && $statement->rowCount() > 0) {
                     $edityear                       = $row["year"]; 
                     $editmake                       = $row["make"];
                     $editmodel                      = $row["model"];
+                    $servicenote1                   = $row['servicenote1'];
+                    $servicenote2                   = $row['servicenote2'];
+                    $servicenote3                   = $row['servicenote3'];
+                    $servicenote1date               = $row['servicenote1date'];
+                    $servicenote2date               = $row['servicenote2date'];
+                    $servicenote3date               = $row['servicenote3date'];
 
-
-                    $oilchangeckd = "";
-                    if ($editoilchange == 'true'){
-                        $oilchangeckd = "red";
-                    } else {
-                        $oilchangeckd = "";
-                    }
-                    $fullserviceckd = "";
-                    if ($editfullservice == 'true'){
-                        $fullserviceckd = "red";
-                    } else {
-                        $fullserviceckd = "";
-                    }
-                    $otherserviceckd = "";
-                    if ($editotherservice == 'true'){
-                        $otherserviceckd = "red";
-                    } else {
-                        $otherserviceckd = "";
-                    }
-                    
-
-
-                    $fronttirechangeckd = "";
-                    if ($editfronttirechange == 'true'){
-                        $fronttirechangeckd = "red";
-                    } else {
-                        $fronttirechangeckd = "";
-                    }
-                    $reartirechangeckd = "";
-                    if ($editreartirechange == 'true'){
-                        $reartirechangeckd = "red";
-                    } else {
-                        $reartirechangeckd = "";
-                    }
-                    $audiotroubleshootingckd = "";
-                    if ($editaudiotroubleshooting == 'true'){
-                        $audiotroubleshootingckd = "red";
-                    } else {
-                        $audiotroubleshootingckd = "";
-                    }
-                    
-
-
-                    $fullaudiosystemckd = "";
-                    if ($editfullaudiosystem == 'true'){
-                        $fullaudiosystemckd = "red";
-                    } else {
-                        $fullaudiosystemckd = "";
-                    }
-                    $audioupgradeckd = "";
-                    if ($editaudioupgrade == 'true'){
-                        $audioupgradeckd = "red";
-                    } else {
-                        $audioupgradeckd = "";
-                    }
 
          } 
         } else { 
@@ -186,6 +137,24 @@ if ($result && $statement->rowCount() > 0) {
     </tr>
     <tr>
         <td colspan="3"><?php echo $editdescription; ?></td>
+    </tr>
+    <tr>
+        <td colspan="3">Service note 1 - Date - <?php echo $servicenote1date; ?></td>
+    </tr>
+    <tr>
+        <td colspan="3"><?php echo $servicenote1; ?></td>
+    </tr>
+    <tr>
+        <td colspan="3">Service note 2 - Date - <?php echo $servicenote2date; ?><</td>
+    </tr>
+    <tr>
+        <td colspan="3"><?php echo $servicenote2; ?></td>
+    </tr>
+    <tr>
+        <td colspan="3">Service note 3 - Date - <?php echo $servicenote3date; ?><</td>
+    </tr>
+    <tr>
+        <td colspan="3"><?php echo $servicenote3; ?></td>
     </tr>
 </table>
 <table id="table-ticket3">
