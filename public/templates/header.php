@@ -31,8 +31,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <a href="edit.php?linkid=all" class="linkbutton">Edit All</a>
     <a href="edit.php?linkid=complete" class="linkbutton">Edit Complete</a>
 	<a href="create.php" class="linkbutton">Create New</a>
-	<a herf="edit.php?linkid=storage" class="linkbutton">Show Storage</a>
-	<a herf="edit.php?linkid=consignment" class="linkbutton">Show Consignment</a>
+	<a href="edit.php?linkid=storage" class="linkbutton">Show Storage</a>
+	<a href="edit.php?linkid=consignment" class="linkbutton">Show Consignment</a>
 	<a href="index.php" class="linkbutton">Back to home</a>
 	<a href="logout.php" class="linkbutton">Logout</a>
 </div>
