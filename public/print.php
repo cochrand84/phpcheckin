@@ -167,6 +167,20 @@ if ($result && $statement->rowCount() > 0) {
     </tr>
 </table>
 
+<table id="table-print-footer">
+    <tr>
+        <td>Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</td>
+    </tr>
+    <tr>
+        <td>
+            Signature:
+        </td>
+        <td>
+            _____________________________________
+        </td>
+    </tr>
+    </table>
+
     <p style="page-break-before: always">
 <?php
     include "templates/posapi.php";

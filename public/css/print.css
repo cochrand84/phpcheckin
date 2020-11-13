@@ -60,3 +60,7 @@ font-size: 25px;
   border-collapse: collapse;
   width: 100%;
 }
+#table-print-footer{
+  position: absolute;
+  bottom:0px;
+}
