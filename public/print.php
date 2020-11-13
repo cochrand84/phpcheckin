@@ -169,7 +169,10 @@ if ($result && $statement->rowCount() > 0) {
 
 <table id="table-print-footer">
     <tr>
-        <td colspan="2">Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah</td>
+        <td colspan="2">I hearby authorize the listed items and repairs to be performed on my vehicle.</td>
+    </tr>
+    <tr>
+        <td colspan="2"> </td>
     </tr>
     <tr>
         <td>
