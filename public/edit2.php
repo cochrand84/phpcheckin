@@ -58,6 +58,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote2date         = $row['servicenote2date'];
                     $editservicenote3date         = $row['servicenote3date'];
                     $editphpid                         = $row['phpid'];
+                    $miles_in                       = $row['miles_in'];
+                    $editmiles_out                      = $row['miles_out'];
 
          } 
         } else { 
@@ -154,9 +156,10 @@ if (isset($_POST['submitedit'])) {
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
+            $editedmiles_out                              = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid'
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -265,9 +268,10 @@ if (isset($_POST['submiteditandprint'])) {
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
+            $editedmiles_out                              = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid'
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -525,6 +529,15 @@ if (isset($_POST['submiteditandprint'])) {
         </div>
         <div class="col-75">
             <input type="text" name="phpid" id="phpid" value="<?php echo $editphpid; ?>"required>
+        </div>
+    </div>
+
+    <div class="row">     
+        <div class="col-25">
+            <label for="miles">Miles</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="miles" id="miles_out" value="<?php echo $editmiles_out; ?>"required>
         </div>
     </div>
 

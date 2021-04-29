@@ -199,7 +199,172 @@ if (isset($_POST['submit'])) {
 <?php if (isset($_POST['submit']) && $statement) { ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
 <?php } ?>
+<?php
+
+if (isset($_POST['submiteditandprint'])) {
+
+    require "../config.php";
  
+
+    $check = getimagesize($_FILES["image1"]["tmp_name"]);
+    if($check !== false){
+        $image1 = $_FILES['image1']['tmp_name'];
+        $imgContent = addslashes(file_get_contents($image1));      
+
+        $db = new mysqli($host, $username, $password, $dbname);
+        
+
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
+    $check = getimagesize($_FILES["image2"]["tmp_name"]);
+    if($check !== false){
+        $image2 = $_FILES['image2']['tmp_name'];
+        $imgContent2 = addslashes(file_get_contents($image2));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand2 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
+    $check = getimagesize($_FILES["image3"]["tmp_name"]);
+    if($check !== false){
+        $image3 = $_FILES['image3']['tmp_name'];
+        $imgContent3 = addslashes(file_get_contents($image3));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand3 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent3', '$dataTime', '$rand3')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+    $check = getimagesize($_FILES["image4"]["tmp_name"]);
+    if($check !== false){
+        $image4 = $_FILES['image4']['tmp_name'];
+        $imgContent4 = addslashes(file_get_contents($image4));
+     
+        $db = new mysqli($host, $username, $password, $dbname);
+       
+        if($db->connect_error){
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $dataTime = date("Y-m-d H:i:s");
+        $rand4 = rand() . "\n";
+
+        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand4')");
+        if($insert){
+            
+        }else{
+            echo "File upload failed, please try again.";
+        } 
+    }else{
+        
+
+}
+
+    try  {
+        
+        $connection = new PDO($dsn, $username, $password, $options);
+        $vinuppercase = strtoupper($VIN);
+        $new_user = array(
+            "vin"                       => $vinuppercase,
+            "firstname"                 => $_POST['firstname'],
+            "lastname"                  => $_POST['lastname'],
+            "email"                     => $_POST['email'],
+            "phone"                     => $_POST['phone'],
+            "year"                      => $ModelYear,
+            "location"                  => $_POST['location'],
+            "status"                    => $_POST['status'],
+            "make"                      => $Make,
+            "model"                     => $Model,
+            "due_date"                  => $_POST['due_date'],
+            "image1"                    => $rand,
+            "image2"                    => $rand2,
+            "image3"                    => $rand3,
+            "image4"                    => $rand4,
+            "description"               => $_POST['description'],
+            "oilchange"                 => $_POST['oilchange'],
+            "fullservice"               => $_POST['fullservice'],
+            "otherservice"              => $_POST['otherservice'],
+            "otherservicedescription"   => $_POST['otherservicedescription'],
+            "fronttirechange"           => $_POST['fronttirechange'],
+            "reartirechange"            => $_POST['reartirechange'],
+            "audiotroubleshooting"      => $_POST['audiotroubleshooting'],
+            "otheraudiodescription"     => $_POST['otheraudiodescription'],
+            "fullaudiosystem"           => $_POST['fullaudiosystem'],
+            "audioupgrade"              => $_POST['audioupgrade'],
+            "username"                  => $username,
+            "phpid"                     => $_POST['phpid'],
+            "miles_in"                  => $_POST['miles_in']
+        );   
+
+        $sql = sprintf(
+                "INSERT INTO %s (%s) values (%s)",
+                "tickets",
+                implode(", ", array_keys($new_user)),
+                ":" . implode(", :", array_keys($new_user))
+        );
+        
+        $statement = $connection->prepare($sql);
+        $statement->execute($new_user);
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+    
+}
+
+?>
+
+<?php if (isset($_POST['submiteditandprint']) && $statement) { 
+    header("Location: print.php?editid=$incommingid");
+    ?>
+    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
+<?php } ?>
+
 <h2>Create a new ticket</h2>
 <div class="container">
         <form method="post" enctype="multipart/form-data">
@@ -348,6 +513,7 @@ if (isset($_POST['submit'])) {
     </div>
     <div class="row">
         <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submiteditandprint" value="Submit Edit and Print">
     </div>
         </form>
 </div>

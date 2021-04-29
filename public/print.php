@@ -76,6 +76,8 @@ if ($result && $statement->rowCount() > 0) {
                     $servicenote1date               = $row['servicenote1date'];
                     $servicenote2date               = $row['servicenote2date'];
                     $servicenote3date               = $row['servicenote3date'];
+                    $miles_in                       = $row['miles_in'];
+                    $miles_out                      = $row['miles_out'];
 
 
          } 
@@ -129,6 +131,12 @@ if ($result && $statement->rowCount() > 0) {
         <td><?php echo $editstatus; ?></td>
         <td>Php POS ID</td>
         <td><?php echo $editphpid; ?></td>
+    </tr>
+        <tr>
+        <td>Miles in</td>
+        <td><?php echo $miles_in; ?></td>
+        <td>Miles out</td>
+        <td><?php echo $miles_out; ?></td>
     </tr>
 </table>
 <table id="table-ticket2">
