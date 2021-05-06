@@ -363,7 +363,6 @@ if (isset($_POST['submiteditandprint'])) {
 ?>
 
 <?php if (isset($_POST['submiteditandprint']) && $statement) { 
-    SELECT fields FROM table ORDER BY id DESC LIMIT 1;
     header("Location: print.php?editid=$incommingid");
     ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
@@ -377,7 +376,7 @@ if (isset($_POST['submiteditandprint'])) {
             <label for="vin">VIN</label>
         </div>
         <div class="col-75">
-            <input type="text" id="vindecoder" value="<?php echo $VIN; ?>"" name="vindecoder" maxlength="17" required/>
+            <input type="text" id="vindecoder" value="<?php echo $VIN; ?>" name="vindecoder" maxlength="17" required/>
         </div>
     </div>  
         <div class="row">
@@ -385,7 +384,7 @@ if (isset($_POST['submiteditandprint'])) {
             <label for="miles_in">Miles In</label>
         </div>
         <div class="col-75">
-            <input type="text" id="miles_in" value="Miles In"" name="miles_in" maxlength="12" required/>
+            <input type="text" id="miles_in" name="miles_in" maxlength="12" required/>
         </div>
     </div>  
     <div class="row">    
