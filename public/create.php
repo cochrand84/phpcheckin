@@ -352,11 +352,6 @@ if (isset($_POST['submiteditandprint'])) {
         
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
-        if ($connection->query($sql) === TRUE) {
-            $incommingid = $connection->insert_id;
-        } else {
-                echo "Error: " . $sql . "<br>" . $connection->error;
-        }
        
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
@@ -367,7 +362,37 @@ if (isset($_POST['submiteditandprint'])) {
 ?>
 
 <?php if (isset($_POST['submiteditandprint']) && $statement) { 
-    header("Location: print.php?editid=$incommingid");
+
+try  {
+        
+        require "../config.php"; 
+        require "../common.php";
+
+        $connection = new PDO($dsn, $username, $password, $options);
+
+        $sql = "SELECT ID FROM `tickets` ORDER BY ID DESC LIMIT 1";
+
+        $location = $_POST['location'];
+
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+
+if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { 
+                    $editid                         = $row["id"]; 
+         } 
+        } else { 
+        echo $_POST['status'];
+     } 
+
+
+    header("Location: print.php?editid=$editid");
     ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
 <?php } ?>
