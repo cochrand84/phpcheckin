@@ -534,7 +534,7 @@ if (isset($_POST['submiteditandprint'])) {
 
     <div class="row">     
         <div class="col-25">
-            <label for="miles">Miles</label>
+            <label for="miles">Miles out</label>
         </div>
         <div class="col-75">
             <input type="text" name="miles" id="miles_out" value="<?php echo $editmiles_out; ?>"required>

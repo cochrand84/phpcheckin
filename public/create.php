@@ -205,7 +205,7 @@ if (isset($_POST['submiteditandprint'])) {
 
     require "../config.php";
  
-
+   
     $check = getimagesize($_FILES["image1"]["tmp_name"]);
     if($check !== false){
         $image1 = $_FILES['image1']['tmp_name'];
@@ -341,6 +341,7 @@ if (isset($_POST['submiteditandprint'])) {
             "phpid"                     => $_POST['phpid'],
             "miles_in"                  => $_POST['miles_in']
         );   
+        $incommingid = $_POST['miles_in']
 
         $sql = sprintf(
                 "INSERT INTO %s (%s) values (%s)",
@@ -519,3 +520,4 @@ if (isset($_POST['submiteditandprint'])) {
 </div>
 
 <?php require "templates/footer.php"; ?>
+
