@@ -341,7 +341,7 @@ if (isset($_POST['submiteditandprint'])) {
             "phpid"                     => $_POST['phpid'],
             "miles_in"                  => $_POST['miles_in']
         );   
-        $incommingid = $_POST['miles_in'];
+       
 
         $sql = sprintf(
                 "INSERT INTO %s (%s) values (%s)",
@@ -352,6 +352,8 @@ if (isset($_POST['submiteditandprint'])) {
         
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
+        $incommingid = $connection->insert_id;
+       
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
@@ -361,6 +363,7 @@ if (isset($_POST['submiteditandprint'])) {
 ?>
 
 <?php if (isset($_POST['submiteditandprint']) && $statement) { 
+    SELECT fields FROM table ORDER BY id DESC LIMIT 1;
     header("Location: print.php?editid=$incommingid");
     ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
