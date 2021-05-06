@@ -341,7 +341,7 @@ if (isset($_POST['submiteditandprint'])) {
             "phpid"                     => $_POST['phpid'],
             "miles_in"                  => $_POST['miles_in']
         );   
-        $incommingid = $_POST['miles_in']
+        $incommingid = $_POST['miles_in'];
 
         $sql = sprintf(
                 "INSERT INTO %s (%s) values (%s)",
@@ -514,7 +514,7 @@ if (isset($_POST['submiteditandprint'])) {
     </div>
     <div class="row">
         <input type="submit" name="submit" value="Submit">
-        <input type="submit" name="submiteditandprint" value="Submit Edit and Print">
+        <input type="submit" name="submiteditandprint" value="Submit and Print">
     </div>
         </form>
 </div>
