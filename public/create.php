@@ -352,7 +352,11 @@ if (isset($_POST['submiteditandprint'])) {
         
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
-        $incommingid = $connection->insert_id;
+        if ($connection->query($sql) === TRUE) {
+            $incommingid = $connection->insert_id;
+        } else {
+                echo "Error: " . $sql . "<br>" . $connection->error;
+        }
        
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
