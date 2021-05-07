@@ -4,7 +4,7 @@
 
 function searchapi(){
 
-$search = $_POST['serachvalue'];
+$search = $_POST['searchvalue'];
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://area51customs.phppointofsale.com/index.php/api/v1/customers?search=' . $search . '&search_field=last_name',
