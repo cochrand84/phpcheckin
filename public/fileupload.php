@@ -2,8 +2,8 @@
     $year = date("Y");
     $month = date("M");
 
-    if (!file_exists("uploads/.$year/.$month/")) {
-        mkdir("uploads/.$year/.$month/", 0777, true);
+    if (!file_exists("uploads/$year/$month/")) {
+        mkdir("uploads/$year/$month/", 0777, true);
     }
     $currentDir = getcwd();
     $uploadDirectory = "/uploads/$year/$month/";
