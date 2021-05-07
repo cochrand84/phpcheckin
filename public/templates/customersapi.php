@@ -32,7 +32,7 @@ echo $response;
 if (isset($_POST['submit'])) {
 
 searchapi();
-    
+    echo "search hit";
 }
 ?>
 
@@ -47,6 +47,6 @@ searchapi();
     <div class="row">
     </div>
 
-    <input type="submit" name="submit" value="submit">
+    <input type="submit" name="submit" value="Search">
 
 
