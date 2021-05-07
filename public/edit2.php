@@ -420,7 +420,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage1; ?>">Click for picture</a>
+            <a href="view.php?image1=<?php echo $editimage1; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -428,10 +428,10 @@ if (isset($_POST['submiteditandprint'])) {
     </div>    
 <div class="row">     
         <div class="col-25">
-                <label for="image1">Image 2</label>
+                <label for="image2">Image 2</label>
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage2; ?>">Click for picture</a>
+            <a href="view.php?image1=<?php echo $editimage2; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -442,7 +442,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image3">Image 3</label>
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage3; ?>">Click for picture</a>
+            <a href="view.php?image1=<?php echo $editimage3; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -453,7 +453,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image4">Image 4</label>
         </div>
         <div class="col-25">
-            <a href="view.php?rand=<?php echo $editimage4; ?>">Click for picture</a>
+            <a href="view.php?image1=<?php echo $editimage4; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             

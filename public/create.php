@@ -1,7 +1,15 @@
 <?php
 require "templates/header.php";
-$vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
+
+
+function post(){
+
+
+    require "../config.php";
+
+    
+$vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
@@ -38,110 +46,215 @@ if ($vin) {
 }
 
 
-if (isset($_POST['submit'])) {
 
-    require "../config.php";
+
+    $year = date("Y");
+    $month = date("M");
+    if (!file_exists("uploads/$year/$month/")) {
+        mkdir("uploads/$year/$month/", 0777, true);
+    }
+    $currentDir = getcwd();
+    $uploadDirectory = "/uploads/$year/$month/";
+    $fileExtensions = ['jpeg','jpg','png']; // Get all the file extensions
+
+
+
+    $errors1 = []; // Store all foreseen and unforseen errors here
+    $fileName1 = $_FILES['image1']['name'];
+    $fileSize1 = $_FILES['image1']['size'];
+    $fileTmpName1  = $_FILES['image1']['tmp_name'];
+    $fileType1 = $_FILES['image1']['type'];
+    $fileExtension1 = strtolower(end(explode('.',$fileName1)));
+    $rand1 = rand();
+    $randfileName1 = $rand1 . basename($fileName1);
+    $uploadPath1 = $currentDir . $uploadDirectory . $randfileName1; 
+    $imgpath1 = $uploadDirectory . $randfileName1;
+
+    if (! in_array($fileExtension1,$fileExtensions)) {
+        $errors1[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+
+    if ($fileSize1 > 2000000) {
+        $errors1[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
+    }
+
+    if (empty($errors1)) {
+        $didUpload1 = move_uploaded_file($fileTmpName1, $uploadPath1);
+
+        if ($didUpload1) {
+                
+        } else {
+            echo "An error occurred somewhere. Try again or contact the admin";
+        }
+    } else {
+        foreach ($errors1 as $error1) {
+            echo $error1 . "These are the errors" . "\n";
+        }
+    }
+
+    if(empty($errors1)){
  
-
-    $check = getimagesize($_FILES["image1"]["tmp_name"]);
-    if($check !== false){
-        $image1 = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image1));      
-
         $db = new mysqli($host, $username, $password, $dbname);
         
-
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
-        $dataTime = date("Y-m-d H:i:s");
-        $rand = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
-        if($insert){
-            
+        $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgpath1', '$dataTime')");
+        if($insert1){
         }else{
-            echo "File upload failed, please try again.";
         } 
     }else{
-        
+        }
 
-}
 
-    $check = getimagesize($_FILES["image2"]["tmp_name"]);
-    if($check !== false){
-        $image2 = $_FILES['image2']['tmp_name'];
-        $imgContent2 = addslashes(file_get_contents($image2));
-     
+    $errors2 = []; // Store all foreseen and unforseen errors here
+    $fileName2 = $_FILES['image2']['name'];
+    $fileSize2 = $_FILES['image2']['size'];
+    $fileTmpName2  = $_FILES['image2']['tmp_name'];
+    $fileType2 = $_FILES['image2']['type'];
+    $fileExtension2 = strtolower(end(explode('.',$fileName2)));
+    $rand2 = rand();
+    $randfileName2 = $rand2 . basename($fileName2);
+    $uploadPath2 = $currentDir . $uploadDirectory . $randfileName2; 
+    $imgpath2 = $uploadDirectory . $randfileName2;
+
+    if (! in_array($fileExtension2,$fileExtensions)) {
+        $errors2[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+
+    if ($fileSize2 > 2000000) {
+        $errors2[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
+    }
+
+    if (empty($errors2)) {
+        $didUpload2 = move_uploaded_file($fileTmpName2, $uploadPath2);
+
+        if ($didUpload2) {
+                
+        } else {
+            echo "An error occurred somewhere. Try again or contact the admin";
+        }
+    } else {
+        foreach ($errors2 as $error2) {
+            echo $error2 . "These are the errors" . "\n";
+        }
+    }
+
+    if(empty($errors2)){
+ 
         $db = new mysqli($host, $username, $password, $dbname);
-       
+        
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
-        $dataTime = date("Y-m-d H:i:s");
-        $rand2 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
-        if($insert){
-            
+        $insert = $db->query("INSERT into images (image2, created) VALUES ('$imgpath2', '$dataTime')");
+        if($insert2){
         }else{
-            echo "File upload failed, please try again.";
         } 
     }else{
-        
+        }
 
-}
+#start of image 3 upload
+    $errors3 = []; // Store all foreseen and unforseen errors here
+    $fileName3 = $_FILES['image3']['name'];
+    $fileSize3 = $_FILES['image3']['size'];
+    $fileTmpName3  = $_FILES['image3']['tmp_name'];
+    $fileType3 = $_FILES['image3']['type'];
+    $fileExtension3 = strtolower(end(explode('.',$fileName3)));
+    $rand3 = rand();
+    $randfileName3 = $rand3 . basename($fileName3);
+    $uploadPath3 = $currentDir . $uploadDirectory . $randfileName3; 
+    $imgpath3 = $uploadDirectory . $randfileName3;
 
-    $check = getimagesize($_FILES["image3"]["tmp_name"]);
-    if($check !== false){
-        $image3 = $_FILES['image3']['tmp_name'];
-        $imgContent3 = addslashes(file_get_contents($image3));
-     
+    if (! in_array($fileExtension3,$fileExtensions)) {
+        $errors3[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+
+    if ($fileSize3 > 2000000) {
+        $errors3[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 3MB";
+    }
+
+    if (empty($errors3)) {
+        $didUpload3 = move_uploaded_file($fileTmpName3, $uploadPath3);
+
+        if ($didUpload3) {
+                
+        } else {
+            echo "An error occurred somewhere. Try again or contact the admin";
+        }
+    } else {
+        foreach ($errors3 as $error3) {
+            echo $error3 . "These are the errors" . "\n";
+        }
+    }
+
+    if(empty($errors3)){
+ 
         $db = new mysqli($host, $username, $password, $dbname);
-       
+        
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
-        $dataTime = date("Y-m-d H:i:s");
-        $rand3 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent3', '$dataTime', '$rand3')");
-        if($insert){
-            
+        $insert = $db->query("INSERT into images (image3, created) VALUES ('$imgpath3', '$dataTime')");
+        if($insert3){
         }else{
-            echo "File upload failed, please try again.";
         } 
     }else{
-        
+        }
 
-}
-    $check = getimagesize($_FILES["image4"]["tmp_name"]);
-    if($check !== false){
-        $image4 = $_FILES['image4']['tmp_name'];
-        $imgContent4 = addslashes(file_get_contents($image4));
-     
+
+#start of image 4 upload
+            $errors4 = []; // Store all foreseen and unforseen errors here
+    $fileName4 = $_FILES['image4']['name'];
+    $fileSize4 = $_FILES['image4']['size'];
+    $fileTmpName4  = $_FILES['image4']['tmp_name'];
+    $fileType4 = $_FILES['image4']['type'];
+    $fileExtension4 = strtolower(end(explode('.',$fileName4)));
+    $rand4 = rand();
+    $randfileName4 = $rand4 . basename($fileName4);
+    $uploadPath4 = $currentDir . $uploadDirectory . $randfileName4; 
+    $imgpath4 = $uploadDirectory . $randfileName4;
+
+    if (! in_array($fileExtension4,$fileExtensions)) {
+        $errors4[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+
+    if ($fileSize4 > 2000000) {
+        $errors4[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 4MB";
+    }
+
+    if (empty($errors4)) {
+        $didUpload4 = move_uploaded_file($fileTmpName4, $uploadPath4);
+
+        if ($didUpload4) {
+                
+        } else {
+            echo "An error occurred somewhere. Try again or contact the admin";
+        }
+    } else {
+        foreach ($errors4 as $error4) {
+            echo $error4 . "These are the errors" . "\n";
+        }
+    }
+
+    if(empty($errors4)){
+ 
         $db = new mysqli($host, $username, $password, $dbname);
-       
+        
         if($db->connect_error){
             die("Connection failed: " . $db->connect_error);
         }
         
-        $dataTime = date("Y-m-d H:i:s");
-        $rand4 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand4')");
-        if($insert){
-            
+        $insert = $db->query("INSERT into images (image4, created) VALUES ('$imgpath4', '$dataTime')");
+        if($insert4){
         }else{
-            echo "File upload failed, please try again.";
+            
         } 
     }else{
-        
-
-}
+        }
 
     try  {
         
@@ -159,10 +272,10 @@ if (isset($_POST['submit'])) {
             "make"                      => $Make,
             "model"                     => $Model,
             "due_date"                  => $_POST['due_date'],
-            "image1"                    => $rand,
-            "image2"                    => $rand2,
-            "image3"                    => $rand3,
-            "image4"                    => $rand4,
+            "image1"                    => $imgpath1,
+            "image2"                    => $imgpath2,
+            "image3"                    => $imgpath3,
+            "image4"                    => $imgpath4,
             "description"               => $_POST['description'],
             "oilchange"                 => $_POST['oilchange'],
             "fullservice"               => $_POST['fullservice'],
@@ -191,6 +304,12 @@ if (isset($_POST['submit'])) {
     } catch(PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
+}
+$vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
+
+if (isset($_POST['submit'])) {
+
+post();
     
 }
 
@@ -199,164 +318,20 @@ if (isset($_POST['submit'])) {
 <?php if (isset($_POST['submit']) && $statement) { ?>
     <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username?></blockquote>
 <?php } ?>
+
+
+
+
+
+
+
+
 <?php
 
 if (isset($_POST['submiteditandprint'])) {
 
-    require "../config.php";
- 
-   
-    $check = getimagesize($_FILES["image1"]["tmp_name"]);
-    if($check !== false){
-        $image1 = $_FILES['image1']['tmp_name'];
-        $imgContent = addslashes(file_get_contents($image1));      
+post();
 
-        $db = new mysqli($host, $username, $password, $dbname);
-        
-
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent', '$dataTime', '$rand')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    }else{
-        
-
-}
-
-    $check = getimagesize($_FILES["image2"]["tmp_name"]);
-    if($check !== false){
-        $image2 = $_FILES['image2']['tmp_name'];
-        $imgContent2 = addslashes(file_get_contents($image2));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand2 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent2', '$dataTime', '$rand2')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    }else{
-        
-
-}
-
-    $check = getimagesize($_FILES["image3"]["tmp_name"]);
-    if($check !== false){
-        $image3 = $_FILES['image3']['tmp_name'];
-        $imgContent3 = addslashes(file_get_contents($image3));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand3 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent3', '$dataTime', '$rand3')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    }else{
-        
-
-}
-    $check = getimagesize($_FILES["image4"]["tmp_name"]);
-    if($check !== false){
-        $image4 = $_FILES['image4']['tmp_name'];
-        $imgContent4 = addslashes(file_get_contents($image4));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand4 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent4', '$dataTime', '$rand4')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    }else{
-        
-
-}
-
-    try  {
-        
-        $connection = new PDO($dsn, $username, $password, $options);
-        $vinuppercase = strtoupper($VIN);
-        $new_user = array(
-            "vin"                       => $vinuppercase,
-            "firstname"                 => $_POST['firstname'],
-            "lastname"                  => $_POST['lastname'],
-            "email"                     => $_POST['email'],
-            "phone"                     => $_POST['phone'],
-            "year"                      => $ModelYear,
-            "location"                  => $_POST['location'],
-            "status"                    => $_POST['status'],
-            "make"                      => $Make,
-            "model"                     => $Model,
-            "due_date"                  => $_POST['due_date'],
-            "image1"                    => $rand,
-            "image2"                    => $rand2,
-            "image3"                    => $rand3,
-            "image4"                    => $rand4,
-            "description"               => $_POST['description'],
-            "oilchange"                 => $_POST['oilchange'],
-            "fullservice"               => $_POST['fullservice'],
-            "otherservice"              => $_POST['otherservice'],
-            "otherservicedescription"   => $_POST['otherservicedescription'],
-            "fronttirechange"           => $_POST['fronttirechange'],
-            "reartirechange"            => $_POST['reartirechange'],
-            "audiotroubleshooting"      => $_POST['audiotroubleshooting'],
-            "otheraudiodescription"     => $_POST['otheraudiodescription'],
-            "fullaudiosystem"           => $_POST['fullaudiosystem'],
-            "audioupgrade"              => $_POST['audioupgrade'],
-            "username"                  => $username,
-            "phpid"                     => $_POST['phpid'],
-            "miles_in"                  => $_POST['miles_in']
-        );   
-       
-
-        $sql = sprintf(
-                "INSERT INTO %s (%s) values (%s)",
-                "tickets",
-                implode(", ", array_keys($new_user)),
-                ":" . implode(", :", array_keys($new_user))
-        );
-        
-        $statement = $connection->prepare($sql);
-        $statement->execute($new_user);
-       
-    } catch(PDOException $error) {
-        echo $sql . "<br>" . $error->getMessage();
-    }
-    
 }
 
 ?>
