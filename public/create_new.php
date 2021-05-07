@@ -1,6 +1,13 @@
 <?php
 require "templates/header.php";
 
+
+
+function post(){
+
+
+    require "../config.php";
+
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
@@ -35,13 +42,6 @@ if ($vin) {
 } else {
         
 }
-
-function post(){
-
-
-    require "../config.php";
-
-
 
 
 
