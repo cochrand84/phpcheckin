@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
   	"accept: application/json",
-    "cache-control: no-cache",
+    "cache-control: must-revalidate",
     "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44",
   ),
 ));
