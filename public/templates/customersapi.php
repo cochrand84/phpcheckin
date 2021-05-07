@@ -1,9 +1,10 @@
 <?php
 
-$search = $_POST['serachvalue'];
+
 
 function searchapi(){
-
+  
+$search = $_POST['serachvalue'];
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/customers?search='$search'&search_field=last_name",
@@ -43,9 +44,8 @@ searchapi();
         </div>
     </div> 
     <div class="row">
-        <input type="submit" value="Search">
     </div>
 
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit" value="submit">
 
 
