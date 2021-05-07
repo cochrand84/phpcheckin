@@ -100,7 +100,7 @@ if (isset($_POST['submit'])) {
         }
         
         $insert = $db->query("INSERT into images (image1, created) VALUES ('$imgpath1', '$dataTime')");
-        if($insert){
+        if($insert1){
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -150,7 +150,7 @@ if (isset($_POST['submit'])) {
         }
         
         $insert = $db->query("INSERT into images (image2, created) VALUES ('$imgpath2', '$dataTime')");
-        if($insert){
+        if($insert2){
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -200,7 +200,7 @@ if (isset($_POST['submit'])) {
         }
         
         $insert = $db->query("INSERT into images (image3, created) VALUES ('$imgpath3', '$dataTime')");
-        if($insert){
+        if($insert3){
         }else{
             echo "File upload failed, please try again.";
         } 
@@ -251,7 +251,7 @@ if (isset($_POST['submit'])) {
         }
         
         $insert = $db->query("INSERT into images (image4, created) VALUES ('$imgpath4', '$dataTime')");
-        if($insert){
+        if($insert4){
         }else{
             echo "File upload failed, please try again.";
         } 
