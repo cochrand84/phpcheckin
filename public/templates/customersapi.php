@@ -25,6 +25,29 @@ curl_close($curl);
 
 echo $response;
 
+echo "</p>"
+
+echo '</br>';
+echo '</br>';
+echo 'Customer:';
+echo '</br>';
+echo '<table id="table-items">';
+echo '<tr class="items-row">';
+echo '<th>Quantity</th>';
+echo '<th>Product ID</th>';
+echo '<th>Description</th>';
+echo '</tr>';
+
+
+$xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
+foreach ($xml->cart_items->cart_item as $cart_item){
+  echo '<tr class="items-row">','<td class="items-divider">',$cart_item->quantity,'</td>','<td class="items-divider">',$cart_item->product_id,'</td>','<td class="items-divider">',$cart_item->name,'</td>','</tr>';
+}
+
+echo '</table>';
+}
+?>
+
 }
 if (isset($_POST['submit2'])) {
 
