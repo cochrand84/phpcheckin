@@ -420,7 +420,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-25">
-            <a href="<?php echo $editimage1; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage1; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -431,7 +431,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image2">Image 2</label>
         </div>
         <div class="col-25">
-            <a href="<?php echo $editimage2; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage2; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -442,7 +442,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image3">Image 3</label>
         </div>
         <div class="col-25">
-            <a href="<?php echo $editimage3; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage3; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -453,7 +453,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image4">Image 4</label>
         </div>
         <div class="col-25">
-            <a href="<?php echo $editimage4; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage4; ?>">Click for picture</a>
         </div>
         <div class="col-25">
             
