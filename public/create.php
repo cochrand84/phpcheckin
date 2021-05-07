@@ -106,7 +106,7 @@ if ($vin) {
     }
 
     if (empty($errors1)) {
-        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, 75);
+        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, 5);
         
     } else {
         foreach ($errors1 as $error1) {
@@ -150,7 +150,7 @@ if ($vin) {
     }
 
     if (empty($errors2)) {
-                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, 75);
+                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, 5);
         
     } else {
         foreach ($errors2 as $error2) {
@@ -194,7 +194,7 @@ if ($vin) {
     }
 
     if (empty($errors3)) {
-                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, 75);
+                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, 5);
         
     } else {
         foreach ($errors3 as $error3) {
@@ -239,7 +239,7 @@ if ($vin) {
     }
 
     if (empty($errors4)) {
-                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, 75);
+                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, 5);
 
     } else {
         foreach ($errors4 as $error4) {
