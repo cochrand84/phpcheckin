@@ -12,8 +12,9 @@
     $fileType = $_FILES['myfile']['type'];
     $fileExtension = strtolower(end(explode('.',$fileName)));
     $rand = rand();
-    $uploadPath = $currentDir . $uploadDirectory . $rand . basename($fileName); 
-    $imgpath = "." . $uploadDirectory . $rand . basename($fileName);
+    $randfileName = $rand . basename($fileName);
+    $uploadPath = $currentDir . $uploadDirectory . $randfileName; 
+    $imgpath = "." . $uploadDirectory . $randfileName;
 
     if (isset($_POST['submit'])) {
 
@@ -29,7 +30,7 @@
             $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
             if ($didUpload) {
-                echo "The file " . basename($fileName) . " has been uploaded";
+                echo "The file " . $randfileName . " has been uploaded to " . $imgpath;
                 ?><img src="<?php echo $imgpath;?>" alt="<?php echo $imgpath; ?>" height="100" width="100">
                 <?php
             } else {
