@@ -1,6 +1,12 @@
 <?php
+    $year = date("Y");
+    $month = date("M");
+
+    if (!file_exists('uploads/$year/$month/')) {
+        mkdir('uploads/$year/$month/', 0777, true);
+    }
     $currentDir = getcwd();
-    $uploadDirectory = "/uploads/";
+    $uploadDirectory = "/uploads/$year/$month/";
 
     $errors = []; // Store all foreseen and unforseen errors here
 
@@ -17,13 +23,6 @@
     $imgpath = "." . $uploadDirectory . $randfileName;
 
     if (isset($_POST['submit'])) {
-
-        $year = date("Y");
-        $month = date("M");
-
-        if (!file_exists('uploads/$year/$month/')) {
-            mkdir('uploads/$year/$month/', 0777, true);
-        }
 
         if (! in_array($fileExtension,$fileExtensions)) {
             $errors[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
