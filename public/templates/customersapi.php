@@ -6,7 +6,7 @@ $search = $_POST['searchvalue2'];
 $curl = curl_init();
 
 
-if($editphpid == 0){
+if($search == 0){
   echo "<h1>";
   echo "No POS Data, PLEASE ADD POS ID AND REPRINT";
   echo "</h1>";
