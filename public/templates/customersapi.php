@@ -32,10 +32,11 @@ echo $response;
 if (isset($_POST['submit'])) {
 
 searchapi();
-    echo "search hit";
+echo "search hit";
+
 }
 ?>
-
+<form method="post" enctype="multipart/form-data">
 <div class="row">     
         <div class="col-25">
             <label for="searchvalue">Search:</label>
@@ -49,4 +50,4 @@ searchapi();
 
     <input type="submit" name="submit" value="Search">
 
-
+</form>
