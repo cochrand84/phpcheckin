@@ -23,7 +23,11 @@ curl_close($curl);
 
 echo $response;
 
-$xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
+$xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
+
+echo "<P>";
+
+echo "xmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxmlxml";
 
 echo "<P>";
 
