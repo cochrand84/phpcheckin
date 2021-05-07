@@ -25,7 +25,7 @@ curl_close($curl);
 
 echo $response;
 
-echo "</p>"
+echo "</p>";
 
 echo '</br>';
 echo '</br>';
