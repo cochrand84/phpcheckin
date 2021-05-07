@@ -47,7 +47,7 @@ if ($vin) {
 
 
 
-    $maxfilesize = '20000000'
+    $maxfilesize = '20000000';
     $year = date("Y");
     $month = date("M");
     if (!file_exists("uploads/$year/$month/")) {
