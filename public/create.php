@@ -47,7 +47,7 @@ if ($vin) {
 
 
 
-
+    $maxfilesize = '20000000'
     $year = date("Y");
     $month = date("M");
     if (!file_exists("uploads/$year/$month/")) {
@@ -74,7 +74,7 @@ if ($vin) {
         $errors1[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
-    if ($fileSize1 > 2000000) {
+    if ($fileSize1 > $maxfilesize) {
         $errors1[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
     }
 
@@ -123,7 +123,7 @@ if ($vin) {
         $errors2[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
-    if ($fileSize2 > 2000000) {
+    if ($fileSize2 > $maxfilesize) {
         $errors2[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
     }
 
@@ -172,7 +172,7 @@ if ($vin) {
         $errors3[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
-    if ($fileSize3 > 2000000) {
+    if ($fileSize3 > $maxfilesize) {
         $errors3[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 3MB";
     }
 
@@ -222,7 +222,7 @@ if ($vin) {
         $errors4[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
-    if ($fileSize4 > 2000000) {
+    if ($fileSize4 > $maxfilesize) {
         $errors4[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 4MB";
     }
 
