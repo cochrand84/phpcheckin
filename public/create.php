@@ -1,7 +1,7 @@
 <?php
 require "templates/header.php";
 
-function compressImage($source, $destination, $quality) { 
+function compressImage($source, $destination) { 
     // Get image info 
     $imgInfo = getimagesize($source); 
     $mime = $imgInfo['mime']; 
@@ -10,19 +10,19 @@ function compressImage($source, $destination, $quality) {
     switch($mime){ 
         case 'image/jpeg': 
             $image = imagecreatefromjpeg($source); 
-           imagejpeg($image, $destination, $quality);
+           imagejpeg($image, $destination, 75);
             break; 
         case 'image/png': 
             $image = imagecreatefrompng($source); 
-            imagepng($image, $destination, $quality);
+            imagepng($image, $destination, 0);
             break; 
         case 'image/gif': 
             $image = imagecreatefromgif($source); 
-            imagegif($image, $destination, $quality);
+            imagegif($image, $destination, 0);
             break; 
         default: 
             $image = imagecreatefromjpeg($source); 
-           imagejpeg($image, $destination, $quality);
+           imagejpeg($image, $destination, 75);
     } 
      
      
@@ -75,7 +75,6 @@ if ($vin) {
 
 
     $maxfilesize = '20000000';
-    $compresslevel = '2';
     $year = date("Y");
     $month = date("M");
     if (!file_exists("uploads/$year/$month/")) {
@@ -107,7 +106,7 @@ if ($vin) {
     }
 
     if (empty($errors1)) {
-        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, $compresslevel);
+        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1);
         
     } else {
         foreach ($errors1 as $error1) {
@@ -151,7 +150,7 @@ if ($vin) {
     }
 
     if (empty($errors2)) {
-                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, $compresslevel);
+                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2);
         
     } else {
         foreach ($errors2 as $error2) {
@@ -195,7 +194,7 @@ if ($vin) {
     }
 
     if (empty($errors3)) {
-                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, $compresslevel);
+                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3);
         
     } else {
         foreach ($errors3 as $error3) {
@@ -240,7 +239,7 @@ if ($vin) {
     }
 
     if (empty($errors4)) {
-                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, $compresslevel);
+                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4);
 
     } else {
         foreach ($errors4 as $error4) {
