@@ -370,7 +370,7 @@ try  {
 
         $connection = new PDO($dsn, $username, $password, $options);
 
-        $sql = "SELECT * FROM `tickets` ORDER BY ID DESC LIMIT 1";
+        $sql = "SELECT * FROM tickets ORDER BY ID DESC LIMIT 1";
 
         $location = $_POST['location'];
 
