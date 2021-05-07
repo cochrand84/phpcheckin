@@ -1,7 +1,34 @@
 <?php
 require "templates/header.php";
 
-
+function compressImage($source, $destination, $quality) { 
+    // Get image info 
+    $imgInfo = getimagesize($source); 
+    $mime = $imgInfo['mime']; 
+     
+    // Create a new image from file 
+    switch($mime){ 
+        case 'image/jpeg': 
+            $image = imagecreatefromjpeg($source); 
+           imagejpeg($image, $destination, $quality);
+            break; 
+        case 'image/png': 
+            $image = imagecreatefrompng($source); 
+            imagepng($image, $destination, $quality);
+            break; 
+        case 'image/gif': 
+            $image = imagecreatefromgif($source); 
+            imagegif($image, $destination, $quality);
+            break; 
+        default: 
+            $image = imagecreatefromjpeg($source); 
+           imagejpeg($image, $destination, $quality);
+    } 
+     
+     
+    // Return compressed image 
+    return $destination; 
+} 
 
 function post(){
 
@@ -79,7 +106,8 @@ if ($vin) {
     }
 
     if (empty($errors1)) {
-        $didUpload1 = move_uploaded_file($fileTmpName1, $uploadPath1);
+        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, 75);
+        $didUpload1 = move_uploaded_file($compressedImage1, $uploadPath1);
 
         if ($didUpload1) {
                 
@@ -128,7 +156,8 @@ if ($vin) {
     }
 
     if (empty($errors2)) {
-        $didUpload2 = move_uploaded_file($fileTmpName2, $uploadPath2);
+                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, 75);
+        $didUpload2 = move_uploaded_file($compressedImage2, $uploadPath2);
 
         if ($didUpload2) {
                 
@@ -177,7 +206,8 @@ if ($vin) {
     }
 
     if (empty($errors3)) {
-        $didUpload3 = move_uploaded_file($fileTmpName3, $uploadPath3);
+                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, 75);
+        $didUpload3 = move_uploaded_file($compressedImage3, $uploadPath3);
 
         if ($didUpload3) {
                 
@@ -227,7 +257,8 @@ if ($vin) {
     }
 
     if (empty($errors4)) {
-        $didUpload4 = move_uploaded_file($fileTmpName4, $uploadPath4);
+                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, 75);
+        $didUpload4 = move_uploaded_file($compressedImage4, $uploadPath4);
 
         if ($didUpload4) {
                 
