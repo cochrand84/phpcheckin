@@ -20,7 +20,7 @@
     $rand = rand();
     $randfileName = $rand . basename($fileName);
     $uploadPath = $currentDir . $uploadDirectory . $randfileName; 
-    $imgpath = "." . $uploadDirectory . $randfileName;
+    $imgpath = $uploadDirectory . $randfileName;
 
     if (isset($_POST['submit'])) {
 
