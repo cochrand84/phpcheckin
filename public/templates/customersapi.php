@@ -32,25 +32,28 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-echo $response;
+echo $xml;
 
 echo "</p>";
 
 echo '</br>';
+echo 'Customer';
 echo '</br>';
-echo 'Customer:';
-echo '</br>';
-echo '<table id="table-items">';
-echo '<tr class="items-row">';
-echo '<th>Quantity</th>';
-echo '<th>Product ID</th>';
-echo '<th>Description</th>';
-echo '</tr>';
 
-
-$xml= new SimpleXMLElement($response) or die("Error: Cannot create object");
+$xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
 foreach ($xml->cart_items->cart_item as $cart_item){
-  echo '<tr class="items-row">','<td class="items-divider">',$cart_item->quantity,'</td>','<td class="items-divider">',$cart_item->product_id,'</td>','<td class="items-divider">',$cart_item->name,'</td>','</tr>';
+
+  echo 'First Name';
+  echo $cart_item->customer_first_name;
+  echo 'Last Name';
+  echo $cart_item->customer_last_name;
+  echo 'Sale Total';
+  echo $cart_item->total;
+  echo 'Phone';
+  echo $cart_item->customer_phone_number;
+  echo 'Email';
+  echo $cart_item->customer_email;
+
 }
 
 echo '</table>';
