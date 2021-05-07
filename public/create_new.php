@@ -1,6 +1,41 @@
 <?php
 require "templates/header.php";
 
+if ($vin) {
+    $postdata = http_build_query([
+            'format' => 'json',
+            'data' => $vin
+        ]
+    );
+    $opts = [
+        'http' => [
+            'method' => 'POST',
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\n".
+                        "Content-Length: ".strlen($postdata)."\r\n",
+            'content' => $postdata
+        ]
+    ];
+
+    $apiURL = "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/";
+    $context = stream_context_create($opts);
+    $fp = fopen($apiURL, 'rb', false, $context);
+
+    $line_of_text = fgets($fp);
+    $json = json_decode($line_of_text, true);
+
+    fclose($fp);
+    $i = 0;
+    $vindecode = '';
+    foreach ($json['Results'][0] as $k => $v) {
+        $vindecode .= '' . $k . ' - ' . $v . '';
+        ${$k} = $v;
+        $i++;
+    }
+
+} else {
+        
+}
+
 function post(){
 
 
@@ -269,42 +304,6 @@ function post(){
     }
 }
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
-
-if ($vin) {
-    $postdata = http_build_query([
-            'format' => 'json',
-            'data' => $vin
-        ]
-    );
-    $opts = [
-        'http' => [
-            'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\r\n".
-                        "Content-Length: ".strlen($postdata)."\r\n",
-            'content' => $postdata
-        ]
-    ];
-
-    $apiURL = "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/";
-    $context = stream_context_create($opts);
-    $fp = fopen($apiURL, 'rb', false, $context);
-
-    $line_of_text = fgets($fp);
-    $json = json_decode($line_of_text, true);
-
-    fclose($fp);
-    $i = 0;
-    $vindecode = '';
-    foreach ($json['Results'][0] as $k => $v) {
-        $vindecode .= '' . $k . ' - ' . $v . '';
-        ${$k} = $v;
-        $i++;
-    }
-
-} else {
-        
-}
-
 
 if (isset($_POST['submit'])) {
 
