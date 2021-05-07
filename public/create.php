@@ -278,6 +278,7 @@ if ($vin) {
             "status"                    => $_POST['status'],
             "make"                      => $Make,
             "model"                     => $Model,
+            "series"                    => $Series,
             "due_date"                  => $_POST['due_date'],
             "image1"                    => $imgpath1,
             "image2"                    => $imgpath2,
