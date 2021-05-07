@@ -8,6 +8,8 @@ function post(){
 
     require "../config.php";
 
+    
+$vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 if ($vin) {
     $postdata = http_build_query([
             'format' => 'json',
