@@ -75,6 +75,7 @@ if ($vin) {
 
 
     $maxfilesize = '20000000';
+    $compresslevel = '2';
     $year = date("Y");
     $month = date("M");
     if (!file_exists("uploads/$year/$month/")) {
@@ -106,7 +107,7 @@ if ($vin) {
     }
 
     if (empty($errors1)) {
-        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, 5);
+        $compressedImage1 = compressImage($fileTmpName1, $uploadPath1, $compresslevel);
         
     } else {
         foreach ($errors1 as $error1) {
@@ -150,7 +151,7 @@ if ($vin) {
     }
 
     if (empty($errors2)) {
-                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, 5);
+                $compressedImage2 = compressImage($fileTmpName2, $uploadPath2, $compresslevel);
         
     } else {
         foreach ($errors2 as $error2) {
@@ -194,7 +195,7 @@ if ($vin) {
     }
 
     if (empty($errors3)) {
-                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, 5);
+                $compressedImage3 = compressImage($fileTmpName3, $uploadPath3, $compresslevel);
         
     } else {
         foreach ($errors3 as $error3) {
@@ -239,7 +240,7 @@ if ($vin) {
     }
 
     if (empty($errors4)) {
-                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, 5);
+                $compressedImage4 = compressImage($fileTmpName4, $uploadPath4, $compresslevel);
 
     } else {
         foreach ($errors4 as $error4) {
