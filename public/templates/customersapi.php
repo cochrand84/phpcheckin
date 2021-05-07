@@ -47,8 +47,6 @@ foreach ($xml->cart_items->cart_item as $cart_item){
 echo '</table>';
 }
 
-
-}
 if (isset($_POST['submit2'])) {
 
 searchapi2();
