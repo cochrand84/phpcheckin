@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
     $uploadPath1 = $currentDir . $uploadDirectory . $randfileName1; 
     $imgpath1 = $uploadDirectory . $randfileName1;
 
-    if (! in_array($fileExtension,$fileExtensions)) {
+    if (! in_array($fileExtension1,$fileExtensions)) {
         $errors1[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
     $uploadPath2 = $currentDir . $uploadDirectory . $randfileName2; 
     $imgpath2 = $uploadDirectory . $randfileName2;
 
-    if (! in_array($fileExtension,$fileExtensions)) {
+    if (! in_array($fileExtension2,$fileExtensions)) {
         $errors2[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
@@ -169,7 +169,7 @@ if (isset($_POST['submit'])) {
     $uploadPath3 = $currentDir . $uploadDirectory . $randfileName3; 
     $imgpath3 = $uploadDirectory . $randfileName3;
 
-    if (! in_array($fileExtension,$fileExtensions)) {
+    if (! in_array($fileExtension3,$fileExtensions)) {
         $errors3[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
@@ -220,7 +220,7 @@ if (isset($_POST['submit'])) {
     $uploadPath4 = $currentDir . $uploadDirectory . $randfileName4; 
     $imgpath4 = $uploadDirectory . $randfileName4;
 
-    if (! in_array($fileExtension,$fileExtensions)) {
+    if (! in_array($fileExtension4,$fileExtensions)) {
         $errors4[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
 
