@@ -359,7 +359,8 @@ if ($vin) {
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if (isset($_POST['submit'])) {
-searchapi2()
+    
+searchapi2();
 post();
     
 }
