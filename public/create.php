@@ -502,7 +502,7 @@ if (isset($_POST['submiteditandprint']))
             <label for="vin">VIN</label>
         </div>
         <div class="col-75">
-            <input type="text" id="vindecoder" value="<?php echo $VIN; ?>" name="vindecoder" maxlength="17" required/>
+            <input type="text" id="vindecoder" value="<?php echo $VIN; ?>" name="vindecoder" minlength="17" maxlength="17" required/>
         </div>
     </div>  
         <div class="row">
