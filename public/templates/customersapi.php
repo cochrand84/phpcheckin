@@ -43,12 +43,8 @@ echo '</br>';
 $xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
 
 
-echo customer_email;
+echo customer_email
 
-
-}
-
-echo '</table>';
 }
 }
 if (isset($_POST['submit2'])) {
