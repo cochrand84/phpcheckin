@@ -2,19 +2,28 @@
 require "templates/header.php";
 
 
-function poscustomerapi(){
+function searchapi2(){
 
 $search = $_POST['searchvalue2'];
 $curl = curl_init();
+
+
+if($search == 0){
+  echo "<h1>";
+  echo "No POS Data, PLEASE ADD POS ID AND REPRINT";
+  echo "</h1>";
+}else{
+
+
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://area51customs.phppointofsale.com/index.php/api/v1/sales/' . $search,
+  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$search",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_HEADER => false,
-  CURLOPT_TIMEOUT => 60,
+  CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "accept: application/json",
+    "accept: application/xml",
     "cache-control: no-cache",
     "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44",
   ),
@@ -25,6 +34,14 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
+$xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
+$email = $xml->customer_email;
+$phone = $xml->customer_phone_number;
+$first_name = $xml->customer_first_name;
+$last_name = $xml->customer_last_name;
+$sale_total = $xml->total;
+
+}
 }
 
 function compressImage($source, $destination) { 
@@ -295,10 +312,10 @@ if ($vin) {
         $vinuppercase = strtoupper($VIN);
         $new_user = array(
             "vin"                       => $vinuppercase,
-            "firstname"                 => $_POST['firstname'],
-            "lastname"                  => $_POST['lastname'],
-            "email"                     => $_POST['email'],
-            "phone"                     => $_POST['phone'],
+            "firstname"                 => $first_name,
+            "lastname"                  => $last_name,
+            "email"                     => $email,
+            "phone"                     => $phone,
             "year"                      => $ModelYear,
             "location"                  => $_POST['location'],
             "status"                    => $_POST['status'],
@@ -342,7 +359,7 @@ if ($vin) {
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if (isset($_POST['submit'])) {
-
+searchapi2()
 post();
     
 }
@@ -409,6 +426,14 @@ if ($result && $statement->rowCount() > 0) {
 <h2>Create a new ticket</h2>
 <div class="container">
         <form method="post" enctype="multipart/form-data">
+                   <div class="row">     
+        <div class="col-25">
+            <label for="phpid">PHP ID</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="phpid" id="phpid" required>
+        </div>
+    </div>
     <div class="row">
         <div class="col-25">
             <label for="vin">VIN</label>
@@ -424,39 +449,7 @@ if ($result && $statement->rowCount() > 0) {
         <div class="col-75">
             <input type="text" id="miles_in" name="miles_in" maxlength="12" required/>
         </div>
-    </div>  
-    <div class="row">    
-        <div class="col-25">
-            <label for="firstname">First Name</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="firstname" id="firstname" required>
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="lastname">Last Name</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="lastname" id="lastname" required>
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="email">Email Address</label>
-        </div>
-        <div class="col-75">
-            <input type="email" name="email" id="email" >
-        </div>
-    </div>    
-    <div class="row">     
-        <div class="col-25">
-            <label for="phone">Phone Number</label>
-        </div>
-        <div class="col-75">
-            <input type="tel" name="phone" id="phone" required> 
-        </div>
-    </div>    
+    </div> 
     <div class="row">     
         <div class="col-25">   
             <label for="location">Location</label>
@@ -544,14 +537,7 @@ if ($result && $statement->rowCount() > 0) {
             <textarea name="description" id="description" rows="10" cols="80" required></textarea><br />
         </div>
     </div>
-       <div class="row">     
-        <div class="col-25">
-            <label for="phpid">PHP ID</label>
-        </div>
-        <div class="col-75">
-            <input type="text" name="phpid" id="phpid" required>
-        </div>
-    </div>
+
     <div class="row">
         <input type="submit" name="submit" value="Submit">
         <input type="submit" name="submiteditandprint" value="Submit and Print">
