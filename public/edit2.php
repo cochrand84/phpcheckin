@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * tickets table.
- *
- */
-
 require "templates/header.php"; 
 
 $_GET['editid'];
@@ -39,8 +33,8 @@ if ($result && $statement->rowCount() > 0) {
                     $editlastname                   = $row["lastname"]; 
                     $editemail                      = $row["email"]; 
                     $edityear                       = $row["year"]; 
-                    $editmake                     = $row["make"];
-                    $editmodel                     = $row["model"];
+                    $editmake                       = $row["make"];
+                    $editmodel                      = $row["model"];
                     $editlocation                   = $row["location"]; 
                     $editdate                       = $row["date"]; 
                     $editstatus                     = $row["status"];
@@ -49,17 +43,20 @@ if ($result && $statement->rowCount() > 0) {
                     $editimage2                     = $row["image2"];
                     $editimage3                     = $row["image3"];
                     $editimage4                     = $row["image4"];
+                    $editimage5                     = $row["image5"];
+                    $editimage6                     = $row["image6"];
+                    $editimage7                     = $row["image7"];                    
                     $editduedate                    = $row["due_date"];
                     $editdescription                = $row["description"];
-                    $editservicenote1             = $row['servicenote1'];
-                    $editservicenote2             = $row['servicenote2'];
-                    $editservicenote3             = $row['servicenote3'];
-                    $editservicenote1date         = $row['servicenote1date'];
-                    $editservicenote2date         = $row['servicenote2date'];
-                    $editservicenote3date         = $row['servicenote3date'];
-                    $editphpid                         = $row['phpid'];
+                    $editservicenote1               = $row['servicenote1'];
+                    $editservicenote2               = $row['servicenote2'];
+                    $editservicenote3               = $row['servicenote3'];
+                    $editservicenote1date           = $row['servicenote1date'];
+                    $editservicenote2date           = $row['servicenote2date'];
+                    $editservicenote3date           = $row['servicenote3date'];
+                    $editphpid                      = $row['phpid'];
                     $miles_in                       = $row['miles_in'];
-                    $editmiles_out                      = $row['miles_out'];
+                    $editmiles_out                  = $row['miles_out'];
 
          } 
         } else { 
@@ -156,7 +153,7 @@ if (isset($_POST['submitedit'])) {
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
-            $editedmiles_out                              = $_POST['miles_out'];
+            $editedmiles_out                        = $_POST['miles_out'];
             
 
          $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
