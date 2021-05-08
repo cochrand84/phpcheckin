@@ -42,8 +42,20 @@ echo '</br>';
 
 $xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
 
-$test = $xml->customer_email;
-echo $test;
+$email = $xml->customer_email;
+echo $email;
+echo '</br>';
+$phone = $xml->customer_phone_number;
+echo $phone;
+echo '</br>';
+$first_name = $xml->customer_first_name;
+echo $first_name;
+echo '</br>';
+$last_name = $xml->customer_last_name;
+echo $last_name;
+echo '</br>';
+$sale_total = $xml->total;
+echo $sale_total;
 
 
 }
