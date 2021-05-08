@@ -2,48 +2,6 @@
 require "templates/header.php";
 
 
-function searchapi2(){
-
-$search = $_POST['phpid'];
-$curl = curl_init();
-
-
-if($search == 0){
-  echo "<h1>";
-  echo "No POS Data, PLEASE ADD POS ID AND REPRINT";
-  echo "</h1>";
-}else{
-
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$search",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_HEADER => false,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "accept: application/xml",
-    "cache-control: no-cache",
-    "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44",
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-$xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
-$email = $xml->customer_email;
-$phone = $xml->customer_phone_number;
-$first_name = $xml->customer_first_name;
-$last_name = $xml->customer_last_name;
-$sale_total = $xml->total;
-
-}
-}
-
 function compressImage($source, $destination) { 
     // Get image info 
     $imgInfo = getimagesize($source); 
@@ -306,6 +264,46 @@ if ($vin) {
     }else{
         }
 
+
+$search = $_POST['phpid'];
+$curl = curl_init();
+
+
+if($search == 0){
+  echo "<h1>";
+  echo "POS ID entered, please try again";
+  echo "</h1>";
+}else{
+
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://area51customs.phppointofsale.com/index.php/api/v1/sales/$search",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HEADER => false,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "accept: application/xml",
+    "cache-control: no-cache",
+    "x-api-key: s088wogkssw84cwwkgggk4w040coowggg4c08c44",
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+$xml = new SimpleXMLElement($response) or die("Error: Cannot create object");
+$email = $xml->customer_email;
+$phone = $xml->customer_phone_number;
+$first_name = $xml->customer_first_name;
+$last_name = $xml->customer_last_name;
+$sale_total = $xml->total;
+
+}
+
     try  {
         
         $connection = new PDO($dsn, $username, $password, $options);
@@ -360,7 +358,6 @@ $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if (isset($_POST['submit'])) {
 
-searchapi2();
 post();
     
 }
