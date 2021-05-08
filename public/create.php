@@ -510,7 +510,7 @@ if (isset($_POST['submiteditandprint']))
             <label for="miles_in">Miles In</label>
         </div>
         <div class="col-75">
-            <input type="number" id="miles_in" name="miles_in" maxlength="18" minlength="3"required/>
+            <input type="number" id="miles_in" name="miles_in" maxlength="18" minlength="3" required/>
         </div>
     </div> 
     <div class="row">     
@@ -597,7 +597,7 @@ if (isset($_POST['submiteditandprint']))
             <label for ="description">Description of Issue/Upgrade</label>
         </div>
         <div class="col-75">
-            <textarea name="description" id="description" rows="10" cols="80" minlength="25"required></textarea><br />
+            <textarea name="description" id="description" rows="10" cols="80" minlength="25" required></textarea><br />
         </div>
     </div>
 
