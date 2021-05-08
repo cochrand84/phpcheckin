@@ -4,7 +4,7 @@ require "templates/header.php";
 
 function searchapi2(){
 
-$search = $_POST['searchvalue2'];
+$search = $_POST['phpid'];
 $curl = curl_init();
 
 
@@ -359,7 +359,7 @@ if ($vin) {
 $vin = isset($_POST['vindecoder']) ? $_POST['vindecoder'] : '';
 
 if (isset($_POST['submit'])) {
-    
+
 searchapi2();
 post();
     
