@@ -402,35 +402,48 @@ if (isset($_POST['submit']))
 
     post();
 
+    try
+    {
+
+        require "../config.php";
+        require "../common.php";
+
+        $connection = new PDO($dsn, $username, $password, $options);
+
+        $sql = "SELECT * FROM tickets ORDER BY ID DESC LIMIT 1";
+
+        $location = $_POST['location'];
+
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(':location', $location, PDO::PARAM_STR);
+        $statement->execute();
+
+        $result = $statement->fetchAll();
+    }
+    catch(PDOException $error)
+    {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+
+    if ($result && $statement->rowCount() > 0)
+    {
+        foreach ($result as $row)
+        {
+            $editid = $row["id"];
+        }
+    }
+    else
+    {
+        echo $_POST['status'];
+    }
+
+    header("Location: submitsuccess.php?editid=$editid");
 }
 
-?>
-
-<?php if (isset($_POST['submit']) && $statement)
-{ ?>
-    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username ?></blockquote>
-<?php
-} ?>
-
-
-
-
-
-
-
-
-<?php
 if (isset($_POST['submiteditandprint']))
 {
 
     post();
-
-}
-
-?>
-
-<?php if (isset($_POST['submiteditandprint']) && $statement)
-{
 
     try
     {
@@ -468,10 +481,10 @@ if (isset($_POST['submiteditandprint']))
     }
 
     header("Location: print.php?editid=$editid");
+
+}
+
 ?>
-    <blockquote>Ticket for <?php echo $_POST['firstname']; ?> <?php echo $_POST['lastname']; ?> successfully added. Logged in as <?php echo $username ?></blockquote>
-<?php
-} ?>
 
 <h2>Create a new ticket</h2>
 <div class="container">
