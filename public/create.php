@@ -69,6 +69,7 @@ function post()
     }
 
     $maxfilesize = '20000000';
+    $minfilesize = '200000';
     $year = date("Y");
     $month = date("M");
     if (!file_exists("uploads/$year/$month/"))
@@ -79,7 +80,7 @@ function post()
     $uploadDirectory = "/uploads/$year/$month/";
     $fileExtensions = ['jpeg', 'jpg', 'png']; // Get all the file extensions
     
-
+    #begin image 1
     $errors1 = []; // Store all foreseen and unforseen errors here
     $fileName1 = $_FILES['image1']['name'];
     $fileSize1 = $_FILES['image1']['size'];
@@ -90,22 +91,29 @@ function post()
     $randfileName1 = $rand1 . basename($fileName1);
     $uploadPath1 = $currentDir . $uploadDirectory . $randfileName1;
     $imgpath1 = $uploadDirectory . $randfileName1;
-
+    #check file extension
     if (!in_array($fileExtension1, $fileExtensions))
     {
         $errors1[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-
+    #check max file size
     if ($fileSize1 > $maxfilesize)
     {
-        $errors1[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
+        $errors1[] = "This file is too large... use a smaller image.";
     }
-
+    #check min file size
+    if ($fileSize1 < $minfilesize)
+    {
+        $errors1[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
     if (empty($errors1))
     {
         $compressedImage1 = compressImage($fileTmpName1, $uploadPath1);
 
     }
+
+
     else
     {
         foreach ($errors1 as $error1)
@@ -135,7 +143,8 @@ function post()
     else
     {
     }
-
+    #end of image 1
+    #begin of image 2
     $errors2 = []; // Store all foreseen and unforseen errors here
     $fileName2 = $_FILES['image2']['name'];
     $fileSize2 = $_FILES['image2']['size'];
@@ -146,16 +155,22 @@ function post()
     $randfileName2 = $rand2 . basename($fileName2);
     $uploadPath2 = $currentDir . $uploadDirectory . $randfileName2;
     $imgpath2 = $uploadDirectory . $randfileName2;
-
+    #check file extension
     if (!in_array($fileExtension2, $fileExtensions))
     {
         $errors2[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-
+    #check max file size
     if ($fileSize2 > $maxfilesize)
     {
-        $errors2[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 2MB";
+        $errors2[] = "This file is too large... use a smaller image.";
     }
+    #check min file size
+    if ($fileSize2 < $minfilesize)
+    {
+        $errors2[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
 
     if (empty($errors2))
     {
@@ -191,7 +206,7 @@ function post()
     else
     {
     }
-
+#end of image 2
     #start of image 3 upload
     $errors3 = []; // Store all foreseen and unforseen errors here
     $fileName3 = $_FILES['image3']['name'];
@@ -203,16 +218,22 @@ function post()
     $randfileName3 = $rand3 . basename($fileName3);
     $uploadPath3 = $currentDir . $uploadDirectory . $randfileName3;
     $imgpath3 = $uploadDirectory . $randfileName3;
-
+    #check file extension
     if (!in_array($fileExtension3, $fileExtensions))
     {
         $errors3[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-
+    #check max file size
     if ($fileSize3 > $maxfilesize)
     {
-        $errors3[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 3MB";
+        $errors3[] = "This file is too large... use a smaller image.";
     }
+    #check min file size
+    if ($fileSize3 < $minfilesize)
+    {
+        $errors3[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
 
     if (empty($errors3))
     {
@@ -248,7 +269,7 @@ function post()
     else
     {
     }
-
+    #end of image 3
     #start of image 4 upload
     $errors4 = []; // Store all foreseen and unforseen errors here
     $fileName4 = $_FILES['image4']['name'];
@@ -260,16 +281,22 @@ function post()
     $randfileName4 = $rand4 . basename($fileName4);
     $uploadPath4 = $currentDir . $uploadDirectory . $randfileName4;
     $imgpath4 = $uploadDirectory . $randfileName4;
-
+    #check file extension
     if (!in_array($fileExtension4, $fileExtensions))
     {
         $errors4[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-
+    #check max file size
     if ($fileSize4 > $maxfilesize)
     {
-        $errors4[] = "This file is more than 2MB. Sorry, it has to be less than or equal to 4MB";
+        $errors4[] = "This file is too large... use a smaller image.";
     }
+    #check min file size
+    if ($fileSize4 < $minfilesize)
+    {
+        $errors4[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
 
     if (empty($errors4))
     {
@@ -306,6 +333,137 @@ function post()
     else
     {
     }
+    #end of image 4
+
+        #start of image 5 upload
+    $errors5 = []; // Store all foreseen and unforseen errors here
+    $fileName5 = $_FILES['image5']['name'];
+    $fileSize5 = $_FILES['image5']['size'];
+    $fileTmpName5 = $_FILES['image5']['tmp_name'];
+    $fileType5 = $_FILES['image5']['type'];
+    $fileExtension5 = strtolower(end(explode('.', $fileName5)));
+    $rand5 = rand();
+    $randfileName5 = $rand5 . basename($fileName5);
+    $uploadPath5 = $currentDir . $uploadDirectory . $randfileName5;
+    $imgpath5 = $uploadDirectory . $randfileName5;
+    #check file extension
+    if (!in_array($fileExtension5, $fileExtensions))
+    {
+        $errors5[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+    #check max file size
+    if ($fileSize5 > $maxfilesize)
+    {
+        $errors5[] = "This file is too large... use a smaller image.";
+    }
+    #check min file size
+    if ($fileSize5 < $minfilesize)
+    {
+        $errors5[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
+
+    if (empty($errors5))
+    {
+        $compressedImage5 = compressImage($fileTmpName5, $uploadPath5);
+
+    }
+    else
+    {
+        foreach ($errors5 as $error5)
+        {
+            echo $error5 . "These are the errors" . "\n";
+        }
+    }
+
+    if (empty($errors5))
+    {
+
+        $db = new mysqli($host, $username, $password, $dbname);
+
+        if ($db->connect_error)
+        {
+            die("Connection failed: " . $db->connect_error);
+        }
+
+        $insert = $db->query("INSERT into images (image5, created) VALUES ('$imgpath5', '$dataTime')");
+        if ($insert5)
+        {
+        }
+        else
+        {
+
+        }
+    }
+    else
+    {
+    }
+    #end of image 5
+
+        #start of image 6 upload
+    $errors6 = []; // Store all foreseen and unforseen errors here
+    $fileName6 = $_FILES['image6']['name'];
+    $fileSize6 = $_FILES['image6']['size'];
+    $fileTmpName6 = $_FILES['image6']['tmp_name'];
+    $fileType6 = $_FILES['image6']['type'];
+    $fileExtension6 = strtolower(end(explode('.', $fileName6)));
+    $rand6 = rand();
+    $randfileName6 = $rand6 . basename($fileName6);
+    $uploadPath6 = $currentDir . $uploadDirectory . $randfileName6;
+    $imgpath6 = $uploadDirectory . $randfileName6;
+    #check file extension
+    if (!in_array($fileExtension6, $fileExtensions))
+    {
+        $errors6[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
+    }
+    #check max file size
+    if ($fileSize6 > $maxfilesize)
+    {
+        $errors6[] = "This file is too large... use a smaller image.";
+    }
+    #check min file size
+    if ($fileSize6 < $minfilesize)
+    {
+        $errors6[] = "This file does not meet the minimum size, please select a larger image";
+    }
+    #if no error
+
+    if (empty($errors6))
+    {
+        $compressedImage6 = compressImage($fileTmpName6, $uploadPath6);
+
+    }
+    else
+    {
+        foreach ($errors6 as $error6)
+        {
+            echo $error6 . "These are the errors" . "\n";
+        }
+    }
+
+    if (empty($errors6))
+    {
+
+        $db = new mysqli($host, $username, $password, $dbname);
+
+        if ($db->connect_error)
+        {
+            die("Connection failed: " . $db->connect_error);
+        }
+
+        $insert = $db->query("INSERT into images (image6, created) VALUES ('$imgpath6', '$dataTime')");
+        if ($insert6)
+        {
+        }
+        else
+        {
+
+        }
+    }
+    else
+    {
+    }
+    #end of image 6
 
     $search = $_POST['phpid'];
     $curl = curl_init();
@@ -369,6 +527,8 @@ function post()
             "image2" => $imgpath2,
             "image3" => $imgpath3,
             "image4" => $imgpath4,
+            "image5" => $imgpath5,
+            "image6" => $imgpath6,            
             "description" => $_POST['description'],
             "oilchange" => $_POST['oilchange'],
             "fullservice" => $_POST['fullservice'],
@@ -562,7 +722,7 @@ if (isset($_POST['submiteditandprint']))
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image1">Image 1</label>
+                <label for="image1">Odometer</label>
         </div>
         <div class="col-75">
             <input type="file" name="image1" id="image1" required/><br />
@@ -570,7 +730,7 @@ if (isset($_POST['submiteditandprint']))
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image2">Image 2</label>
+                <label for="image2">Vin Plate</label>
         </div>
         <div class="col-75">
             <input type="file" name="image2" id="image2" required/><br />
@@ -578,7 +738,7 @@ if (isset($_POST['submiteditandprint']))
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image3">Image 3</label>
+                <label for="image3">Left Side</label>
         </div>
         <div class="col-75">
             <input type="file" name="image3" id="image3" required/><br />
@@ -586,10 +746,26 @@ if (isset($_POST['submiteditandprint']))
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image4">Image 4</label>
+                <label for="image4">Front</label>
         </div>
         <div class="col-75">
             <input type="file" name="image4" id="image4" required/><br />
+        </div>
+    </div>
+        <div class="row">     
+        <div class="col-25">
+                <label for="image4">Right Side</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="image5" id="image5" required/><br />
+        </div>
+    </div>
+        <div class="row">     
+        <div class="col-25">
+                <label for="image4">Back</label>
+        </div>
+        <div class="col-75">
+            <input type="file" name="image6" id="image6" required/><br />
         </div>
     </div>
     <div class="row">
