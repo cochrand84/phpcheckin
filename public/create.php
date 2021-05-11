@@ -80,7 +80,7 @@ function post()
     $uploadDirectory = "/uploads/$year/$month/";
     $fileExtensions = ['jpeg', 'jpg', 'png']; // Get all the file extensions
     
-    #begin image 1
+    //begin image 1
     $errors1 = []; // Store all foreseen and unforseen errors here
     $fileName1 = $_FILES['image1']['name'];
     $fileSize1 = $_FILES['image1']['size'];
@@ -91,22 +91,22 @@ function post()
     $randfileName1 = $rand1 . basename($fileName1);
     $uploadPath1 = $currentDir . $uploadDirectory . $randfileName1;
     $imgpath1 = $uploadDirectory . $randfileName1;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension1, $fileExtensions))
     {
         $errors1[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize1 > $maxfilesize)
     {
         $errors1[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize1 < $minfilesize)
     {
         $errors1[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
     if (empty($errors1))
     {
         $compressedImage1 = compressImage($fileTmpName1, $uploadPath1);
@@ -143,8 +143,8 @@ function post()
     else
     {
     }
-    #end of image 1
-    #begin of image 2
+    //end of image 1
+    //begin of image 2
     $errors2 = []; // Store all foreseen and unforseen errors here
     $fileName2 = $_FILES['image2']['name'];
     $fileSize2 = $_FILES['image2']['size'];
@@ -155,22 +155,22 @@ function post()
     $randfileName2 = $rand2 . basename($fileName2);
     $uploadPath2 = $currentDir . $uploadDirectory . $randfileName2;
     $imgpath2 = $uploadDirectory . $randfileName2;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension2, $fileExtensions))
     {
         $errors2[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize2 > $maxfilesize)
     {
         $errors2[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize2 < $minfilesize)
     {
         $errors2[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
 
     if (empty($errors2))
     {
@@ -206,8 +206,8 @@ function post()
     else
     {
     }
-#end of image 2
-    #start of image 3 upload
+    //end of image 2
+    //start of image 3 upload
     $errors3 = []; // Store all foreseen and unforseen errors here
     $fileName3 = $_FILES['image3']['name'];
     $fileSize3 = $_FILES['image3']['size'];
@@ -218,22 +218,22 @@ function post()
     $randfileName3 = $rand3 . basename($fileName3);
     $uploadPath3 = $currentDir . $uploadDirectory . $randfileName3;
     $imgpath3 = $uploadDirectory . $randfileName3;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension3, $fileExtensions))
     {
         $errors3[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize3 > $maxfilesize)
     {
         $errors3[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize3 < $minfilesize)
     {
         $errors3[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
 
     if (empty($errors3))
     {
@@ -269,8 +269,8 @@ function post()
     else
     {
     }
-    #end of image 3
-    #start of image 4 upload
+    //end of image 3
+    //start of image 4 upload
     $errors4 = []; // Store all foreseen and unforseen errors here
     $fileName4 = $_FILES['image4']['name'];
     $fileSize4 = $_FILES['image4']['size'];
@@ -281,22 +281,22 @@ function post()
     $randfileName4 = $rand4 . basename($fileName4);
     $uploadPath4 = $currentDir . $uploadDirectory . $randfileName4;
     $imgpath4 = $uploadDirectory . $randfileName4;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension4, $fileExtensions))
     {
         $errors4[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize4 > $maxfilesize)
     {
         $errors4[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize4 < $minfilesize)
     {
         $errors4[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
 
     if (empty($errors4))
     {
@@ -333,9 +333,9 @@ function post()
     else
     {
     }
-    #end of image 4
+    //end of image 4
 
-        #start of image 5 upload
+        //start of image 5 upload
     $errors5 = []; // Store all foreseen and unforseen errors here
     $fileName5 = $_FILES['image5']['name'];
     $fileSize5 = $_FILES['image5']['size'];
@@ -346,22 +346,22 @@ function post()
     $randfileName5 = $rand5 . basename($fileName5);
     $uploadPath5 = $currentDir . $uploadDirectory . $randfileName5;
     $imgpath5 = $uploadDirectory . $randfileName5;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension5, $fileExtensions))
     {
         $errors5[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize5 > $maxfilesize)
     {
         $errors5[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize5 < $minfilesize)
     {
         $errors5[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
 
     if (empty($errors5))
     {
@@ -398,9 +398,9 @@ function post()
     else
     {
     }
-    #end of image 5
+    //end of image 5
 
-        #start of image 6 upload
+        //start of image 6 upload
     $errors6 = []; // Store all foreseen and unforseen errors here
     $fileName6 = $_FILES['image6']['name'];
     $fileSize6 = $_FILES['image6']['size'];
@@ -411,22 +411,22 @@ function post()
     $randfileName6 = $rand6 . basename($fileName6);
     $uploadPath6 = $currentDir . $uploadDirectory . $randfileName6;
     $imgpath6 = $uploadDirectory . $randfileName6;
-    #check file extension
+    //check file extension
     if (!in_array($fileExtension6, $fileExtensions))
     {
         $errors6[] = "This file extension is not allowed. Please upload a JPEG or PNG file";
     }
-    #check max file size
+    //check max file size
     if ($fileSize6 > $maxfilesize)
     {
         $errors6[] = "This file is too large... use a smaller image.";
     }
-    #check min file size
+    //check min file size
     if ($fileSize6 < $minfilesize)
     {
         $errors6[] = "This file does not meet the minimum size, please select a larger image";
     }
-    #if no error
+    //if no error
 
     if (empty($errors6))
     {
@@ -463,16 +463,13 @@ function post()
     else
     {
     }
-    #end of image 6
+    //end of image 6
 
     $search = $_POST['phpid'];
     $curl = curl_init();
 
     if ($search == 0)
     {
-        echo "<h1>";
-        echo "POS ID entered, please try again";
-        echo "</h1>";
     }
     else
     {

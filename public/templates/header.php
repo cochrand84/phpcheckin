@@ -21,7 +21,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     echo "yup, it's set";
  }
  else{
- 	echo "nope, it's not set";
+ 	header("location: login.php");
  }
 
 ?>
