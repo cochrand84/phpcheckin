@@ -128,15 +128,7 @@ if (isset($_POST['submitedit']) && $statement) { ?>
         <div class="col-75">
             <input type="text" id="ticketid" value="<?php echo $editid; ?>" name="ticketid" maxlength="255" required/>
         </div>
-    </div>   
-    <div class="row">
-        <div class="col-25">
-            <label for="vin">VIN</label>
-        </div>
-        <div class="col-75">
-            <input type="text" id="vin" value="<?php echo $editvin; ?>" name="vin" maxlength="17" required/>
-        </div>
-    </div>    
+    </div>     
     <div class="row">    
         <div class="col-25">
             <label for="firstname">First Name</label>
