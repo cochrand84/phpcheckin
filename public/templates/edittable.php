@@ -14,7 +14,6 @@
                     <th>Status</th>
                     <th>Tech Assigned</th>
                     <th>Edit</th>
-                    <th>Complete</th>
                     <th>Print</th>
                     <th>Check-out</th>
                 </tr>
@@ -32,10 +31,9 @@
                 <td><?php echo escape($row["model"]); ?> </td>
                 <td><?php echo escape($row["description"]); ?></td>
                 <td><?php echo escape($row["due_date"]); ?> </td>
-                <td><?php echo escape($row["status"]); ?> </td>     
-                <td><?php echo "NA"; ?> </td>   
+                <td><?php echo escape($row["status"]); ?> </td>
+                <td><?php echo "NA"; ?> </td>
               <td><a href="edit2.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Edit</a></td>
-              <td><a href="complete.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Mark as Complete</a></td>
               <td><a href="print.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Print</a></td>
               <td><a href="checkout.php?editid=<?php echo $row["id"]; ?>" class="linkbutton">Check-out</a></td>
             </tr>

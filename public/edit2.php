@@ -55,7 +55,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editservicenote2date           = $row['servicenote2date'];
                     $editservicenote3date           = $row['servicenote3date'];
                     $editphpid                      = $row['phpid'];
-                    $miles_in                       = $row['miles_in'];
+                    $editmiles_in                   = $row['miles_in'];
                     $editmiles_out                  = $row['miles_out'];
 
          } 
@@ -153,10 +153,11 @@ if (isset($_POST['submitedit'])) {
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
+            $editedmiles_in                        = $_POST['miles_in'];
             $editedmiles_out                        = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_in` = '$editedmiles_in', `miles_out` = '$editedmiles_out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -265,7 +266,8 @@ if (isset($_POST['submiteditandprint'])) {
             $editedserviceimage6                    = $rand6;
             $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
-            $editedmiles_out                              = $_POST['miles_out'];
+            $editedmiles_in                         = $_POST['miles_in'];
+            $editedmiles_out                        = $_POST['miles_out'];
             
 
          $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
@@ -417,7 +419,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image1">Image 1</label>
         </div>
         <div class="col-25">
-            <a href="/public<?php echo $editimage1; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage1; ?>" target="_blank">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -428,7 +430,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image2">Image 2</label>
         </div>
         <div class="col-25">
-            <a href="/public<?php echo $editimage2; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage2; ?>" target="_blank">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -439,7 +441,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image3">Image 3</label>
         </div>
         <div class="col-25">
-            <a href="/public<?php echo $editimage3; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage3; ?>" target="_blank">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -450,7 +452,7 @@ if (isset($_POST['submiteditandprint'])) {
                 <label for="image4">Image 4</label>
         </div>
         <div class="col-25">
-            <a href="/public<?php echo $editimage4; ?>">Click for picture</a>
+            <a href="/public<?php echo $editimage4; ?>" target="_blank">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -529,12 +531,21 @@ if (isset($_POST['submiteditandprint'])) {
         </div>
     </div>
 
+       <div class="row">     
+        <div class="col-25">
+            <label for="miles">Miles in</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="miles_in" id="miles_in" value="<?php echo $editmiles_in; ?>"required>
+        </div>
+    </div>
+
     <div class="row">     
         <div class="col-25">
             <label for="miles">Miles out</label>
         </div>
         <div class="col-75">
-            <input type="text" name="miles" id="miles_out" value="<?php echo $editmiles_out; ?>"required>
+            <input type="text" name="miles_out" id="miles_out" value="<?php echo $editmiles_out; ?>"required>
         </div>
     </div>
 

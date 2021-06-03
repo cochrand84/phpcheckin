@@ -34,12 +34,8 @@ try  {
 if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { 
                     $editid                         = $row["id"]; 
-                    $editvin                        = $row["vin"];
                     $editfirstname                  = $row["firstname"]; 
                     $editlastname                   = $row["lastname"]; 
-                    $edityear                       = $row["year"]; 
-                    $editedmake                     = $row["Make"];
-                    $editedmodel                    = $row["Model"];
                     $editservicenote1               = $row['servicenote1'];
                     $editservicenote2               = $row['servicenote2'];
                     $editservicenote3               = $row['servicenote3'];
@@ -88,12 +84,6 @@ if (isset($_POST['submitedit'])) {
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
         
-            $editedvin                              = $_POST['vin'];
-            $editedfirstname                        = $_POST['firstname'];
-            $editedlastname                         = $_POST['lastname'];
-            $editedyear                             = $_POST['ModelYear'];
-            $editedmake                             = $_POST['Make'];
-            $editedmodel                            = $_POST['Model'];
             $editedservicenote1                     = $_POST['servicenote1'];
             $editedservicenote2                     = $_POST['servicenote2'];
             $editedservicenote3                     = $_POST['servicenote3'];
@@ -108,9 +98,10 @@ if (isset($_POST['submitedit'])) {
             $editedrightblinker                     = $_POST['rightblinker'];
             $editedleftblinker                      = $_POST['leftblinker'];
             $editedbrakelight                       = $_POST['brakelight'];
+            $editedmiles_out                        = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `year` = '$editedyear', `location` = '$editedlocation', `make` = '$editedmake', `model` = '$editedmodel', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date',`voltage` = '$editedvoltage',`reartirepressure` = '$editedreartirepressure',`fronttirepressure` = '$editedfronttirepressure',`lowbeam` = '$editedlowbeam',`highbeam` = '$editedhighbeam',`rightblinker` = '$editedrightblinker',`leftblinker` = '$editedleftblinker',`brakelight` = '$editedbrakelight', `status` = 'Checked-Out'
+         $sql = "UPDATE `tickets` SET `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date',`voltage` = '$editedvoltage',`reartirepressure` = '$editedreartirepressure',`fronttirepressure` = '$editedfronttirepressure',`lowbeam` = '$editedlowbeam',`highbeam` = '$editedhighbeam',`rightblinker` = '$editedrightblinker',`leftblinker` = '$editedleftblinker',`brakelight` = '$editedbrakelight', `status` = 'Checked-Out', `miles_out` = '$editedmiles_out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -240,6 +231,14 @@ if (isset($_POST['submitedit']) && $statement) { ?>
             <input type="checkbox" name="rightblinker" id="rightblinker" value="true"<?php echo $rightblinkerckd; ?>/>Right Blinker<br />
             <input type="checkbox" name="leftblinker" id="leftblinker" value="true"<?php echo $leftblinkerckd; ?>/>Left Blinker<br />
             <input type="checkbox" name="brakelight" id="brakelight" value="true"<?php echo $brakelightckd; ?>/>Brake Light<br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="miles_out">Miles Out</label>
+        </div>
+                <div class="col-75">
+                    <input type="text" name="miile_out" id="miles_out" value="<?php echo $editmiles_out; ?>" required> 
         </div>
     </div>
     <div class="row">

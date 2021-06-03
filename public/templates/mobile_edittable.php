@@ -9,7 +9,6 @@
                     <th>Status</th>
                     <th>Tech Assigned</th>
                     <th>Edit</th>
-                    <th>Complete</th>
                     <th>Check-out</th>
                 </tr>
             </thead>
@@ -42,9 +41,6 @@ foreach ($result as $row) {
               <td><a href="edit2.php?editid=<?php
     echo $row["id"];
 ?>" class="linkbutton">Edit</a></td>
-              <td><a href="complete.php?editid=<?php
-    echo $row["id"];
-?>" class="linkbutton">Mark as Complete</a></td>
               <td><a href="checkout.php?editid=<?php
     echo $row["id"];
 ?>" class="linkbutton">Check-out</a></td>
