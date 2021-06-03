@@ -44,8 +44,7 @@ if ($result && $statement->rowCount() > 0) {
                     $editimage3                     = $row["image3"];
                     $editimage4                     = $row["image4"];
                     $editimage5                     = $row["image5"];
-                    $editimage6                     = $row["image6"];
-                    $editimage7                     = $row["image7"];                    
+                    $editimage6                     = $row["image6"];                   
                     $editduedate                    = $row["due_date"];
                     $editdescription                = $row["description"];
                     $editservicenote1               = $row['servicenote1'];
@@ -65,30 +64,6 @@ if ($result && $statement->rowCount() > 0) {
 
 if (isset($_POST['submitedit'])) {
 
-
-        $image5 = $_FILES['image5']['tmp_name'];
-        $imgContent5 = addslashes(file_get_contents($image5));      
-
-        $db = new mysqli($host, $username, $password, $dbname);
-        
-
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand5 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent5', '$dataTime', '$rand5')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    
-
-        $image6 = $_FILES['image6']['tmp_name'];
-        $imgContent6 = addslashes(file_get_contents($image6));
      
         $db = new mysqli($host, $username, $password, $dbname);
        
@@ -97,36 +72,7 @@ if (isset($_POST['submitedit'])) {
         }
         
         $dataTime = date("Y-m-d H:i:s");
-        $rand2 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent6', '$dataTime', '$rand6')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-
-
-   
-        $image7 = $_FILES['image7']['tmp_name'];
-        $imgContent7 = addslashes(file_get_contents($image7));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand7 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent7', '$dataTime', '$rand7')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    
+  
 
     try  {
         $connection = new PDO($dsn, $username, $password, $options);
@@ -149,15 +95,12 @@ if (isset($_POST['submitedit'])) {
             $editedservicenote1date                 = $_POST['servicenote1date'];
             $editedservicenote2date                 = $_POST['servicenote2date'];
             $editedservicenote3date                 = $_POST['servicenote3date'];
-            $editedserviceimage5                    = $rand5;
-            $editedserviceimage6                    = $rand6;
-            $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
-            $editedmiles_in                        = $_POST['miles_in'];
+            $editedmiles_in                         = $_POST['miles_in'];
             $editedmiles_out                        = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_in` = '$editedmiles_in', `miles_out` = '$editedmiles_out'
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `phpid` = '$editedphpid', `miles_in` = '$editedmiles_in', `miles_out` = '$editedmiles_out'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -178,67 +121,6 @@ if (isset($_POST['submitedit']) && $statement) { ?>
 
 if (isset($_POST['submiteditandprint'])) {
 
-
-        $image5 = $_FILES['image5']['tmp_name'];
-        $imgContent5 = addslashes(file_get_contents($image5));      
-
-        $db = new mysqli($host, $username, $password, $dbname);
-        
-
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand5 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent5', '$dataTime', '$rand5')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-    
-
-        $image6 = $_FILES['image6']['tmp_name'];
-        $imgContent6 = addslashes(file_get_contents($image6));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand2 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent6', '$dataTime', '$rand6')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
-
-
-   
-        $image7 = $_FILES['image7']['tmp_name'];
-        $imgContent7 = addslashes(file_get_contents($image7));
-     
-        $db = new mysqli($host, $username, $password, $dbname);
-       
-        if($db->connect_error){
-            die("Connection failed: " . $db->connect_error);
-        }
-        
-        $dataTime = date("Y-m-d H:i:s");
-        $rand7 = rand() . "\n";
-
-        $insert = $db->query("INSERT into images (image1, created, rand) VALUES ('$imgContent7', '$dataTime', '$rand7')");
-        if($insert){
-            
-        }else{
-            echo "File upload failed, please try again.";
-        } 
     
 
     try  {
@@ -262,15 +144,12 @@ if (isset($_POST['submiteditandprint'])) {
             $editedservicenote1date                 = $_POST['servicenote1date'];
             $editedservicenote2date                 = $_POST['servicenote2date'];
             $editedservicenote3date                 = $_POST['servicenote3date'];
-            $editedserviceimage5                    = $rand5;
-            $editedserviceimage6                    = $rand6;
-            $editedserviceimage7                    = $rand7;
             $editedphpid                            = $_POST['phpid'];
             $editedmiles_in                         = $_POST['miles_in'];
             $editedmiles_out                        = $_POST['miles_out'];
             
 
-         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `image5` = '$editedserviceimage5', `image6` = '$editedserviceimage6', `image7` = '$editedserviceimage7', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out'
+         $sql = "UPDATE `tickets` SET `vin` = '$editedvin', `firstname` = '$editedfirstname', `lastname` = '$editedlastname', `email` = '$editedemail', `phone` = '$editedphone', `year` = '$editedyear', `location` = '$editedlocation', `status` = '$editedstatus', `make` = '$editedmake', `model` = '$editedmodel', `due_date` = '$editeddue_date', `description` = '$editeddescription', `servicenote1` = '$editedservicenote1',`servicenote2` = '$editedservicenote2',`servicenote3` = '$editedservicenote3',`servicenote1date` = '$editedservicenote1date',`servicenote2date` = '$editedservicenote2date',`servicenote3date` = '$editedservicenote3date', `phpid` = '$editedphpid', `miles_out` = '$editedmiles_out',`miles_in` = '$editedmiles_in'
          WHERE `id` = '$editid';";
 
         $statement = $connection->prepare($sql);
@@ -416,7 +295,7 @@ if (isset($_POST['submiteditandprint'])) {
     </div>    
     <div class="row">     
         <div class="col-25">
-                <label for="image1">Image 1</label>
+                <label for="image1">Odometer</label>
         </div>
         <div class="col-25">
             <a href="/public<?php echo $editimage1; ?>" target="_blank">Click for picture</a>
@@ -427,7 +306,7 @@ if (isset($_POST['submiteditandprint'])) {
     </div>    
 <div class="row">     
         <div class="col-25">
-                <label for="image2">Image 2</label>
+                <label for="image2">VIN Plate</label>
         </div>
         <div class="col-25">
             <a href="/public<?php echo $editimage2; ?>" target="_blank">Click for picture</a>
@@ -438,7 +317,7 @@ if (isset($_POST['submiteditandprint'])) {
     </div>
     <div class="row">     
         <div class="col-25">
-                <label for="image3">Image 3</label>
+                <label for="image3">Left Side</label>
         </div>
         <div class="col-25">
             <a href="/public<?php echo $editimage3; ?>" target="_blank">Click for picture</a>
@@ -449,10 +328,32 @@ if (isset($_POST['submiteditandprint'])) {
     </div>
     <div class="row">     
         <div class="col-25">
-                <label for="image4">Image 4</label>
+                <label for="image4">Front</label>
         </div>
         <div class="col-25">
             <a href="/public<?php echo $editimage4; ?>" target="_blank">Click for picture</a>
+        </div>
+        <div class="col-25">
+            
+        </div>
+    </div>
+        <div class="row">     
+        <div class="col-25">
+                <label for="image5">Right Side</label>
+        </div>
+        <div class="col-25">
+            <a href="/public<?php echo $editimage5; ?>" target="_blank">Click for picture</a>
+        </div>
+        <div class="col-25">
+            
+        </div>
+    </div>
+        <div class="row">     
+        <div class="col-25">
+                <label for="image6">Back</label>
+        </div>
+        <div class="col-25">
+            <a href="/public<?php echo $editimage6; ?>" target="_blank">Click for picture</a>
         </div>
         <div class="col-25">
             
@@ -482,12 +383,6 @@ if (isset($_POST['submiteditandprint'])) {
             <input type="date" name="servicenote1date" value="<?php echo $editservicenote1date; ?>">
             <textarea name="servicenote1" id="servicenote1" rows="5" cols="80" ><?php echo $editservicenote1; ?></textarea><br />
         </div>
-        <div class="col-25">
-                <label for="image5">Image 5</label>
-        </div>
-        <div class="col-75">
-            <input type="file" name="image5" id="image5"/><br />
-        </div>
             </div>
     <div class="row">
                  <div class="col-25">
@@ -498,12 +393,7 @@ if (isset($_POST['submiteditandprint'])) {
             
             <textarea name="servicenote2" id="servicenote2" rows="5" cols="80" ><?php echo $editservicenote2; ?></textarea><br />
         </div>
-                <div class="col-25">
-                <label for="image6">Image 6</label>
-        </div>
-        <div class="col-75">
-            <input type="file" name="image6" id="image6"/><br />
-        </div>
+               
             </div>
     <div class="row">
                  <div class="col-25">
@@ -513,13 +403,7 @@ if (isset($_POST['submiteditandprint'])) {
             <input type="date" name="servicenote3date" value="<?php echo $editservicenote3date; ?>">
            
             <textarea name="servicenote3" id="servicenote3" rows="5" cols="80" ><?php echo $editservicenote3; ?></textarea><br />
-        </div>
-                <div class="col-25">
-                <label for="image7">Image 7</label>
-        </div>
-        <div class="col-75">
-            <input type="file" name="image7" id="image7"/><br />
-        </div>
+        
     </div>
             
     <div class="row">     

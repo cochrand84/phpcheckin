@@ -751,7 +751,7 @@ if (isset($_POST['submiteditandprint']))
     </div>
         <div class="row">     
         <div class="col-25">
-                <label for="image4">Right Side</label>
+                <label for="image5">Right Side</label>
         </div>
         <div class="col-75">
             <input type="file" name="image5" id="image5" required/><br />
@@ -759,7 +759,7 @@ if (isset($_POST['submiteditandprint']))
     </div>
         <div class="row">     
         <div class="col-25">
-                <label for="image4">Back</label>
+                <label for="image6">Back</label>
         </div>
         <div class="col-75">
             <input type="file" name="image6" id="image6" required/><br />
