@@ -9,7 +9,7 @@ function escape($html) {
     return htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
 }
 
-$ver = 1.06;
+$ver = 1.075;
 
 /**define('phpusername', 'phpusername');
 if(!isset($_COOKIE[phpusername])) {
